@@ -1,0 +1,73 @@
+<!-- IF S_TYPE == 1 -->
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4>{L_CONFIRMATION}</h4>
+	</div>
+	<div class="panel-body">
+		<p>{L_CONFIRM_EXPLAIN}</p>
+
+		<fieldset class="form-horizontal">
+
+		<!-- IF S_RECAPTCHA_AVAILABLE -->
+			<dl class="form-group">
+				<dt class="col-md-3 col-sm-4 col-xs-12"><label class="control-label">{L_CONFIRM_CODE}{L_COLON}</label><br /><span>{L_RECAPTCHA_EXPLAIN}</span></dt>
+				<dd class="col-md-9 col-sm-8 col-xs-12 form-inline">
+					<script>
+					var RecaptchaOptions = {
+						lang : '{LA_RECAPTCHA_LANG}',
+						theme : 'clean',
+						tabindex : <!-- IF $CAPTCHA_TAB_INDEX -->{$CAPTCHA_TAB_INDEX}<!-- ELSE -->10<!-- ENDIF -->
+					};
+					</script>
+					<script src="{RECAPTCHA_SERVER}/challenge?k={RECAPTCHA_PUBKEY}{RECAPTCHA_ERRORGET}"></script>
+
+					<noscript>
+					<div>
+						<object data="{RECAPTCHA_SERVER}/noscript?k={RECAPTCHA_PUBKEY}{RECAPTCHA_ERRORGET}" type="text/html" height="300" width="500"></object><br />
+						<textarea name="recaptcha_challenge_field" rows="3" cols="40" class="form-control"></textarea>
+						<input type="hidden" name="recaptcha_response_field" value="manual_challenge" />
+					</div>
+					</noscript>
+
+					<a href="http://www.google.com/intl/{LA_RECAPTCHA_LANG}/policies/" target="_blank" class="recaptcha-responsive" style="display: none"><img alt="" width="71" height="36" src="{RECAPTCHA_SERVER}/img/clean/logo.png"></a>
+				</dd>
+			</dl>
+		<!-- ELSE -->
+		{L_RECAPTCHA_NOT_AVAILABLE}
+		<!-- ENDIF -->
+
+		</fieldset>
+	</div>
+</div>
+
+<!-- ELSE -->
+
+<!-- IF S_RECAPTCHA_AVAILABLE -->
+	<dl class="form-group">
+		<dt class="col-md-4 col-sm-5 col-xs-12"><label class="control-label">{L_CONFIRM_CODE}{L_COLON}</label><br /><span>{L_RECAPTCHA_EXPLAIN}</span></dt>
+		<dd class="col-md-8 col-sm-7 col-xs-12 form-inline">
+			<script>
+			var RecaptchaOptions = {
+				lang : '{LA_RECAPTCHA_LANG}',
+				theme : 'clean',
+				tabindex : <!-- IF $CAPTCHA_TAB_INDEX -->{$CAPTCHA_TAB_INDEX}<!-- ELSE -->10<!-- ENDIF -->
+			};
+			</script>
+			<script src="{RECAPTCHA_SERVER}/challenge?k={RECAPTCHA_PUBKEY}{RECAPTCHA_ERRORGET}"></script>
+
+			<noscript>
+			<div>
+				<object data="{RECAPTCHA_SERVER}/noscript?k={RECAPTCHA_PUBKEY}{RECAPTCHA_ERRORGET}" type="text/html" height="300" width="500"></object><br />
+				<textarea name="recaptcha_challenge_field" rows="3" cols="40"></textarea>
+				<input type="hidden" name="recaptcha_response_field" value="manual_challenge" />
+			</div>
+			</noscript>
+
+			<a href="http://www.google.com/intl/{LA_RECAPTCHA_LANG}/policies/" target="_blank" class="recaptcha-responsive" style="display: none"><img alt="" width="71" height="36" src="{RECAPTCHA_SERVER}/img/clean/logo.png"></a>
+		</dd>
+	</dl>
+<!-- ELSE -->
+{L_RECAPTCHA_NOT_AVAILABLE}
+<!-- ENDIF -->
+
+<!-- ENDIF -->

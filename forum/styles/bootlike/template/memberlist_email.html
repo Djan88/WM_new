@@ -1,0 +1,87 @@
+<!-- INCLUDE overall_header.html -->
+
+<form method="post" action="{S_POST_ACTION}" id="post">
+
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title"><!-- IF S_CONTACT_ADMIN-->{L_CONTACT_ADMIN}<!-- ELSEIF S_SEND_USER -->{L_SEND_EMAIL_USER}<!-- ELSE -->{L_EMAIL_TOPIC}<!-- ENDIF --></h4>
+				</div>
+				<div class="panel-body">
+
+				<!-- IF CONTACT_INFO -->
+				<div class="alert alert-info">{CONTACT_INFO}</div>
+				<!-- ENDIF -->
+
+				<!-- IF ERROR_MESSAGE --><div class="alert alert-danger">{ERROR_MESSAGE}</div><!-- ENDIF -->
+				<fieldset class="form-horizontal">
+				<!-- IF S_SEND_USER -->
+					<dl class="form-group">
+						<dt class="col-md-3 col-sm-4 col-xs-12"><label class="control-label">{L_RECIPIENT}{L_COLON}</label></dt>
+						<dd class="col-md-9 col-sm-8 col-xs-12"><label class="control-label">{USERNAME_FULL}</label></dd>
+					</dl>
+					<dl class="form-group">
+						<dt class="col-md-3 col-sm-4 col-xs-12"><label class="control-label" for="subject">{L_SUBJECT}{L_COLON}</label></dt>
+						<dd class="col-md-9 col-sm-8 col-xs-12 form-inline"><input class="form-control" type="text" name="subject" id="subject" size="50" tabindex="1" value="{SUBJECT}" /></dd>
+					</dl>
+				<!-- ELSEIF S_CONTACT_ADMIN-->
+					<dl class="form-group">
+						<dt class="col-md-3 col-sm-4 col-xs-12"><label class="control-label">{L_RECIPIENT}:</label></dt>
+						<dd class="col-md-9 col-sm-8 col-xs-12"><label class="control-label">{L_ADMINISTRATOR}</label></dd>
+					</dl>
+					<!-- IF not S_IS_REGISTERED -->
+					<dl class="form-group">
+						<dt class="col-md-3 col-sm-4 col-xs-12"><label class="control-label" for="email">{L_SENDER_EMAIL_ADDRESS}:</label></dt>
+						<dd class="col-md-9 col-sm-8 col-xs-12 form-inline"><input class="form-control" type="text" name="email" id="email" size="50" maxlength="100" tabindex="1" value="{EMAIL}" /></dd>
+					</dl>
+					<dl class="form-group">
+						<dt class="col-md-3 col-sm-4 col-xs-12"><label class="control-label" for="name">{L_SENDER_NAME}:</label></dt>
+						<dd class="col-md-9 col-sm-8 col-xs-12 form-inline"><input class="form-control" type="text" name="name" id="name" size="50" tabindex="2" value="{NAME}" /></dd>
+					</dl>
+					<!-- ENDIF -->
+					<dl class="form-group">
+						<dt class="col-md-3 col-sm-4 col-xs-12"><label class="control-label" for="subject">{L_SUBJECT}:</label></dt>
+						<dd class="col-md-9 col-sm-8 col-xs-12 form-inline"><input class="form-control" type="text" name="subject" id="subject" size="50" tabindex="3" value="{SUBJECT}" /></dd>
+					</dl>
+				<!-- ELSE -->
+					<dl class="form-group">
+						<dt class="col-md-3 col-sm-4 col-xs-12"><label class="control-label" for="email">{L_EMAIL_ADDRESS}{L_COLON}</label></dt>
+						<dd class="col-md-9 col-sm-8 col-xs-12 form-inline"><input class="form-control" type="email" name="email" id="email" size="50" maxlength="100" tabindex="2" value="{EMAIL}" /></dd>
+					</dl>
+					<dl class="form-group">
+						<dt class="col-md-3 col-sm-4 col-xs-12"><label class="control-label" for="name">{L_REAL_NAME}{L_COLON}</label></dt>
+						<dd class="col-md-9 col-sm-8 col-xs-12 form-inline"><input class="form-control" type="text" name="name" id="name" size="50" tabindex="3" value="{NAME}" /></dd>
+					</dl>
+					<dl class="form-group">
+						<dt class="col-md-3 col-sm-4 col-xs-12"><label class="control-label" for="lang">{L_DEST_LANG}{L_COLON}</label><br /><span class="help-block">{L_DEST_LANG_EXPLAIN}</span></dt>
+						<dd class="col-md-9 col-sm-8 col-xs-12 form-inline"><select name="lang">{S_LANG_OPTIONS}</select></dd>
+					</dl>
+				<!-- ENDIF -->
+					<dl class="form-group">
+						<dt class="col-md-3 col-sm-4 col-xs-12"><label class="control-label" for="message">{L_MESSAGE_BODY}{L_COLON}</label><br /><span class="help-block">{L_EMAIL_BODY_EXPLAIN}</span></dt>
+						<dd class="col-md-9 col-sm-8 col-xs-12"><textarea class="form-control" name="message" id="message" rows="15" cols="76" tabindex="4">{MESSAGE}</textarea></dd>
+					</dl>
+				<!-- IF S_REGISTERED_USER -->
+					<dl class="form-group">
+						<dt class="col-md-3 col-sm-4 col-xs-12 hidden-xs">&nbsp;</dt>
+						<dd class="col-md-9 col-sm-8 col-xs-12 form-inline"><label for="cc_sender"><input type="checkbox" name="cc_sender" id="cc_sender" value="1" checked="checked" tabindex="5" /> {L_CC_SENDER}</label></dd>
+					</dl>
+				<!-- ENDIF -->
+				</fieldset>
+
+				</div>
+
+				<div class="panel-footer text-center">
+					<input type="submit" tabindex="6" name="submit" value="{L_SEND_EMAIL}" class="btn btn-success" />
+				{S_FORM_TOKEN}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</form>
+
+<!-- INCLUDE overall_footer.html -->

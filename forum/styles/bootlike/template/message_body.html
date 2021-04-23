@@ -1,0 +1,29 @@
+<!-- IF S_SIMPLE_MESSAGE -->
+	<!-- INCLUDE simple_header.html -->
+<!-- ELSE -->
+	<!-- INCLUDE overall_header.html -->
+<!-- ENDIF -->
+
+<div class="container">
+	<div class="row" id="message">
+		<div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">{MESSAGE_TITLE}</h4>
+				</div>
+				<div class="panel-body">
+					<p>{MESSAGE_TEXT}</p>
+				<!-- IF SCRIPT_NAME == "search" and not S_BOARD_DISABLED and not S_NO_SEARCH and L_RETURN_TO_SEARCH_ADV -->
+					<p><a href="{U_SEARCH}" class="arrow-{S_CONTENT_FLOW_BEGIN}">{L_GO_TO_SEARCH_ADV}</a></p>
+				<!-- ENDIF -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- IF S_SIMPLE_MESSAGE -->
+	<!-- INCLUDE simple_footer.html -->
+<!-- ELSE -->
+	<!-- INCLUDE overall_footer.html -->
+<!-- ENDIF -->

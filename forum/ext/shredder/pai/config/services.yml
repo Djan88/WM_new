@@ -1,0 +1,8 @@
+services:
+    shredder.pai.listener:
+        class: shredder\pai\event\listener
+        arguments:
+            - @config
+            - @template
+        tags:
+            - { name: event.listener }

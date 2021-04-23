@@ -1,0 +1,83 @@
+<fieldset class="form-horizontal">
+	<!-- IF not S_SHOW_DRAFTS -->
+
+		<!-- IF S_GROUP_OPTIONS -->
+			<dl class="form-group">
+				<dt class="col-md-3 col-sm-4 col-xs-12"><label class="control-label" for="group_list">{L_TO_ADD_GROUPS}{L_COLON}</label></dt>
+				<dd class="col-md-9 col-sm-8 col-xs-12 form-inline"><select name="group_list[]" id="group_list" multiple="multiple" size="3" class="form-control">{S_GROUP_OPTIONS}</select></dd>
+			</dl>
+		<!-- ENDIF -->
+		<!-- IF S_ALLOW_MASS_PM -->
+			<!-- IF not S_EDIT_POST -->
+			<dl class="form-group">
+				<dt class="col-md-3 col-sm-4 col-xs-12"><label class="control-label">{L_TO_ADD_MASS}{L_COLON}</label></dt>
+				<dd class="col-md-9 col-sm-8 col-xs-12 form-inline"><textarea id="username_list" name="username_list" cols="50" rows="2" tabindex="1" class="form-control"></textarea>&nbsp;
+				<div class="btn-group">
+					<input type="submit" name="add_to" value="{L_ADD}" tabindex="1" class="btn btn-default" />
+					<input type="submit" name="add_bcc" value="{L_ADD_BCC}" tabindex="1" class="btn btn-default" />
+				<!-- EVENT posting_pm_header_find_username_before -->
+					<a href="{U_FIND_USERNAME}" onclick="find_username(this.href); return false;" class="btn btn-default">{L_FIND_USERNAME}</a>
+				<!-- EVENT posting_pm_header_find_username_after -->
+				</div>
+				</dd>
+			</dl>
+			<!-- ENDIF -->
+
+			<!-- IF .to_recipient -->
+				<dl class="form-group form-group-sm">
+					<dt class="col-md-3 col-sm-4 col-xs-12"><label class="control-label">{L_TO_MASS}{L_COLON}</label></dt>
+					<dd class="col-md-9 col-sm-8 col-xs-12 form-inline">
+						<!-- BEGIN to_recipient -->
+						<div class="btn-group recipients">
+							<!-- IF to_recipient.IS_GROUP --><a href="{to_recipient.U_VIEW}" class="btn btn-default btn-sm"><strong>{to_recipient.NAME}</strong></a><!-- ELSE --><span class="btn btn-default btn-sm tip">{to_recipient.NAME_FULL}</span><!-- ENDIF -->
+							<!-- IF not S_EDIT_POST --><input type="submit" name="remove_{to_recipient.TYPE}[{to_recipient.UG_ID}]" value="&nbsp;x&nbsp;" class="btn btn-sm btn-danger" /><!-- ENDIF -->
+						</div>
+						<!-- END to_recipient -->
+					</dd>
+				</dl>
+			<!-- ENDIF -->
+			<!-- IF .bcc_recipient -->
+				<dl class="form-group form-group-sm">
+					<dt class="col-md-3 col-sm-4 col-xs-12"><label class="control-label">{L_BCC}{L_COLON}</label></dt>
+					<dd class="col-md-9 col-sm-8 col-xs-12 form-inline">
+						<!-- BEGIN bcc_recipient -->
+						<div class="btn-group recipients">
+							<!-- IF bcc_recipient.IS_GROUP --><a href="{bcc_recipient.U_VIEW}" class="btn btn-default btn-sm"><strong>{bcc_recipient.NAME}</strong></a><!-- ELSE --><span class="btn btn-default btn-sm tip">{bcc_recipient.NAME_FULL}</span><!-- ENDIF -->
+							<!-- IF not S_EDIT_POST --><input type="submit" name="remove_{bcc_recipient.TYPE}[{bcc_recipient.UG_ID}]" value="&nbsp;x&nbsp;" class="btn btn-sm btn-danger" /><!-- ENDIF -->
+						</div>
+						<!-- END bcc_recipient -->
+					</dd>
+				</dl>
+			<!-- ENDIF -->
+		<!-- ELSE -->
+			<dl class="form-group">
+				<dt class="col-md-3 col-sm-4 col-xs-12"><label class="control-label" for="username_list">{L_TO_ADD}{L_COLON}</label></dt>
+				<!-- IF not S_EDIT_POST -->
+				<dd class="col-md-9 col-sm-8 col-xs-12 form-inline">
+					<div class="input-group">
+					<input type="text" name="username_list" id="username_list" size="20" value="" class="form-control" />
+					<span class="input-group-btn">
+						<input type="submit" name="add_to" value="{L_ADD}" class="btn btn-default" />
+						<!-- IF not S_EDIT_POST --><a href="{U_FIND_USERNAME}" onclick="find_username(this.href); return false" class="btn btn-default">{L_FIND_USERNAME}</a><!-- ENDIF -->
+					</span>
+					</div>
+				</dd>
+			</dl>
+				<!-- ENDIF -->
+			<!-- IF .to_recipient -->
+			<dl class="form-group">
+				<dt class="col-md-3 col-sm-4 col-xs-12"><label class="control-label" for="username_list">{L_TO}{L_COLON}</label></dt>
+				<dd class="col-md-9 col-sm-8 col-xs-12 form-inline">
+					<!-- BEGIN to_recipient -->
+					<div class="btn-group recipients">
+						<!-- IF to_recipient.IS_GROUP --><a href="{to_recipient.U_VIEW}" class="btn btn-default btn-sm"><strong>{to_recipient.NAME}</strong></a><!-- ELSE --><span class="btn btn-default btn-sm tip">{to_recipient.NAME_FULL}</span><!-- ENDIF -->
+						<!-- IF not S_EDIT_POST --><input type="submit" name="remove_{to_recipient.TYPE}[{to_recipient.UG_ID}]" value="&nbsp;x&nbsp;" class="btn btn-sm btn-danger" /><!-- ENDIF -->
+					</div>
+					<!-- END to_recipient -->
+				</dd>
+			</dl>
+			<!-- ENDIF -->
+		<!-- ENDIF -->
+
+	<!-- ENDIF -->
+	</fieldset>

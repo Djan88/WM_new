@@ -1,0 +1,96 @@
+<!-- INCLUDE mcp_header.html -->
+
+<h3>{L_TITLE}</h3>
+
+<form method="post" id="mcp" action="{U_POST_ACTION}">
+
+	<div class="pages clearfix">
+		<!-- IF .pagination --> 
+			<!-- INCLUDE pagination.html -->
+		<!-- ENDIF -->
+		<div class="btn-group pull-{S_CONTENT_FLOW_BEGIN}">
+			<span class="btn btn-default disabled">{TOTAL}</span>
+			<span class="btn btn-default disabled">{PAGE_NUMBER}</span>
+		</div>
+	</div>
+
+	<div class="panel-group form-inline text-{S_CONTENT_FLOW_END}">
+	<div class="input-group">
+		<input type="search" class="form-control" name="keywords" value="{S_KEYWORDS}" placeholder="{L_SEARCH_KEYWORDS}" />
+		<div class="input-group-btn">
+			<input type="submit" class="btn btn-default" name="filter" value="{L_SEARCH}" />
+		</div>
+		</div>
+	</div>
+
+	<div class="table-responsive">
+	<table class="table table-bordered">
+	<thead>
+	<tr>
+		<th class="width-15">{L_USERNAME}</th>
+		<th class="text-center">{L_IP}</th>
+		<th class="width-15 text-center">{L_TIME}</th>
+		<th class="width-50">{L_ACTION}</th>
+		<!-- IF S_CLEAR_ALLOWED --><th class="text-center">{L_MARK}</th><!-- ENDIF -->
+	</tr>
+	</thead>
+		<tbody>
+	<!-- IF S_LOGS -->
+		<!-- BEGIN log -->
+		<!-- IF log.S_ROW_COUNT is even --><tr class="bg1"><!-- ELSE --><tr class="bg2"><!-- ENDIF -->
+			<td class="width-15">{log.USERNAME}</td>
+			<td class="text-center">{log.IP}</td>
+			<td class="width-15 text-center">{log.DATE}</td>
+			<td class="width-50">{log.ACTION}<br />
+			{log.DATA}
+		</td>
+			<!-- IF S_CLEAR_ALLOWED --><td class="text-center"><input type="checkbox" name="mark[]" value="{log.ID}" /></td><!-- ENDIF -->
+		</tr>
+		<!-- END log -->
+	<!-- ELSE -->
+		<tr>
+			<td class="bg1 text-center" colspan="<!-- IF S_CLEAR_ALLOWED -->5<!-- ELSE -->4<!-- ENDIF -->">{L_NO_ENTRIES}</td>
+		</tr>
+	<!-- ENDIF -->
+	</tbody>
+	</table>
+	</div>
+
+	<!-- IF .log -->
+		<fieldset class="panel-group text-center">
+			<label>{L_DISPLAY_POSTS}{L_COLON}</label> {S_SELECT_SORT_DAYS}
+			<label>{L_SORT_BY}{L_COLON}</label> {S_SELECT_SORT_KEY} {S_SELECT_SORT_DIR}
+			<input type="submit" name="sort" value="{L_GO}" class="btn btn-default" />
+		</fieldset>
+
+		{S_FORM_TOKEN}
+
+		<!-- IF S_CLEAR_ALLOWED -->
+		<fieldset class="panel-group text-{S_CONTENT_FLOW_END}">
+			<div class="btn-group">
+			<input class="btn btn-danger" type="submit" name="action[del_all]" value="{L_DELETE_ALL}" />
+			<input class="btn btn-primary" type="submit" value="{L_DELETE_MARKED}" name="action[del_marked]" />
+			<a href="#" onclick="marklist('mcp', 'mark', false); return false;" class="btn btn-warning">{L_UNMARK_ALL}</a>
+			<a href="#" onclick="marklist('mcp', 'mark', true); return false;" class="btn btn-info">{L_MARK_ALL}</a>
+			</div>
+		</fieldset>
+		<!-- ENDIF -->
+
+		<div class="pages clearfix">
+			<!-- IF .pagination --> 
+				<!-- INCLUDE pagination.html -->
+			<!-- ENDIF -->
+			<div class="btn-group pull-{S_CONTENT_FLOW_BEGIN}">
+				<span class="btn btn-default disabled">{TOTAL}</span>
+				<span class="btn btn-default disabled">{PAGE_NUMBER}</span>
+			</div>
+		</div>
+
+	<!-- ELSE -->
+			{S_FORM_TOKEN}
+	<!-- ENDIF -->
+</form>
+
+<br />
+
+<!-- INCLUDE mcp_footer.html -->

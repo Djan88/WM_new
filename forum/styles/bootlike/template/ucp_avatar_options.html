@@ -1,0 +1,51 @@
+
+	<!-- IF not S_AVATARS_ENABLED -->
+		<div class="alert alert-warning">{L_AVATAR_FEATURES_DISABLED}</div>
+	<!-- ENDIF -->
+
+	<fieldset class="form-horizontal">
+	<!-- IF ERROR --><div class="alert alert-danger">{ERROR}</div><!-- ENDIF -->
+		<dl class="form-group">
+			<dt class="col-md-4 col-sm-5 col-xs-12"><label class="control-label">{L_CURRENT_IMAGE}{L_COLON}</label><br /><span class="help-block">{L_AVATAR_EXPLAIN}</span></dt>
+			<dd class="col-md-8 col-sm-7 col-xs-12 form-inline">
+				<!-- IF AVATAR -->{AVATAR}<!-- ELSE --><img src="{T_THEME_PATH}/images/no_avatar.gif" alt="" class="img-thumbnail" /><!-- ENDIF --><br />
+				<label for="avatar_delete"><input type="checkbox" name="avatar_delete" id="avatar_delete" /> {L_DELETE_AVATAR}</label>
+			</dd>
+		</dl>
+	</fieldset>
+	<hr />
+	<h4>{L_AVATAR_SELECT}</h4>
+	<fieldset class="form-horizontal">
+		<dl class="form-group">
+			<dt class="col-md-4 col-sm-5 col-xs-12"><label class="control-label">{L_AVATAR_TYPE}{L_COLON}</label></dt>
+			<dd class="col-md-8 col-sm-7 col-xs-12 form-inline"><select class="form-control" name="avatar_driver" id="avatar_driver" data-togglable-settings="true">
+				<!-- BEGIN avatar_drivers -->
+				<option value="{avatar_drivers.DRIVER}"<!-- IF avatar_drivers.SELECTED --> selected="selected"<!-- ENDIF --> data-toggle-setting="#avatar_option_{avatar_drivers.DRIVER}">{avatar_drivers.L_TITLE}</option>
+				<!-- END avatar_drivers -->
+			</select></dd>
+		</dl>
+	</fieldset>
+	<div id="avatar_options">
+<!-- BEGIN avatar_drivers -->
+	<div id="avatar_option_{avatar_drivers.DRIVER}">
+	<noscript>
+	<h3 class="avatar_section_header">{avatar_drivers.L_TITLE}</h3>
+	</noscript>
+	<p class="alert alert-info">{avatar_drivers.L_EXPLAIN}</p>
+
+	<fieldset class="form-horizontal">
+	{avatar_drivers.OUTPUT}
+	</fieldset>
+	</div>
+<!-- END avatar_drivers -->
+	</div>
+
+	</div>
+<!-- IF not S_GROUP_MANAGE -->
+	<fieldset class="panel-footer text-center">
+		<input type="reset" value="{L_RESET}" name="reset" class="btn btn-danger" /> &nbsp;
+		<input type="submit" name="submit" value="{L_SUBMIT}" class="btn btn-success" />
+	</fieldset>
+<!-- ENDIF -->
+
+</div>

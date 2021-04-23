@@ -1,0 +1,30 @@
+<form method="post" action="{U_QR_ACTION}" id="qr_postform">
+<!-- EVENT quickreply_editor_panel_before -->
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">{L_QUICKREPLY}</h4>
+		</div>
+		<div class="panel-body">
+			<fieldset class="form-horizontal">
+				<dl class="form-group">
+					<dt class="col-md-2 col-sm-3 col-xs-12"><label class="control-label" for="subject">{L_SUBJECT}{L_COLON}</label></dt>
+					<dd class="col-md-10 col-sm-9 col-xs-12 form-inline"><input type="text" name="subject" id="subject" size="45" maxlength="124" tabindex="2" value="{SUBJECT}" class="inputbox autowidth" /></dd>
+				</dl>
+			<!-- EVENT quickreply_editor_message_before -->
+				<dl class="form-group">
+					<dt class="col-md-2 col-sm-3 col-xs-12"><label class="control-label" for="message-box">{L_MESSAGE}:</label></dt>
+					<dd class="col-md-10 col-sm-9 col-xs-12 form-inline"><textarea id="message-box" style="height: 9em;" name="message" rows="7" cols="76" tabindex="3" class="form-control"></textarea></dd>
+				</dl>
+			<!-- EVENT quickreply_editor_message_after -->
+			</fieldset>
+		</div>
+
+		<fieldset class="panel-footer text-center">
+			{S_FORM_TOKEN}
+			{QR_HIDDEN_FIELDS}
+			<input type="submit" accesskey="f" tabindex="6" name="preview" value="{L_FULL_EDITOR}" id="qr_full_editor" class="btn btn-info" />&nbsp;
+			<input type="submit" accesskey="s" tabindex="7" name="post" value="{L_SUBMIT}" class="btn btn-success" />&nbsp;
+		</fieldset>
+	</div>
+<!-- EVENT quickreply_editor_panel_after -->
+</form>

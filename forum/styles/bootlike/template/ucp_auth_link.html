@@ -1,0 +1,16 @@
+<!-- INCLUDE ucp_header.html -->
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">{L_UCP_AUTH_LINK_TITLE}</h4>
+	</div>
+	<div class="panel-body">
+		<!-- IF ERROR --><div class="alert alert-danger">{ERROR}</div><!-- ENDIF -->
+
+		<!-- IF PROVIDER_TEMPLATE_FILE -->
+			<!-- INCLUDE {PROVIDER_TEMPLATE_FILE} -->
+		<!-- ENDIF -->
+	</div>
+</div>
+
+<!-- INCLUDE ucp_footer.html -->

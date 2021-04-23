@@ -1,0 +1,47 @@
+
+<div id="review" class="panel panel-default">
+	<div class="panel-heading">
+		<span class="pull-{S_CONTENT_FLOW_END}"><a href="#review" class="btn btn-default btn-xs" onclick="viewableArea(getElementById('topicreview'), true); var rev_text = getElementById('review').getElementsByTagName('a').item(0).firstChild; if (rev_text.data == '{LA_EXPAND_VIEW}'){rev_text.data = '{LA_COLLAPSE_VIEW}'; } else if (rev_text.data == '{LA_COLLAPSE_VIEW}'){rev_text.data = '{LA_EXPAND_VIEW}'};">{L_EXPAND_VIEW}</a></span>
+		<h4 class="panel-title">{L_MESSAGE_HISTORY}{L_COLON}</h4>
+	</div>
+
+	<div id="topicreview" class="panel-body">
+		<script type="text/javascript">
+		// <![CDATA[
+			bbcodeEnabled = {S_BBCODE_ALLOWED};
+		// ]]>
+		</script>
+		<!-- BEGIN history_row -->
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title"><a href="{history_row.U_VIEW_MESSAGE}" <!-- IF history_row.S_CURRENT_MSG -->class="label label-info"<!-- ENDIF -->>{history_row.SUBJECT}</a></h4>
+			</div>
+			<div class="panel-body">
+
+			<div class="postbody" id="pr{history_row.MSG_ID}">
+
+			<div class="panel-group post-buttons clearfix">
+				{L_MESSAGE_BY_AUTHOR} {history_row.MESSAGE_AUTHOR_FULL} &raquo; {L_SENT_AT}{L_COLON} <strong>{history_row.SENT_DATE}</strong>
+
+				<!-- IF history_row.U_QUOTE or history_row.MESSAGE_AUTHOR_QUOTE -->
+				<div class="btn-toolbar pull-{S_CONTENT_FLOW_END}">
+					<div class="btn-group">
+						<a <!-- IF history_row.U_QUOTE -->href="{history_row.U_QUOTE}"<!-- ELSE -->href="#postingbox" onclick="addquote({history_row.MSG_ID}, '{history_row.MESSAGE_AUTHOR_QUOTE}', '{LA_WROTE}');"<!-- ENDIF --> title="{L_QUOTE} {history_row.MESSAGE_AUTHOR}" class="btn btn-success"><i class="fa fa-quote-{S_CONTENT_FLOW_BEGIN} fa-fw"></i><span>{L_QUOTE} {history_row.MESSAGE_AUTHOR}</span></a>
+					</div>
+				</div>
+				<!-- ENDIF -->
+			</div>
+
+				<div class="content"><!-- IF history_row.MESSAGE -->{history_row.MESSAGE}<!-- ELSE --><span class="alert alert-warning">{L_MESSAGE_REMOVED_FROM_OUTBOX}</span><!-- ENDIF --></div>
+				<div id="message_{history_row.MSG_ID}" style="display: none;">{history_row.DECODED_MESSAGE}</div>
+			</div>
+
+			</div>
+		</div>
+		<!-- END history_row -->
+	</div>
+
+	<div class="panel-footer text-{S_CONTENT_FLOW_END}">
+		<a href="#cp-main" title="{L_BACK_TO_TOP}"><i class="fa fa-chevron-up"></i></a>
+	</div>
+</div>

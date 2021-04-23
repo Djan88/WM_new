@@ -1,0 +1,50 @@
+<!-- INCLUDE ucp_header.html -->
+
+<form id="ucp" method="post" action="{S_UCP_ACTION}"{S_FORM_ENCTYPE}>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">{L_TITLE} &nbsp; <a href="{U_USER_PROFILE}" title="{L_VIEW_PROFILE}" class="btn btn-default btn-xs">{L_VIEW_PROFILE}</a></h4>
+	</div>
+	<div class="panel-body">
+
+	<p>{L_PROFILE_INFO_NOTICE}</p>
+
+	<fieldset class="form-horizontal">
+	<!-- IF ERROR --><div class="alert alert-danger">{ERROR}</div><!-- ENDIF -->
+	<!-- IF S_BIRTHDAYS_ENABLED -->
+		<dl class="form-group">
+			<dt class="col-md-4 col-sm-5 col-xs-12"><label class="control-label" for="bday_day">{L_BIRTHDAY}{L_COLON}</label><br /><span class="help-block">{L_BIRTHDAY_EXPLAIN}</span></dt>
+			<dd class="col-md-8 col-sm-7 col-xs-12 form-inline">
+				{L_DAY}{L_COLON} <select name="bday_day" id="bday_day">{S_BIRTHDAY_DAY_OPTIONS}</select>&nbsp;
+				{L_MONTH}{L_COLON} <select name="bday_month" id="bday_month">{S_BIRTHDAY_MONTH_OPTIONS}</select>&nbsp;
+				{L_YEAR}{L_COLON} <select name="bday_year" id="bday_year">{S_BIRTHDAY_YEAR_OPTIONS}</select>
+			</dd>
+		</dl>
+	<!-- ENDIF -->
+	<!-- IF S_JABBER_ENABLED -->
+		<dl class="form-group">
+			<dt class="col-md-4 col-sm-5 col-xs-12"><label class="control-label" for="jabber">{L_UCP_JABBER}{L_COLON}</label></dt>
+			<dd class="col-md-8 col-sm-7 col-xs-12 form-inline"><input type="email" name="jabber" id="jabber" maxlength="255" value="{JABBER}" class="form-control" /></dd>
+		</dl>
+	<!-- ENDIF -->
+	<!-- BEGIN profile_fields -->
+		<dl class="form-group">
+			<dt class="col-md-4 col-sm-5 col-xs-12"><label class="control-label"<!-- IF profile_fields.FIELD_ID --> for="{profile_fields.FIELD_ID}"<!-- ENDIF -->><!-- IF profile_fields.S_REQUIRED --><i class="fa fa-asterisk text-info"></i>&nbsp; <!-- ENDIF -->{profile_fields.LANG_NAME}{L_COLON}</label>
+			<!-- IF profile_fields.LANG_EXPLAIN --><br /><span class="help-block">{profile_fields.LANG_EXPLAIN}</span><!-- ENDIF --></dt>
+			<dd class="col-md-8 col-sm-7 col-xs-12 form-inline">{profile_fields.FIELD}<!-- IF profile_fields.ERROR --><br /><span class="text-danger">{profile_fields.ERROR}</span><!-- ENDIF --></dd>
+		</dl>
+	<!-- END profile_fields -->
+	</fieldset>
+
+	</div>
+	<fieldset class="panel-footer text-center">
+		{S_HIDDEN_FIELDS}<input type="reset" value="{L_RESET}" name="reset" class="btn btn-danger" />&nbsp;
+		<input type="submit" name="submit" value="{L_SUBMIT}" class="btn btn-success" />
+		{S_FORM_TOKEN}
+	</fieldset>
+</div>
+
+</form>
+
+<!-- INCLUDE ucp_footer.html -->

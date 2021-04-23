@@ -1,0 +1,135 @@
+<div class="navbar navbar-default" role="navigation">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-header">
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		</button>
+	</div>
+
+	<div class="collapse navbar-collapse" id="navbar-collapse-header">
+
+	<ul id="nav-main" class="nav navbar-nav" role="menubar">
+
+		<li id="quick-links"<!-- IF not S_DISPLAY_QUICK_LINKS and not S_DISPLAY_SEARCH --> class="hiden"<!-- ENDIF -->>
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="caret"></span> {L_QUICK_LINKS}</a>
+			<ul class="dropdown-menu dropdown-menu-{S_CONTENT_FLOW_BEGIN}" role="menu">
+			<!-- EVENT navbar_header_quick_links_before -->
+
+			<!-- IF S_DISPLAY_SEARCH -->
+				<!-- IF S_REGISTERED_USER -->
+				<li><a href="{U_SEARCH_SELF}" role="menuitem">{L_SEARCH_SELF}</a></li>
+				<!-- ENDIF -->
+				<!-- IF S_USER_LOGGED_IN -->
+				<li><a href="{U_SEARCH_NEW}" role="menuitem">{L_SEARCH_NEW}</a></li>
+				<!-- ENDIF -->
+				<!-- IF S_LOAD_UNREADS --> 
+				<li><a href="{U_SEARCH_UNREAD}" role="menuitem">{L_SEARCH_UNREAD}</a></li>
+				<!-- ENDIF -->
+				<li><a href="{U_SEARCH_UNANSWERED}" role="menuitem">{L_SEARCH_UNANSWERED}</a></li>
+				<li><a href="{U_SEARCH_ACTIVE_TOPICS}" role="menuitem">{L_SEARCH_ACTIVE_TOPICS}</a></li>
+				<li class="divider"></li>
+				<li><a href="{U_SEARCH}" role="menuitem">{L_SEARCH}</a></li>
+			<!-- ENDIF -->
+
+			<!-- IF not S_IS_BOT and (S_DISPLAY_MEMBERLIST or (S_REGISTERED_USER and U_TEAM)) -->
+				<li class="divider"></li>
+				<!-- IF S_DISPLAY_MEMBERLIST --><li><a href="{U_MEMBERLIST}" role="menuitem">{L_MEMBERLIST}</a></li><!-- ENDIF -->
+				<!-- IF S_REGISTERED_USER and U_TEAM --><li><a href="{U_TEAM}" role="menuitem">{L_THE_TEAM}</a></li><!-- ENDIF -->
+			<!-- ENDIF -->
+
+			<!-- EVENT navbar_header_quick_links_after -->
+			</ul>
+		</li>
+
+		<!-- EVENT overall_header_navigation_prepend -->
+		<li><a href="{U_FAQ}" rel="help" title="{L_FAQ_EXPLAIN}" role="menuitem"><i class="fa fa-question"></i> {L_FAQ}</a></li>
+		<!-- EVENT overall_header_navigation_append -->
+		<!-- IF U_ACP -->
+		<li><a href="{U_ACP}" title="{L_ACP}" role="menuitem"><i class="fa fa-cogs"></i> {L_ACP_SHORT}</a></li>
+		<!-- ENDIF -->
+		<!-- IF U_MCP -->
+		<li><a href="{U_MCP}" title="{L_MCP}" role="menuitem"><i class="fa fa-gavel"></i> {L_MCP_SHORT}</a></li>
+		<!-- ENDIF -->
+	</ul>
+
+	<!-- IF S_REGISTERED_USER -->
+	<ul class="nav navbar-nav navbar-{S_CONTENT_FLOW_END}" role="menubar">
+		<!-- IF S_NOTIFICATIONS_DISPLAY -->
+		<li>
+			<a href="{U_VIEW_ALL_NOTIFICATIONS}" id="notification_list_button" class="dropdown-toggle" data-toggle="dropdown"><span class="caret"></span> {L_NOTIFICATIONS} <strong class="badge">{NOTIFICATIONS_COUNT}</strong></a>
+			<!-- INCLUDE notification_dropdown.html -->
+		</li>
+		<!-- ENDIF -->
+		<!-- IF S_DISPLAY_PM -->
+		<li>
+			<a href="{U_PRIVATEMSGS}" role="menuitem"><i class="fa fa-user"></i> {L_PRIVATE_MESSAGES} <strong class="badge">{PRIVATE_MESSAGE_COUNT}</strong></a>
+		</li>
+		<!-- ENDIF -->
+		<li id="username_logged_in" class="rightside <!-- IF CURRENT_USER_AVATAR --> no-bulletin<!-- ENDIF -->" data-skip-responsive="true">
+			<!-- EVENT navbar_header_username_prepend -->
+			<a href="{U_PROFILE}" class="header-avatar dropdown-toggle" data-toggle="dropdown"><span class="caret"></span> <!-- IF CURRENT_USER_AVATAR -->{CURRENT_USER_AVATAR} <!-- ENDIF -->{CURRENT_USERNAME_SIMPLE}</a>
+			<ul class="dropdown-menu dropdown-menu-{S_CONTENT_FLOW_END}" role="menu">
+				<!-- IF U_RESTORE_PERMISSIONS --><li><a href="{U_RESTORE_PERMISSIONS}">{L_RESTORE_PERMISSIONS}</a></li><!-- ENDIF -->
+	
+				<!-- EVENT navbar_header_profile_list_before -->
+	
+				<li><a href="{U_PROFILE}" title="{L_PROFILE}" role="menuitem">{L_PROFILE}</a></li>
+				<li><a href="{U_USER_PROFILE}" title="{L_READ_PROFILE}" role="menuitem">{L_READ_PROFILE}</a></li>
+	
+				<!-- EVENT navbar_header_profile_list_after -->
+	
+				<li class="divider"></li>
+				<li><a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="x" role="menuitem">{L_LOGIN_LOGOUT}</a></li>
+			</ul>
+			<!-- EVENT navbar_header_username_append -->
+		</li>
+	</ul>
+	<!-- ELSE -->
+	<ul class="nav navbar-nav navbar-{S_CONTENT_FLOW_END}" role="menubar">
+		<!-- IF S_REGISTER_ENABLED and not (S_SHOW_COPPA or S_REGISTRATION) -->
+		<li><a href="{U_REGISTER}" role="menuitem">{L_REGISTER}</a></li>
+		<!-- ENDIF -->
+		<!-- EVENT navbar_header_logged_out_content -->
+		<!-- IF not (S_IN_UCP or SCRIPT_NAME eq 'posting') -->
+		<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="caret"></span> {L_LOGIN_LOGOUT}</a>
+			<ul class="dropdown-menu dropdown-menu-{S_CONTENT_FLOW_END}" role="menu">
+				<li style="min-width: 250px;">
+					<form method="post" action="{S_LOGIN_ACTION}">
+						<fieldset class="panel-body form-group-sm">
+							<div class="form-group">
+								<label class="control-label" for="username">{L_USERNAME}{L_COLON}</label>
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+									<input name="username" id="username" size="10" placeholder="{L_USERNAME}" title="{L_USERNAME}" class="form-control" />
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="password">{L_PASSWORD}{L_COLON}</label>
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+									<input type="password" name="password" id="password" size="10" placeholder="{L_PASSWORD}" title="{L_PASSWORD}" class="form-control" />
+								</div>
+							</div>
+
+							<!-- IF S_AUTOLOGIN_ENABLED -->
+							<div class="form-group" title="{L_LOG_ME_IN}" data-toggle="buttons">
+								<label for="autologin" class="btn btn-default btn-sm btn-block">{L_LOG_ME_IN} <input type="checkbox" name="autologin" id="autologin" /></label>
+							</div>
+							<!-- ENDIF -->
+							<input type="submit" name="login" value="{L_LOGIN}" class="btn btn-primary btn-sm btn-block" />
+
+							{S_LOGIN_REDIRECT}
+						</fieldset>
+					</form>
+				</li>
+			</ul>
+		</li>
+		<!-- ENDIF -->
+	</ul>
+	<!-- ENDIF -->
+
+	</div>
+
+</div>

@@ -1,0 +1,44 @@
+<!-- INCLUDE overall_header.html -->
+
+<h3>{L_MCP}</h3>
+
+<!-- IF U_MCP -->
+	<p class="btn-group">
+		<!-- IF U_ACP --><a href="{U_ACP}" class="btn btn-default" title="{L_ACP}" data-responsive-text="{L_ACP_SHORT}">{L_ACP}</a><!-- ENDIF --><a href="{U_MCP}" class="btn btn-default" title="{L_MCP}" data-responsive-text="{L_MCP_SHORT}">{L_MCP}</a><!-- IF U_MCP_FORUM --><a href="{U_MCP_FORUM}" class="btn btn-default">{L_MODERATE_FORUM}</a><!-- ENDIF --><!-- IF U_MCP_TOPIC --><a href="{U_MCP_TOPIC}" class="btn btn-default">{L_MODERATE_TOPIC}</a><!-- ENDIF --><!-- IF U_MCP_POST --><a href="{U_MCP_POST}" class="btn btn-default">{L_MODERATE_POST}</a><!-- ENDIF -->
+	</p>
+<!-- ENDIF -->
+
+	<ul class="nav nav-tabs nav-justified" role="tablist">
+		<!-- BEGIN l_block1 -->
+		<li class="tab<!-- IF l_block1.S_SELECTED --> active<!-- ENDIF -->"><a href="{l_block1.U_TITLE}">{l_block1.L_TITLE}</a></li>
+		<!-- END l_block1 -->
+	</ul>
+
+	<div id="cp-menu">
+		<ul id="navigation" class="nav nav-pills" role="menu">
+		<!-- BEGIN l_block1 -->
+		<!-- IF l_block1.S_SELECTED -->
+			<!-- BEGIN l_block2 -->
+			<!-- IF l_block1.l_block2.S_SELECTED -->
+			<li class="active"><a href="{l_block1.l_block2.U_TITLE}"><span>{l_block1.l_block2.L_TITLE}<!-- IF l_block1.l_block2.ADD_ITEM --> ({l_block1.l_block2.ADD_ITEM})<!-- ENDIF --></span></a></li>
+			<!-- ELSE -->
+			<li><a href="{l_block1.l_block2.U_TITLE}"><span>{l_block1.l_block2.L_TITLE}<!-- IF l_block1.l_block2.ADD_ITEM --> ({l_block1.l_block2.ADD_ITEM})<!-- ENDIF --></span></a></li>
+			<!-- ENDIF -->
+			<!-- END l_block2 -->
+		<!-- ENDIF -->
+		<!-- END l_block1 -->
+		</ul>
+	</div>
+
+	<div id="cp-main" class="mcp-main panel-container">
+		<!-- IF MESSAGE -->
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">{L_MESSAGE}</h4>
+			</div>
+			<div class="panel-body">
+				<p class="alert alert-danger">{MESSAGE}</p>
+			<!-- BEGIN return_links -->{return_links.MESSAGE_LINK}<!-- END return_links -->
+			</div>
+		</div>
+		<!-- ENDIF -->

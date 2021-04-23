@@ -1,0 +1,53 @@
+<!-- INCLUDE overall_header.html -->
+
+<h4>{TOTAL_REGISTERED_USERS_ONLINE}</h4>
+<p>{TOTAL_GUEST_USERS_ONLINE}<!-- IF S_SWITCH_GUEST_DISPLAY --> &bull; <a href="{U_SWITCH_GUEST_DISPLAY}">{L_SWITCH_GUEST_DISPLAY}</a><!-- ENDIF --></p>
+
+<div class="pages clearfix">
+	<!-- IF .pagination --> 
+		<!-- INCLUDE pagination.html -->
+	<!-- ENDIF -->
+	<div class="btn btn-default disabled pull-{S_CONTENT_FLOW_BEGIN}">{PAGE_NUMBER}</div>
+</div>
+
+<div class="table-responsive">
+	<table class="table table-bordered">
+
+	<!-- IF .user_row -->
+		<thead>
+		<tr>
+			<th class="width-50"><a href="{U_SORT_USERNAME}">{L_USERNAME}</a></th>
+			<th class="text-center"><a href="{U_SORT_LOCATION}">{L_FORUM_LOCATION}</a></th>
+			<th class="text-center"><a href="{U_SORT_UPDATED}">{L_LAST_UPDATED}</a></th>
+		</tr>
+		</thead>
+		<tbody>
+		<!-- BEGIN user_row -->
+		<tr class="<!-- IF user_row.S_ROW_COUNT is odd -->bg1<!-- ELSE -->bg2<!-- ENDIF -->">
+			<td class="width-50">{user_row.USERNAME_FULL}<!-- IF user_row.USER_IP --> <span class="pull-{S_CONTENT_FLOW_END}">{L_IP}{L_COLON} <a href="{user_row.U_USER_IP}">{user_row.USER_IP}</a> &#187; <a href="{user_row.U_WHOIS}" onclick="popup(this.href, 750, 500); return false;">{L_WHOIS}</a></span><!-- ENDIF -->
+				<!-- IF user_row.USER_BROWSER --><br />{user_row.USER_BROWSER}<!-- ENDIF --></td>
+			<td class="text-center"><a href="{user_row.U_FORUM_LOCATION}">{user_row.FORUM_LOCATION}</a></td>
+			<td class="text-center">{user_row.LASTUPDATE}</td>
+		</tr>
+		<!-- END user_row -->
+	<!-- ELSE -->
+		<tbody>
+		<tr class="bg1">
+			<td colspan="3">{L_NO_ONLINE_USERS}<!-- IF S_SWITCH_GUEST_DISPLAY --> &bull; <a href="{U_SWITCH_GUEST_DISPLAY}">{L_SWITCH_GUEST_DISPLAY}</a><!-- ENDIF --></td>
+		</tr>
+	<!-- ENDIF -->
+	</tbody>
+	</table>
+</div>
+
+<!-- IF LEGEND --><p>{L_LEGEND}{L_COLON} {LEGEND}</p><!-- ENDIF -->
+
+<div class="pages clearfix">
+	<!-- IF .pagination --> 
+		<!-- INCLUDE pagination.html -->
+	<!-- ENDIF -->
+	<div class="btn btn-default disabled pull-{S_CONTENT_FLOW_BEGIN}">{PAGE_NUMBER}</div>
+</div>
+
+<!-- INCLUDE jumpbox.html -->
+<!-- INCLUDE overall_footer.html -->

@@ -1,0 +1,70 @@
+<!-- INCLUDE mcp_header.html -->
+
+<form method="post" id="mcp" action="{U_POST_ACTION}">
+
+<h3>{L_WARNED_USERS}</h3>
+
+	<p>{L_WARNED_USERS_EXPLAIN}</p>
+
+	<!-- IF .user -->
+		<div class="pages clearfix">
+		<!-- IF .pagination --> 
+			<!-- INCLUDE pagination.html -->
+		<!-- ENDIF -->
+			<div class="btn-group pull-{S_CONTENT_FLOW_BEGIN}">
+				<span class="btn btn-default disabled">{TOTAL_USERS}</span>
+				<span class="btn btn-default disabled">{PAGE_NUMBER}</span>
+			</div>
+		</div>
+
+		<div class="table-responsive">
+		<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>{L_USERNAME}</th>
+				<th class="width-35">{L_LATEST_WARNING_TIME}</th>
+				<th class="width-15 text-center">{L_WARNINGS}</th>
+				<th class="width-15 text-center">&nbsp;</th>
+			</tr>
+		</thead>
+		<tbody>
+
+		<!-- BEGIN user -->
+			<tr class="<!-- IF user.S_ROW_COUNT is even -->bg1<!-- ELSE -->bg2<!-- ENDIF -->">
+				<td>{user.USERNAME_FULL}</td>
+				<td class="width-35">{user.WARNING_TIME}</td>
+				<td class="width-15 text-center">{user.WARNINGS}</td>
+				<td class="width-15 text-center"><a href="{user.U_NOTES}">{L_VIEW_NOTES}</a></td>
+			</tr>
+		<!-- END user -->
+		</tbody>
+		</table>
+		</div>
+
+		<fieldset class="panel-group text-center">
+			<label>{L_DISPLAY_POSTS}{L_COLON}</label> {S_SELECT_SORT_DAYS}
+			<label>{L_SORT_BY}{L_COLON}</label> {S_SELECT_SORT_KEY} {S_SELECT_SORT_DIR}
+			<input type="submit" name="sort" value="{L_GO}" class="btn btn-default" />
+		</fieldset>
+
+		<div class="pages clearfix">
+		<!-- IF .pagination --> 
+			<!-- INCLUDE pagination.html -->
+		<!-- ENDIF -->
+			<div class="btn-group pull-{S_CONTENT_FLOW_BEGIN}">
+				<span class="btn btn-default disabled">{TOTAL_USERS}</span>
+				<span class="btn btn-default disabled">{PAGE_NUMBER}</span>
+			</div>
+		</div>
+
+	<!-- ELSE -->
+		<div class="alert alert-info">
+			{L_NO_WARNINGS}
+		</div>
+	<!-- ENDIF -->
+
+{S_FORM_TOKEN}
+
+</form>
+
+<!-- INCLUDE mcp_footer.html -->

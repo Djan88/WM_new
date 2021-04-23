@@ -1,0 +1,157 @@
+<!-- INCLUDE ucp_header.html -->
+
+<!-- INCLUDE ucp_pm_message_header.html -->
+
+	</div>
+</div>
+
+<!-- IF S_DISPLAY_HISTORY and (U_VIEW_PREVIOUS_HISTORY or U_VIEW_NEXT_HISTORY) -->
+	<fieldset class="panel-group">
+		<div class="btn-group pull-{S_CONTENT_FLOW_END}">
+		<!-- IF U_VIEW_PREVIOUS_HISTORY --><a href="{U_VIEW_PREVIOUS_HISTORY}" class="btn btn-default"><i class="fa fa-chevron-{S_CONTENT_FLOW_BEGIN}"></i> {L_VIEW_PREVIOUS_HISTORY}</a><!-- ENDIF -->
+		<!-- IF U_VIEW_NEXT_HISTORY --><a href="{U_VIEW_NEXT_HISTORY}" class="btn btn-default">{L_VIEW_NEXT_HISTORY} <i class="fa fa-chevron-{S_CONTENT_FLOW_END}"></i></a><!-- ENDIF -->
+		</div>
+	</fieldset>
+<!-- ENDIF -->
+
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		<h4 class="panel-title">{SUBJECT}</h4>
+	</div>
+	<div class="post panel-body">
+
+	<div id="post-{MESSAGE_ID}" class="post pm has-profile<!-- IF S_POST_UNAPPROVED or S_POST_REPORTED --> reported<!-- ENDIF -->">
+
+		<dl class="postprofile col-md-3 col-sm-4 col-xs-12" id="profile{MESSAGE_ID}">
+			<dt class="<!-- IF RANK_TITLE or RANK_IMG -->has-profile-rank<!-- ELSE -->no-profile-rank<!-- ENDIF --> <!-- IF AUTHOR_AVATAR -->has-avatar<!-- ELSE -->no-avatar<!-- ENDIF -->">
+				<!-- IF S_ONLINE --><span class="online label label-success">{L_ONLINE}</span><!-- ENDIF -->
+				<div class="avatar-container hidden-xs">
+					<!-- EVENT ucp_pm_viewmessage_avatar_before -->
+					<!-- IF AUTHOR_AVATAR --><a href="{U_MESSAGE_AUTHOR}" class="avatar">{AUTHOR_AVATAR}</a><!-- ENDIF -->
+					<!-- EVENT ucp_pm_viewmessage_avatar_after -->
+				</div>
+				{MESSAGE_AUTHOR_FULL}
+			</dt>
+
+			<!-- IF RANK_TITLE or RANK_IMG --><dd class="profile-rank">{RANK_TITLE}<!-- IF RANK_TITLE and RANK_IMG --><br /><!-- ENDIF -->{RANK_IMG}</dd><!-- ENDIF -->
+
+			<dd class="profile-posts"><strong>{L_POSTS}{L_COLON}</strong> <!-- IF U_AUTHOR_POSTS != '' --><a href="{U_AUTHOR_POSTS}">{AUTHOR_POSTS}</a><!-- ELSE -->{AUTHOR_POSTS}<!-- ENDIF --></dd>
+			<!-- IF AUTHOR_JOINED --><dd class="profile-joined"><strong>{L_JOINED}{L_COLON}</strong> {AUTHOR_JOINED}</dd><!-- ENDIF -->
+
+			<!-- EVENT ucp_pm_viewmessage_custom_fields_before -->
+			<!-- BEGIN custom_fields -->
+				<!-- IF not custom_fields.S_PROFILE_CONTACT -->
+					<dd class="profile-custom-field profile-{custom_fields.PROFILE_FIELD_IDENT}"><strong>{custom_fields.PROFILE_FIELD_NAME}{L_COLON}</strong> {custom_fields.PROFILE_FIELD_VALUE}</dd>
+				<!-- ENDIF -->
+			<!-- END custom_fields -->
+			<!-- EVENT ucp_pm_viewmessage_custom_fields_after -->
+
+			<!-- EVENT ucp_pm_viewmessage_contact_fields_before -->
+				<!-- IF .contact -->
+					<dd>&nbsp;</dd>
+					<dd>
+					<div class="btn-group dropup">
+						<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">{L_CONTACT} <span class="caret"></span></button>
+						<ul class="dropdown-menu dropdown-contents">
+						<!-- BEGIN contact -->
+							<!-- IF contact.U_CONTACT -->
+							<li>
+								<a href="{contact.U_CONTACT}" title="{contact.NAME}"<!-- IF contact.ID eq 'jabber' --> onclick="popup(this.href, 750, 320); return false;"<!-- ENDIF -->>
+									<span class="{contact.ID}-icon"><i class="fa fa-<!-- IF contact.ID eq 'pm' -->user<!-- ELSEIF contact.ID eq 'email' -->envelope<!-- ELSEIF contact.ID eq 'phpbb_website' -->globe<!-- ELSEIF contact.ID eq 'icon_contact_jabber' -->lightbulb-o<!-- ELSEIF contact.ID eq 'phpbb_yahoo' -->yahoo<!-- ELSEIF contact.ID eq 'phpbb_facebook' -->facebook-square<!-- ELSEIF contact.ID eq 'phpbb_twitter' -->twitter<!-- ELSEIF contact.ID eq 'phpbb_skype' -->skype<!-- ELSEIF contact.ID eq 'phpbb_youtube' -->youtube-play<!-- ELSEIF contact.ID eq 'phpbb_googleplus' -->google-plus<!-- ELSE -->comments<!-- ENDIF --> fa-fw"></i> {contact.NAME}</span>
+								</a>
+							</li>
+							<!-- ENDIF -->
+						<!-- END contact -->
+						</ul>
+					</div>
+					</dd>
+				<!-- ENDIF -->
+			<!-- EVENT ucp_pm_viewmessage_contact_fields_after -->
+		</dl>
+
+		<div class="postbody col-md-9 col-sm-8 col-xs-12">
+
+			<div class="panel-group post-buttons clearfix">
+				<strong>{L_SENT_AT}{L_COLON}</strong> {SENT_DATE}
+
+			<!-- IF U_DELETE or U_EDIT or U_QUOTE or U_REPORT -->
+				<div class="btn-toolbar pull-{S_CONTENT_FLOW_END}">
+					<div class="btn-group">
+						<!-- EVENT ucp_pm_viewmessage_post_buttons_before -->
+						<!-- IF U_EDIT -->
+							<a href="{U_EDIT}" title="{L_POST_EDIT_PM}" class="btn btn-primary"><i class="fa fa-edit fa-fw"></i><span>{L_POST_EDIT_PM}</span></a>
+						<!-- ENDIF -->
+						<!-- IF U_DELETE -->
+							<a href="{U_DELETE}" title="{L_DELETE_MESSAGE}" class="btn btn-danger"><i class="fa fa-trash-o fa-fw"></i><span>{L_DELETE_MESSAGE}</span></a>
+						<!-- ENDIF -->
+						<!-- IF U_REPORT -->
+							<a href="{U_REPORT}" title="{L_REPORT_PM}" class="btn btn-warning"><i class="fa fa-exclamation fa-fw"></i><span>{L_REPORT_PM}</span></a>
+						<!-- ENDIF -->
+						<!-- IF U_QUOTE -->
+							<a href="{U_QUOTE}" title="{L_POST_QUOTE_PM}" class="btn btn-success"><i class="fa fa-quote-{S_CONTENT_FLOW_BEGIN} fa-fw"></i><span>{L_POST_QUOTE_PM}</span></a>
+						<!-- ENDIF -->
+						<!-- EVENT ucp_pm_viewmessage_post_buttons_after -->
+					</div>
+				</div>
+			<!-- ENDIF -->
+			</div>
+
+			<p class="author">
+				<strong>{L_PM_FROM}{L_COLON}</strong> {MESSAGE_AUTHOR_FULL}
+				<!-- IF S_TO_RECIPIENT --><br /><strong>{L_TO}{L_COLON}</strong> <!-- BEGIN to_recipient --><!-- IF to_recipient.NAME_FULL -->{to_recipient.NAME_FULL}<!-- ELSE --><a href="{to_recipient.U_VIEW}" style="color:<!-- IF to_recipient.COLOUR -->{to_recipient.COLOUR}<!-- ELSEIF to_recipient.IS_GROUP -->#0000FF<!-- ENDIF -->;">{to_recipient.NAME}</a><!-- ENDIF -->&nbsp;<!-- END to_recipient --><!-- ENDIF -->
+				<!-- IF S_BCC_RECIPIENT --><br /><strong>{L_BCC}{L_COLON}</strong> <!-- BEGIN bcc_recipient --><!-- IF bcc_recipient.NAME_FULL -->{bcc_recipient.NAME_FULL}<!-- ELSE --><a href="{bcc_recipient.U_VIEW}" style="color:<!-- IF bcc_recipient.COLOUR -->{bcc_recipient.COLOUR}<!-- ELSEIF bcc_recipient.IS_GROUP -->#0000FF<!-- ENDIF -->;">{bcc_recipient.NAME}</a><!-- ENDIF -->&nbsp;<!-- END bcc_recipient --><!-- ENDIF -->
+			</p>
+
+			<div class="content">{MESSAGE}</div>
+
+			<!-- IF S_HAS_ATTACHMENTS -->
+				<div class="attachbox pull-{S_CONTENT_FLOW_BEGIN}">
+					<p>{L_ATTACHMENTS}</p>
+					<!-- BEGIN attachment -->
+					<div class="panel panel-default">{attachment.DISPLAY_ATTACHMENT}</div>
+					<!-- END attachment -->
+				</div>
+				<div class="clearfix"></div>
+			<!-- ENDIF -->
+
+			<!-- IF S_DISPLAY_NOTICE -->
+				<div class="alert alert-warning">{L_DOWNLOAD_NOTICE}</div>
+			<!-- ENDIF -->
+
+			<!-- IF EDITED_MESSAGE or EDIT_REASON -->
+			<div class="alert alert-info">
+				{EDITED_MESSAGE}
+				<!-- IF EDIT_REASON --><br /><strong>{L_REASON}{L_COLON}</strong> <em>{EDIT_REASON}</em><!-- ENDIF -->
+			</div>
+			<!-- ENDIF -->
+
+			<!-- IF SIGNATURE -->
+				<div id="sig{MESSAGE_ID}" class="panel-footer">{SIGNATURE}</div>
+			<!-- ENDIF -->
+		</div>
+
+		</div>
+
+	</div>
+
+	<div class="panel-footer text-{S_CONTENT_FLOW_END}"><a href="#top" title="{L_BACK_TO_TOP}"><i class="fa fa-chevron-up"></i></a></div>
+</div>
+
+<!-- IF S_VIEW_MESSAGE -->
+<fieldset class="panel-group text-center">
+	<!-- IF U_PREVIOUS_PM --><a href="{U_PREVIOUS_PM}" class="pull-{S_CONTENT_FLOW_BEGIN} btn btn-default"><i class="fa fa-chevron-{S_CONTENT_FLOW_BEGIN}"></i> {L_VIEW_PREVIOUS_PM}</a><!-- ENDIF -->
+	<!-- IF U_NEXT_PM --><a href="{U_NEXT_PM}" class="pull-{S_CONTENT_FLOW_END} btn btn-default">{L_VIEW_NEXT_PM} <i class="fa fa-chevron-{S_CONTENT_FLOW_END}"></i></a><!-- ENDIF -->
+
+	<!-- IF S_MARK_OPTIONS --><select name="mark_option" id="mark_option">{S_MARK_OPTIONS}</select> <input type="submit" name="submit_mark" value="{L_GO}" class="btn btn-default" /><!-- ENDIF -->
+	<!-- IF not S_UNREAD and not S_SPECIAL_FOLDER --><label for="dest_folder"><!-- IF S_VIEW_MESSAGE -->{L_MOVE_TO_FOLDER}{L_COLON} <!-- ELSE -->{L_MOVE_MARKED_TO_FOLDER}<!-- ENDIF --></label> <select name="dest_folder" id="dest_folder">{S_TO_FOLDER_OPTIONS}</select> <input type="submit" name="move_pm" value="{L_GO}" class="btn btn-default" /><!-- ENDIF -->
+	<input type="hidden" name="marked_msg_id[]" value="{MSG_ID}" />
+	<input type="hidden" name="cur_folder_id" value="{CUR_FOLDER_ID}" />
+	<input type="hidden" name="p" value="{MSG_ID}" />
+</fieldset>
+<!-- ENDIF -->
+
+<!-- INCLUDE ucp_pm_message_footer.html -->
+
+<!-- IF S_DISPLAY_HISTORY --><!-- INCLUDE ucp_pm_history.html --><!-- ENDIF -->
+
+<!-- INCLUDE ucp_footer.html -->

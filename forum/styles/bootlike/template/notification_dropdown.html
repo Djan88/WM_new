@@ -1,0 +1,37 @@
+<ul id="notification_list" class="dropdown-menu dropdown-menu-{S_CONTENT_FLOW_END} dropdown-contents">
+	<li><a href="{U_NOTIFICATION_SETTINGS}">{L_SETTINGS}</a></li>
+	<li class="divider"></li>
+	<!-- IF not .notifications -->
+		<li style="padding: 5px 20px;">
+			{L_NO_NOTIFICATIONS}
+		</li>
+		<li class="divider"></li>
+	<!-- ENDIF -->
+
+	<!-- BEGIN notifications -->
+	<li class="notification-block<!-- IF notifications.UNREAD --> bg-info<!-- ENDIF --><!-- IF notifications.STYLING --> {notifications.STYLING}<!-- ENDIF --><!-- IF not notifications.URL --> no-url<!-- ENDIF -->">
+		<!-- IF notifications.URL -->
+			<a href="<!-- IF notifications.UNREAD -->{notifications.U_MARK_READ}" data-real-url="{notifications.URL}<!-- ELSE -->{notifications.URL}<!-- ENDIF -->">
+		<!-- ENDIF -->
+			<div class="notification-text">
+				<span class="pull-{S_CONTENT_FLOW_BEGIN}"><!-- IF notifications.AVATAR -->{notifications.AVATAR}<!-- ELSE --><img src="{T_THEME_PATH}/images/no_avatar.gif" alt="" class="img-thumbnail" /><!-- ENDIF --></span>
+				{notifications.FORMATTED_TITLE}<br />
+				<!-- IF notifications.REFERENCE -->{notifications.REFERENCE}<br /><!-- ENDIF -->
+				<!-- IF notifications.FORUM -->{notifications.FORUM}<br /><!-- ENDIF -->
+				<!-- IF notifications.REASON -->{notifications.REASON}<br /><!-- ENDIF -->
+				<div class="small text-{S_CONTENT_FLOW_END}">{notifications.TIME}</div>
+			</div>
+		<!-- IF notifications.URL --></a><!-- ENDIF -->
+		<!-- IF notifications.UNREAD -->
+			<a href="{notifications.U_MARK_READ}" class="mark_read icon-mark" data-ajax="notification.mark_read" title="{L_MARK_READ}"><i class="fa fa-check fa-2x"></i></a>
+		<!-- ENDIF -->
+	</li>
+	<li class="divider"></li>
+	<!-- END notifications -->
+
+	<li><a href="{U_VIEW_ALL_NOTIFICATIONS}">{L_SEE_ALL}</a></li>
+	<!-- IF NOTIFICATIONS_COUNT -->
+	<li class="divider"></li>
+	<li id="mark_all_notifications"><a href="{U_MARK_ALL_NOTIFICATIONS}" data-ajax="notification.mark_all_read">{L_MARK_ALL_READ}</a></li>
+	<!-- ENDIF -->
+</ul>

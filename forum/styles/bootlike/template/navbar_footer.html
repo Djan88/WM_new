@@ -1,0 +1,50 @@
+<div class="navbar navbar-default" role="navigation">
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-footer">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+	</div>
+
+	<div class="collapse navbar-collapse" id="navbar-collapse-footer">
+		<ul class="nav navbar-nav navbar-{S_CONTENT_FLOW_BEGIN}" role="menubar">
+		<!-- IF U_SITE_HOME -->
+			<li><a href="{U_SITE_HOME}" data-navbar-reference="home"><i class="fa fa-home"></i> {L_SITE_HOME}</a></li>
+		<!-- ENDIF -->
+		<!-- EVENT overall_footer_breadcrumb_prepend -->
+			<li><a href="{U_INDEX}" data-navbar-reference="index"><!-- IF not U_SITE_HOME --><i class="fa fa-home"></i> <!-- ENDIF -->{L_INDEX}</a></li>
+		<!-- EVENT overall_footer_breadcrumb_append -->
+			
+		<!-- IF U_WATCH_FORUM_LINK and not S_IS_BOT -->
+			<li class="icon-<!-- IF S_WATCHING_FORUM -->unsubscribe<!-- ELSE -->subscribe<!-- ENDIF -->"><a href="{U_WATCH_FORUM_LINK}" title="{S_WATCH_FORUM_TITLE}" data-ajax="toggle_link" data-toggle-class="small-icon icon-<!-- IF not S_WATCHING_FORUM -->unsubscribe<!-- ELSE -->subscribe<!-- ENDIF -->" data-toggle-text="{S_WATCH_FORUM_TOGGLE}" data-toggle-url="{U_WATCH_FORUM_TOGGLE}">{S_WATCH_FORUM_TITLE}</a></li>
+		<!-- ENDIF -->
+		</ul>
+
+		<ul class="nav navbar-nav dropup navbar-{S_CONTENT_FLOW_END}" role="menubar">
+			<li>
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="caret"></span> {L_QUICK_LINKS}</a>
+				<ul class="dropdown-menu dropdown-menu-{S_CONTENT_FLOW_END}" role="menu">
+				<!-- IF not S_IS_BOT -->
+					<li><a href="{U_DELETE_COOKIES}" data-ajax="true" data-refresh="true" role="menuitem">{L_DELETE_COOKIES}</a></li>
+				<!-- IF S_DISPLAY_MEMBERLIST -->
+					<li><a href="{U_MEMBERLIST}" title="{L_MEMBERLIST_EXPLAIN}" role="menuitem">{L_MEMBERLIST}</a></li>
+				<!-- ENDIF -->
+				<!-- ENDIF -->
+				<!-- EVENT overall_footer_teamlink_before -->
+				<!-- IF S_REGISTERED_USER and U_TEAM -->
+					<li><a href="{U_TEAM}" role="menuitem">{L_THE_TEAM}</a></li>
+				<!-- ENDIF -->
+				<!-- EVENT overall_footer_teamlink_after -->
+				<!-- IF U_CONTACT_US -->
+					<li><a href="{U_CONTACT_US}" role="menuitem">{L_CONTACT_US}</a></li>
+				<!-- ENDIF -->
+				</ul>
+			</li>
+
+			<!-- EVENT overall_footer_timezone_before -->
+			<li class="navbar-text hidden-xs">{S_TIMEZONE}</li>
+			<!-- EVENT overall_footer_timezone_after -->
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,128 @@
+<!-- INCLUDE ucp_header.html -->
+
+<form id="ucp" method="post" action="{S_UCP_ACTION}"{S_FORM_ENCTYPE}>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">{TITLE}</h4>
+	</div>
+	<div class="panel-body">
+
+		<p>{TITLE_EXPLAIN}</p>
+
+		<!-- IF MODE == 'notification_options' -->
+		<div class="table-responsive">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>{L_NOTIFICATION_TYPE}</th>
+						<!-- BEGIN notification_methods -->
+							<th class="text-center">{notification_methods.NAME}</th>
+						<!-- END notification_methods -->
+						<th class="text-center">{L_NOTIFICATIONS}</th>
+					</tr>
+				</thead>
+				<tbody>
+				<!-- BEGIN notification_types -->
+					<!-- IF notification_types.GROUP_NAME -->
+						<tr class="bg3">
+							<td colspan="{NOTIFICATION_TYPES_COLS}">{notification_types.GROUP_NAME}</td>
+						</tr>
+					<!-- ELSE -->
+						<tr class="<!-- IF notification_types.S_ROW_COUNT is odd -->bg1<!-- ELSE -->bg2<!-- ENDIF -->">
+							<td>
+								{notification_types.NAME}
+								<!-- IF notification_types.EXPLAIN --><br />&nbsp; &nbsp;{notification_types.EXPLAIN}<!-- ENDIF -->
+							</td>
+							<!-- BEGIN notification_methods -->
+								<td class="text-center"><input type="checkbox" name="{notification_types.TYPE}_{notification_methods.METHOD}"<!-- IF notification_methods.SUBSCRIBED --> checked="checked"<!-- ENDIF --> /></td>
+							<!-- END notification_methods -->
+							<td class="text-center"><input type="checkbox" name="{notification_types.TYPE}_notification"<!-- IF notification_types.SUBSCRIBED --> checked="checked"<!-- ENDIF --> /></td>
+						</tr>
+					<!-- ENDIF -->
+				<!-- END notification_types -->
+				</tbody>
+			</table>
+		</div>
+		<!-- ELSE -->
+
+			<!-- IF .notification_list -->
+			<div class="pages clearfix">
+				<!-- IF .pagination -->
+					<!-- INCLUDE pagination.html -->
+				<!-- ENDIF -->
+				<div class="btn-group pull-{S_CONTENT_FLOW_BEGIN}">
+					<span class="btn btn-default disabled">{L_NOTIFICATIONS} [<strong>{TOTAL_COUNT}</strong>]</span>
+					<span class="btn btn-default disabled">{PAGE_NUMBER}</span>
+					<!-- IF U_MARK_ALL -->
+					<a href="{U_MARK_ALL}" class="btn btn-default">{L_NOTIFICATIONS_MARK_ALL_READ}</a>
+					<!-- ENDIF -->
+				</div>
+			</div>
+
+		<div class="panel panel-default">
+			<div class="clearfix">
+				<h4 class="col-md-10 col-sm-10 col-xs-9">{L_NOTIFICATIONS}</h4>
+				<h5 class="col-md-2 col-sm-2 col-xs-3 text-center">{L_MARK_READ}</h5>
+			</div>
+			<!-- BEGIN notification_list -->
+				<div class="clearfix icon notification-text<!-- IF notification_list.UNREAD --> alert-info<!-- ELSE --><!-- IF notification_list.S_ROW_COUNT is odd --> bg1<!-- ELSE --> bg2<!-- ENDIF --><!-- ENDIF --><!-- IF notification_list.STYLING --> {notification_list.STYLING}<!-- ENDIF -->">
+					<div class="col-md-1 col-sm-1 hidden-xs">
+						<!-- IF notification_list.AVATAR -->{notification_list.AVATAR}<!-- ELSE --><img src="{T_THEME_PATH}/images/no_avatar.gif" alt="" class="img-thumbnail" /><!-- ENDIF -->
+					</div>
+					<div class="col-md-9 col-sm-9 col-xs-9">
+						<!-- IF notification_list.URL --><a href="<!-- IF notification_list.UNREAD -->{notification_list.U_MARK_READ}<!-- ELSE -->{notification_list.URL}<!-- ENDIF -->"><!-- ENDIF -->
+						{notification_list.FORMATTED_TITLE}<!-- IF notification_list.REFERENCE --> {notification_list.REFERENCE}<!-- ENDIF --><br />
+						<!-- IF notification_list.URL --></a><!-- ENDIF -->				
+						<!-- IF notification_list.FORUM -->{notification_list.FORUM}<br /><!-- ENDIF -->
+						<!-- IF notification_list.REASON -->{notification_list.REASON}<br /><!-- ENDIF -->
+						{notification_list.TIME}
+					</div>
+            
+					<div class="col-md-2 col-sm-2 col-xs-3 text-center">
+						<input type="checkbox" name="mark[]" value="{notification_list.NOTIFICATION_ID}"<!-- IF not notification_list.UNREAD --> disabled="disabled"<!-- ENDIF --> />
+					</div>
+				</div>
+			<!-- END notification_list -->
+			</div>
+
+			<!-- ELSE -->
+				<div class="alert alert-info">
+					{L_NO_NOTIFICATIONS}
+				</div>
+			<!-- ENDIF -->
+
+		<!-- ENDIF -->
+
+		<!-- IF .notification_types or .notification_list -->
+		<fieldset class="panel-group text-{S_CONTENT_FLOW_END}">
+			<input type="hidden" name="form_time" value="{FORM_TIME}" />
+			{S_HIDDEN_FIELDS}
+			<div class="btn-group">
+				<a href="#" onclick="$('#ucp input:checkbox').prop('checked', false); return false;" class="btn btn-warning">{L_UNMARK_ALL}</a>
+				<input type="submit" name="submit" value="<!-- IF MODE == 'notification_options' -->{L_SUBMIT}<!-- ELSE -->{L_MARK_READ}<!-- ENDIF -->" class="btn btn-default" />
+				<a href="#" onclick="$('#ucp input:checkbox').prop('checked', true); return false;" class="btn btn-info">{L_MARK_ALL}</a>
+			</div>
+			{S_FORM_TOKEN}
+		</fieldset>
+
+		<div class="pages clearfix">
+			<!-- IF .pagination -->
+				<!-- INCLUDE pagination.html -->
+			<!-- ENDIF -->
+			<div class="btn-group pull-{S_CONTENT_FLOW_BEGIN}">
+				<span class="btn btn-default disabled">{L_NOTIFICATIONS} [<strong>{TOTAL_COUNT}</strong>]</span>
+				<span class="btn btn-default disabled">{PAGE_NUMBER}</span>
+				<!-- IF U_MARK_ALL -->
+				<a href="{U_MARK_ALL}" class="btn btn-default">{L_NOTIFICATIONS_MARK_ALL_READ}</a>
+				<!-- ENDIF -->
+			</div>
+		</div>
+		<!-- ENDIF -->
+
+	</div>
+</div>
+
+</form>
+
+<!-- INCLUDE ucp_footer.html -->

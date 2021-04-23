@@ -1,0 +1,25 @@
+<div class="panel-group clearfix">
+	<!-- IF S_VIEWTOPIC -->
+		<a href="{U_VIEW_FORUM}" class="btn btn-default pull-{S_CONTENT_FLOW_BEGIN}" accesskey="r"><i class="fa fa-angle-{S_CONTENT_FLOW_BEGIN}"></i> {L_RETURN_TO_FORUM}</a>
+	<!-- ELSEIF S_VIEWFORUM -->
+		<a href="{U_INDEX}" class="btn btn-default pull-{S_CONTENT_FLOW_BEGIN}" accesskey="r"><i class="fa fa-angle-{S_CONTENT_FLOW_BEGIN}"></i> {L_RETURN_TO_INDEX}</a>
+	<!-- ELSEIF SEARCH_TOPIC -->
+		<a class="btn btn-default pull-{S_CONTENT_FLOW_BEGIN}" href="{U_SEARCH_TOPIC}" accesskey="r"><i class="fa fa-angle-{S_CONTENT_FLOW_BEGIN}"></i> {L_RETURN_TO_TOPIC}</a>
+	<!-- ELSEIF S_SEARCH_ACTION -->
+		<a class="btn btn-default pull-{S_CONTENT_FLOW_BEGIN}" href="{U_SEARCH}" title="{L_SEARCH_ADV}" accesskey="r"><i class="fa fa-angle-{S_CONTENT_FLOW_BEGIN}"></i> {L_GO_TO_SEARCH_ADV}</a>
+	<!-- ENDIF -->
+
+	<!-- IF S_DISPLAY_JUMPBOX -->
+	<div id="jumpbox" class="btn-group dropup pull-{S_CONTENT_FLOW_END}">
+		<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" title="<!-- IF S_IN_MCP and S_MERGE_SELECT -->{L_SELECT_TOPICS_FROM}<!-- ELSEIF S_IN_MCP -->{L_MODERATE_FORUM}<!-- ELSE -->{L_JUMP_TO}<!-- ENDIF -->"><!-- IF S_IN_MCP and S_MERGE_SELECT -->{L_SELECT_TOPICS_FROM}<!-- ELSEIF S_IN_MCP -->{L_MODERATE_FORUM}<!-- ELSE -->{L_JUMP_TO}<!-- ENDIF --> <span class="caret"></span></button>
+		<ul class="dropdown-menu dropdown-menu-{S_CONTENT_FLOW_END} dropdown-contents">
+		<!-- BEGIN jumpbox_forums -->
+			<!-- IF jumpbox_forums.FORUM_ID neq -1 -->
+			<li class="jumpbox"><a href="{jumpbox_forums.LINK}"><!-- BEGIN level -->&nbsp; &nbsp;<!-- END level -->{jumpbox_forums.FORUM_NAME}</a></li>
+			<li class="divider"></li>
+			<!-- ENDIF -->
+		<!-- END jumpbox_forums -->
+		</ul>
+	</div>
+	<!-- ENDIF -->
+</div>

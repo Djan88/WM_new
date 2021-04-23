@@ -1,0 +1,55 @@
+<form id="viewfolder" method="post" action="{S_PM_ACTION}">
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">{L_TITLE}<!-- IF CUR_FOLDER_NAME -->{L_COLON} {CUR_FOLDER_NAME}<!-- ENDIF --></h4>
+	</div>
+	<div class="panel-body">
+	<!-- IF FOLDER_STATUS and FOLDER_MAX_MESSAGES neq 0 --><p>{FOLDER_STATUS}</p><!-- ENDIF -->
+
+	<div class="well well-sm form-inline text-center clearfix">
+		<!-- IF U_POST_REPLY_PM or U_POST_NEW_TOPIC or U_FORWARD_PM -->
+		<!-- IF U_POST_REPLY_PM -->
+		<div class="big-btn pull-{S_CONTENT_FLOW_BEGIN} reply-icon"><a href="{U_POST_REPLY_PM}" class="btn btn-primary" title="{L_POST_REPLY_PM}"><i class="fa fa-reply"></i>{L_POST_REPLY_PM}</a> &nbsp;</div>
+		<!-- ELSEIF U_POST_NEW_TOPIC -->
+		<div class="big-btn pull-{S_CONTENT_FLOW_BEGIN} post-icon"><a href="{U_POST_NEW_TOPIC}" accesskey="n" class="btn btn-primary" title="{L_UCP_PM_COMPOSE}"><i class="fa fa-plus"></i>{L_UCP_PM_COMPOSE}</a> &nbsp;</div>
+		<!-- ENDIF -->
+		<!-- IF U_FORWARD_PM -->
+		<div class="big-btn pull-{S_CONTENT_FLOW_BEGIN} forward-icon"><a href="{U_FORWARD_PM}" class="btn btn-primary" title="{L_POST_FORWARD_PM}"><i class="fa fa-forward"></i>{L_FORWARD_PM}</a> &nbsp;</div>
+		<!-- ENDIF -->
+		<!-- IF U_POST_REPLY_PM and S_PM_RECIPIENTS gt 1 -->
+		<div class="big-btn pull-{S_CONTENT_FLOW_BEGIN} reply-all"><a href="{U_POST_REPLY_ALL}" class="btn btn-primary" title="{L_REPLY_TO_ALL}"><i class="fa fa-reply-all"></i>{L_REPLY_TO_ALL}</a> &nbsp;</div>
+		<!-- ENDIF -->
+		<!-- ENDIF -->
+	</div>
+
+	<!-- IF not S_IS_BOT and U_PRINT_PM -->
+		<div class="dropdown-container dropdown-button-control topic-tools">
+			<span title="{L_PM_TOOLS}" class="dropdown-trigger dropdown-select button icon-button tools-icon"></span>
+			<div class="dropdown hidden">
+				<div class="pointer"><div class="pointer-inner"></div></div>
+				<ul class="dropdown-contents">
+					<!-- IF U_PRINT_PM --><li class="small-icon icon-print"><a href="{U_PRINT_PM}" title="{L_PRINT_PM}" accesskey="p">{L_PRINT_PM}</a></li><!-- ENDIF -->
+				</ul>
+			</div>
+		</div>
+	<!-- ENDIF -->
+
+	<!-- IF TOTAL_MESSAGES or S_VIEW_MESSAGE -->
+		<div class="pages clearfix">
+		<!-- IF .pagination -->
+			<!-- INCLUDE pagination.html -->
+		<!-- ENDIF -->
+		<!-- IF S_VIEW_MESSAGE -->
+			<a class="btn btn-default pull-{S_CONTENT_FLOW_BEGIN}" href="{U_CURRENT_FOLDER}"><i class="fa fa-angle-{S_CONTENT_FLOW_BEGIN}"></i> {L_RETURN_TO_FOLDER}</a>
+		<!-- ELSEIF FOLDER_CUR_MESSAGES neq 0 -->
+			<div class="btn-group pull-{S_CONTENT_FLOW_BEGIN}">
+				<span class="btn btn-default disabled">{TOTAL_MESSAGES}</span>
+				<span class="btn btn-default disabled">{PAGE_NUMBER}</span>
+				<!-- IF U_MARK_ALL -->
+				<a href="{U_MARK_ALL}" class="btn btn-default">{L_PM_MARK_ALL_READ}</a>
+				<!-- ENDIF -->
+			</div>
+		<!-- ENDIF -->
+		</div>
+	<!-- ENDIF -->

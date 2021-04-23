@@ -1,0 +1,78 @@
+<!-- IF PAI_ENABLED and (S_VIEWTOPIC or S_IN_POSTING or S_COMPOSE_PM) -->
+<script type="text/javascript">
+// <![CDATA[
+var max_width = '{PAI_MAX_WIDTH}';
+var max_height = '{PAI_MAX_HEIGHT}';
+var onclick_event = (typeof hs !== 'undefined') ? "return hs.expand(this);" : "window.open(this.href); return false;";
+
+// The "callback" argument is called with either true or false
+// depending on whether the image at "url" exists or not.
+function imageExists(url, callback) {
+	var img = new Image();
+	img.onload = function() { callback(true); };
+	img.onerror = function() { callback(false); };
+	img.src = url;
+}
+
+if (typeof phpbb.plupload !== 'undefined')
+{
+	phpbb.plupload.updateRow = function(index, downloadUrl) {
+		var attach = phpbb.plupload.data[index],
+			row = $('[data-attach-id="' + attach.attach_id + '"]');
+
+		// Add the link to the file
+		if (typeof downloadUrl !== 'undefined' && typeof downloadUrl[index] !== 'undefined') {
+			var url = downloadUrl[index].replace('&amp;', '&'),
+				link = $('<a></a>');
+
+			imageExists(url, function(exists) {
+				if (exists)
+				{
+					link.attr('onclick', onclick_event);
+
+					link.attr('href', url).html("<img src='" + url + "' style='max-width: " + max_width + "px; max-height: " + max_height + "px;' alt='" + attach.real_filename + "' />");
+				}
+				else
+				{
+					link.attr('href', url).html(attach.real_filename);
+				}
+			});
+
+			row.find('.file-name').html(link)	
+		}
+
+		row.find('textarea').attr('rows', '3');
+		row.find('textarea').attr('name', 'comment_list[' + index + ']');
+
+		phpbb.plupload.updateHiddenData(row, attach, index);
+	};
+}
+
+$('a[href^="./download/file.php?mode=view&id="]').each(function() {
+	var link = $(this);
+	var url = $(this).attr('href');
+	var real_filename = this.innerHTML;
+
+	link.removeAttr("target");
+
+	imageExists(url, function(exists) {
+		if (exists)
+		{
+			link.attr('onclick', onclick_event);
+
+			link.attr('href', url).html("<img src='" + url + "' style='max-width: " + max_width + "px; max-height: " + max_height + "px;' alt='" + real_filename + "' />");
+		}
+		else
+		{
+			link.attr('href', url).html(real_filename);
+		}
+	});
+});
+
+$('textarea[name^="comment_list"]').each(function() {
+	$(this).attr('rows', '3');
+});
+
+// ]]>
+</script>
+<!-- ENDIF -->

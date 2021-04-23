@@ -1,0 +1,40 @@
+<!-- INCLUDE overall_header.html -->
+
+<!-- IF FORUM_NAME --><h2 class="forum-title"><a href="{U_VIEW_FORUM}">{FORUM_NAME}</a></h2><!-- ENDIF -->
+
+<form id="login_forum" method="post" action="{S_LOGIN_ACTION}">
+{S_FORM_TOKEN}
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">{L_LOGIN}</h4>
+	</div>
+	<div class="panel-body">
+		<p>{L_LOGIN_FORUM}</p>
+
+		<fieldset class="form-horizontal">
+			<!-- IF LOGIN_ERROR -->
+				<dl class="form-group">
+					<dt class="col-md-3 col-sm-4 col-xs-12 hidden-xs">&nbsp;</dt>
+					<dd class="col-md-9 col-sm-8 col-xs-12 alert alert-danger">{LOGIN_ERROR}</dd>
+				</dl>
+			<!-- ENDIF -->
+
+			<dl class="form-group">
+				<dt class="col-md-3 col-sm-4 col-xs-12"><label class="control-label" for="password">{L_PASSWORD}{L_COLON}</label></dt>
+				<dd class="col-md-9 col-sm-8 col-xs-12 form-inline"><input type="password" tabindex="1" id="password" name="password" size="25" class="form-control" /></dd>
+			</dl>
+			{S_LOGIN_REDIRECT}
+		</fieldset>
+	</div>
+
+	<div class="panel-footer text-center">
+		{S_HIDDEN_FIELDS}
+		<input type="submit" name="login" id="login" class="btn btn-success" value="{L_LOGIN}" tabindex="2" />
+	</div>
+</div>
+
+</form>
+
+<!-- INCLUDE jumpbox.html -->
+<!-- INCLUDE overall_footer.html -->

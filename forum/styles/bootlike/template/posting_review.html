@@ -1,0 +1,37 @@
+<h4>{L_POST_REVIEW}</h4>
+
+<p>{L_POST_REVIEW_EXPLAIN}</p>
+
+<!-- BEGIN post_review_row -->
+<!-- IF post_review_row.S_IGNORE_POST -->
+<div class="panel panel-default">
+	<div class="panel-body">
+		{post_review_row.L_IGNORE_POST}
+	</div>
+</div>
+<!-- ELSE -->
+<div class="panel panel-default<!-- IF post_review_row.S_ROW_COUNT is odd --> bg1<!-- ELSE --> bg2<!-- ENDIF -->">
+	<div class="panel-heading">
+		<h4 class="panel-title"><a href="#ppr{post_review_row.POST_ID}">{post_review_row.POST_SUBJECT}</a></h4>
+	</div>
+	<div class="panel-body">
+
+		<div class="postbody" id="ppr{post_review_row.POST_ID}">
+			<p><!-- IF S_IS_BOT --><i class="fa fa-file-o"></i><!-- ELSE --><a href="{post_review_row.U_MINI_POST}" title="{L_POST}"><i class="fa fa-file-o"></i></a><!-- ENDIF --> {L_POST_BY_AUTHOR}<strong>  {post_review_row.POST_AUTHOR_FULL}</strong> &raquo; {post_review_row.POST_DATE}</p>
+			<div class="content">{post_review_row.MESSAGE}</div>
+
+			<!-- IF post_review_row.S_HAS_ATTACHMENTS -->
+				<div class="attachbox pull-{S_CONTENT_FLOW_BEGIN}">
+					<p>{L_ATTACHMENTS}</p>
+					<!-- BEGIN attachment -->
+					<div class="panel panel-default">{post_review_row.attachment.DISPLAY_ATTACHMENT}</div>
+					<!-- END attachment -->
+				</div>
+				<div class="clearfix"></div>
+			<!-- ENDIF -->
+		</div>
+
+	</div>
+</div>
+<!-- ENDIF -->
+<!-- END post_review_row -->

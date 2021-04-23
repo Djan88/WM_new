@@ -1,0 +1,68 @@
+<!-- INCLUDE mcp_header.html -->
+
+<form method="post" id="mcp" action="{U_POST_ACTION}">
+
+<h3>{L_WARN_USER}</h3>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">{USERNAME_FULL}</h4>
+	</div>
+	<div class="post panel-body">
+
+	<!-- IF AVATAR_IMG -->
+		<div class="postprofile col-md-3 col-sm-4 col-xs-12">
+			{AVATAR_IMG}
+		</div>
+	<!-- ENDIF -->
+
+		<div class="col-md-9 col-sm-8 col-xs-12 form-horizontal">
+			<dl class="form-group">
+			<!-- IF RANK_TITLE -->
+				<dt class="col-md-4 col-sm-5 col-xs-12">{L_RANK}{L_COLON}</dt>
+				<dd class="col-md-8 col-sm-7 col-xs-12">{RANK_TITLE}</dd>
+			<!-- ENDIF -->
+			<!-- IF RANK_IMG -->
+				<dt class="col-md-4 col-sm-5 col-xs-12"><!-- IF RANK_TITLE -->&nbsp;<!-- ELSE -->{L_RANK}{L_COLON}<!-- ENDIF --></dt>
+				<dd class="col-md-8 col-sm-7 col-xs-12">{RANK_IMG}</dd>
+			<!-- ENDIF -->
+				<dt class="col-md-4 col-sm-5 col-xs-12">{L_JOINED}{L_COLON}</dt>
+				<dd class="col-md-8 col-sm-7 col-xs-12">{JOINED}</dd>
+				<dt class="col-md-4 col-sm-5 col-xs-12">{L_TOTAL_POSTS}{L_COLON}</dt>
+				<dd class="col-md-8 col-sm-7 col-xs-12">{POSTS}</dd>
+				<dt class="col-md-4 col-sm-5 col-xs-12">{L_WARNINGS}{L_COLON}</dt>
+				<dd class="col-md-8 col-sm-7 col-xs-12">{WARNINGS}</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+<!-- EVENT mcp_warn_user_add_warning_field_before -->
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">{L_ADD_WARNING}</h4>
+	</div>
+	<div class="panel-body">
+
+	<p>{L_ADD_WARNING_EXPLAIN}</p>
+
+	<textarea name="warning" id="warning" class="form-control" cols="40" rows="3"></textarea>
+	<!-- IF S_CAN_NOTIFY -->
+	<br /><label><input type="checkbox" name="notify_user" checked="checked" /> {L_NOTIFY_USER_WARN}</label>
+	<!-- ENDIF -->
+
+	</div>
+
+	<fieldset class="panel-footer text-center">
+		<input type="reset" value="{L_RESET}" name="reset" class="btn btn-danger" />&nbsp; 
+		<input type="submit" name="action[add_warning]" value="{L_SUBMIT}" class="btn btn-success" />
+		{S_FORM_TOKEN}
+	</fieldset>
+</div>
+
+<!-- EVENT mcp_warn_user_add_warning_field_after -->
+
+</form>
+
+<!-- INCLUDE mcp_footer.html -->

@@ -1,0 +1,65 @@
+<!-- INCLUDE ucp_header.html -->
+
+<form id="ucp" method="post" action="{S_UCP_ACTION}"{S_FORM_ENCTYPE}>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">{L_TITLE}</h4>
+	</div>
+	<div class="panel-body">
+
+	<fieldset class="form-horizontal">
+	<!-- IF ERROR --><div class="alert alert-danger">{ERROR}</div><!-- ENDIF -->
+	<!-- EVENT ucp_prefs_post_prepend -->
+	<dl class="form-group form-group-sm">
+		<dt class="col-md-4 col-sm-5 col-xs-12"><label class="control-label" for="bbcode1">{L_DEFAULT_BBCODE}{L_COLON}</label></dt>
+		<dd class="col-md-8 col-sm-7 col-xs-12 form-inline">
+			<div class="btn-group btn-group-sm" data-toggle="buttons">
+				<label class="btn btn-default active" for="bbcode1"><input type="radio" name="bbcode" id="bbcode1" value="1"<!-- IF S_BBCODE --> checked="checked"<!-- ENDIF --> /> {L_YES}</label> 
+				<label class="btn btn-default" for="bbcode0"><input type="radio" name="bbcode" id="bbcode0" value="0"<!-- IF not S_BBCODE --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+			</div>
+		</dd>
+	</dl>
+	<dl class="form-group form-group-sm">
+		<dt class="col-md-4 col-sm-5 col-xs-12"><label class="control-label" for="smilies1">{L_DEFAULT_SMILIES}{L_COLON}</label></dt>
+		<dd class="col-md-8 col-sm-7 col-xs-12 form-inline">
+			<div class="btn-group btn-group-sm" data-toggle="buttons">
+				<label class="btn btn-default active" for="smilies1"><input type="radio" name="smilies" id="smilies1" value="1"<!-- IF S_SMILIES --> checked="checked"<!-- ENDIF --> /> {L_YES}</label> 
+				<label class="btn btn-default" for="smilies0"><input type="radio" name="smilies" id="smilies0" value="0"<!-- IF not S_SMILIES --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+			</div>
+		</dd>
+	</dl>
+	<dl class="form-group form-group-sm">
+		<dt class="col-md-4 col-sm-5 col-xs-12"><label class="control-label" for="sig1">{L_DEFAULT_ADD_SIG}{L_COLON}</label></dt>
+		<dd class="col-md-8 col-sm-7 col-xs-12 form-inline">
+			<div class="btn-group btn-group-sm" data-toggle="buttons">
+				<label class="btn btn-default active" for="sig1"><input type="radio" name="sig" id="sig1" value="1"<!-- IF S_SIG --> checked="checked"<!-- ENDIF --> /> {L_YES}</label> 
+				<label class="btn btn-default" for="sig0"><input type="radio" name="sig" id="sig0" value="0"<!-- IF not S_SIG --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+			</div>
+		</dd>
+	</dl>
+	<dl class="form-group form-group-sm">
+		<dt class="col-md-4 col-sm-5 col-xs-12"><label class="control-label" for="notify1">{L_DEFAULT_NOTIFY}{L_COLON}</label></dt>
+		<dd class="col-md-8 col-sm-7 col-xs-12 form-inline">
+			<div class="btn-group btn-group-sm" data-toggle="buttons">
+				<label class="btn btn-default" for="notify1"><input type="radio" name="notify" id="notify1" value="1"<!-- IF S_NOTIFY --> checked="checked"<!-- ENDIF --> /> {L_YES}</label> 
+				<label class="btn btn-default active" for="notify0"><input type="radio" name="notify" id="notify0" value="0"<!-- IF not S_NOTIFY --> checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+			</div>
+		</dd>
+	</dl>
+	<!-- EVENT ucp_prefs_post_append -->
+	</fieldset>
+
+	</div>
+
+	<fieldset class="panel-footer text-center">
+		{S_HIDDEN_FIELDS}
+		<input type="reset" value="{L_RESET}" name="reset" class="btn btn-danger" />&nbsp; 
+		<input type="submit" name="submit" value="{L_SUBMIT}" class="btn btn-success" />
+		{S_FORM_TOKEN}
+	</fieldset>
+</div>
+
+</form>
+
+<!-- INCLUDE ucp_footer.html -->

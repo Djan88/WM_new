@@ -1,0 +1,66 @@
+<!-- INCLUDE overall_header.html -->
+
+<div class="hidden-xs clearfix">
+	<p<!-- IF S_USER_LOGGED_IN --> class="pull-{S_CONTENT_FLOW_END}"<!-- ENDIF -->><!-- IF S_USER_LOGGED_IN -->{LAST_VISIT_DATE}<!-- ELSE -->{CURRENT_TIME}<!-- ENDIF --></p>
+	<!-- IF S_USER_LOGGED_IN -->
+	<p class="pull-{S_CONTENT_FLOW_BEGIN}">{CURRENT_TIME}</p>
+	<!-- ENDIF -->
+</div>
+
+<!-- EVENT index_body_markforums_before -->
+<!-- IF U_MARK_FORUMS -->
+	<p class="text-{S_CONTENT_FLOW_END}">
+		<a href="{U_MARK_FORUMS}" accesskey="m" data-ajax="mark_forums_read">{L_MARK_FORUMS_READ}</a>
+	</p>
+<!-- ENDIF -->
+<!-- EVENT index_body_markforums_after -->
+
+<!-- INCLUDE forumlist_body.html -->
+
+<!-- EVENT index_body_forumlist_body_after -->
+
+<!-- EVENT index_body_stat_blocks_before -->
+
+<!-- IF S_DISPLAY_ONLINE_LIST -->
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title"><!-- IF U_VIEWONLINE --><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a><!-- ELSE -->{L_WHO_IS_ONLINE}<!-- ENDIF --></h4>
+	</div>
+	<div class="panel-body">
+		<!-- EVENT index_body_block_online_prepend -->
+		{TOTAL_USERS_ONLINE} ({L_ONLINE_EXPLAIN})<br />{RECORD_USERS}<br /><br />{LOGGED_IN_USER_LIST}
+		<!-- IF LEGEND --><br />{L_LEGEND}{L_COLON} {LEGEND}<!-- ENDIF -->
+		<!-- EVENT index_body_block_online_append -->
+	</div>
+</div>
+<!-- ENDIF -->
+
+<!-- IF S_DISPLAY_BIRTHDAY_LIST -->
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">{L_BIRTHDAYS}</h4>
+	</div>
+	<div class="panel-body">
+		<!-- EVENT index_body_block_birthday_prepend -->
+		<!-- IF .birthdays -->{L_CONGRATULATIONS}{L_COLON} <strong><!-- BEGIN birthdays -->{birthdays.USERNAME}<!-- IF birthdays.AGE !== '' --> ({birthdays.AGE})<!-- ENDIF --><!-- IF not birthdays.S_LAST_ROW -->, <!-- ENDIF --><!-- END birthdays --></strong><!-- ELSE -->{L_NO_BIRTHDAYS}<!-- ENDIF -->
+		<!-- EVENT index_body_block_birthday_append -->
+	</div>
+</div>
+<!-- ENDIF -->
+
+<!-- IF NEWEST_USER -->
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">{L_STATISTICS}</h4>
+	</div>
+	<div class="panel-body">
+		<!-- EVENT index_body_block_stats_prepend -->
+		{TOTAL_POSTS} &bull; {TOTAL_TOPICS} &bull; {TOTAL_USERS} &bull; {NEWEST_USER}
+		<!-- EVENT index_body_block_stats_append -->
+	</div>
+</div>
+<!-- ENDIF -->
+
+<!-- EVENT index_body_stat_blocks_after -->
+
+<!-- INCLUDE overall_footer.html -->

@@ -1,0 +1,97 @@
+<!-- INCLUDE overall_header.html -->
+
+<form action="{S_LOGIN_ACTION}" method="post" id="login" data-focus="<!-- IF S_ADMIN_AUTH -->{PASSWORD_CREDENTIAL}<!-- ELSE -->{USERNAME_CREDENTIAL}<!-- ENDIF -->">
+
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4><!-- IF LOGIN_EXPLAIN -->{LOGIN_EXPLAIN}<!-- ELSE -->{L_LOGIN}<!-- ENDIF --></h4>
+				</div>
+				<div class="panel-body">
+
+				<fieldset class="form-horizontal">
+				<!-- IF LOGIN_ERROR --><div class="alert alert-danger">{LOGIN_ERROR}</div><!-- ENDIF -->
+				<dl class="form-group">
+					<dt class="col-md-3 col-sm-4 col-xs-12"><label class="control-label" for="{USERNAME_CREDENTIAL}">{L_USERNAME}{L_COLON}</label></dt>
+					<dd class="col-md-9 col-sm-8 col-xs-12 form-inline"><input type="text" tabindex="1" name="{USERNAME_CREDENTIAL}" id="{USERNAME_CREDENTIAL}" size="25" value="{USERNAME}" class="form-control" /></dd>
+				</dl>
+				<dl class="form-group">
+					<dt class="col-md-3 col-sm-4 col-xs-12"><label class="control-label" for="{PASSWORD_CREDENTIAL}">{L_PASSWORD}{L_COLON}</label></dt>
+					<dd class="col-md-9 col-sm-8 col-xs-12 form-inline"><input type="password" tabindex="2" id="{PASSWORD_CREDENTIAL}" name="{PASSWORD_CREDENTIAL}" size="25" class="form-control" /></dd>
+				</dl>
+				<!-- IF S_DISPLAY_FULL_LOGIN and (U_SEND_PASSWORD or U_RESEND_ACTIVATION) -->
+				<dl class="form-group">
+					<dt class="col-md-3 col-sm-4 col-xs-12 hidden-xs">&nbsp;</dt>
+					<dd class="col-md-9 col-sm-8 col-xs-12">
+					<!-- IF U_RESEND_ACTIVATION -->
+						<a href="{U_RESEND_ACTIVATION}">{L_RESEND_ACTIVATION}</a>
+					<!-- ENDIF -->
+					<!-- IF U_SEND_PASSWORD -->
+						<a href="{U_SEND_PASSWORD}">{L_FORGOT_PASS}</a>
+					<!-- ENDIF -->
+					</dd>
+				</dl>
+				<!-- ENDIF -->
+				<!-- IF CAPTCHA_TEMPLATE and S_CONFIRM_CODE -->
+					<!-- DEFINE $CAPTCHA_TAB_INDEX = 3 -->
+					<!-- INCLUDE {CAPTCHA_TEMPLATE} -->
+				<!-- ENDIF -->
+				<!-- IF S_DISPLAY_FULL_LOGIN -->
+				<dl class="form-group">
+					<dt class="col-md-3 col-sm-4 col-xs-12 hidden-xs">&nbsp;</dt>
+					<dd class="col-md-9 col-sm-8 col-xs-12 form-inline">
+					<!-- IF S_AUTOLOGIN_ENABLED -->
+						<label for="autologin"><input type="checkbox" name="autologin" id="autologin" tabindex="4" /> {L_LOG_ME_IN}</label><br />
+					<!-- ENDIF -->
+						<label for="viewonline"><input type="checkbox" name="viewonline" id="viewonline" tabindex="5" /> {L_HIDE_ME}</label>
+					</dd>
+				</dl>
+				<!-- ENDIF -->
+
+				</fieldset>
+
+				<!-- IF not S_ADMIN_AUTH and PROVIDER_TEMPLATE_FILE -->
+					<!-- INCLUDE {PROVIDER_TEMPLATE_FILE} -->
+				<!-- ENDIF -->
+				</div>
+
+				<div class="panel-footer text-center">
+					{S_LOGIN_REDIRECT}
+					{S_HIDDEN_FIELDS}
+					<input type="submit" name="login" tabindex="6" value="{L_LOGIN}" class="btn btn-success" />
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- IF not S_ADMIN_AUTH and S_REGISTER_ENABLED -->
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4>{L_REGISTER}</h4>
+				</div>
+				<div class="panel-body">
+				<p>{L_LOGIN_INFO}</p>
+
+				</div>
+
+				<div class="panel-footer text-center">
+					<div class="btn-group">
+						<a href="{U_TERMS_USE}" class="btn btn-default">{L_TERMS_USE}</a><a href="{U_PRIVACY}" class="btn btn-default">{L_PRIVACY}</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ENDIF -->
+
+</form>
+
+<!-- INCLUDE overall_footer.html -->

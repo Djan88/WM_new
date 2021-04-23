@@ -1,0 +1,87 @@
+#handle1 .rs-handle  {
+    background: url(tr.png) center center no-repeat;
+    width: 400px!important;
+    height: 400px!important;
+    position: absolute;
+    left: -9px;
+    top: -201px;
+    background-size: 88%;
+    background-position: 24px -24px;
+}
+.disc_wrap {
+    margin-left: 100px;
+    margin-top: 100px;
+    position: relative;
+    padding: 60px;
+    border: 1px solid #555;
+    border-radius: 50%;
+    width: 400px;
+}
+#handle1 {
+    transform: rotate(-15deg);
+}
+.elem_pos {
+    position: absolute;
+    width: 80px;
+}
+.rs-bar {
+    /*transition: all 0.1s linear!important;*/
+}
+svg path 
+{
+    stroke-width: 10px;
+}
+.elem_pos_t.elem_pos_active svg path 
+{
+    /*stroke: #ff0000;*/
+    stroke: #fdb435;
+    stroke-width: 10px;
+}
+.elem_pos_r.elem_pos_active svg path 
+{
+    /*stroke: #0072ff;*/
+    stroke: #fdb435;
+    stroke-width: 10px;
+}
+.elem_pos_s.elem_pos_active svg path 
+{
+    /*stroke: #00f3ff;*/
+    stroke: #fdb435;
+    stroke-width: 10px;
+}
+.elem_pos_d.elem_pos_active svg path 
+{
+    /*stroke: #501414;*/
+    stroke: #fdb435;
+    stroke-width: 10px;
+}
+.elem_pos svg {
+    width: 80px;
+    height: 100px;
+}
+span.rs-tooltip.rs-tooltip-text {
+    display: none;
+}
+span.rs-seperator.rs-border {
+    display: none;
+}
+#handle1 .rs-tooltip  {
+    top: 75%;
+    font-size: 11px;
+}
+#handle1 .rs-tooltip div  {
+    text-align: center;
+    background: orange;
+    color: white;
+    border-radius: 4px;
+    padding: 1px 5px 2px;
+    margin-top: 4px;
+}
+.rs-range-color
+{
+    background-color: transparent;
+}
+.rs-block .rs-inner
+{
+    border: none;
+}

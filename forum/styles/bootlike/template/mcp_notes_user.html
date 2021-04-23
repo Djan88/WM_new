@@ -1,0 +1,141 @@
+<!-- INCLUDE mcp_header.html -->
+
+<form method="post" id="mcp" action="{U_POST_ACTION}">
+
+<h3>{L_TITLE}</h3>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">{USERNAME_FULL}</h4>
+	</div>
+	<div class="post panel-body">
+
+	<!-- IF AVATAR_IMG -->
+		<div class="postprofile col-md-3 col-sm-4 col-xs-12">
+			<div>{AVATAR_IMG}</div>
+		</div>
+	<!-- ENDIF -->
+
+		<div class="col-md-9 col-sm-8 col-xs-12 form-horizontal">
+			<dl class="form-group">
+			<!-- IF RANK_TITLE -->
+				<dt class="col-md-4 col-sm-5 col-xs-12">{L_RANK}{L_COLON}</dt>
+				<dd class="col-md-8 col-sm-7 col-xs-12">{RANK_TITLE}</dd>
+			<!-- ENDIF -->
+			<!-- IF RANK_IMG -->
+				<dt class="col-md-4 col-sm-5 col-xs-12"><!-- IF RANK_TITLE -->&nbsp;<!-- ELSE -->{L_RANK}{L_COLON}<!-- ENDIF --></dt>
+				<dd class="col-md-8 col-sm-7 col-xs-12">{RANK_IMG}</dd>
+			<!-- ENDIF -->
+				<dt class="col-md-4 col-sm-5 col-xs-12">{L_JOINED}{L_COLON}</dt>
+				<dd class="col-md-8 col-sm-7 col-xs-12">{JOINED}</dd>
+				<dt class="col-md-4 col-sm-5 col-xs-12">{L_TOTAL_POSTS}{L_COLON}</dt>
+				<dd class="col-md-8 col-sm-7 col-xs-12">{POSTS}</dd>
+				<dt class="col-md-4 col-sm-5 col-xs-12">{L_WARNINGS}{L_COLON}</dt>
+				<dd class="col-md-8 col-sm-7 col-xs-12">{WARNINGS}</dd>
+			</dl>
+		</div>
+
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">{L_ADD_FEEDBACK}</h4>
+	</div>
+	<div class="panel-body">
+
+	<p>{L_ADD_FEEDBACK_EXPLAIN}</p>
+
+	<fieldset>
+		<textarea name="usernote" id="usernote" class="form-control" cols="40" rows="3"></textarea>
+	</fieldset>
+
+	</div>
+
+	<fieldset class="panel-footer text-center">
+		{S_HIDDEN_FIELDS}
+		<input type="reset" value="{L_RESET}" name="reset" class="btn btn-danger" />&nbsp;
+		<input type="submit" name="action[add_feedback]" value="{L_SUBMIT}" class="btn btn-success" />
+		{S_FORM_TOKEN}
+	</fieldset>
+</div>
+
+	<div class="panel-group form-inline text-{S_CONTENT_FLOW_END}">
+		<div class="input-group">
+			<input type="search" class="form-control" name="keywords" value="{S_KEYWORDS}" placeholder="{L_SEARCH_KEYWORDS}" />
+			<div class="input-group-btn">
+				<input type="submit" class="btn btn-default" name="filter" value="{L_SEARCH}" />
+			</div>
+		</div>
+	</div>
+
+	<div class="pages clearfix">
+		<!-- IF .pagination --> 
+			<!-- INCLUDE pagination.html -->
+		<!-- ENDIF -->
+		<div class="btn-group pull-{S_CONTENT_FLOW_BEGIN}">
+			<span class="btn btn-default disabled">{TOTAL_REPORTS}</span>
+			<span class="btn btn-default disabled">{PAGE_NUMBER}</span>
+		</div>
+	</div>
+
+	<div class="table-responsive">
+	<table class="table table-bordered">
+	<thead>
+	<tr>
+		<th class="width-15">{L_REPORT_BY}</th>
+		<th class="text-center">{L_IP}</th>
+		<th class="width-15 text-center">{L_TIME}</th>
+		<th class="width-50">{L_ACTION_NOTE}</th>
+		<!-- IF S_CLEAR_ALLOWED --><th class="text-center">{L_MARK}</th><!-- ENDIF -->
+	</tr>
+	</thead>
+	<tbody>
+	<!-- BEGIN usernotes -->
+	<!-- IF usernotes.S_ROW_COUNT is even --><tr class="bg1"><!-- ELSE --><tr class="bg2"><!-- ENDIF -->
+		<td class="width-15">{usernotes.REPORT_BY}</td>
+		<td class="text-center">{usernotes.IP}</td>
+		<td class="width-15 text-center">{usernotes.REPORT_AT}</td>
+		<td class="width-50">{usernotes.ACTION}</td>
+
+		<!-- IF S_CLEAR_ALLOWED --><td class="text-center"><input type="checkbox" name="marknote[]" id="note-{usernotes.ID}" value="{usernotes.ID}" /></td><!-- ENDIF -->
+	</tr>
+	<!-- BEGINELSE -->
+	<tr>
+		<td class="bg1 text-center" colspan="<!-- IF S_CLEAR_ALLOWED -->5<!-- ELSE -->4<!-- ENDIF -->">{L_NO_ENTRIES}</td>
+	</tr>
+	<!-- END usernotes -->
+	</tbody>
+	</table>
+	</div>
+
+	<fieldset class="panel-group text-center">
+		<label>{L_DISPLAY_LOG}{L_COLON}</label> {S_SELECT_SORT_DAYS}
+		<label>{L_SORT_BY}{L_COLON}</label> {S_SELECT_SORT_KEY} {S_SELECT_SORT_DIR}
+		<input type="submit" name="sort" value="{L_GO}" class="btn btn-default" />
+	</fieldset>
+
+	<!-- IF S_CLEAR_ALLOWED -->
+	<fieldset class="panel-group text-{S_CONTENT_FLOW_END}">
+		<div class="btn-group">
+			<input class="btn btn-danger" type="submit" name="action[del_all]" value="{L_DELETE_ALL}" />
+			<input class="btn btn-primary" type="submit" name="action[del_marked]" value="{L_DELETE_MARKED}" />
+			<a href="#" onclick="marklist('mcp', 'marknote', false); return false;" class="btn btn-warning">{L_UNMARK_ALL}</a>
+			<a href="#" onclick="marklist('mcp', 'marknote', true); return false;" class="btn btn-info">{L_MARK_ALL}</a>
+		</div>
+	</fieldset>
+	<!-- ENDIF -->
+
+	<div class="pages clearfix">
+		<!-- IF .pagination --> 
+			<!-- INCLUDE pagination.html -->
+		<!-- ENDIF -->
+		<div class="btn-group pull-{S_CONTENT_FLOW_BEGIN}">
+			<span class="btn btn-default disabled">{TOTAL_REPORTS}</span>
+			<span class="btn btn-default disabled">{PAGE_NUMBER}</span>
+		</div>
+	</div>
+
+</form>
+
+<!-- INCLUDE mcp_footer.html -->

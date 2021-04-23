@@ -1,0 +1,31 @@
+{
+	"name": "shredder/pai",
+	"type": "phpbb-extension",
+	"description": "Preview attached images for phpBB 3.1",
+	"homepage": "http://www.phpbb-work.ru/",
+	"keywords": ["phpbb-work", "extension", "Preview", "Attachments", "Images"],
+	"version": "1.0.2",
+	"time": "2014-12-06",
+	"license": "GPL-2.0",
+	"authors": [
+		{
+			"name": "Shredder",
+			"homepage": "http://www.phpbb-work.ru/",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": ">=5.3.3"
+	},
+	"extra": {
+		"display-name": "Preview Attached Images",
+		"soft-require": {
+			"phpbb/phpbb": ">=3.1.3"
+		},
+		"version-check": {
+			"host": "www.phpbb-work.ru",
+			"directory": "/mods",
+			"filename": "pai.json"
+		}
+	}
+}

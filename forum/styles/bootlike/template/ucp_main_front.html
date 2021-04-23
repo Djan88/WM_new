@@ -1,0 +1,79 @@
+<!-- INCLUDE ucp_header.html -->
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">{L_TITLE}</h4>
+	</div>
+	<div class="panel-body">
+
+	<p>{L_UCP_WELCOME}</p>
+
+<!-- IF .topicrow -->
+	<div class="panel panel-default">
+	<div class="clearfix">
+		<h4 class="col-md-9 col-sm-8 col-xs-12">{L_IMPORTANT_NEWS}</h4>
+		<h5 class="col-md-3 col-sm-4 hidden-xs">{L_LAST_POST}</h5>
+	</div>
+	<!-- BEGIN topicrow -->
+		<div class="clearfix icon {topicrow.TOPIC_IMG_STYLE}<!-- IF topicrow.S_ROW_COUNT is odd --> bg1<!-- ELSE --> bg2<!-- ENDIF -->">
+			<div class="folder col-md-9 col-sm-8 col-xs-12"<!-- IF topicrow.TOPIC_ICON_IMG --> style="background-image: url({T_ICONS_PATH}{topicrow.TOPIC_ICON_IMG});"<!-- ENDIF -->>
+
+			<!-- IF topicrow.S_UNREAD_TOPIC --><a href="{topicrow.U_NEWEST_POST}" class="icon-link"></a><!-- ENDIF -->
+				<!-- IF topicrow.S_UNREAD --><a href="{topicrow.U_NEWEST_POST}">{NEWEST_POST_IMG}</a> <!-- ENDIF --><a href="{topicrow.U_VIEW_TOPIC}" class="topictitle">{topicrow.TOPIC_TITLE}</a><br />
+				<!-- IF .topicrow.pagination -->
+				<ul class="pagination">
+				<!-- BEGIN pagination -->
+					<!-- IF topicrow.pagination.S_IS_PREV -->
+					<!-- ELSEIF topicrow.pagination.S_IS_CURRENT --><li class="active"><span>{topicrow.pagination.PAGE_NUMBER}</span></li>
+					<!-- ELSEIF topicrow.pagination.S_IS_ELLIPSIS --><li class="ellipsis disabled"><span>{L_ELLIPSIS}</span></li>
+					<!-- ELSEIF topicrow.pagination.S_IS_NEXT -->
+					<!-- ELSE --><li><a href="{topicrow.pagination.PAGE_URL}">{topicrow.pagination.PAGE_NUMBER}</a></li>
+					<!-- ENDIF -->
+				<!-- END pagination -->
+				</ul>
+				<!-- ENDIF -->
+				<div class="hidden-xs">
+					<!-- IF topicrow.ATTACH_ICON_IMG --><span class="tip" title="{L_TOTAL_ATTACHMENTS}"><i class="fa fa-paperclip"></i></span> <!-- ENDIF -->
+					{L_POST_BY_AUTHOR} {topicrow.TOPIC_AUTHOR_FULL} &raquo; {topicrow.FIRST_POST_TIME}
+				</div>
+				<div class="visible-xs">
+					<!-- IF topicrow.ATTACH_ICON_IMG --><span class="tip" title="{L_TOTAL_ATTACHMENTS}"><i class="fa fa-paperclip"></i></span> <!-- ENDIF -->
+					{L_LAST_POST} {L_POST_BY_AUTHOR} {topicrow.LAST_POST_AUTHOR_FULL} &laquo; <a href="{topicrow.U_LAST_POST}" title="{L_GOTO_LAST_POST}">{topicrow.LAST_POST_TIME}</a>
+				</div>
+			</div>
+
+			<div class="col-md-3 col-sm-4 hidden-xs">
+				{L_POST_BY_AUTHOR} {topicrow.LAST_POST_AUTHOR_FULL}
+				<a href="{topicrow.U_LAST_POST}" title="{L_GOTO_LAST_POST}"><i class="fa fa-arrow-{S_CONTENT_FLOW_END}"></i></a> <br />{topicrow.LAST_POST_TIME}
+			</div>
+		</div>
+	<!-- END topicrow -->
+<!-- ENDIF -->
+	</div>
+
+	<h4>{L_YOUR_DETAILS}</h4>
+
+	<dl class="form-group">
+		<dt class="col-md-3 col-sm-4 col-xs-12">{L_JOINED}{L_COLON}</dt>
+			<dd class="col-md-9 col-sm-8 col-xs-12">{JOINED}</dd>
+		<dt class="col-md-3 col-sm-4 col-xs-12">{L_LAST_ACTIVE}{L_COLON}</dt>
+			<dd class="col-md-9 col-sm-8 col-xs-12">{LAST_VISIT_YOU}</dd>
+		<dt class="col-md-3 col-sm-4 col-xs-12">{L_TOTAL_POSTS}{L_COLON}</dt>
+			<dd class="col-md-9 col-sm-8 col-xs-12"><!-- IF POSTS_PCT -->{POSTS}<!-- IF S_DISPLAY_SEARCH --> | <strong><a href="{U_SEARCH_USER}">{L_SEARCH_YOUR_POSTS}</a></strong><!-- ENDIF --><br />({POSTS_DAY} / {POSTS_PCT})<!-- ELSE -->{POSTS}<!-- ENDIF --></dd>
+		<!-- IF ACTIVE_FORUM != '' -->
+		<dt class="col-md-3 col-sm-4 col-xs-12">{L_ACTIVE_IN_FORUM}{L_COLON}</dt>
+			<dd class="col-md-9 col-sm-8 col-xs-12"><strong><a href="{U_ACTIVE_FORUM}">{ACTIVE_FORUM}</a></strong><br />({ACTIVE_FORUM_POSTS} / {ACTIVE_FORUM_PCT})</dd>
+		<!-- ENDIF -->
+		<!-- IF ACTIVE_TOPIC != '' -->
+		<dt class="col-md-3 col-sm-4 col-xs-12">{L_ACTIVE_IN_TOPIC}{L_COLON}</dt>
+			<dd class="col-md-9 col-sm-8 col-xs-12"><strong><a href="{U_ACTIVE_TOPIC}">{ACTIVE_TOPIC}</a></strong><br />({ACTIVE_TOPIC_POSTS} / {ACTIVE_TOPIC_PCT})</dd><!-- ENDIF -->
+		<!-- IF WARNINGS -->
+		<dt class="col-md-3 col-sm-4 col-xs-12">{L_YOUR_WARNINGS}{L_COLON}</dt>
+			<dd class="col-md-9 col-sm-8 col-xs-12"><strong class="label label-warning">{WARNINGS}</strong></dd>
+		<!-- ENDIF -->
+	</dl>
+
+	</div>
+</div>
+
+<!-- INCLUDE ucp_footer.html -->

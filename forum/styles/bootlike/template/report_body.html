@@ -1,0 +1,54 @@
+<!-- INCLUDE overall_header.html -->
+
+<form method="post" action="{S_REPORT_ACTION}" id="report">
+
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title"><!-- IF S_REPORT_POST -->{L_REPORT_POST}<!-- ELSE -->{L_REPORT_MESSAGE}<!-- ENDIF --></h4>
+				</div>
+				<div class="panel-body">
+
+					<p><!-- IF S_REPORT_POST -->{L_REPORT_POST_EXPLAIN}<!-- ELSE -->{L_REPORT_MESSAGE_EXPLAIN}<!-- ENDIF --></p>
+					
+					<fieldset class="form-horizontal">
+					<!-- IF ERROR --><div class="alert alert-danger">{ERROR}</div><!-- ENDIF -->
+					<dl class="form-group">
+						<dt class="col-md-3 col-sm-4 col-xs-12"><label class="control-label" for="reason_id">{L_REASON}{L_COLON}</label></dt>
+						<dd class="col-md-9 col-sm-8 col-xs-12 form-inline"><select name="reason_id" id="reason_id" class="form-control"><!-- BEGIN reason --><option value="{reason.ID}"<!-- IF reason.S_SELECTED --> selected="selected"<!-- ENDIF -->>{reason.DESCRIPTION}</option><!-- END reason --></select></dd>
+					</dl>
+					<!-- IF S_CAN_NOTIFY -->
+					<dl class="form-group">
+						<dt class="col-md-3 col-sm-4 col-xs-12"><label class="control-label" for="notify1">{L_REPORT_NOTIFY}{L_COLON}</label><br /><span class="help-block">{L_REPORT_NOTIFY_EXPLAIN}</span></dt>
+						<dd class="col-md-9 col-sm-8 col-xs-12">
+							<label class="control-label" for="notify1"><input type="radio" name="notify" id="notify1" value="1" <!-- IF not S_NOTIFY -->checked="checked"<!-- ENDIF --> /> {L_YES}</label> 
+							<label class="control-label" for="notify0"><input type="radio" name="notify" id="notify0" value="0" <!-- IF S_NOTIFY -->checked="checked"<!-- ENDIF --> /> {L_NO}</label>
+						</dd>
+					</dl>
+					<!-- ENDIF -->
+					<dl class="form-group">
+						<dt class="col-md-3 col-sm-4 col-xs-12"><label class="control-label" for="report_text">{L_MORE_INFO}{L_COLON}</label><br /><span class="help-block">{L_CAN_LEAVE_BLANK}</span></dt>
+						<dd class="col-md-9 col-sm-8 col-xs-12 form-inline"><textarea name="report_text" id="report_text" rows="10" cols="76" class="form-control">{REPORT_TEXT}</textarea></dd>
+					</dl>
+					<!-- IF CAPTCHA_TEMPLATE -->
+						<!-- INCLUDE {CAPTCHA_TEMPLATE} -->
+					<!-- ENDIF -->
+					</fieldset>
+
+				</div>
+
+				<fieldset class="panel-footer text-center">
+					<input type="submit" name="submit" class="btn btn-success" value="{L_SUBMIT}" />&nbsp;
+					<input type="submit" name="cancel" class="btn btn-danger" value="{L_CANCEL}" />
+					{S_FORM_TOKEN}
+				</fieldset>
+			</div>
+		</div>
+	</div>
+</div>
+
+</form>
+
+<!-- INCLUDE overall_footer.html -->

@@ -1,0 +1,46 @@
+<!-- INCLUDE overall_header.html -->
+
+<h3>{PAGE_TITLE}</h3>
+
+<form method="post" action="{S_MODE_ACTION}">
+
+<!-- BEGIN group -->
+<div class="table-responsive">
+	<table class="table table-bordered">
+
+	<thead>
+	<tr>
+		<th class="width-35" data-dfn="{L_RANK}{L_COMMA_SEPARATOR}{L_USERNAME}"><span class="rank-img hidden-xs pull-{S_CONTENT_FLOW_END}">{L_RANK}&nbsp;</span><!-- IF group.U_GROUP --><a href="{group.U_GROUP}">{group.GROUP_NAME}</a><!-- ELSE -->{group.GROUP_NAME}<!-- ENDIF --></th>
+		<th>{L_PRIMARY_GROUP}</th>
+		<!-- IF S_DISPLAY_MODERATOR_FORUMS -->
+		<th class="width-35">{L_MODERATOR}</th>
+		<!-- ENDIF -->
+	</tr>
+	</thead>
+	<tbody>
+<!-- BEGIN user -->
+	<tr class="<!-- IF group.user.S_ROW_COUNT is even -->bg1<!-- ELSE -->bg2<!-- ENDIF -->">
+		<td class="width-35"><span class="rank-img hidden-xs pull-{S_CONTENT_FLOW_END}"><!-- IF group.user.RANK_IMG -->{group.user.RANK_IMG}<!-- ELSE -->{group.user.RANK_TITLE}<!-- ENDIF --></span>{group.user.USERNAME_FULL}</td>
+		<td><!-- IF group.user.U_GROUP -->
+			<a<!-- IF group.user.GROUP_COLOR --> style="font-weight: bold; color: #{group.user.GROUP_COLOR}"<!-- ENDIF --> href="{group.user.U_GROUP}">{group.user.GROUP_NAME}</a>
+			<!-- ELSE -->
+				{group.user.GROUP_NAME}
+			<!-- ENDIF --></td>
+		<!-- IF S_DISPLAY_MODERATOR_FORUMS -->
+		<td class="width-35"><!-- IF group.user.FORUM_OPTIONS --><select class="form-control" style="width: 100%;">{group.user.FORUMS}</select><!-- ELSEIF group.user.FORUMS -->{group.user.FORUMS}<!-- ELSE -->-<!-- ENDIF --></td>
+		<!-- ENDIF -->
+	</tr>
+<!-- BEGINELSE -->
+	<tr class="bg1">
+		<td colspan="3"><strong>{L_NO_MEMBERS}</strong></td>
+	</tr>
+<!-- END user -->
+	</tbody>
+	</table>
+</div>
+<!-- END group -->
+
+</form>
+
+<!-- INCLUDE jumpbox.html -->
+<!-- INCLUDE overall_footer.html -->
