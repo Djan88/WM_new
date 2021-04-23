@@ -156,7 +156,19 @@
     <!--==========================
       Intro Section
     ============================-->
-    <?php if(is_page(183)) { ?>
+    <?php if(is_page(331)) { ?>
+      <main id="main" class="oferta">
+        <div class="container container_main">
+          <div class="row">
+            <div class="col-sm-2 col-xs-12"></div>
+            <div class="col-sm-8 col-xs-12">
+              <?php the_content(); ?>
+            </div>
+            <div class="col-sm-2 col-xs-12"></div>
+          </div>
+        </div>
+      </main>
+    <?php } else if(is_page(183)) { ?>
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <main id="main" class="kabinet">
           <div class="container container_main">
