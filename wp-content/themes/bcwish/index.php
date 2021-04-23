@@ -1590,7 +1590,7 @@
             <div class="col-sm-4">
               <div class="form">
                 <h4>Есть вопрос? Есть ответ!</h4>
-                <p>У Вас остались вопросы? Нужна помощь в освоениии <b>"WizardMachine"</b>? Хотите сказать нам спасибо? Воспользуйтесь формой ниже. Вам оперативно ответят! <a target="_blank" href="https://wizardmachine.ru/publichnyj-dogovor-oferta-o-predostavlenii-uslug-publichnaya-oferta/">Публичаня оферта</a><br><button class="form_triger" data-toggle="modal" data-target="#mail"><i class="fa fa-envelope"></i></button></p>
+                <p>У Вас остались вопросы? Нужна помощь в освоениии <b>"WizardMachine"</b>? Хотите сказать нам спасибо? Воспользуйтесь формой ниже. Вам оперативно ответят! <a target="_blank" href="https://wizardmachine.ru/publichnyj-dogovor-oferta-o-predostavlenii-uslug-publichnaya-oferta/">Публичная оферта</a><br><button class="form_triger" data-toggle="modal" data-target="#mail"><i class="fa fa-envelope"></i></button></p>
               </div>
             </div>
           </div>
