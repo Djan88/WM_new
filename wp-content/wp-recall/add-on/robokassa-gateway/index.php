@@ -160,7 +160,7 @@ class Rcl_Gateway_Robokassa extends Rcl_Gateway_Core {
 			array_splice( $md_array, 3, 0, $data->currency );
 		}
 
-		if ( $receipt = $this->get_receipt( $data ) ) {
+		if ( $receipt = urlencode($this->get_receipt( $data )) ) {
 			array_splice( $md_array, 3, 0, $receipt );
 		}
 

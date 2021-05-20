@@ -13,9 +13,11 @@ Adds an avatar upload field to user profiles inside the WordPress dashboard.
 
 Provides a plugin for front-end avatar management for sites that what to keep users out of the dashboard. Shortcode is `[basic-user-avatars]`.
 
+Version 1.0.5 added a feature to automatically convert avatars formerly loaded through the WP User Avatar plugin. This means that you can disable WP User Avatar, activate Basic User Avatars, and have a seamless transition for existing avatars in your site. Be sure to update any avatar upload form that used the [avatar_upload] shortcode to use our shortcode: [basic-user-avatars].
+
 Automatically adds avatar support to bbPress (2.3+) user profiles if bbPress is activated.
 
-**[This plugin is on GitHub!](https://github.com/strangerstudios/basic-user-avatars/)** Pull requests are welcome. If possible please report issues throug Github.
+**[This plugin is on GitHub!](https://github.com/strangerstudios/basic-user-avatars/)** Pull requests are welcome. If possible please report issues through Github.
 
 Note: This plugin is a fork of Simple Local Avatars v1.3.1 by Jake Goldman (10up). If you want snazzy ajax and some other nifty features, check out [Simple Local Avatars 2.x](http://wordpress.org/plugins/simple-local-avatars).
 
@@ -47,6 +49,9 @@ If things are still not functioning properly then proceed to reporting an issue.
 1. Option on the bbPress user profile edit page. 
 
 == Changelog ==
+= 1.0.5 - 2021-05-19 =
+* ENHANCEMENT: Now pulling avatar from WP User Avatar if we don't have one yet
+
 = 1.0.4 - 2020-01-12 =
 * BUG FIX: Fixed typos on readme.txt - Thanks @fred-pedro
 * ENHANCEMENT: Added translation for Spanish - Thanks @ricardpriet
