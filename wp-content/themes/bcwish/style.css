@@ -2423,6 +2423,10 @@ button.wizard_starter_alt.btn.btn-success
 {
   display: block;
 }
+.no_transition
+{
+  transition: all 0s!important;
+}
 /*Animation*/
 
 

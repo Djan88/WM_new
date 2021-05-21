@@ -16319,6 +16319,7 @@ mmt_2 = function(){
     count_animation = 1;
     jQuery('.ring').addClass('hidden');
     jQuery('.ring, .zone_ring').css('transform', 'rotate(0deg)');
+    jQuery('.zone_d2_').removeClass('no_transition');
     jQuery('.zone_d2_, .zone_v2').css({
         color: 'transparent',
         borderColor: 'transparent',
@@ -16352,6 +16353,7 @@ mmt_2 = function(){
             paddingTop: '2px',
             zIndex: '2'
         });
+        jQuery('.zone_d2_').addClass('no_transition').removeClass('rot_d_one');
         sound.stop();
         if (pausedStatus == true) {
           localStorage.setItem('paused', 'carma_2_1');
