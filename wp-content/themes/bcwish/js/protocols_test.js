@@ -16333,7 +16333,7 @@ mmt_2 = function(){
     jQuery('.zone_d2_').addClass('rot_d_one').css({background: '#fff url(/wp-content/themes/bcwish/img/d_.png) center center/100% no-repeat'});
     
     phaseOne = setInterval(function(){
-      if (count_animation <= 40){
+      if (count_animation <= 44){
         if (reloadTime == 0){                                                                       //1
             sound.stop();
             reloadSound.play();
