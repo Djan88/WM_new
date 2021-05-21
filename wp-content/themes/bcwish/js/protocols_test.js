@@ -16407,7 +16407,7 @@ mmt_2 = function(){
             paddingTop: '2px',
             zIndex: '2'
         });
-        // jQuery('.zone_d2_').removeClass('rot_d_one');
+        jQuery('.zone_d2_').removeClass('rot_d_one');
         sound.stop();
         if (pausedStatus == true) {
           localStorage.setItem('paused', 'carma_2');
