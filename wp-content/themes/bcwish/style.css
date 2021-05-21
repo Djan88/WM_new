@@ -2932,6 +2932,28 @@ button.wizard_starter_alt.btn.btn-success
 }
 
 
+.rot_d_one {
+  animation: 1s linear 0s normal none infinite running rot_d_one;
+  -webkit-animation: 1s linear 0s normal none infinite running rot_d_one;
+}
+@keyframes rot_d_one {
+  0% {
+    transform: rotate(0deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(-240deg) scale(1.5);
+  }
+}
+@-webkit-keyframes rot_d_one {
+  0% {
+    transform: rotate(0deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(-240deg) scale(1.5);
+  }
+}
+
+
 
 /*--------------------------------------------------------------
 # Responsive Media Queries

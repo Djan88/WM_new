@@ -651,6 +651,21 @@
                           <?php } ?>
                         </div>
                       </li>
+                      <?php if(current_user_can('administrator')){ ?>
+                        <li>
+                          <a data-toggle="collapse" href="#faq10" class="collapsed">КАРМИЧЕСКИЙ <i class="ion-android-remove"></i></a>
+                          <div id="faq10" class="collapse" data-parent="#faq-list">
+                            <p>
+                              Предназначен для очистки кармы
+                            </p>
+                            <?php if (current_user_can('subscriber') && $new_registred == 1) { ?>
+                              <p><div class=" closed_protocol wow bounceInUp">Этот протокол доступен только пользователям с оплаченным доступом! Оплатите доступ к программе и откройте все протоколы "WizardMachine"</div></p>
+                            <?php } else { ?>
+                              <p><button class="btn wizard_blue wizard_protocol wizard_protocol_10 wizard_prot_10 wow bounceInUp" data-wow-duration="1.4s">Активировать протокол</button></p>
+                            <?php } ?>
+                          </div>
+                        </li>
+                      <?php } ?>
                     </ul>
                   </div>
                 </div>

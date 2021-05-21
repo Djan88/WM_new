@@ -16311,6 +16311,59 @@ mmt_2 = function(){
     }, 250);
   }
 
+  carma = function(){
+    jQuery('.wizard_heading').text('Выполняется Кармический протокол');
+    jQuery('.wizard_percent').text('0%');
+    reloadTime = 0;
+    cur_animation_val = 0;
+    count_animation = 1;
+    jQuery('.ring').addClass('hidden');
+    jQuery('.ring, .zone_ring').css('transform', 'rotate(0deg)');
+    jQuery('.zone_d2_, .zone_v2').css({
+        color: 'transparent',
+        borderColor: 'transparent',
+        opacity: 0.8,
+        borderWidth: '1px',
+        paddingTop: '4px',
+        transform: 'rotate(0deg) scale(1.5)',
+        zIndex: '1000'
+    });
+    jQuery('.zone_v2').css({background: '#fff url(/wp-content/themes/bcwish/img/super_plod.png) center center/100% no-repeat'});
+    jQuery('.zone_d2_').css({background: '#fff url(/wp-content/themes/bcwish/img/d_.png) center center/100% no-repeat'});
+    jQuery('.zone_d2_').addClass('rot_d_one');
+    phaseOne = setInterval(function(){
+      if (count_animation <= 32){
+        if (reloadTime == 0){                                                                       //1
+            sound.stop();
+            reloadSound.play();
+        } else if (reloadTime == 2) {
+            sound.play();
+        };
+        reloadTime += 1;
+        count_animation += 1;
+      } else {
+        clearInterval(phaseOne);
+        count_animation = 1;
+        jQuery('.zone_d2_, .zone_v2').css({
+            background: '#fff',
+            color: '#413e66',
+            borderColor: '#413e66',
+            transform: 'rotate(0deg) scale(1)',
+            paddingTop: '2px',
+            zIndex: '2'
+        });
+        sound.stop();
+        if (pausedStatus == true) {
+          localStorage.setItem('paused', 'carma_2_1');
+          endNow()
+        } else {
+          // carma_2_1();
+          console.log('continue');
+        } 
+      }
+    }, 250);
+  }
+
 // Если есть незавершенный протокол
   if (localStorage.getItem('paused')) {
     jQuery('.wizard_continue').removeClass('hidden');
@@ -16371,6 +16424,8 @@ mmt_2 = function(){
       cur_protocol = 'visceral';
     } else if (that.hasClass('wizard_protocol_9')) {
       cur_protocol = 'universal';
+    } else if (that.hasClass('wizard_protocol_10')) {
+      cur_protocol = 'carma';
     }
     localStorage.setItem('cur_protocol', cur_protocol);
   }
@@ -16425,11 +16480,11 @@ mmt_2 = function(){
 
   jQuery('.wizard_play, .wizard_starter_alt').on('click', function(event) {
     checkPoints();
-    if(pointsStatus == false){
-      swal("Не все зоны перенесены!", "Перед началом процедуры необходимо перенести на фото калибровочное кольцо и все зоны.", "info");
-      alert_altSound.play();
-      pointsStatus = true;
-    } else {
+    // if(pointsStatus == false){
+    //   swal("Не все зоны перенесены!", "Перед началом процедуры необходимо перенести на фото калибровочное кольцо и все зоны.", "info");
+    //   alert_altSound.play();
+    //   pointsStatus = true;
+    // } else {
       if (pausedStatus == true) {
         // jQuery('.wizard_returned').attr('src', localStorage.getItem('pausedPhoto'));
         // console.log(localStorage.getItem('pausedPhoto'));
@@ -16465,6 +16520,9 @@ mmt_2 = function(){
         } else if (protocol == 'visceral') {
           mmt();
           jQuery('.status_title').text('Висцеральный протокол');
+        } else if (protocol == 'carma') {
+          carma();
+          jQuery('.status_title').text('Кармический протокол');
         }
       }
       pausedStatus = false;
@@ -16477,7 +16535,7 @@ mmt_2 = function(){
       localStorage.removeItem('paused');
       localStorage.removeItem('pausedPhoto');
       jQuery('.wizard_stop').removeClass('wizard_stop_inProgress');
-    }
+    // }
   });
 
 
