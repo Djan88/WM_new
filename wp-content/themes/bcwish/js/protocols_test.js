@@ -16329,7 +16329,7 @@ mmt_2 = function(){
         zIndex: '1000'
     });
     jQuery('.zone_v3').css({background: '#fff url(/wp-content/themes/bcwish/img/super_plod.png) center center/100% no-repeat', transform: 'rotate(0deg) scale(1.5)'});
-    jQuery('.zone_d2_').removeClass('rot_d_one').addClass('rot_d_two').css({background: '#fff url(/wp-content/themes/bcwish/img/d_.png) center center/100% no-repeat'});
+    jQuery('.zone_d2_').addClass('rot_d_two').css({background: '#fff url(/wp-content/themes/bcwish/img/d_.png) center center/100% no-repeat'});
     
     phaseOne = setInterval(function(){
       if (count_animation <= 40){
@@ -16352,6 +16352,7 @@ mmt_2 = function(){
             paddingTop: '2px',
             zIndex: '2'
         });
+        jQuery('.zone_d2_').removeClass('rot_d_two');
         sound.stop();
         if (pausedStatus == true) {
           localStorage.setItem('paused', 'carma_3');
@@ -16404,6 +16405,7 @@ mmt_2 = function(){
             paddingTop: '2px',
             zIndex: '2'
         });
+        jQuery('.zone_d2_').removeClass('rot_d_one');
         sound.stop();
         if (pausedStatus == true) {
           localStorage.setItem('paused', 'carma_2');
