@@ -16323,12 +16323,13 @@ mmt_2 = function(){
     jQuery('.zone_d2_, .zone_v3').css({
         color: 'transparent',
         borderColor: 'transparent',
+        transform: 'rotate(0deg) scale(1.5)',
         opacity: 0.8,
         borderWidth: '1px',
         paddingTop: '4px',
         zIndex: '1000'
     });
-    jQuery('.zone_v3').css({background: '#fff url(/wp-content/themes/bcwish/img/super_plod.png) center center/100% no-repeat', transform: 'rotate(0deg) scale(1.5)'});
+    jQuery('.zone_v3').css({background: '#fff url(/wp-content/themes/bcwish/img/super_plod.png) center center/100% no-repeat'});
     jQuery('.zone_d2_').addClass('rot_d_two').css({background: '#fff url(/wp-content/themes/bcwish/img/d_.png) center center/100% no-repeat'});
     
     phaseOne = setInterval(function(){
@@ -16376,12 +16377,13 @@ mmt_2 = function(){
     jQuery('.zone_d2_, .zone_v2').css({
         color: 'transparent',
         borderColor: 'transparent',
+        transform: 'rotate(0deg) scale(1.5)',
         opacity: 0.8,
         borderWidth: '1px',
         paddingTop: '4px',
         zIndex: '1000'
     });
-    jQuery('.zone_v2').css({background: '#fff url(/wp-content/themes/bcwish/img/super_plod.png) center center/100% no-repeat', transform: 'rotate(0deg) scale(1.5)'});
+    jQuery('.zone_v2').css({background: '#fff url(/wp-content/themes/bcwish/img/super_plod.png) center center/100% no-repeat'});
     jQuery('.zone_d2_').addClass('rot_d_one').css({background: '#fff url(/wp-content/themes/bcwish/img/d_.png) center center/100% no-repeat'});
     
     phaseOne = setInterval(function(){

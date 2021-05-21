@@ -2465,10 +2465,10 @@ button.wizard_starter_alt.btn.btn-success
     transform: rotate(0deg) scale(1.5);
   }
   10% {
-    transform: rotate(-660deg) scale(1.5);
+    transform: rotate(-280deg) scale(1.5);
   }
   100% {
-    transform: rotate(-660deg) scale(1.5);
+    transform: rotate(-280deg) scale(1.5);
   }
 }
 @-webkit-keyframes rot_d_two {
@@ -2476,10 +2476,10 @@ button.wizard_starter_alt.btn.btn-success
     transform: rotate(0deg) scale(1.5);
   }
   10% {
-    transform: rotate(-660deg) scale(1.5);
+    transform: rotate(-280deg) scale(1.5);
   }
   100% {
-    transform: rotate(-660deg) scale(1.5);
+    transform: rotate(-280deg) scale(1.5);
   }
 }
 
