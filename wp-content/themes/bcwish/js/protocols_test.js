@@ -16330,7 +16330,7 @@ mmt_2 = function(){
         zIndex: '1000'
     });
     jQuery('.zone_v3').css({background: '#fff url(/wp-content/themes/bcwish/img/super_plod.png) center center/100% no-repeat'});
-    jQuery('.zone_d2_').removeClass('rot_d_one');.addClass('rot_d_two').css({background: '#fff url(/wp-content/themes/bcwish/img/d_.png) center center/100% no-repeat'});
+    jQuery('.zone_d2_').removeClass('rot_d_one').addClass('rot_d_two').css({background: '#fff url(/wp-content/themes/bcwish/img/d_.png) center center/100% no-repeat'});
     
     phaseOne = setInterval(function(){
       if (count_animation <= 40){
