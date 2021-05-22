@@ -16311,6 +16311,59 @@ mmt_2 = function(){
     }, 250);
   }
 
+  carma_3 = function(){
+    jQuery('.wizard_heading').text('Выполняется Кармический протокол');
+    jQuery('.wizard_percent').text('20%');
+    reloadTime = 0;
+    cur_animation_val = 0;
+    count_animation = 1;
+    jQuery('.ring').addClass('hidden');
+    jQuery('.ring, .zone_ring').css('transform', 'rotate(0deg)');
+    jQuery('.zone_d2_, .zone_v3').css({
+        color: 'transparent',
+        borderColor: 'transparent',
+        transform: 'scale(1.5)',
+        opacity: 0.8,
+        borderWidth: '1px',
+        paddingTop: '4px',
+        zIndex: '1000'
+    });
+    jQuery('.zone_v3').css({background: '#fff url(/wp-content/themes/bcwish/img/super_plod.png) center center/100% no-repeat'});
+    jQuery('.zone_d2_').addClass('rot_d_three').css({background: '#fff url(/wp-content/themes/bcwish/img/d_.png) center center/100% no-repeat'});
+    
+    phaseOne = setInterval(function(){
+      if (count_animation <= 40){
+        if (reloadTime == 0){                                                                       //1
+            sound.stop();
+            reloadSound.play();
+        } else if (reloadTime == 2) {
+            sound.play();
+        };
+        reloadTime += 1;
+        count_animation += 1;
+      } else {
+        clearInterval(phaseOne);
+        count_animation = 1;
+        jQuery('.zone_v3').css({
+            background: '#fff',
+            color: '#413e66',
+            borderColor: '#413e66',
+            transform: 'scale(1)',
+            paddingTop: '2px',
+            zIndex: '2'
+        });
+        jQuery('.zone_d2_').removeClass('rot_d_three');
+        sound.stop();
+        if (pausedStatus == true) {
+          localStorage.setItem('paused', 'carma_4');
+          endNow()
+        } else {
+          // carma_4();
+          console.log('continue');
+        } 
+      }
+    }, 250);
+  }
 
   carma_2 = function(){
     jQuery('.wizard_heading').text('Выполняется Кармический протокол');
@@ -16359,8 +16412,8 @@ mmt_2 = function(){
           localStorage.setItem('paused', 'carma_3');
           endNow()
         } else {
-          // carma_3();
-          console.log('continue');
+          carma_3();
+          // console.log('continue');
         } 
       }
     }, 250);
