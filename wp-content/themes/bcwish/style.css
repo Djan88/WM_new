@@ -2625,6 +2625,27 @@ button.wizard_starter_alt.btn.btn-success
     transform: rotate(-360deg) scale(1.5);
   }
 }
+.rot_zone_supersolis {
+  animation: 26s linear 0s normal none infinite running rot_zone_supersolis;
+  -webkit-animation: 26s linear 0s normal none infinite running rot_zone_supersolis;
+}
+@keyframes rot_zone_supersolis {
+  0% {
+    transform: rotate(0deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.5);
+  }
+}
+@-webkit-keyframes rot_zone_supersolis {
+  0% {
+    transform: rotate(0deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.5);
+  }
+}
+
 .rot_90_one {
   animation: 90s linear 0s normal none infinite running rot_90_one;
   -webkit-animation: 90s linear 0s normal none infinite running rot_90_one;
@@ -2830,27 +2851,6 @@ button.wizard_starter_alt.btn.btn-success
     transform: rotate(-180deg) scale(1.5);
   }
 }
-.rot_zone_supersolis {
-  animation: 26s linear 0s normal none infinite running rot_zone_supersolis;
-  -webkit-animation: 26s linear 0s normal none infinite running rot_zone_supersolis;
-}
-@keyframes rot_zone_supersolis {
-  0% {
-    transform: rotate(0deg) scale(1.5);
-  }
-  100% {
-    transform: rotate(-360deg) scale(1.5);
-  }
-}
-@-webkit-keyframes rot_zone_supersolis {
-  0% {
-    transform: rotate(0deg) scale(1.5);
-  }
-  100% {
-    transform: rotate(-360deg) scale(1.5);
-  }
-}
-
 
 .rot_zone_ring_double {
   animation: 180s linear 0s normal none infinite running rot_zone_ring_double;
