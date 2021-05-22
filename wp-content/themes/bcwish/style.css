@@ -2439,10 +2439,10 @@ button.wizard_starter_alt.btn.btn-success
     transform: rotate(0deg) scale(1.5);
   }
   3% {
-    transform: rotate(-320deg) scale(1.5);
+    transform: rotate(-311deg) scale(1.5);
   }
   97% {
-    transform: rotate(-320deg) scale(1.5);
+    transform: rotate(-311deg) scale(1.5);
   }
   100% {
     transform: rotate(-360deg) scale(1.5);
@@ -2453,16 +2453,79 @@ button.wizard_starter_alt.btn.btn-success
     transform: rotate(0deg) scale(1.5);
   }
   3% {
-    transform: rotate(-320deg) scale(1.5);
+    transform: rotate(-311deg) scale(1.5);
   }
   97% {
-    transform: rotate(-320deg) scale(1.5);
+    transform: rotate(-311deg) scale(1.5);
   }
   100% {
     transform: rotate(-360deg) scale(1.5);
   }
 }
-
+.rot_d_two {
+  animation: 26s linear 0s normal none running rot_d_two;
+  -webkit-animation: 26s linear 0s normal none running rot_d_two;
+}
+@keyframes rot_d_two {
+  0% {
+    transform: rotate(0deg) scale(1.5);
+  }
+  3% {
+    transform: rotate(-210deg) scale(1.5);
+  }
+  97% {
+    transform: rotate(-210deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1.5);
+  }
+}
+@-webkit-keyframes rot_d_two {
+  0% {
+    transform: rotate(0deg) scale(1.5);
+  }
+  3% {
+    transform: rotate(-210deg) scale(1.5);
+  }
+  97% {
+    transform: rotate(-210deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1.5);
+  }
+}
+.rot_d_three {
+  animation: 26s linear 0s normal none running rot_d_three;
+  -webkit-animation: 26s linear 0s normal none running rot_d_three;
+}
+@keyframes rot_d_three {
+  0% {
+    transform: rotate(0deg) scale(1.5);
+  }
+  3% {
+    transform: rotate(-195deg) scale(1.5);
+  }
+  97% {
+    transform: rotate(-195deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1.5);
+  }
+}
+@-webkit-keyframes rot_d_three {
+  0% {
+    transform: rotate(0deg) scale(1.5);
+  }
+  3% {
+    transform: rotate(-195deg) scale(1.5);
+  }
+  97% {
+    transform: rotate(-195deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1.5);
+  }
+}
 .rot_d_four {
   animation: 26s linear 0s normal none running rot_d_four;
   -webkit-animation: 26s linear 0s normal none running rot_d_four;
@@ -2472,10 +2535,10 @@ button.wizard_starter_alt.btn.btn-success
     transform: rotate(0deg) scale(1.5);
   }
   3% {
-    transform: rotate(-250deg) scale(1.5);
+    transform: rotate(-185deg) scale(1.5);
   }
   97% {
-    transform: rotate(-250deg) scale(1.5);
+    transform: rotate(-185deg) scale(1.5);
   }
   100% {
     transform: rotate(-360deg) scale(1.5);
@@ -2486,10 +2549,10 @@ button.wizard_starter_alt.btn.btn-success
     transform: rotate(0deg) scale(1.5);
   }
   3% {
-    transform: rotate(-250deg) scale(1.5);
+    transform: rotate(-185deg) scale(1.5);
   }
   97% {
-    transform: rotate(-250deg) scale(1.5);
+    transform: rotate(-185deg) scale(1.5);
   }
   100% {
     transform: rotate(-360deg) scale(1.5);
@@ -2505,10 +2568,10 @@ button.wizard_starter_alt.btn.btn-success
     transform: rotate(0deg) scale(1.5);
   }
   3% {
-    transform: rotate(-210deg) scale(1.5);
+    transform: rotate(-225deg) scale(1.5);
   }
   97% {
-    transform: rotate(-210deg) scale(1.5);
+    transform: rotate(-225deg) scale(1.5);
   }
   100% {
     transform: rotate(-360deg) scale(1.5);
@@ -2519,10 +2582,10 @@ button.wizard_starter_alt.btn.btn-success
     transform: rotate(0deg) scale(1.5);
   }
   3% {
-    transform: rotate(-210deg) scale(1.5);
+    transform: rotate(-225deg) scale(1.5);
   }
   97% {
-    transform: rotate(-210deg) scale(1.5);
+    transform: rotate(-225deg) scale(1.5);
   }
   100% {
     transform: rotate(-360deg) scale(1.5);
@@ -2538,10 +2601,10 @@ button.wizard_starter_alt.btn.btn-success
     transform: rotate(0deg) scale(1.5);
   }
   3% {
-    transform: rotate(-200deg) scale(1.5);
+    transform: rotate(-260deg) scale(1.5);
   }
   97% {
-    transform: rotate(-200deg) scale(1.5);
+    transform: rotate(-260deg) scale(1.5);
   }
   100% {
     transform: rotate(-360deg) scale(1.5);
@@ -2552,74 +2615,10 @@ button.wizard_starter_alt.btn.btn-success
     transform: rotate(0deg) scale(1.5);
   }
   3% {
-    transform: rotate(-200deg) scale(1.5);
+    transform: rotate(-260deg) scale(1.5);
   }
   97% {
-    transform: rotate(-200deg) scale(1.5);
-  }
-  100% {
-    transform: rotate(-360deg) scale(1.5);
-  }
-}
-.rot_d_three {
-  animation: 26s linear 0s normal none running rot_d_three;
-  -webkit-animation: 26s linear 0s normal none running rot_d_three;
-}
-@keyframes rot_d_three {
-  0% {
-    transform: rotate(0deg) scale(1.5);
-  }
-  3% {
-    transform: rotate(-190deg) scale(1.5);
-  }
-  97% {
-    transform: rotate(-190deg) scale(1.5);
-  }
-  100% {
-    transform: rotate(-360deg) scale(1.5);
-  }
-}
-@-webkit-keyframes rot_d_three {
-  0% {
-    transform: rotate(0deg) scale(1.5);
-  }
-  3% {
-    transform: rotate(-190deg) scale(1.5);
-  }
-  97% {
-    transform: rotate(-190deg) scale(1.5);
-  }
-  100% {
-    transform: rotate(-360deg) scale(1.5);
-  }
-}
-.rot_d_two {
-  animation: 26s linear 0s normal none running rot_d_two;
-  -webkit-animation: 26s linear 0s normal none running rot_d_two;
-}
-@keyframes rot_d_two {
-  0% {
-    transform: rotate(0deg) scale(1.5);
-  }
-  3% {
-    transform: rotate(-180deg) scale(1.5);
-  }
-  97% {
-    transform: rotate(-180deg) scale(1.5);
-  }
-  100% {
-    transform: rotate(-360deg) scale(1.5);
-  }
-}
-@-webkit-keyframes rot_d_two {
-  0% {
-    transform: rotate(0deg) scale(1.5);
-  }
-  3% {
-    transform: rotate(-180deg) scale(1.5);
-  }
-  97% {
-    transform: rotate(-180deg) scale(1.5);
+    transform: rotate(-260deg) scale(1.5);
   }
   100% {
     transform: rotate(-360deg) scale(1.5);
