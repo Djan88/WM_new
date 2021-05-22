@@ -2438,10 +2438,10 @@ button.wizard_starter_alt.btn.btn-success
   0% {
     transform: rotate(0deg) scale(1.5);
   }
-  10% {
+  3% {
     transform: rotate(-320deg) scale(1.5);
   }
-  90% {
+  97% {
     transform: rotate(-320deg) scale(1.5);
   }
   100% {
@@ -2452,10 +2452,10 @@ button.wizard_starter_alt.btn.btn-success
   0% {
     transform: rotate(0deg) scale(1.5);
   }
-  10% {
+  3% {
     transform: rotate(-320deg) scale(1.5);
   }
-  90% {
+  97% {
     transform: rotate(-320deg) scale(1.5);
   }
   100% {
@@ -2471,10 +2471,10 @@ button.wizard_starter_alt.btn.btn-success
   0% {
     transform: rotate(0deg) scale(1.5);
   }
-  10% {
+  3% {
     transform: rotate(-250deg) scale(1.5);
   }
-  95% {
+  97% {
     transform: rotate(-250deg) scale(1.5);
   }
   100% {
@@ -2485,10 +2485,10 @@ button.wizard_starter_alt.btn.btn-success
   0% {
     transform: rotate(0deg) scale(1.5);
   }
-  10% {
+  3% {
     transform: rotate(-250deg) scale(1.5);
   }
-  95% {
+  97% {
     transform: rotate(-250deg) scale(1.5);
   }
   100% {
@@ -2504,10 +2504,10 @@ button.wizard_starter_alt.btn.btn-success
   0% {
     transform: rotate(0deg) scale(1.5);
   }
-  10% {
+  3% {
     transform: rotate(-210deg) scale(1.5);
   }
-  95% {
+  97% {
     transform: rotate(-210deg) scale(1.5);
   }
   100% {
@@ -2518,10 +2518,10 @@ button.wizard_starter_alt.btn.btn-success
   0% {
     transform: rotate(0deg) scale(1.5);
   }
-  10% {
+  3% {
     transform: rotate(-210deg) scale(1.5);
   }
-  95% {
+  97% {
     transform: rotate(-210deg) scale(1.5);
   }
   100% {
@@ -2537,10 +2537,10 @@ button.wizard_starter_alt.btn.btn-success
   0% {
     transform: rotate(0deg) scale(1.5);
   }
-  10% {
+  3% {
     transform: rotate(-200deg) scale(1.5);
   }
-  95% {
+  97% {
     transform: rotate(-200deg) scale(1.5);
   }
   100% {
@@ -2551,10 +2551,10 @@ button.wizard_starter_alt.btn.btn-success
   0% {
     transform: rotate(0deg) scale(1.5);
   }
-  10% {
+  3% {
     transform: rotate(-200deg) scale(1.5);
   }
-  95% {
+  97% {
     transform: rotate(-200deg) scale(1.5);
   }
   100% {
@@ -2569,10 +2569,10 @@ button.wizard_starter_alt.btn.btn-success
   0% {
     transform: rotate(0deg) scale(1.5);
   }
-  10% {
+  3% {
     transform: rotate(-190deg) scale(1.5);
   }
-  95% {
+  97% {
     transform: rotate(-190deg) scale(1.5);
   }
   100% {
@@ -2583,10 +2583,10 @@ button.wizard_starter_alt.btn.btn-success
   0% {
     transform: rotate(0deg) scale(1.5);
   }
-  10% {
+  3% {
     transform: rotate(-190deg) scale(1.5);
   }
-  95% {
+  97% {
     transform: rotate(-190deg) scale(1.5);
   }
   100% {
@@ -2601,10 +2601,10 @@ button.wizard_starter_alt.btn.btn-success
   0% {
     transform: rotate(0deg) scale(1.5);
   }
-  10% {
+  3% {
     transform: rotate(-180deg) scale(1.5);
   }
-  95% {
+  97% {
     transform: rotate(-180deg) scale(1.5);
   }
   100% {
@@ -2615,10 +2615,10 @@ button.wizard_starter_alt.btn.btn-success
   0% {
     transform: rotate(0deg) scale(1.5);
   }
-  10% {
+  3% {
     transform: rotate(-180deg) scale(1.5);
   }
-  95% {
+  97% {
     transform: rotate(-180deg) scale(1.5);
   }
   100% {
@@ -2828,6 +2828,26 @@ button.wizard_starter_alt.btn.btn-success
   }
   64% {
     transform: rotate(-180deg) scale(1.5);
+  }
+}
+.rot_zone_supersolis {
+  animation: 26s linear 0s normal none infinite running rot_zone_supersolis;
+  -webkit-animation: 26s linear 0s normal none infinite running rot_zone_supersolis;
+}
+@keyframes rot_zone_supersolis {
+  0% {
+    transform: rotate(0deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1.5);
+  }
+}
+@-webkit-keyframes rot_zone_supersolis {
+  0% {
+    transform: rotate(0deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1.5);
   }
 }
 

@@ -16328,11 +16328,11 @@ mmt_2 = function(){
         paddingTop: '4px',
         zIndex: '1000'
     });
-    jQuery('.zone_d5').css({background: '#fff url(/wp-content/themes/bcwish/img/super_plod.png) center center/100% no-repeat'});
+    jQuery('.zone_d5').addClass('rot_zone_supersolis').css({background: '#fff url(/wp-content/themes/bcwish/img/super_plod.png) center center/100% no-repeat'});
     jQuery('.zone_d2_').addClass('rot_d_six').css({background: '#fff url(/wp-content/themes/bcwish/img/d_.png) center center/100% no-repeat'});
     
     phaseOne = setInterval(function(){
-      if (count_animation <= 40){
+      if (count_animation <= 104){
         if (reloadTime == 0){                                                                       //1
             sound.stop();
             reloadSound.play();
@@ -16353,6 +16353,7 @@ mmt_2 = function(){
             zIndex: '2'
         });
         jQuery('.zone_d2_').removeClass('rot_d_six');
+        jQuery('.zone_d5').removeClass('rot_zone_supersolis');
         sound.stop();
         if (pausedStatus == true) {
           localStorage.setItem('paused', 'carma_7');
@@ -16381,11 +16382,11 @@ mmt_2 = function(){
         paddingTop: '4px',
         zIndex: '1000'
     });
-    jQuery('.zone_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/super_plod.png) center center/100% no-repeat'});
+    jQuery('.zone_d4').addClass('rot_zone_supersolis').css({background: '#fff url(/wp-content/themes/bcwish/img/super_plod.png) center center/100% no-repeat'});
     jQuery('.zone_d2_').addClass('rot_d_five').css({background: '#fff url(/wp-content/themes/bcwish/img/d_.png) center center/100% no-repeat'});
     
     phaseOne = setInterval(function(){
-      if (count_animation <= 40){
+      if (count_animation <= 104){
         if (reloadTime == 0){                                                                       //1
             sound.stop();
             reloadSound.play();
@@ -16406,6 +16407,7 @@ mmt_2 = function(){
             zIndex: '2'
         });
         jQuery('.zone_d2_').removeClass('rot_d_five');
+        jQuery('.zone_d4').removeClass('rot_zone_supersolis');
         sound.stop();
         if (pausedStatus == true) {
           localStorage.setItem('paused', 'carma_6');
@@ -16434,11 +16436,11 @@ mmt_2 = function(){
         paddingTop: '4px',
         zIndex: '1000'
     });
-    jQuery('.zone_d3').css({background: '#fff url(/wp-content/themes/bcwish/img/super_plod.png) center center/100% no-repeat'});
+    jQuery('.zone_d3').addClass('rot_zone_supersolis').css({background: '#fff url(/wp-content/themes/bcwish/img/super_plod.png) center center/100% no-repeat'});
     jQuery('.zone_d2_').addClass('rot_d_four').css({background: '#fff url(/wp-content/themes/bcwish/img/d_.png) center center/100% no-repeat'});
     
     phaseOne = setInterval(function(){
-      if (count_animation <= 40){
+      if (count_animation <= 104){
         if (reloadTime == 0){                                                                       //1
             sound.stop();
             reloadSound.play();
@@ -16459,6 +16461,7 @@ mmt_2 = function(){
             zIndex: '2'
         });
         jQuery('.zone_d2_').removeClass('rot_d_four');
+        jQuery('.zone_d3').removeClass('rot_zone_supersolis');
         sound.stop();
         if (pausedStatus == true) {
           localStorage.setItem('paused', 'carma_5');
@@ -16487,11 +16490,11 @@ mmt_2 = function(){
         paddingTop: '4px',
         zIndex: '1000'
     });
-    jQuery('.zone_v4').css({background: '#fff url(/wp-content/themes/bcwish/img/super_plod.png) center center/100% no-repeat'});
+    jQuery('.zone_v4').addClass('rot_zone_supersolis').css({background: '#fff url(/wp-content/themes/bcwish/img/super_plod.png) center center/100% no-repeat'});
     jQuery('.zone_d2_').addClass('rot_d_three').css({background: '#fff url(/wp-content/themes/bcwish/img/d_.png) center center/100% no-repeat'});
     
     phaseOne = setInterval(function(){
-      if (count_animation <= 40){
+      if (count_animation <= 104){
         if (reloadTime == 0){                                                                       //1
             sound.stop();
             reloadSound.play();
@@ -16512,6 +16515,7 @@ mmt_2 = function(){
             zIndex: '2'
         });
         jQuery('.zone_d2_').removeClass('rot_d_three');
+        jQuery('.zone_v4').removeClass('rot_zone_supersolis');
         sound.stop();
         if (pausedStatus == true) {
           localStorage.setItem('paused', 'carma_4');
@@ -16541,11 +16545,11 @@ mmt_2 = function(){
         paddingTop: '4px',
         zIndex: '1000'
     });
-    jQuery('.zone_v3').css({background: '#fff url(/wp-content/themes/bcwish/img/super_plod.png) center center/100% no-repeat'});
+    jQuery('.zone_v3').addClass('rot_zone_supersolis').css({background: '#fff url(/wp-content/themes/bcwish/img/super_plod.png) center center/100% no-repeat'});
     jQuery('.zone_d2_').addClass('rot_d_two').css({background: '#fff url(/wp-content/themes/bcwish/img/d_.png) center center/100% no-repeat'});
     
     phaseOne = setInterval(function(){
-      if (count_animation <= 40){
+      if (count_animation <= 104){
         if (reloadTime == 0){                                                                       //1
             sound.stop();
             reloadSound.play();
@@ -16566,6 +16570,7 @@ mmt_2 = function(){
             zIndex: '2'
         });
         jQuery('.zone_d2_').removeClass('rot_d_two');
+        jQuery('.zone_v3').removeClass('rot_zone_supersolis');
         sound.stop();
         if (pausedStatus == true) {
           localStorage.setItem('paused', 'carma_3');
@@ -16595,11 +16600,11 @@ mmt_2 = function(){
         paddingTop: '4px',
         zIndex: '1000'
     });
-    jQuery('.zone_v2').css({background: '#fff url(/wp-content/themes/bcwish/img/super_plod.png) center center/100% no-repeat'});
+    jQuery('.zone_v2').addClass('rot_zone_supersolis').css({background: '#fff url(/wp-content/themes/bcwish/img/super_plod.png) center center/100% no-repeat'});
     jQuery('.zone_d2_').addClass('rot_d_one').css({background: '#fff url(/wp-content/themes/bcwish/img/d_.png) center center/100% no-repeat'});
     
     phaseOne = setInterval(function(){
-      if (count_animation <= 40){
+      if (count_animation <= 104){
         if (reloadTime == 0){                                                                       //1
             sound.stop();
             reloadSound.play();
@@ -16620,6 +16625,7 @@ mmt_2 = function(){
             zIndex: '2'
         });
         jQuery('.zone_d2_').removeClass('rot_d_one');
+        jQuery('.zone_v2').removeClass('rot_zone_supersolis');
         sound.stop();
         if (pausedStatus == true) {
           localStorage.setItem('paused', 'carma_2');
