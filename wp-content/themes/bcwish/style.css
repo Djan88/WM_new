@@ -2505,10 +2505,10 @@ button.wizard_starter_alt.btn.btn-success
     transform: rotate(0deg) scale(1.5);
   }
   10% {
-    transform: rotate(-200deg) scale(1.5);
+    transform: rotate(-210deg) scale(1.5);
   }
   95% {
-    transform: rotate(-200deg) scale(1.5);
+    transform: rotate(-210deg) scale(1.5);
   }
   100% {
     transform: rotate(-360deg) scale(1.5);
@@ -2519,10 +2519,107 @@ button.wizard_starter_alt.btn.btn-success
     transform: rotate(0deg) scale(1.5);
   }
   10% {
-    transform: rotate(-200deg) scale(1.5);
+    transform: rotate(-210deg) scale(1.5);
   }
   95% {
-    transform: rotate(-200deg) scale(1.5);
+    transform: rotate(-210deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1.5);
+  }
+}
+
+.rot_d_four {
+  animation: 10s linear 0s normal none running rot_d_four;
+  -webkit-animation: 10s linear 0s normal none running rot_d_four;
+}
+@keyframes rot_d_four {
+  0% {
+    transform: rotate(0deg) scale(1.5);
+  }
+  10% {
+    transform: rotate(-190deg) scale(1.5);
+  }
+  95% {
+    transform: rotate(-190deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1.5);
+  }
+}
+@-webkit-keyframes rot_d_four {
+  0% {
+    transform: rotate(0deg) scale(1.5);
+  }
+  10% {
+    transform: rotate(-190deg) scale(1.5);
+  }
+  95% {
+    transform: rotate(-190deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1.5);
+  }
+}
+.rot_d_five {
+  animation: 10s linear 0s normal none running rot_d_five;
+  -webkit-animation: 10s linear 0s normal none running rot_d_five;
+}
+@keyframes rot_d_five {
+  0% {
+    transform: rotate(0deg) scale(1.5);
+  }
+  10% {
+    transform: rotate(-180deg) scale(1.5);
+  }
+  95% {
+    transform: rotate(-180deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1.5);
+  }
+}
+@-webkit-keyframes rot_d_five {
+  0% {
+    transform: rotate(0deg) scale(1.5);
+  }
+  10% {
+    transform: rotate(-180deg) scale(1.5);
+  }
+  95% {
+    transform: rotate(-180deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1.5);
+  }
+}
+.rot_d_six {
+  animation: 10s linear 0s normal none running rot_d_six;
+  -webkit-animation: 10s linear 0s normal none running rot_d_six;
+}
+@keyframes rot_d_six {
+  0% {
+    transform: rotate(0deg) scale(1.5);
+  }
+  10% {
+    transform: rotate(-180deg) scale(1.5);
+  }
+  95% {
+    transform: rotate(-180deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1.5);
+  }
+}
+@-webkit-keyframes rot_d_six {
+  0% {
+    transform: rotate(0deg) scale(1.5);
+  }
+  10% {
+    transform: rotate(-180deg) scale(1.5);
+  }
+  95% {
+    transform: rotate(-180deg) scale(1.5);
   }
   100% {
     transform: rotate(-360deg) scale(1.5);
