@@ -2441,8 +2441,11 @@ button.wizard_starter_alt.btn.btn-success
   10% {
     transform: rotate(-320deg) scale(1.5);
   }
-  100% {
+  90% {
     transform: rotate(-320deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1.5);
   }
 }
 @-webkit-keyframes rot_d_one {
@@ -2452,8 +2455,11 @@ button.wizard_starter_alt.btn.btn-success
   10% {
     transform: rotate(-320deg) scale(1.5);
   }
-  100% {
+  90% {
     transform: rotate(-320deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1.5);
   }
 }
 .rot_d_two {
@@ -2465,10 +2471,13 @@ button.wizard_starter_alt.btn.btn-success
     transform: rotate(0deg) scale(1.5);
   }
   10% {
-    transform: rotate(-260deg) scale(1.5);
+    transform: rotate(-250deg) scale(1.5);
+  }
+  90% {
+    transform: rotate(-250deg) scale(1.5);
   }
   100% {
-    transform: rotate(-260deg) scale(1.5);
+    transform: rotate(-360deg) scale(1.5);
   }
 }
 @-webkit-keyframes rot_d_two {
@@ -2476,10 +2485,13 @@ button.wizard_starter_alt.btn.btn-success
     transform: rotate(0deg) scale(1.5);
   }
   10% {
-    transform: rotate(-260deg) scale(1.5);
+    transform: rotate(-250deg) scale(1.5);
+  }
+  90% {
+    transform: rotate(-250deg) scale(1.5);
   }
   100% {
-    transform: rotate(-260deg) scale(1.5);
+    transform: rotate(-360deg) scale(1.5);
   }
 }
 
