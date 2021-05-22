@@ -16323,7 +16323,7 @@ mmt_2 = function(){
     jQuery('.zone_d2_, .zone_v3').css({
         color: 'transparent',
         borderColor: 'transparent',
-        transform: 'rotate(0deg) scale(1.5)',
+        transform: 'scale(1.5)',
         opacity: 0.8,
         borderWidth: '1px',
         paddingTop: '4px',
@@ -16349,7 +16349,7 @@ mmt_2 = function(){
             background: '#fff',
             color: '#413e66',
             borderColor: '#413e66',
-            transform: 'rotate(0deg) scale(1)',
+            transform: 'scale(1)',
             paddingTop: '2px',
             zIndex: '2'
         });
@@ -16377,7 +16377,7 @@ mmt_2 = function(){
     jQuery('.zone_d2_, .zone_v2').css({
         color: 'transparent',
         borderColor: 'transparent',
-        transform: 'rotate(0deg) scale(1.5)',
+        transform: 'scale(1.5)',
         opacity: 0.8,
         borderWidth: '1px',
         paddingTop: '4px',
