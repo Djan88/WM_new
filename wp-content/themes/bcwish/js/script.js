@@ -204,7 +204,7 @@ jQuery(function() {
     jQuery('.wizard_to_test').addClass('hidden');
     jQuery('.wizard_to_what_way').fadeIn(500).removeClass('hidden');
     jQuery('.wizard_test').fadeIn(500).removeClass('hidden').css('display', 'flex');
-    jQuery('.wizard_heading').text('Провести диагностику, тестирование или перейти к выбору протокола?');
+    jQuery('.wizard_heading').text('Тестирование поможет выбрать протокол');
   });
   // К тестированию с ножа
   jQuery('.test_btn_fromDiag').on('click', function(event) {
@@ -212,7 +212,7 @@ jQuery(function() {
     jQuery('.wizard_to_what_way, .wizard_clean_graf').addClass('hidden');
     jQuery('.wizard_to_protDiag').fadeIn(500).removeClass('hidden');
     jQuery('.wizard_test').fadeIn(500).removeClass('hidden');
-    jQuery('.wizard_heading').text('Провести диагностику, тестирование или перейти к выбору протокола?');
+    jQuery('.wizard_heading').text('Тестирование поможет выбрать протокол.');
   });
   // К диагностике с тестирования
   jQuery('.diag_btn_fromTest').on('click', function(event) {
