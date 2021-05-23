@@ -202,7 +202,7 @@ jQuery(function() {
   jQuery('.wizard_to_test, .test_btn_alt').on('click', function(event) {
     jQuery('.wizard_prots').addClass('hidden');
     jQuery('.wizard_to_test').addClass('hidden');
-    jQuery('.wizard_to_what_way, .wizard_clean_graf').fadeIn(500).removeClass('hidden');
+    jQuery('.wizard_to_what_way').fadeIn(500).removeClass('hidden');
     jQuery('.wizard_test').fadeIn(500).removeClass('hidden').css('display', 'flex');
     jQuery('.wizard_heading').text('Провести диагностику, тестирование или перейти к выбору протокола?');
   });
