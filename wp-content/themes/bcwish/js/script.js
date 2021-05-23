@@ -185,7 +185,7 @@ jQuery(function() {
   //Назад. К выбору режимов
   jQuery('.wizard_to_what_way').on('click', function(event) {
     jQuery('.wizard_prots, .wizard_diag, .wizard_test').addClass('hidden');
-    jQuery('.wizard_to_what_way').addClass('hidden');
+    jQuery('.wizard_to_what_way, .wizard_clean_graf').addClass('hidden');
     jQuery('.wizard_to_start').fadeIn(500).removeClass('hidden');
     jQuery('.wizard_way').fadeIn(500).removeClass('hidden');
     jQuery('.wizard_heading').text('Провести диагностику, тестирование или перейти к выбору протокола?');
