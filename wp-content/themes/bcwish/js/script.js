@@ -223,7 +223,7 @@ jQuery(function() {
     jQuery('.wizard_heading').text('Определите актуальную зону');
   });
   // К выбору протокола с тестирования
-  jQuery('.diag_btn_fromTest').on('click', function(event) {
+  jQuery('.btn_prot_choice_fromTest').on('click', function(event) {
     jQuery('.wizard_test').addClass('hidden');
     jQuery('.wizard_to_what_way').addClass('hidden');
     jQuery('.wizard_to_protDiag').fadeIn(500).removeClass('hidden');
