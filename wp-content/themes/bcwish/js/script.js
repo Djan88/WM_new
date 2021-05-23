@@ -198,6 +198,22 @@ jQuery(function() {
     jQuery('.wizard_diag').fadeIn(500).removeClass('hidden').css('display', 'flex');
     jQuery('.wizard_heading').text('Определите актуальную зону.');
   });
+  //Назад. К тестированию
+  jQuery('.wizard_to_test, .test_btn_alt').on('click', function(event) {
+    jQuery('.wizard_prots').addClass('hidden');
+    jQuery('.wizard_to_test').addClass('hidden');
+    jQuery('.wizard_to_what_way, .wizard_clean_graf').fadeIn(500).removeClass('hidden');
+    jQuery('.wizard_test').fadeIn(500).removeClass('hidden').css('display', 'flex');
+    jQuery('.wizard_heading').text('Провести диагностику, тестирование или перейти к выбору протокола?');
+  });
+  // К тестированию с ножа
+  jQuery('.test_btn_fromDiag').on('click', function(event) {
+    jQuery('.wizard_diag').addClass('hidden');
+    jQuery('.wizard_to_what_way, .wizard_clean_graf').addClass('hidden');
+    jQuery('.wizard_to_test').fadeIn(500).removeClass('hidden');
+    jQuery('.wizard_test').fadeIn(500).removeClass('hidden');
+    jQuery('.wizard_heading').text('Провести диагностику, тестирование или перейти к выбору протокола?');
+  });
 
 
    //Назад. К списку протоколов

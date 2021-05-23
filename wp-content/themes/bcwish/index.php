@@ -69,6 +69,9 @@
       <button type="button" class="wizard_to_protDiag hidden header_btn">
         <i class="fa fa-arrow-left"></i>
       </button>
+      <button type="button" class="wizard_to_test hidden header_btn">
+        <i class="fa fa-arrow-left"></i>
+      </button>
       <button type="button" class="wizard_clean_graf hidden header_btn">
         <i class="fa fa-trash"></i>
       </button>
@@ -537,6 +540,9 @@
                   <div id="faq" class="col-md-12 wizard_prots hidden">
                     <div class="to_diag_auto">
                       <div class="btn btn-success diag_btn_alt">Диагностика</div>
+                      <?php if(current_user_can('administrator')){ ?>
+                        <div class="btn btn-success test_btn_alt">Тестирование</div>
+                      <?php } ?>
                     </div>
                     <ul id="faq-list" class="wow fadeInUp">
                       <li>
@@ -1416,6 +1422,9 @@
                   </div>
                   <div class="col-sm-12" style="text-align: center;">
                     <div class="btn btn-success btn_prot_choice_fromDiag back-to-top_2">Выбрать протокол</div>
+                    <?php if(current_user_can('administrator')){ ?>
+                      <div class="btn btn-success test_btn_fromDiag">Тестирование</div>
+                    <?php } ?>
                   </div>
                 </div>
                 <div class="row wizard_test hidden">
