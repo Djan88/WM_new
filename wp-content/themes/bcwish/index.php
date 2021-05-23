@@ -368,6 +368,9 @@
                 <div class="row wizard_operation">
                   <div class="col-md-12 wizard_way hidden">
                     <button class="btn btn-success btn_diag wow bounceInUp back-to-top_2" data-wow-duration="1.4s" data-wow-delay="0.4s">Диагностика</button>
+                    <?php if(current_user_can('administrator')){ ?>
+                      <button class="btn btn-success btn_test wow bounceInUp back-to-top_2" data-wow-duration="1.4s" data-wow-delay="0.6s">Тестирование</button>
+                    <?php } ?>
                     <button class="btn btn-success btn_prot_choice wow bounceInUp back-to-top_2" data-wow-duration="1.4s" data-wow-delay="0.8s">Выбор протокола</button>
                   </div>
                   <div class="col-md-12 wizard_estate hidden">
@@ -1414,6 +1417,20 @@
                   <div class="col-sm-12" style="text-align: center;">
                     <div class="btn btn-success btn_prot_choice_fromDiag back-to-top_2">Выбрать протокол</div>
                   </div>
+                </div>
+                <div class="row wizard_test hidden">
+                  Экран тестирования
+                  <!-- <div class="col-sm-6 wizard_grafic">
+                    <div class="row">
+                      <img src="<?php //bloginfo('template_url'); ?>/img/marakata.png" class="marakata" alt="">
+                    </div>
+                  </div>
+                  <div class="col-sm-6 wizard_grafic_photo">
+                    <img src="" class="wizard_returned" alt="wizard_returned">
+                  </div>
+                  <div class="col-sm-12" style="text-align: center;">
+                    <div class="btn btn-success btn_prot_choice_fromDiag back-to-top_2">Выбрать протокол</div>
+                  </div> -->
                 </div>
               </div>
             </div>

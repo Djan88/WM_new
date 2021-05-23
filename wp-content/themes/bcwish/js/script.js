@@ -63,7 +63,7 @@ jQuery(function() {
       jQuery('.machine_screen, #intro').addClass('hidden');
       jQuery('.wizard_way').removeClass('hidden');
       jQuery('.wizard_returned').attr('src', croppedImg.src);
-      jQuery('.wizard_heading').text('Провести диагностику или перейти к выбору протокола?');
+      jQuery('.wizard_heading').text('Провести диагностику, тестирование или перейти к выбору протокола?');
       jQuery('.wizard_to_start').fadeIn(500).removeClass('hidden');
       jQuery('.wm_start').removeClass('unopacity');
       jQuery('.wm_start').removeAttr('style');
@@ -141,7 +141,7 @@ jQuery(function() {
     mode = 'estate';
   });
 
-  jQuery('.mobile-nav-toggle, .mobile-nav a, .photo_upload, .crop_photo, .btn_diag, .btn_prot_choice, .wizard_clean_graf, .btn_prot_choice_fromDiag, #faq-list li a, .wizard_protocol, .wizard_play, .wizard_starter_alt, .wizard_stop, body .cancel, body .confirm, .wizard_continue, .mobile-nav select, .wpcf7-submit, .btn-get-started').on('click', function(event) {
+  jQuery('.mobile-nav-toggle, .mobile-nav a, .photo_upload, .crop_photo, .btn_diag, .btn_prot_choice, .btn_test, .btn_test_fromDiag, .wizard_clean_graf, .btn_prot_choice_fromDiag, #faq-list li a, .wizard_protocol, .wizard_play, .wizard_starter_alt, .wizard_stop, body .cancel, body .confirm, .wizard_continue, .mobile-nav select, .wpcf7-submit, .btn-get-started').on('click', function(event) {
     nextSound.play();
   });
   jQuery('.wizard_to_protList, .wizard_to_what_way, .wizard_to_start').on('click', function(event) {
@@ -173,14 +173,22 @@ jQuery(function() {
     jQuery('.wizard_diag').fadeIn(500).removeClass('hidden').css('display', 'flex');
     jQuery('.wizard_heading').text('Определите актуальную зону.');
   });
+  // К тестированию
+  jQuery('.btn_test').on('click', function(event) {
+    jQuery('.wizard_way').addClass('hidden');
+    jQuery('.wizard_to_start').addClass('hidden');
+    jQuery('.wizard_to_what_way').fadeIn(500).removeClass('hidden');
+    jQuery('.wizard_test').fadeIn(500).removeClass('hidden').css('display', 'flex');
+    jQuery('.wizard_heading').text('Тестирование поможет выбрать протокол.');
+  });
 
   //Назад. К выбору режимов
   jQuery('.wizard_to_what_way').on('click', function(event) {
-    jQuery('.wizard_prots, .wizard_diag').addClass('hidden');
+    jQuery('.wizard_prots, .wizard_diag, .wizard_test').addClass('hidden');
     jQuery('.wizard_to_what_way').addClass('hidden');
     jQuery('.wizard_to_start').fadeIn(500).removeClass('hidden');
     jQuery('.wizard_way').fadeIn(500).removeClass('hidden');
-    jQuery('.wizard_heading').text('Провести диагностику или перейти к выбору протокола?');
+    jQuery('.wizard_heading').text('Провести диагностику, тестирование или перейти к выбору протокола?');
   });
   //Назад. К диагностике
   jQuery('.wizard_to_protDiag, .diag_btn_alt').on('click', function(event) {
