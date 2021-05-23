@@ -214,6 +214,22 @@ jQuery(function() {
     jQuery('.wizard_test').fadeIn(500).removeClass('hidden');
     jQuery('.wizard_heading').text('Провести диагностику, тестирование или перейти к выбору протокола?');
   });
+  // К диагностике с тестирования
+  jQuery('.diag_btn_fromTest').on('click', function(event) {
+    jQuery('.wizard_test').addClass('hidden');
+    jQuery('.wizard_to_what_way, .wizard_clean_graf').addClass('hidden');
+    jQuery('.wizard_to_protDiag').fadeIn(500).removeClass('hidden');
+    jQuery('.wizard_diag').fadeIn(500).removeClass('hidden');
+    jQuery('.wizard_heading').text('Определите актуальную зону');
+  });
+  // К выбору протокола с тестирования
+  jQuery('.diag_btn_fromTest').on('click', function(event) {
+    jQuery('.wizard_test').addClass('hidden');
+    jQuery('.wizard_to_what_way').addClass('hidden');
+    jQuery('.wizard_to_protDiag').fadeIn(500).removeClass('hidden');
+    jQuery('.wizard_way').fadeIn(500).removeClass('hidden');
+    jQuery('.wizard_heading').text('Выберите протокол');
+  });
 
 
    //Назад. К списку протоколов

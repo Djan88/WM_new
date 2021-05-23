@@ -1429,6 +1429,10 @@
                 </div>
                 <div class="row wizard_test hidden">
                   Экран тестирования
+                  <div class="col-sm-12" style="text-align: center;">
+                    <div class="btn btn-success btn_prot_choice_fromTest back-to-top_2">Выбрать протокол</div>
+                    <div class="btn btn-success diag_btn_fromTest">Диагностика</div>
+                  </div>
                   <!-- <div class="col-sm-6 wizard_grafic">
                     <div class="row">
                       <img src="<?php //bloginfo('template_url'); ?>/img/marakata.png" class="marakata" alt="">
