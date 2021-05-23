@@ -151,7 +151,7 @@ jQuery(function() {
 
   // К протоколам
   jQuery('.btn_prot_choice').on('click', function(event) {
-    jQuery('.wizard_way').addClass('hidden');
+    jQuery('.wizard_way, .wizard_test').addClass('hidden');
     jQuery('.wizard_to_start').addClass('hidden');
     jQuery('.wizard_to_what_way').fadeIn(500).removeClass('hidden');
     jQuery('.wizard_prots').fadeIn(500).removeClass('hidden');
@@ -159,7 +159,7 @@ jQuery(function() {
   });
   // К протоколам с ножа
   jQuery('.btn_prot_choice_fromDiag').on('click', function(event) {
-    jQuery('.wizard_diag').addClass('hidden');
+    jQuery('.wizard_diag, .wizard_test').addClass('hidden');
     jQuery('.wizard_to_what_way, .wizard_clean_graf').addClass('hidden');
     jQuery('.wizard_to_protDiag').fadeIn(500).removeClass('hidden');
     jQuery('.wizard_prots').fadeIn(500).removeClass('hidden');
@@ -167,7 +167,7 @@ jQuery(function() {
   });
   // К диагностике
   jQuery('.btn_diag').on('click', function(event) {
-    jQuery('.wizard_way').addClass('hidden');
+    jQuery('.wizard_way, .wizard_test').addClass('hidden');
     jQuery('.wizard_to_start').addClass('hidden');
     jQuery('.wizard_to_what_way').fadeIn(500).removeClass('hidden');
     jQuery('.wizard_diag').fadeIn(500).removeClass('hidden').css('display', 'flex');
@@ -192,7 +192,7 @@ jQuery(function() {
   });
   //Назад. К диагностике
   jQuery('.wizard_to_protDiag, .diag_btn_alt').on('click', function(event) {
-    jQuery('.wizard_prots').addClass('hidden');
+    jQuery('.wizard_prots, .wizard_test').addClass('hidden');
     jQuery('.wizard_to_protDiag').addClass('hidden');
     jQuery('.wizard_to_what_way, .wizard_clean_graf').fadeIn(500).removeClass('hidden');
     jQuery('.wizard_diag').fadeIn(500).removeClass('hidden').css('display', 'flex');
