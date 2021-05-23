@@ -227,7 +227,7 @@ jQuery(function() {
     jQuery('.wizard_test').addClass('hidden');
     jQuery('.wizard_to_what_way').addClass('hidden');
     jQuery('.wizard_to_protDiag').fadeIn(500).removeClass('hidden');
-    jQuery('.wizard_way').fadeIn(500).removeClass('hidden');
+    jQuery('.wizard_prots').fadeIn(500).removeClass('hidden');
     jQuery('.wizard_heading').text('Выберите протокол');
   });
 
