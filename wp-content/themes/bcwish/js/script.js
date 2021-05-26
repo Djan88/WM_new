@@ -311,8 +311,9 @@ jQuery(function() {
   jQuery('.btn_test__self').on('click', function(event) {
     jQuery('.test_level_1').addClass('hidden');
     jQuery('.test_level_2').fadeIn(500).removeClass('hidden');
+    jQuery('.test_heading_2').text('Знаете свою актуальность?');
   });
-  
+
   jQuery('.btn_test__to_prot').on('click', function(event) {
     jQuery('.wizard_test').addClass('hidden');
     jQuery('.wizard_to_what_way').addClass('hidden');
