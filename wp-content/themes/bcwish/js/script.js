@@ -179,7 +179,7 @@ jQuery(function() {
     jQuery('.wizard_to_start').addClass('hidden');
     jQuery('.wizard_to_what_way').fadeIn(500).removeClass('hidden');
     jQuery('.wizard_test').fadeIn(500).removeClass('hidden').css('display', 'flex');
-    jQuery('.wizard_heading').text('Кого лечим?');
+    jQuery('.wizard_heading').text('Тестирование поможет выбрать протокол.');
   });
 
   //Назад. К выбору режимов
@@ -276,7 +276,7 @@ jQuery(function() {
   jQuery('.btn_test__other').on('click', function(event) {
     swal({
       title: "Работа с другим человеком.",
-      text: 'При работе другими людьми мы советуем определять актуальность вручную или из описанных ими жалоб.',
+      text: 'При работе другими с людьми мы советуем определять актуальность через диагностику или из описанных ими жалоб.',
       type: "info",
       showCancelButton: true,
       confirmButtonClass: "btn-success",
@@ -288,14 +288,13 @@ jQuery(function() {
     function(isConfirm) {
       if (isConfirm) {
         swal.close();
-        
-      } else {
-        swal.close();
         jQuery('.wizard_test').addClass('hidden');
         jQuery('.wizard_to_what_way, .wizard_clean_graf').addClass('hidden');
         jQuery('.wizard_to_protDiag').fadeIn(500).removeClass('hidden');
         jQuery('.wizard_diag').fadeIn(500).removeClass('hidden');
         jQuery('.wizard_heading').text('Определите актуальную зону');
+      } else {
+        swal.close();
       }
     });
   });

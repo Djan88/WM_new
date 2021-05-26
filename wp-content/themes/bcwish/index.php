@@ -1428,9 +1428,8 @@
                   </div>
                 </div>
                 <div class="row wizard_test hidden">
-                  Экран тестирования
                   <div class="col-sm-12" style="text-align: center;">
-                    <h4 class="test_heading">Кого лечим?</h4>
+                    <h4 class="test_heading_2">Кого лечим?</h4>
                   </div>
                   <div class="col-sm-12 test_level_1" style="text-align: center;">
                     <div class="btn btn-sm btn-primary btn_test__self">Себя</div>
