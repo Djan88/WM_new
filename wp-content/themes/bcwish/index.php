@@ -1430,9 +1430,40 @@
                 <div class="row wizard_test hidden">
                   Экран тестирования
                   <div class="col-sm-12" style="text-align: center;">
+                    <h4 class="test_heading">Кого лечим?</h4>
+                  </div>
+                  <div class="col-sm-12 test_level_1" style="text-align: center;">
+                    <div class="btn btn-sm btn-primary btn_test__self">Себя</div>
+                    <div class="btn btn-sm btn-primary btn_test__other">Другого человека</div>
+                  </div>
+                  <div class="col-sm-12 test_level_2 hidden" style="text-align: center;">
+                    <div class="btn btn-sm btn-primary btn_test__self btn_test__to_prot">Я знаю с какой протокол нужен. (Перейти к выбору протокола)</div>
+                    <div class="btn btn-sm btn-primary btn_test__other btn_test__to_list">Я не знаю что делать. (Продолжить отвечать на вопросы)</div>
+                  </div>
+                  <div class="col-sm-12 test_level_3 hidden" style="text-align: center;">
+                    <div class="btn btn-sm btn-primary btn_test__self test_item_1_1_2">Грусть, тоска, дисфория</div>
+                    <div class="btn btn-sm btn-primary btn_test__other test_item_1_1_3">Беспокойство, страх сердцебеение, изжога</div>
+                    <div class="btn btn-sm btn-primary btn_test__other test_item_1_1_4">Злость, возбуждение, бессонница,плохие сновидения</div>
+                    <div class="btn btn-sm btn-primary btn_test__other test_item_1_1_5">Гармональные нарушения, снижение либидо</div>
+                    <div class="btn btn-sm btn-primary btn_test__other test_item_1_1_6">Головные боли/div>
+                    <div class="btn btn-sm btn-primary btn_test__other test_item_1_1_7">Дилеммы, неудачи</div>
+                    <div class="btn btn-sm btn-primary btn_test__other test_item_1_1_8">Обиды, переживания вины</div>
+                    <div class="btn btn-sm btn-primary btn_test__other test_item_1_1_9">Неуверенность в себе, сомнения</div>
+                    <div class="btn btn-sm btn-primary btn_test__other test_item_1_1_10">Переживания несправедливости</div>
+                    <div class="btn btn-sm btn-primary btn_test__other test_item_1_1_11">Проблемы пищеварения, запоры</div>
+                    <div class="btn btn-sm btn-primary btn_test__other test_item_1_1_11">Переживания несправедливости</div>
+                    <div class="btn btn-sm btn-primary btn_test__other test_item_1_1_12">Проблемы с поясницей</div>
+                    <div class="btn btn-sm btn-primary btn_test__other test_item_1_1_13">Проблемы с шеей</div>
+                    <div class="btn btn-sm btn-primary btn_test__other test_item_1_1_14">Накопление кармы</div>
+                    <div class="btn btn-sm btn-primary btn_test__other test_item_1_1_15">Сглаз, порча</div>
+                    <div class="btn btn-sm btn-primary btn_test__other test_item_1_1_16">Алергия</div>
+                    <div class="btn btn-sm btn-primary btn_test__other test_item_1_1_17">Упадок сил</div>
+                    <div class="btn btn-sm btn-primary btn_test__other test_item_1_1_18">Перевозбуждение на полнолуние</div>
+                  </div>
+                  <!-- <div class="col-sm-12" style="text-align: center;">
                     <div class="btn btn-success btn_prot_choice_fromTest back-to-top_2">Выбрать протокол</div>
                     <div class="btn btn-success diag_btn_fromTest">Диагностика</div>
-                  </div>
+                  </div> -->
                   <!-- <div class="col-sm-6 wizard_grafic">
                     <div class="row">
                       <img src="<?php //bloginfo('template_url'); ?>/img/marakata.png" class="marakata" alt="">

@@ -179,7 +179,7 @@ jQuery(function() {
     jQuery('.wizard_to_start').addClass('hidden');
     jQuery('.wizard_to_what_way').fadeIn(500).removeClass('hidden');
     jQuery('.wizard_test').fadeIn(500).removeClass('hidden').css('display', 'flex');
-    jQuery('.wizard_heading').text('Тестирование поможет выбрать протокол.');
+    jQuery('.wizard_heading').text('Кого лечим?');
   });
 
   //Назад. К выбору режимов
@@ -212,24 +212,24 @@ jQuery(function() {
     jQuery('.wizard_to_what_way, .wizard_clean_graf').addClass('hidden');
     jQuery('.wizard_to_protDiag').fadeIn(500).removeClass('hidden');
     jQuery('.wizard_test').fadeIn(500).removeClass('hidden');
-    jQuery('.wizard_heading').text('Тестирование поможет выбрать протокол.');
+    jQuery('.wizard_heading').text('Кого лечим?');
   });
   // К диагностике с тестирования
-  jQuery('.diag_btn_fromTest').on('click', function(event) {
-    jQuery('.wizard_test').addClass('hidden');
-    jQuery('.wizard_to_what_way, .wizard_clean_graf').addClass('hidden');
-    jQuery('.wizard_to_protDiag').fadeIn(500).removeClass('hidden');
-    jQuery('.wizard_diag').fadeIn(500).removeClass('hidden');
-    jQuery('.wizard_heading').text('Определите актуальную зону');
-  });
+  // jQuery('.diag_btn_fromTest').on('click', function(event) {
+  //   jQuery('.wizard_test').addClass('hidden');
+  //   jQuery('.wizard_to_what_way, .wizard_clean_graf').addClass('hidden');
+  //   jQuery('.wizard_to_protDiag').fadeIn(500).removeClass('hidden');
+  //   jQuery('.wizard_diag').fadeIn(500).removeClass('hidden');
+  //   jQuery('.wizard_heading').text('Определите актуальную зону');
+  // });
   // К выбору протокола с тестирования
-  jQuery('.btn_prot_choice_fromTest').on('click', function(event) {
-    jQuery('.wizard_test').addClass('hidden');
-    jQuery('.wizard_to_what_way').addClass('hidden');
-    jQuery('.wizard_to_protDiag').fadeIn(500).removeClass('hidden');
-    jQuery('.wizard_prots').fadeIn(500).removeClass('hidden');
-    jQuery('.wizard_heading').text('Выберите протокол');
-  });
+  // jQuery('.btn_prot_choice_fromTest').on('click', function(event) {
+  //   jQuery('.wizard_test').addClass('hidden');
+  //   jQuery('.wizard_to_what_way').addClass('hidden');
+  //   jQuery('.wizard_to_protDiag').fadeIn(500).removeClass('hidden');
+  //   jQuery('.wizard_prots').fadeIn(500).removeClass('hidden');
+  //   jQuery('.wizard_heading').text('Выберите протокол');
+  // });
 
 
    //Назад. К списку протоколов
@@ -269,6 +269,35 @@ jQuery(function() {
 
   jQuery('.estate_clean').on('click', function(event) {
     jQuery('.zone_estate').addClass('zone_default').removeAttr('style');
+  });
+
+  // Алгоритм тестирования
+
+  jQuery('.btn_test__other').on('click', function(event) {
+    swal({
+      title: "Работа с другим человеком.",
+      text: 'При работе другими людьми мы советуем определять актуальность вручную или из описанных ими жалоб.',
+      type: "info",
+      showCancelButton: true,
+      confirmButtonClass: "btn-success",
+      cancelButtonClass: "btn-warning",
+      cancelButtonText: "Назад",
+      confirmButtonText: "Определить актуальность",
+      closeOnConfirm: true
+    },
+    function(isConfirm) {
+      if (isConfirm) {
+        swal.close();
+        
+      } else {
+        swal.close();
+        jQuery('.wizard_test').addClass('hidden');
+        jQuery('.wizard_to_what_way, .wizard_clean_graf').addClass('hidden');
+        jQuery('.wizard_to_protDiag').fadeIn(500).removeClass('hidden');
+        jQuery('.wizard_diag').fadeIn(500).removeClass('hidden');
+        jQuery('.wizard_heading').text('Определите актуальную зону');
+      }
+    });
   });
 
 
