@@ -300,7 +300,7 @@ jQuery(function() {
         jQuery('.wizard_test').addClass('hidden');
         jQuery('.wizard_to_what_way, .wizard_clean_graf').addClass('hidden');
         jQuery('.wizard_back_to_test').fadeIn(500).removeClass('hidden');
-        jQuery('.wizard_diag').fadeIn(500).removeClass('hidden');
+        jQuery('.wizard_diag').fadeIn(500).removeClass('hidden').css('display', 'flex');
         jQuery('.wizard_heading').text('Определите актуальную зону');
       } else {
         swal.close();
