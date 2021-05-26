@@ -310,7 +310,15 @@ jQuery(function() {
 
   jQuery('.btn_test__self').on('click', function(event) {
     jQuery('.test_level_1').addClass('hidden');
-    jQuery('.test_level_2').fadeIn(500).removeClass('hidden').css('display', 'flex');
+    jQuery('.test_level_2').fadeIn(500).removeClass('hidden');
+  });
+  
+  jQuery('.btn_test__to_prot').on('click', function(event) {
+    jQuery('.wizard_test').addClass('hidden');
+    jQuery('.wizard_to_what_way').addClass('hidden');
+    jQuery('.wizard_back_to_test').fadeIn(500).removeClass('hidden');
+    jQuery('.wizard_prots').fadeIn(500).removeClass('hidden');
+    jQuery('.wizard_heading').text('Выберите протокол');
   });
 
 
