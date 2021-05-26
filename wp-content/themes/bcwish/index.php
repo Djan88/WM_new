@@ -72,6 +72,9 @@
       <button type="button" class="wizard_to_test hidden header_btn">
         <i class="fa fa-arrow-left"></i>
       </button>
+      <button type="button" class="wizard_back_to_test hidden header_btn">
+        <i class="fa fa-arrow-left"></i>
+      </button>
       <button type="button" class="wizard_clean_graf hidden header_btn">
         <i class="fa fa-trash"></i>
       </button>
@@ -1428,6 +1431,7 @@
                   </div>
                 </div>
                 <div class="row wizard_test hidden">
+                  
                   <div class="col-sm-12" style="text-align: center;">
                     <h4 class="test_heading_2">Кого лечим?</h4>
                   </div>

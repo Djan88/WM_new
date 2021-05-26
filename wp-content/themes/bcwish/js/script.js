@@ -190,6 +190,15 @@ jQuery(function() {
     jQuery('.wizard_way').fadeIn(500).removeClass('hidden');
     jQuery('.wizard_heading').text('Провести диагностику, тестирование или перейти к выбору протокола?');
   });
+
+  //Назад. К выбору режимов
+  jQuery('.wizard_back_to_test').on('click', function(event) {
+    jQuery('.wizard_prots, .wizard_diag').addClass('hidden');
+    jQuery('.wizard_back_to_test, .wizard_to_what_way').addClass('hidden');
+    jQuery('.wizard_to_start').fadeIn(500).removeClass('hidden');
+    jQuery('.wizard_test').fadeIn(500).removeClass('hidden');
+    jQuery('.wizard_heading').text('Тестирование поможет выбрать протокол');
+  });
   //Назад. К диагностике
   jQuery('.wizard_to_protDiag, .diag_btn_alt').on('click', function(event) {
     jQuery('.wizard_prots, .wizard_test').addClass('hidden');

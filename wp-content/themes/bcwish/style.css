@@ -1763,12 +1763,12 @@ h3.wizard_heading
   margin: 2px 9px;
   color: #413e66;
 }
-.wizard_crop, .wizard_to_start, .wizard_to_what_way, .wizard_to_protList, .wizard_to_protDiag, .wizard_disbledMove, .wizard_to_test
+.wizard_crop, .wizard_to_start, .wizard_to_what_way, .wizard_to_protList, .wizard_to_protDiag, .wizard_disbledMove, .wizard_to_test, .wizard_back_to_test
 {
   right: 47px;
   transition: all linear 0.5s;
 }
-.wizard_crop:hover, .wizard_to_start:hover, .wizard_to_what_way:hover, .wizard_to_protList:hover, .wizard_to_protDiag:hover, .wizard_disbledMove:hover, .wizard_to_test:hover
+.wizard_crop:hover, .wizard_to_start:hover, .wizard_to_what_way:hover, .wizard_to_protList:hover, .wizard_to_protDiag:hover, .wizard_disbledMove:hover, .wizard_to_test:hover, .wizard_back_to_test:hover
 {
   color: #1bb1dc;
   border-color: #1bb1dc;
