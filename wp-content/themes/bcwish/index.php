@@ -379,13 +379,6 @@
                     <?php } ?>
                     <button class="btn btn-success btn_prot_choice back-to-top_2">Выбор протокола</button>
                   </div>
-                  <!-- <div class="col-md-12 wizard_way hidden">
-                    <button class="btn btn-success btn_diag wow bounceInUp back-to-top_2" data-wow-duration="1.4s" data-wow-delay="0.4s">Диагностика</button>
-                    <?php //if(current_user_can('administrator')){ ?>
-                      <button class="btn btn-success btn_test wow bounceInUp back-to-top_2" data-wow-duration="1.4s" data-wow-delay="0.6s">Тестирование</button>
-                    <?php } ?>
-                    <button class="btn btn-success btn_prot_choice wow bounceInUp back-to-top_2" data-wow-duration="1.4s" data-wow-delay="0.8s">Выбор протокола</button>
-                  </div> -->
                   <div class="col-md-12 wizard_estate hidden">
                     <div class="row">
                       <div class="col-sm-2 estate_items">
