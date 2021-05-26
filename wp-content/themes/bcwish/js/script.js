@@ -308,6 +308,11 @@ jQuery(function() {
     });
   });
 
+  jQuery('.btn_test__self').on('click', function(event) {
+    jQuery('.test_level_1').addClass('hidden');
+    jQuery('.test_level_2').fadeIn(500).removeClass('hidden').css('display', 'flex');
+  });
+
 
 
 //CROPPING SCRIPT
