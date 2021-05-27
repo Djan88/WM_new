@@ -4,6 +4,8 @@ jQuery(function() {
       device_w = screen.width,
       testing_val,
       testing_sum = {},
+      testing,
+      testing_result,
       mode = 'foto',
       returned_img,
       nextSound = new Howl({
@@ -313,7 +315,14 @@ jQuery(function() {
     jQuery('.test_heading_2').text('Выберите из списка проблемы описывающие Ваше текущее состояние. Можно несколько.');
   });
 
-// testing sum
+// testing
+
+testing = function(){
+  if ("1_1_14" in testing_sum || "1_1_16" in testing_sum) {
+    console.log('ahtung!');
+  }
+}
+
 jQuery('.test_item').on('click', function(event) {
   testing_val = jQuery(this).data('index');
   if (jQuery(this).hasClass('btn-warning')) {
@@ -324,6 +333,7 @@ jQuery('.test_item').on('click', function(event) {
     testing_sum[testing_val] = testing_val;
   }
   console.log(testing_sum);
+  testing();
 });
 
 //CROPPING SCRIPT
