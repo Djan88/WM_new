@@ -1462,6 +1462,9 @@
                     <div class="btn btn-sm btn-primary test_item test_item_1_1_17" data-index = '1_1_17'>Упадок сил</div>
                     <div class="btn btn-sm btn-primary test_item test_item_1_1_18" data-index = '1_1_18'>Перевозбуждение на полнолуние</div>
                   </div>
+                  <div class="col-sm-12 test_level_4 hidden" style="text-align: center;">
+                    <div class="btn btn-success btn_test__result">Протокол определен <i class="fa fa-thumbs-up"></i></div>
+                  </div>
                   <!-- <div class="col-sm-12" style="text-align: center;">
                     <div class="btn btn-success btn_prot_choice_fromTest back-to-top_2">Выбрать протокол</div>
                     <div class="btn btn-success diag_btn_fromTest">Диагностика</div>
