@@ -1448,7 +1448,7 @@
                     <div class="btn btn-sm btn-primary test_item_1_1_3">Беспокойство, страх сердцебеение, изжога</div>
                     <div class="btn btn-sm btn-primary test_item_1_1_4">Злость, возбуждение, бессонница,плохие сновидения</div>
                     <div class="btn btn-sm btn-primary test_item_1_1_5">Гармональные нарушения, снижение либидо</div>
-                    <div class="btn btn-sm btn-primary test_item_1_1_6">Головные боли/div>
+                    <div class="btn btn-sm btn-primary test_item_1_1_6">Головные боли</div>
                     <div class="btn btn-sm btn-primary test_item_1_1_7">Дилеммы, неудачи</div>
                     <div class="btn btn-sm btn-primary test_item_1_1_8">Обиды, переживания вины</div>
                     <div class="btn btn-sm btn-primary test_item_1_1_9">Неуверенность в себе, сомнения</div>
