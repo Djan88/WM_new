@@ -320,7 +320,10 @@ jQuery('.test_item').on('click', function(event) {
     jQuery(this).removeClass('active');
   } else {
     jQuery(this).addClass('active');
-    if (!testing_val in testing_sum) {testing_sum.testing_val}
+    if (!testing_val in testing_sum) {
+
+    }
+    testing_sum[testing_val] = testing_val;
   }
   console.log(testing_sum);
 });
