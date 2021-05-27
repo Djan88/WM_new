@@ -316,13 +316,11 @@ jQuery(function() {
 // testing sum
 jQuery('.test_item').on('click', function(event) {
   testing_val = jQuery(this).data('index');
-  if (jQuery(this).hasClass('active')) {
-    jQuery(this).removeClass('active');
+  if (jQuery(this).hasClass('btn-warning')) {
+    jQuery(this).removeClass('btn-warning').addClass('btn-primary');
+    delete testing_sum[testing_val];
   } else {
-    jQuery(this).addClass('active');
-    if (!testing_val in testing_sum) {
-
-    }
+    jQuery(this).addClass('btn-warning').removeClass('btn-primary');
     testing_sum[testing_val] = testing_val;
   }
   console.log(testing_sum);
