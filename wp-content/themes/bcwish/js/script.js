@@ -3,7 +3,7 @@ jQuery(function() {
       w_block_wrap,
       device_w = screen.width,
       testing_val,
-      testing_sum = [],
+      testing_sum = {},
       mode = 'foto',
       returned_img,
       nextSound = new Howl({
