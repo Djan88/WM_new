@@ -223,23 +223,6 @@ jQuery(function() {
     jQuery('.wizard_test').fadeIn(500).removeClass('hidden');
     jQuery('.wizard_heading').text('Кого лечим?');
   });
-  // К диагностике с тестирования
-  // jQuery('.diag_btn_fromTest').on('click', function(event) {
-  //   jQuery('.wizard_test').addClass('hidden');
-  //   jQuery('.wizard_to_what_way, .wizard_clean_graf').addClass('hidden');
-  //   jQuery('.wizard_to_protDiag').fadeIn(500).removeClass('hidden');
-  //   jQuery('.wizard_diag').fadeIn(500).removeClass('hidden');
-  //   jQuery('.wizard_heading').text('Определите актуальную зону');
-  // });
-  // К выбору протокола с тестирования
-  // jQuery('.btn_prot_choice_fromTest').on('click', function(event) {
-  //   jQuery('.wizard_test').addClass('hidden');
-  //   jQuery('.wizard_to_what_way').addClass('hidden');
-  //   jQuery('.wizard_to_protDiag').fadeIn(500).removeClass('hidden');
-  //   jQuery('.wizard_prots').fadeIn(500).removeClass('hidden');
-  //   jQuery('.wizard_heading').text('Выберите протокол');
-  // });
-
 
    //Назад. К списку протоколов
   jQuery('.wizard_to_protList').on('click', function(event) {
@@ -320,6 +303,12 @@ jQuery(function() {
     jQuery('.wizard_back_to_test').fadeIn(500).removeClass('hidden');
     jQuery('.wizard_prots').fadeIn(500).removeClass('hidden');
     jQuery('.wizard_heading').text('Выберите протокол');
+  });
+
+  jQuery('.btn_test__to_list').on('click', function(event) {
+    jQuery('.test_level_2').addClass('hidden');
+    jQuery('.test_level_3').fadeIn(500).removeClass('hidden');
+    jQuery('.test_heading_2').text('Выберите из списка проблемы описывающие Ваше текущее состояние. Можно несколько.');
   });
 
 
