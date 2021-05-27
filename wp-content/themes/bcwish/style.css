@@ -2427,8 +2427,11 @@ button.wizard_starter_alt.btn.btn-success
 {
   transition: all 0s!important;
 }
+.test_item
+{
+  margin: 5px 2px;
+}
 /*Animation*/
-
 
 .rot_d_one {
   animation: 26s linear 0s normal none running rot_d_one;
