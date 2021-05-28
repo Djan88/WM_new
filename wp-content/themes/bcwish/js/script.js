@@ -427,8 +427,11 @@ testing = function(){
 }
 
 jQuery('.test_item').on('click', function(event) {
-  if (!jQuery(this).hasClass('test_item_1_1_19') && !jQuery('.test_item_1_1_19').hasClass('btn-warning')) {
+  if (!jQuery(this).hasClass('test_item_1_1_19')) {
     jQuery('.test_item_1_1_19').addClass('hidden');
+  } else if (jQuery('.test_item_1_1_19').hasClass('btn-warning')) {
+    jQuery('.test_item_1_1_19').removeClass('btn-warning');
+    delete testing_sum['1_1_19'];
   } else {
     testing_status = 1;
     testing_result = 'universal';
