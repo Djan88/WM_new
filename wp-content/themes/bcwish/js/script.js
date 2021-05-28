@@ -193,6 +193,7 @@ jQuery(function() {
     jQuery('.test_item').removeClass('btn-warning').addClass('btn-primary');
     testing_sum = {};
     testing_status = 2;
+    jQuery('.test_item_1_1_19').removeClass('hidden');
   });
 
   //Назад. К выбору режимов
@@ -217,6 +218,7 @@ jQuery(function() {
     jQuery('.test_item').removeClass('btn-warning').addClass('btn-primary');
     testing_sum = {};
     testing_status = 2;
+    jQuery('.test_item_1_1_19').removeClass('hidden');
   });
   //Назад. К диагностике
   jQuery('.wizard_to_protDiag, .diag_btn_alt').on('click', function(event) {
@@ -239,6 +241,7 @@ jQuery(function() {
     jQuery('.test_item').removeClass('btn-warning').addClass('btn-primary');
     testing_sum = {};
     testing_status = 2;
+    jQuery('.test_item_1_1_19').removeClass('hidden');
   });
   // К тестированию с ножа
   jQuery('.test_btn_fromDiag').on('click', function(event) {
@@ -424,6 +427,9 @@ testing = function(){
 }
 
 jQuery('.test_item').on('click', function(event) {
+  if (!jQuery(this).hasClass('test_item_1_1_19')) {
+    jQuery('.test_item_1_1_19').addClass('hidden');
+  }
   testing_val = jQuery(this).data('index');
   if (jQuery(this).hasClass('btn-warning')) {
     jQuery(this).removeClass('btn-warning').addClass('btn-primary');
@@ -439,6 +445,7 @@ jQuery('.test_item').on('click', function(event) {
     jQuery('.test_level_4').fadeIn(500).removeClass('hidden');
   } else {
     jQuery('.test_level_4').addClass('hidden');
+    jQuery('.test_item_1_1_19').removeClass('hidden');
   }
 });
 
@@ -453,12 +460,14 @@ jQuery('.btn_test__restart').on('click', function(event) {
   jQuery('.test_item').removeClass('btn-warning').addClass('btn-primary');
   testing_sum = {};
   testing_status = 2;
+  jQuery('.test_item_1_1_19').removeClass('hidden');
 });
 jQuery('.btn_test__reset').on('click', function(event) {
   jQuery('.test_level_4').addClass('hidden');
   jQuery('.test_item').removeClass('btn-warning').addClass('btn-primary');
   testing_sum = {};
   testing_status = 2;
+  jQuery('.test_item_1_1_19').removeClass('hidden');
 });
 
 //CROPPING SCRIPT
