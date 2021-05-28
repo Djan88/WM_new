@@ -429,6 +429,34 @@ testing = function(){
 jQuery('.test_item').on('click', function(event) {
   if (!jQuery(this).hasClass('test_item_1_1_19')) {
     jQuery('.test_item_1_1_19').addClass('hidden');
+  } else {
+    testing_status = 1;
+    testing_result = 'universal';
+    localStorage.setItem('cur_protocol', testing_result);
+    testing_result_title = 'Рекомендуется "Универсальный протокол"';
+    swal({
+      title: testing_result_title,
+      text: 'Для запуска протокола нажмите "Применить". Для повтора тестирования нажмите "Назад".',
+      type: "success",
+      showCancelButton: true,
+      confirmButtonClass: "btn-success",
+      cancelButtonClass: "btn-warning",
+      cancelButtonText: "Назад",
+      confirmButtonText: "Применить",
+      closeOnConfirm: true
+    },
+    function(isConfirm) {
+      if (isConfirm) {
+        swal.close();
+        jQuery('.wizard_test').addClass('hidden');
+        jQuery('.wizard_to_what_way').addClass('hidden');
+        jQuery('.wizard_back_to_test, .wizard_play, .wizard_starter_alt').fadeIn(500).removeClass('hidden');
+        jQuery('.wizard_main_screen').fadeIn(500).removeClass('hidden').css('display', 'flex');
+        jQuery('.wizard_heading').text('Осталось перенести зоны на фото и можно начинать!');
+      } else {
+        swal.close();
+      }
+    });
   }
   testing_val = jQuery(this).data('index');
   if (jQuery(this).hasClass('btn-warning')) {
