@@ -433,6 +433,14 @@ jQuery('.btn_test__result').on('click', function(event) {
   testing();
 });
 
+jQuery('.btn_test__reset').on('click', function(event) {
+  jQuery('.test_level_2, .test_level_3, .test_level_4').addClass('hidden');
+  jQuery('.test_level_1').fadeIn(500).removeClass('hidden');
+  jQuery('.test_heading_2').text('Кого лечим?');
+  testing_sum = {};
+  testing_status = 2;
+});
+
 //CROPPING SCRIPT
   // convert bytes into friendly format
   function bytesToSize(bytes) {
