@@ -321,15 +321,60 @@ jQuery(function() {
 // testing
 
 testing = function(){
-  if ("1_1_14" in testing_sum || "1_1_16" in testing_sum) {
-    testing_result = 'drenag';
+  if (testing_sum_size >= 6 || "1_1_19" in testing_sum) {
+    testing_result = 'universal';
     localStorage.setItem('cur_protocol', testing_result);
-    testing_result_title = 'Рекомендуется "Дренажный протокол"';
+    testing_result_title = 'Рекомендуется "Универсальный протокол"';
+    testing_status = 1;
+  } else if (testing_sum_size < 6 && "1_1_10" in testing_sum) {
+    testing_result = 'v3';
+    localStorage.setItem('cur_protocol', testing_result);
+    testing_result_title = 'Рекомендуется "Протокол V3"';
     testing_status = 1;
   } else if ("1_1_11" in testing_sum && "1_1_15" in testing_sum) {
     testing_result = 'visceral';
     localStorage.setItem('cur_protocol', testing_result);
     testing_result_title = 'Рекомендуется "Висцеральный протокол"';
+    testing_status = 1;
+  } else if ("1_1_2" in testing_sum && "1_1_3" in testing_sum) {
+    testing_result = 'v1';
+    localStorage.setItem('cur_protocol', testing_result);
+    testing_result_title = 'Рекомендуется "Протокол V1"';
+    testing_status = 1;
+  } else if ("1_1_14" in testing_sum && "1_1_16" in testing_sum) {
+    testing_result = 'drenag';
+    localStorage.setItem('cur_protocol', testing_result);
+    testing_result_title = 'Рекомендуется "Дренажный протокол"';
+    testing_status = 1;
+  } else if ("1_1_7" in testing_sum) {
+    testing_result = 'v2';
+    localStorage.setItem('cur_protocol', testing_result);
+    testing_result_title = 'Рекомендуется "Протокол V2"';
+    testing_status = 1;
+  } else if ("1_1_17" in testing_sum) {
+    testing_result = 'v5';
+    localStorage.setItem('cur_protocol', testing_result);
+    testing_result_title = 'Рекомендуется "Протокол V5"';
+    testing_status = 1;
+  } else if ("1_1_18" in testing_sum) {
+    testing_result = 'solis';
+    localStorage.setItem('cur_protocol', testing_result);
+    testing_result_title = 'Рекомендуется "Протокол Solis"';
+    testing_status = 1;
+  } else if ("1_1_4" in testing_sum) {
+    testing_result = 'v4';
+    localStorage.setItem('cur_protocol', testing_result);
+    testing_result_title = 'Рекомендуется "Протокол V4"';
+    testing_status = 1;
+  } else if ("1_1_4" in testing_sum) {
+    testing_result = 'v4';
+    localStorage.setItem('cur_protocol', testing_result);
+    testing_result_title = 'Рекомендуется "Протокол V4"';
+    testing_status = 1;
+  } else if ("1_1_14" in testing_sum) {
+    testing_result = 'carma';
+    localStorage.setItem('cur_protocol', testing_result);
+    testing_result_title = 'Рекомендуется "Кармический протокол"';
     testing_status = 1;
   } else {
     testing_status = 2;

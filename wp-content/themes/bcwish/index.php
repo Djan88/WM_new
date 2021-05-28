@@ -1461,6 +1461,7 @@
                     <div class="btn btn-sm btn-primary test_item test_item_1_1_16" data-index = '1_1_16'>Алергия</div>
                     <div class="btn btn-sm btn-primary test_item test_item_1_1_17" data-index = '1_1_17'>Упадок сил</div>
                     <div class="btn btn-sm btn-primary test_item test_item_1_1_18" data-index = '1_1_18'>Перевозбуждение на полнолуние</div>
+                    <div class="btn btn-sm btn-primary test_item test_item_1_1_19" data-index = '1_1_19'>Мне сложно определиться</div>
                   </div>
                   <div class="col-sm-12 test_level_4 hidden" style="text-align: center;">
                     <div class="btn btn-success btn_test__result">Подобрать протокол <i class="fa fa-check-circle"></i></div>
