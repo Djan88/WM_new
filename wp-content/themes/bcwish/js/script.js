@@ -187,6 +187,12 @@ jQuery(function() {
     jQuery('.wizard_to_what_way').fadeIn(500).removeClass('hidden');
     jQuery('.wizard_test').fadeIn(500).removeClass('hidden').css('display', 'flex');
     jQuery('.wizard_heading').text('Тестирование поможет выбрать протокол.');
+    jQuery('.test_level_2, .test_level_3, .test_level_4').addClass('hidden');
+    jQuery('.test_level_1').fadeIn(500).removeClass('hidden');
+    jQuery('.test_heading_2').text('Кого лечим?');
+    jQuery('.test_item').removeClass('btn-warning').addClass('btn-primary');
+    testing_sum = {};
+    testing_status = 2;
   });
 
   //Назад. К выбору режимов
@@ -205,6 +211,12 @@ jQuery(function() {
     jQuery('.wizard_to_what_way').fadeIn(500).removeClass('hidden');
     jQuery('.wizard_test').fadeIn(500).removeClass('hidden');
     jQuery('.wizard_heading').text('Тестирование поможет выбрать протокол');
+    jQuery('.test_level_2, .test_level_3, .test_level_4').addClass('hidden');
+    jQuery('.test_level_1').fadeIn(500).removeClass('hidden');
+    jQuery('.test_heading_2').text('Кого лечим?');
+    jQuery('.test_item').removeClass('btn-warning').addClass('btn-primary');
+    testing_sum = {};
+    testing_status = 2;
   });
   //Назад. К диагностике
   jQuery('.wizard_to_protDiag, .diag_btn_alt').on('click', function(event) {
@@ -221,6 +233,12 @@ jQuery(function() {
     jQuery('.wizard_to_what_way').fadeIn(500).removeClass('hidden');
     jQuery('.wizard_test').fadeIn(500).removeClass('hidden').css('display', 'flex');
     jQuery('.wizard_heading').text('Тестирование поможет выбрать протокол');
+    jQuery('.test_level_2, .test_level_3, .test_level_4').addClass('hidden');
+    jQuery('.test_level_1').fadeIn(500).removeClass('hidden');
+    jQuery('.test_heading_2').text('Кого лечим?');
+    jQuery('.test_item').removeClass('btn-warning').addClass('btn-primary');
+    testing_sum = {};
+    testing_status = 2;
   });
   // К тестированию с ножа
   jQuery('.test_btn_fromDiag').on('click', function(event) {

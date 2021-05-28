@@ -1424,9 +1424,9 @@
                     <img src="" class="wizard_returned" alt="wizard_returned">
                   </div>
                   <div class="col-sm-12" style="text-align: center;">
-                    <div class="btn btn-success btn_prot_choice_fromDiag back-to-top_2">Выбрать протокол</div>
+                    <div class="btn btn-success btn_prot_choice_fromDiag back-to-top_2">Протокол</div>
                     <?php if(current_user_can('administrator')){ ?>
-                      <div class="btn btn-success test_btn_fromDiag">Тестирование</div>
+                      <div class="btn btn-success test_btn_fromDiag">Диагностика</div>
                     <?php } ?>
                   </div>
                 </div>
@@ -1465,8 +1465,7 @@
                   </div>
                   <div class="col-sm-12 test_level_4 hidden" style="text-align: center;">
                     <div class="btn btn-success btn_test__result">Подобрать протокол <i class="fa fa-check-circle"></i></div>
-                    <div class="btn btn-warning btn_test__reset">Сбросить <i class="fa fa-reply"></i></div>
-                    <div class="btn btn-warning btn_test__restart">Начать с начала <i class="fa fa-refresh"></i></div>
+                    <div class="btn btn-warning btn_test__reset">Сбросить <i class="fa fa-refresh"></i></div>
                   </div>
                   <!-- <div class="col-sm-12" style="text-align: center;">
                     <div class="btn btn-success btn_prot_choice_fromTest back-to-top_2">Выбрать протокол</div>
