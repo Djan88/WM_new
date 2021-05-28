@@ -19337,11 +19337,11 @@ mmt_2 = function(){
 
   jQuery('.wizard_play, .wizard_starter_alt').on('click', function(event) {
     checkPoints();
-    // if(pointsStatus == false){
-    //   swal("Не все зоны перенесены!", "Перед началом процедуры необходимо перенести на фото калибровочное кольцо и все зоны.", "info");
-    //   alert_altSound.play();
-    //   pointsStatus = true;
-    // } else {
+    if(pointsStatus == false){
+      swal("Не все зоны перенесены!", "Перед началом процедуры необходимо перенести на фото калибровочное кольцо и все зоны.", "info");
+      alert_altSound.play();
+      pointsStatus = true;
+    } else {
       if (pausedStatus == true) {
         // jQuery('.wizard_returned').attr('src', localStorage.getItem('pausedPhoto'));
         // console.log(localStorage.getItem('pausedPhoto'));
@@ -19392,7 +19392,7 @@ mmt_2 = function(){
       localStorage.removeItem('paused');
       localStorage.removeItem('pausedPhoto');
       jQuery('.wizard_stop').removeClass('wizard_stop_inProgress');
-    // }
+    }
   });
 
 
