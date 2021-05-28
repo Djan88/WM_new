@@ -4,6 +4,7 @@ jQuery(function() {
       device_w = screen.width,
       testing_val,
       testing_sum = {},
+      testing_sum_size,
       testing,
       testing_result,
       mode = 'foto',
@@ -298,7 +299,7 @@ jQuery(function() {
   jQuery('.btn_test__self').on('click', function(event) {
     jQuery('.test_level_1').addClass('hidden');
     jQuery('.test_level_2').fadeIn(500).removeClass('hidden');
-    jQuery('.test_heading_2').text('Знаете свою актуальность?');
+    jQuery('.test_heading_2').text('Выберите для подродлжения.');
   });
 
   jQuery('.btn_test__to_prot').on('click', function(event) {
@@ -319,8 +320,10 @@ jQuery(function() {
 
 testing = function(){
   if ("1_1_14" in testing_sum || "1_1_16" in testing_sum) {
-    console.log('ahtung!');
+    testing_result = 'drenag';
+    // localStorage.setItem('cur_protocol', testing_result);
   }
+  console.log(testing_result);
 }
 
 jQuery('.test_item').on('click', function(event) {
@@ -333,6 +336,16 @@ jQuery('.test_item').on('click', function(event) {
     testing_sum[testing_val] = testing_val;
   }
   console.log(testing_sum);
+  testing_sum_size = Object.keys(testing_sum).length;
+  console.log(testing_sum_size);
+  if (testing_sum_size >= 1) {
+    jQuery('.test_level_4').fadeIn(500).removeClass('hidden');
+  } else {
+    jQuery('.test_level_4').addClass('hidden');
+  }
+});
+
+jQuery('.btn_test__result').on('click', function(event) {
   testing();
 });
 

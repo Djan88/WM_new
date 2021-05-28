@@ -1440,8 +1440,8 @@
                     <div class="btn btn-sm btn-primary btn_test__other">Другого человека</div>
                   </div>
                   <div class="col-sm-12 test_level_2 hidden" style="text-align: center;">
-                    <div class="btn btn-sm btn-primary btn_test__to_prot">Я знаю какой протокол нужен. (Перейти к выбору протокола)</div>
-                    <div class="btn btn-sm btn-primary btn_test__to_list">Я не знаю что делать. (Продолжить отвечать на вопросы)</div>
+                    <div class="btn btn-sm btn-primary btn_test__to_prot">Я знаю какой протокол нужен.</div>
+                    <div class="btn btn-sm btn-primary btn_test__to_list">Я не знаю что делать.</div>
                   </div>
                   <div class="col-sm-12 test_level_3 hidden" style="text-align: center;">
                     <div class="btn btn-sm btn-primary test_item test_item_1_1_2" data-index = '1_1_2'>Грусть, тоска, дисфория</div>
@@ -1463,7 +1463,7 @@
                     <div class="btn btn-sm btn-primary test_item test_item_1_1_18" data-index = '1_1_18'>Перевозбуждение на полнолуние</div>
                   </div>
                   <div class="col-sm-12 test_level_4 hidden" style="text-align: center;">
-                    <div class="btn btn-success btn_test__result">Протокол определен <i class="fa fa-thumbs-up"></i></div>
+                    <div class="btn btn-success btn_test__result">Подобрать протокол <i class="fa fa-check-circle"></i></div>
                   </div>
                   <!-- <div class="col-sm-12" style="text-align: center;">
                     <div class="btn btn-success btn_prot_choice_fromTest back-to-top_2">Выбрать протокол</div>
