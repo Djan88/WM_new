@@ -433,10 +433,17 @@ jQuery('.btn_test__result').on('click', function(event) {
   testing();
 });
 
-jQuery('.btn_test__reset').on('click', function(event) {
+jQuery('.btn_test__restart').on('click', function(event) {
   jQuery('.test_level_2, .test_level_3, .test_level_4').addClass('hidden');
   jQuery('.test_level_1').fadeIn(500).removeClass('hidden');
   jQuery('.test_heading_2').text('Кого лечим?');
+  jQuery('.test_item').removeClass('btn-warning').addClass('btn-primary');
+  testing_sum = {};
+  testing_status = 2;
+});
+jQuery('.btn_test__reset').on('click', function(event) {
+  jQuery('.test_level_4').addClass('hidden');
+  jQuery('.test_item').removeClass('btn-warning').addClass('btn-primary');
   testing_sum = {};
   testing_status = 2;
 });
