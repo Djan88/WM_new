@@ -373,11 +373,11 @@
                 </div>
                 <div class="row wizard_operation">
                   <div class="col-md-12 wizard_way hidden">
-                    <button class="btn btn-success btn_diag back-to-top_2">Диагностика</button>
+                    <button class="btn btn-success btn_diag back-to-top_2">Актуальность</button>
                     <?php if(current_user_can('administrator')){ ?>
-                      <button class="btn btn-success btn_test back-to-top_2">Тестирование</button>
+                      <button class="btn btn-success btn_test back-to-top_2">Диагностика</button>
                     <?php } ?>
-                    <button class="btn btn-success btn_prot_choice back-to-top_2">Выбор протокола</button>
+                    <button class="btn btn-success btn_prot_choice back-to-top_2">Протокол</button>
                   </div>
                   <div class="col-md-12 wizard_estate hidden">
                     <div class="row">
@@ -542,9 +542,9 @@
                   </div>
                   <div id="faq" class="col-md-12 wizard_prots hidden">
                     <div class="to_diag_auto">
-                      <div class="btn btn-success diag_btn_alt">Диагностика</div>
+                      <div class="btn btn-success diag_btn_alt">Актуальность</div>
                       <?php if(current_user_can('administrator')){ ?>
-                        <div class="btn btn-success test_btn_alt">Тестирование</div>
+                        <div class="btn btn-success test_btn_alt">Диагностика</div>
                       <?php } ?>
                     </div>
                     <ul id="faq-list" class="wow fadeInUp">
