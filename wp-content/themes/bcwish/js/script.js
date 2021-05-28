@@ -366,11 +366,6 @@ testing = function(){
     localStorage.setItem('cur_protocol', testing_result);
     testing_result_title = 'Рекомендуется "Протокол V4"';
     testing_status = 1;
-  } else if ("1_1_4" in testing_sum) {
-    testing_result = 'v4';
-    localStorage.setItem('cur_protocol', testing_result);
-    testing_result_title = 'Рекомендуется "Протокол V4"';
-    testing_status = 1;
   } else if ("1_1_14" in testing_sum) {
     testing_result = 'carma';
     localStorage.setItem('cur_protocol', testing_result);
