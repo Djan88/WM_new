@@ -7,6 +7,8 @@ jQuery(function() {
       testing_sum_size,
       testing,
       testing_result,
+      testing_status = 2,
+      testing_result_title,
       mode = 'foto',
       returned_img,
       nextSound = new Howl({
@@ -321,9 +323,46 @@ jQuery(function() {
 testing = function(){
   if ("1_1_14" in testing_sum || "1_1_16" in testing_sum) {
     testing_result = 'drenag';
-    // localStorage.setItem('cur_protocol', testing_result);
+    localStorage.setItem('cur_protocol', testing_result);
+    testing_result_title = 'Рекомендуется "Дренажный протокол"';
+    testing_status = 1;
+  } else if ("1_1_11" in testing_sum && "1_1_15" in testing_sum) {
+    testing_result = 'visceral';
+    localStorage.setItem('cur_protocol', testing_result);
+    testing_result_title = 'Рекомендуется "Висцеральный протокол"';
+    testing_status = 1;
+  } else {
+    testing_status = 2;
   }
-  console.log(testing_result);
+  if (testing_status == 1) {
+    swal({
+      title: testing_result_title,
+      text: 'Для запуска протокола нажмите "Применить". Для повтора тестирования нажмите "Назад".',
+      type: "success",
+      showCancelButton: true,
+      confirmButtonClass: "btn-success",
+      cancelButtonClass: "btn-warning",
+      cancelButtonText: "Назад",
+      confirmButtonText: "Применить",
+      closeOnConfirm: true
+    },
+    function(isConfirm) {
+      if (isConfirm) {
+        swal.close();
+        jQuery('.wizard_test').addClass('hidden');
+        jQuery('.wizard_to_what_way').addClass('hidden');
+        jQuery('.wizard_back_to_test, .wizard_play, .wizard_starter_alt').fadeIn(500).removeClass('hidden');
+        jQuery('.wizard_main_screen').fadeIn(500).removeClass('hidden').css('display', 'flex');
+        jQuery('.wizard_heading').text('Осталось перенести зоны на фото и можно начинать!');
+      } else {
+        swal.close();
+      }
+    });
+  } else {
+      swal("Недостаточно данных", "Для определения протокола нужно выбрать больше пунктов из списка", "info");
+      alert_altSound.play();
+      pointsStatus = true;
+  }
 }
 
 jQuery('.test_item').on('click', function(event) {
