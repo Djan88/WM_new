@@ -296,7 +296,7 @@ jQuery(function() {
   jQuery('.btn_test__other').on('click', function(event) {
     swal({
       title: "Работа с другим человеком.",
-      text: 'При работе другими с людьми мы советуем определять актуальность через диагностику или из описанных ими жалоб.',
+      text: 'При работе другими с людьми мы советуем определять актуальность ножом или из описанных ими жалоб.',
       type: "info",
       showCancelButton: true,
       confirmButtonClass: "btn-success",
