@@ -1537,7 +1537,7 @@
                   <div class="steps_item steps_item_2 wow bounceInUp" data-wow-duration="1.4s">
                     <!-- <div class="icon"></div> -->
                     <h4 class="title">Определение актуальности</h4>
-                    <p class="description">Определите актуальную зону по которой далее будет происходить работа. Для этого в программе "WizardMachine" есть встроенный помощник или пройдите диагностический тест</p>
+                    <p class="description">Определите актуальную зону по которой далее будет происходить работа. Для этого в программе есть встроенный помощник или пройдите диагностический тест</p>
                   </div>
                   <div class="steps_item steps_item_3 wow bounceInUp" data-wow-duration="1.4s">
                     <!-- <div class="icon"></div> -->
