@@ -663,7 +663,7 @@
                         <a data-toggle="collapse" href="#faq10" class="collapsed">КАРМИЧЕСКИЙ <i class="ion-android-remove"></i></a>
                         <div id="faq10" class="collapse" data-parent="#faq-list">
                           <p>
-                            Предназначен для очистки накопленной личной истории (Кармы);
+                            Предназначен для очистки накопленной личной истории (Кармы)
                           </p>
                           <?php if (current_user_can('subscriber') && $new_registred == 1) { ?>
                             <p><div class=" closed_protocol wow bounceInUp">Этот протокол доступен только пользователям с оплаченным доступом! Оплатите доступ к программе и откройте все протоколы "WizardMachine"</div></p>
