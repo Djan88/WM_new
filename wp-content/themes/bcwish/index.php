@@ -374,9 +374,7 @@
                 <div class="row wizard_operation">
                   <div class="col-md-12 wizard_way hidden">
                     <button class="btn btn-success btn_diag back-to-top_2">Актуальность</button>
-                    <?php if(current_user_can('administrator')){ ?>
-                      <button class="btn btn-success btn_test back-to-top_2">Диагностика</button>
-                    <?php } ?>
+                    <button class="btn btn-success btn_test back-to-top_2">Диагностика</button>
                     <button class="btn btn-success btn_prot_choice back-to-top_2">Протокол</button>
                   </div>
                   <div class="col-md-12 wizard_estate hidden">
@@ -543,9 +541,7 @@
                   <div id="faq" class="col-md-12 wizard_prots hidden">
                     <div class="to_diag_auto">
                       <div class="btn btn-success diag_btn_alt">Актуальность</div>
-                      <?php if(current_user_can('administrator')){ ?>
-                        <div class="btn btn-success test_btn_alt">Диагностика</div>
-                      <?php } ?>
+                      <div class="btn btn-success test_btn_alt">Диагностика</div>
                     </div>
                     <ul id="faq-list" class="wow fadeInUp">
                       <li>
@@ -663,21 +659,19 @@
                           <?php } ?>
                         </div>
                       </li>
-                      <?php if(current_user_can('administrator')){ ?>
-                        <li>
-                          <a data-toggle="collapse" href="#faq10" class="collapsed">КАРМИЧЕСКИЙ <i class="ion-android-remove"></i></a>
-                          <div id="faq10" class="collapse" data-parent="#faq-list">
-                            <p>
-                              Предназначен для очистки кармы
-                            </p>
-                            <?php if (current_user_can('subscriber') && $new_registred == 1) { ?>
-                              <p><div class=" closed_protocol wow bounceInUp">Этот протокол доступен только пользователям с оплаченным доступом! Оплатите доступ к программе и откройте все протоколы "WizardMachine"</div></p>
-                            <?php } else { ?>
-                              <p><button class="btn wizard_blue wizard_protocol wizard_protocol_10 wizard_prot_10 wow bounceInUp" data-wow-duration="1.4s">Активировать протокол</button></p>
-                            <?php } ?>
-                          </div>
-                        </li>
-                      <?php } ?>
+                      <li>
+                        <a data-toggle="collapse" href="#faq10" class="collapsed">КАРМИЧЕСКИЙ <i class="ion-android-remove"></i></a>
+                        <div id="faq10" class="collapse" data-parent="#faq-list">
+                          <p>
+                            Предназначен для очистки накопленной личной истории (Кармы);
+                          </p>
+                          <?php if (current_user_can('subscriber') && $new_registred == 1) { ?>
+                            <p><div class=" closed_protocol wow bounceInUp">Этот протокол доступен только пользователям с оплаченным доступом! Оплатите доступ к программе и откройте все протоколы "WizardMachine"</div></p>
+                          <?php } else { ?>
+                            <p><button class="btn wizard_blue wizard_protocol wizard_protocol_10 wizard_prot_10 wow bounceInUp" data-wow-duration="1.4s">Активировать протокол</button></p>
+                          <?php } ?>
+                        </div>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -1425,9 +1419,7 @@
                   </div>
                   <div class="col-sm-12" style="text-align: center;">
                     <div class="btn btn-success btn_prot_choice_fromDiag back-to-top_2">Протокол</div>
-                    <?php if(current_user_can('administrator')){ ?>
-                      <div class="btn btn-success test_btn_fromDiag">Диагностика</div>
-                    <?php } ?>
+                    <div class="btn btn-success test_btn_fromDiag">Диагностика</div>
                   </div>
                 </div>
                 <div class="row wizard_test hidden">
@@ -1545,12 +1537,12 @@
                   <div class="steps_item steps_item_2 wow bounceInUp" data-wow-duration="1.4s">
                     <!-- <div class="icon"></div> -->
                     <h4 class="title">Определение актуальности</h4>
-                    <p class="description">Определите актуальную зону по которой далее будет происходить работа. Для этого в программе "WizardMachine" есть встроенный помощник</p>
+                    <p class="description">Определите актуальную зону по которой далее будет происходить работа. Для этого в программе "WizardMachine" есть встроенный помощник или пройдите диагностический тест</p>
                   </div>
                   <div class="steps_item steps_item_3 wow bounceInUp" data-wow-duration="1.4s">
                     <!-- <div class="icon"></div> -->
                     <h4 class="title">Выбор протокола</h4>
-                    <p class="description">После определения актуальной зоны выберите необходимый протокол в зависимости от актуальности той или оной зоны "V" оси.</p>
+                    <p class="description">После определения актуальной зоны выберите необходимый протокол в зависимости от актуальности той или иной зоны "V" оси.</p>
                   </div>
                   <div class="steps_item steps_item_4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
                     <!-- <div class="icon"></div> -->
