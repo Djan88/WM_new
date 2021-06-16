@@ -138,8 +138,8 @@
               <?php echo do_shortcode( '[theme_switcha_select text="Выберите версию"]' ); ?>
             </li>
             <li><a class="mobile-nav-toggle mobile-nav-toggle_open" href="" data-toggle="modal" data-target="#mail">Обратная связь</a></li>
-            <li><a class="link-warning" target="_blank" href="https://www.youtube.com/watch?v=nu73-7soe8g&t=190s">Как работать по фото?</a></li>
-            <li><a class="link-warning" target="_blank" href="https://www.youtube.com/watch?v=7nQ50HcSgv0">Как работать с планом?</a></li>
+            <li><a class="link-warning" target="_blank" href="https://youtu.be/fzaWUCoDGbk">Учебное видео</a></li>
+            <!-- <li><a class="link-warning" target="_blank" href="https://www.youtube.com/watch?v=7nQ50HcSgv0">Как работать с планом?</a></li> -->
             <li><a target="_blank" href="<?php echo get_template_directory_uri(); ?>/img/manual_wizard.pdf">Как оплатить доступ?</a></li>
             <?php if(is_user_logged_in()){ ?>
               <li><a href="/wp-login.php?action=logout&_wpnonce=0d90a53269">Выход</a></li>
