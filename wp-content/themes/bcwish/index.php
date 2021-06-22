@@ -1428,7 +1428,11 @@
                       <h4 class="test_heading_2">Режим диагностики</h4>
                     </div>
                     <div class="col-sm-12 test_level_1" style="text-align: center;">
-                      Режим диагностики доступен только пользователям с оплаченным доступом! Оплатите доступ к программе и откройте для себя все возможности "WizardMachine"
+                      Режим диагностики доступен только пользователям с оплаченным доступом! Оплатите доступ к программе и откройте для себя все возможности "WizardMachine".
+                    </div>
+                    <div class="col-sm-12" style="text-align: center;">
+                      <div class="btn btn-success btn_prot_choice_fromDiag back-to-top_2">Протокол</div>
+                      <button class="btn btn-success btn_diag back-to-top_2">Актуальность</button>
                     </div>
                   <?php } else { ?>
                     <div class="col-sm-12" style="text-align: center;">
