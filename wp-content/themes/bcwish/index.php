@@ -1422,15 +1422,30 @@
                     <div class="btn btn-success test_btn_fromDiag">Диагностика</div>
                   </div>
                 </div>
+                <div class="col-sm-12" style="text-align: center;">
+                  <h4 class="test_heading_2">Режим диагностики</h4>
+                </div>
+                <div class="col-sm-12 test_level_1" style="text-align: center;">
+                  Режим диагностики доступен только пользователям с оплаченным доступом! Оплатите доступ к программе и откройте для себя все возможности "WizardMachine"
+                </div>
                 <div class="row wizard_test hidden">
-
-                  <div class="col-sm-12" style="text-align: center;">
-                    <h4 class="test_heading_2">Кого лечим?</h4>
-                  </div>
-                  <div class="col-sm-12 test_level_1" style="text-align: center;">
-                    <div class="btn btn-sm btn-primary btn_test__self">Себя</div>
-                    <div class="btn btn-sm btn-primary btn_test__other">Другого человека</div>
-                  </div>
+                  <?php if (current_user_can('subscriber') && $new_registred == 1) { ?>
+                    <div class="col-sm-12" style="text-align: center;">
+                      <h4 class="test_heading_2">Данный режим станет доступкн</h4>
+                    </div>
+                    <div class="col-sm-12 test_level_1" style="text-align: center;">
+                      <div class="btn btn-sm btn-primary btn_test__self">Себя</div>
+                      <div class="btn btn-sm btn-primary btn_test__other">Другого человека</div>
+                    </div>
+                  <?php } else { ?>
+                    <div class="col-sm-12" style="text-align: center;">
+                      <h4 class="test_heading_2">Кого лечим?</h4>
+                    </div>
+                    <div class="col-sm-12 test_level_1" style="text-align: center;">
+                      <div class="btn btn-sm btn-primary btn_test__self">Себя</div>
+                      <div class="btn btn-sm btn-primary btn_test__other">Другого человека</div>
+                    </div>
+                  <?php } ?>
                   <div class="col-sm-12 test_level_2 hidden" style="text-align: center;">
                     <div class="btn btn-sm btn-primary btn_test__to_prot">Я знаю какой протокол нужен.</div>
                     <div class="btn btn-sm btn-primary btn_test__to_list">Я не знаю что делать.</div>
