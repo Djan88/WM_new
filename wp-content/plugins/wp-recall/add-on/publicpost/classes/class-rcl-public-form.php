@@ -105,9 +105,7 @@ class Rcl_Public_Form extends Rcl_Public_Form_Fields {
 		$dataForm['post_excerpt'] = ( $this->post_id ) ? $this->post->post_excerpt : '';
 		$dataForm['post_title']   = ( $this->post_id ) ? $this->post->post_title : '';
 
-		$dataForm = ( object ) $dataForm;
-
-		return $dataForm;
+		return ( object ) $dataForm;
 	}
 
 	function add_guest_fields( $fields ) {
@@ -127,9 +125,7 @@ class Rcl_Public_Form extends Rcl_Public_Form_Fields {
 			)
 		);
 
-		$fields = array_merge( $guestFields, $fields );
-
-		return $fields;
+		return array_merge( $guestFields, $fields );
 	}
 
 	function init_options() {
@@ -170,11 +166,11 @@ class Rcl_Public_Form extends Rcl_Public_Form_Fields {
 
 		if ( $user_ID && $this->post_id ) {
 
-			$this->user_can['edit'] = ( current_user_can( 'edit_post', $this->post_id ) ) ? true : false;
+			$this->user_can['edit'] = current_user_can( 'edit_post', $this->post_id );
 
 			if ( ! $this->user_can['edit'] && $this->post_type == 'post-group' ) {
 
-				$this->user_can['edit'] = ( rcl_can_user_edit_post_group( $this->post_id ) ) ? true : false;
+				$this->user_can['edit'] = rcl_can_user_edit_post_group( $this->post_id );
 			}
 
 			$this->user_can['delete'] = $this->user_can['edit'];
@@ -201,9 +197,7 @@ class Rcl_Public_Form extends Rcl_Public_Form_Fields {
 			$errors[] = __( 'You can not edit this publication :(', 'wp-recall' );
 		}
 
-		$errors = apply_filters( 'rcl_public_form_errors', $errors, $this );
-
-		return $errors;
+		return apply_filters( 'rcl_public_form_errors', $errors, $this );
 	}
 
 	function get_errors_content() {
@@ -220,36 +214,38 @@ class Rcl_Public_Form extends Rcl_Public_Form_Fields {
 		return $errorContent;
 	}
 
-	function isset_notice(){
-		return !empty(strval($_GET['notice-warning'])) || !empty(strval($_GET['notice-success']));
+	function isset_notice() {
+		return ! empty( $_GET['notice-warning'] ) || ! empty( $_GET['notice-success'] );
 	}
 
 	function get_notice_content() {
 
 		$noticeContent = '';
 
-		$noticesData = apply_filters('rcl_public_form_notices', [
+		$noticesData = apply_filters( 'rcl_public_form_notices', [
 			'warning' => [
 				'required-fields' => __( 'Please fill in required fields!', 'wp-recall' )
 			],
 			'success' => [
 				'draft-saved' => __( 'The draft has been saved successfully!', 'wp-recall' )
 			]
-		]);
+		] );
 
 		foreach ( $noticesData as $type => $notices ) {
 
-			if(empty(strval($_GET['notice-'.$type])))
+			if ( empty( $_GET[ 'notice-' . $type ] ) ) {
 				continue;
+			}
 
-			$noticeKey = strval($_GET['notice-'.$type]);
+			$noticeKey = sanitize_key( $_GET[ 'notice-' . $type ] );
 
-			if(empty($notices[$noticeKey]))
+			if ( empty( $notices[ $noticeKey ] ) ) {
 				continue;
+			}
 
 			$noticeContent .= rcl_get_notice( array(
 				'type' => $type,
-				'text' => $notices[$noticeKey]
+				'text' => $notices[ $noticeKey ]
 			) );
 
 		}
@@ -427,6 +423,8 @@ class Rcl_Public_Form extends Rcl_Public_Form_Fields {
 
 		$this->current_field = $field;
 
+		$contentField = false;
+
 		if ( $this->taxonomies && in_array( $field_id, $this->tax_fields ) ) {
 
 			if ( $taxonomy = $this->is_taxonomy_field( $field_id ) ) {
@@ -478,7 +476,7 @@ class Rcl_Public_Form extends Rcl_Public_Form_Fields {
 							                  ->select( [ 'media_id' ] )
 							                  ->where( [
 								                  'user_id'         => $uploader->user_id ? $uploader->user_id : 0,
-								                  'session_id'      => $uploader->user_id ? '' : $_COOKIE['PHPSESSID'],
+								                  'session_id'      => $uploader->user_id ? '' : ( ! empty( $_COOKIE['PHPSESSID'] ) ? sanitize_text_field( wp_unslash( $_COOKIE['PHPSESSID'] ) ) : '' ),
 								                  'uploader_id__in' => array( 'post_thumbnail' )
 							                  ] )
 							                  ->limit( 1 )
@@ -513,7 +511,7 @@ class Rcl_Public_Form extends Rcl_Public_Form_Fields {
 							             ->select( [ 'media_id' ] )
 							             ->where( [
 								             'user_id'         => $uploader->user_id ? $uploader->user_id : 0,
-								             'session_id'      => $uploader->user_id ? '' : $_COOKIE['PHPSESSID'],
+								             'session_id'      => $uploader->user_id ? '' : ( ! empty( $_COOKIE['PHPSESSID'] ) ? sanitize_text_field( wp_unslash( $_COOKIE['PHPSESSID'] ) ) : '' ),
 								             'uploader_id__in' => array( 'post_uploader', 'post_thumbnail' )
 							             ] )
 							             ->limit( - 1 )->order( 'ASC' )->get_col();
@@ -760,9 +758,7 @@ class Rcl_Public_Form extends Rcl_Public_Form_Fields {
 			return false;
 		}
 
-		$content = '<div class="rcl-tags-list">' . $content . '</div>';
-
-		return $content;
+		return '<div class="rcl-tags-list">' . $content . '</div>';
 	}
 
 	function get_tags_input( $taxonomy = 'post_tag' ) {
@@ -829,9 +825,7 @@ class Rcl_Public_Form extends Rcl_Public_Form_Fields {
 
 		$args = apply_filters( 'rcl_public_form_hierarchical_terms', $args, $taxonomy, $this->get_object_form() );
 
-		$allcats = get_terms( $taxonomy, $args );
-
-		return $allcats;
+		return get_terms( $taxonomy, $args );
 	}
 
 	function get_post_terms( $taxonomy ) {
@@ -952,10 +946,10 @@ class Rcl_Public_Form extends Rcl_Public_Form_Fields {
 
 		echo '<script type="text/javascript">'
 		     . 'rcl_init_public_form({'
-		     . 'post_type:"' . $obj->post_type . '",'
-		     . 'post_id:"' . $obj->post_id . '",'
-		     . 'post_status:"' . $obj->post_status . '",'
-		     . 'form_id:"' . $this->form_id . '"'
+		     . 'post_type:"' . esc_js( $obj->post_type ) . '",'
+		     . 'post_id:"' . esc_js( $obj->post_id ) . '",'
+		     . 'post_status:"' . esc_js( $obj->post_status ) . '",'
+		     . 'form_id:"' . esc_js( $this->form_id ) . '"'
 		     . '});</script>';
 	}
 

@@ -8,6 +8,7 @@ class Rcl_Feed_List extends Rcl_Query {
 	public $user_feed;
 	public $paged;
 	public $add_uri;
+	public $number = 30;
 
 	function __construct( $args = array() ) {
 		global $user_ID;
@@ -21,12 +22,12 @@ class Rcl_Feed_List extends Rcl_Query {
 		}
 
 		if ( isset( $_GET['feed-filter'] ) ) {
-			$args['content'] = $_GET['feed-filter'];
+			$args['content'] = sanitize_key( ( $_GET['feed-filter'] ) );
 		}
 
 		$content = isset( $args['content'] ) ? $args['content'] : 'posts';
 
-		$args = apply_filters( 'rcl_feed_' . $args['content'] . '_args', $args );
+		$args = apply_filters( 'rcl_feed_' . $content . '_args', $args );
 
 		$this->init_properties( $args );
 
@@ -41,7 +42,11 @@ class Rcl_Feed_List extends Rcl_Query {
 			add_filter( 'rcl_feed_data', array( $this, 'setup_' . $this->content . '_data' ), 10, 2 );
 		}
 
+		$this->per_page = ( isset( $args['per_page'] ) ) ? $args['per_page'] : 30;
+
 		$this->setup_feed_query( $args );
+		$this->number = $this->per_page;
+		$this->number( $this->number );
 	}
 
 	function setup_feed_query( $args ) {
@@ -339,13 +344,11 @@ class Rcl_Feed_List extends Rcl_Query {
 			}
 		}
 
-		$rqst = apply_filters( 'rcl_feed_uri', $rqst );
-
-		return $rqst;
+		return apply_filters( 'rcl_feed_uri', $rqst );
 	}
 
 	function get_filters() {
-		global $post, $active_addons, $user_LK;
+		global $post, $user_LK;
 
 		if ( ! $this->filters ) {
 			return false;
@@ -362,7 +365,7 @@ class Rcl_Feed_List extends Rcl_Query {
 		$rqst = ( $s_array ) ? implode( '&', $s_array ) . '&' : '';
 
 		if ( $user_LK ) {
-			$url = ( isset( $_POST['tab_url'] ) ) ? $_POST['tab_url'] : rcl_get_user_url( $user_LK );
+			$url = ( isset( $_POST['tab_url'] ) ) ? sanitize_text_field( wp_unslash( $_POST['tab_url'] ) ) : rcl_get_user_url( $user_LK );
 		} else {
 			$url = get_permalink( $post->ID );
 		}

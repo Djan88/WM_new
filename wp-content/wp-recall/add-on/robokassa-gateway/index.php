@@ -274,7 +274,7 @@ class Rcl_Gateway_Robokassa extends Rcl_Gateway_Core {
 		}
 
 		$content .= parent::construct_form( array(
-				'action' => 'https://merchant.roboxchange.com/Index.aspx',
+				'action' => 'https://auth.robokassa.ru/Merchant/Index.aspx', //'https://merchant.roboxchange.com/Index.aspx',
 				'method' => 'post',
 				'fields' => $fields,
 			) );

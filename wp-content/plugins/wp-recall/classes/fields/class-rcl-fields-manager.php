@@ -270,7 +270,7 @@ class Rcl_Fields_Manager extends Rcl_Fields {
 		$content = '<div class="rcl-fields-manager ' . ( $this->structure_edit ? 'structure-edit' : 'structure-simple' ) . '">';
 
 		if ( $this->meta_delete ) {
-			$content .= '<span style="display:none" id="rcl-manager-confirm-delete">' . __( 'To delete a data adding this field?', 'wp-recall' ) . '</span>';
+			$content .= '<span id="rcl-manager-confirm-delete" class="rcl-hide">' . __( 'To delete a data adding this field?', 'wp-recall' ) . '</span>';
 		}
 
 		if ( $this->template_fields ) {
@@ -327,6 +327,7 @@ class Rcl_Fields_Manager extends Rcl_Fields {
 
 		unset( $props['fields'] );
 		unset( $props['default_fields'] );
+		unset( $props['field_options'] );
 
 		$content .= "<script>rcl_init_manager_fields(" . json_encode( $props ) . ");</script>";
 
@@ -358,7 +359,7 @@ class Rcl_Fields_Manager extends Rcl_Fields {
 
 		$group = wp_parse_args( $group, array(
 			'title' => '',
-			'id'    => 'section-' . rand( 100, 10000 ),
+			'id'    => 'section-' . uniqid(),
 			'type'  => 0,
 			'areas' => array(
 				array(
@@ -468,7 +469,7 @@ class Rcl_Fields_Manager extends Rcl_Fields {
 		if ( $this->empty_field ) {
 
 			$this->add_field( array(
-				'slug' => 'newField-' . rand( 1, 10000 ),
+				'slug' => 'newField-' . uniqid(),
 				'type' => $this->types[0],
 				'_new' => true
 			) );
@@ -650,7 +651,7 @@ class Rcl_Fields_Manager extends Rcl_Fields {
 	function setup_options( $options, $field_id, $serviceType = false ) {
 
 		if ( ! $options ) {
-			return $options;
+			return null;
 		}
 
 		$field = $this->get_field( $field_id, $serviceType );
@@ -738,9 +739,7 @@ class Rcl_Fields_Manager extends Rcl_Fields {
 			);
 		}
 
-		$buttons = apply_filters( 'rcl_manager_field_controls', $buttons, $field_id, $this->manager_id );
-
-		return $buttons;
+		return apply_filters( 'rcl_manager_field_controls', $buttons, $field_id, $this->manager_id );
 	}
 
 	function get_field_options_box( $field_id, $serviceType = false ) {
@@ -974,9 +973,7 @@ class Rcl_Fields_Manager extends Rcl_Fields {
 			$typesList[ $type ] = $wprecall->fields[ $type ]['label'];
 		}
 
-		$typesList = apply_filters( 'rcl_field_types_manager_' . $this->manager_id, $typesList );
-
-		return $typesList;
+		return apply_filters( 'rcl_field_types_manager_' . $this->manager_id, $typesList );
 	}
 
 }

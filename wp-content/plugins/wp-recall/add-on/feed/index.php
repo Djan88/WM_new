@@ -39,7 +39,7 @@ function rcl_add_feed_button( $user_id ) {
 
 function rcl_add_userlist_follow_button() {
 	global $rcl_user;
-	echo '<div class="follow-button">' . rcl_add_feed_button( $rcl_user->ID ) . '</div>';
+	echo wp_kses( '<div class="follow-button">' . rcl_add_feed_button( $rcl_user->ID ) . '</div>', rcl_kses_allowed_html() );
 }
 
 add_action( 'init', 'rcl_add_followers_tab', 10 );
@@ -223,18 +223,24 @@ function rcl_update_feed_current_user( $author_id ) {
 	return $data;
 }
 
-rcl_ajax_action( 'rcl_feed_progress', false );
+rcl_ajax_action( 'rcl_feed_progress' );
 function rcl_feed_progress() {
 	global $rcl_feed;
 
 	rcl_verify_ajax_nonce();
 
-	$customData = json_decode( base64_decode( $_POST['custom'] ) );
+	if ( ! isset( $_POST['custom'] ) ) {
+		wp_send_json( [
+			'error' => esc_html__( 'Error', 'wp-recall' )
+		] );
+	}
+
+	$customData = rcl_recursive_map( 'sanitize_text_field', json_decode( base64_decode( sanitize_text_field( wp_unslash( $_POST['custom'] ) ) ) ) );
 
 	$customData = ( array ) $customData;
 
-	$customData['paged']   = intval( $_POST['paged'] );
-	$customData['content'] = strval( wp_strip_all_tags( $_POST['content'] ) );
+	$customData['paged']   = isset( $_POST['paged'] ) ? intval( $_POST['paged'] ) : 1;
+	$customData['content'] = isset( $_POST['content'] ) ? sanitize_text_field( wp_unslash( $_POST['content'] ) ) : '';
 	$customData['filters'] = 0;
 
 	if ( isset( $customData['query'] ) ) {

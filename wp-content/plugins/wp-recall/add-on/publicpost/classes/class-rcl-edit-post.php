@@ -21,12 +21,12 @@ class Rcl_EditPost {
 			require_once( ABSPATH . "wp-admin" . '/includes/media.php' );
 		}
 
-		if ( isset( $_POST['post_type'] ) && $_POST['post_type'] ) {
-			$this->post_type = sanitize_text_field( $_POST['post_type'] );
+		if ( ! empty( $_POST['post_type'] ) ) {
+			$this->post_type = sanitize_key( $_POST['post_type'] );
 		}
 
 		if ( ! $post_id ) {
-			$post_id = isset( $_POST['post_ID'] ) && $_POST['post_ID'] ? $_POST['post_ID'] : ( isset( $_POST['post_id'] ) && $_POST['post_id'] ? $_POST['post_id'] : 0 );
+			$post_id = ! empty( $_POST['post_ID'] ) ? intval( $_POST['post_ID'] ) : ( ! empty( $_POST['post_id'] ) ? intval( $_POST['post_id'] ) : 0 );
 		}
 
 		if ( $post_id ) {
@@ -54,43 +54,26 @@ class Rcl_EditPost {
 
 	function check_required_post_fields() {
 
-		$formFields = new Rcl_Public_Form_Fields( $_POST['post_type'], array(
-			'form_id' => isset( $_POST['form_id'] ) ? $_POST['form_id'] : 1
-		) );
-
-		foreach([
-			'post_title', 'post_content', 'post_thumbnail'
-		] as $field_name){
-			if ( $formFields->is_active_field( $field_name ) ) {
-				$field = $formFields->get_field( $field_name );
-				if ( $field->get_prop( 'required' ) && empty($_POST[$field_name]) ) {
-					return false;
-				}
-			}
+		if ( empty( $_POST['post_type'] ) ) {
+			return false;
 		}
 
-		return true;
+		$formFields = new Rcl_Public_Form_Fields( sanitize_key( $_POST['post_type'] ), array(
+			'form_id' => isset( $_POST['form_id'] ) ? intval( $_POST['form_id'] ) : 1
+		) );
 
-		if ( $customFields = $formFields->get_custom_fields() ) {
-			foreach ( $customFields as $field ) {
-
-				$value = ( isset( $_POST[ $field->slug ] ) ) ? $_POST[ $field->slug ] : false;
-
-				if ( $field->required && ! $value ) {
+		foreach (
+			[
+				'post_title',
+				'post_content',
+				'post_thumbnail'
+			] as $field_name
+		) {
+			if ( $formFields->is_active_field( $field_name ) ) {
+				$field = $formFields->get_field( $field_name );
+				if ( $field->get_prop( 'required' ) && empty( $_POST[ $field_name ] ) ) {
 					return false;
 				}
-
-				if ( in_array( $field->type, array( 'runner' ) ) ) {
-
-					$value = $value?: 0;
-					$min   = $field->value_min;
-					$max   = $field->value_max;
-
-					if ( $value < $min || $value > $max ) {
-						return false;
-					}
-				}
-
 			}
 		}
 
@@ -101,7 +84,7 @@ class Rcl_EditPost {
 		if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) {
 			wp_send_json( array( 'error' => $error ) );
 		} else {
-			wp_die( $error );
+			wp_die( esc_html( $error ) );
 		}
 	}
 
@@ -264,9 +247,9 @@ class Rcl_EditPost {
 
 		$postdata = array(
 			'post_type'    => $this->post_type,
-			'post_title'   => ( isset( $_POST['post_title'] ) ) ? sanitize_text_field( $_POST['post_title'] ) : '',
-			'post_excerpt' => ( isset( $_POST['post_excerpt'] ) ) ? $_POST['post_excerpt'] : '',
-			'post_content' => ( isset( $_POST['post_content'] ) ) ? $_POST['post_content'] : ''
+			'post_title'   => ( isset( $_POST['post_title'] ) ) ? sanitize_text_field( wp_unslash( $_POST['post_title'] ) ) : '',
+			'post_excerpt' => ( isset( $_POST['post_excerpt'] ) ) ? sanitize_textarea_field( wp_unslash( $_POST['post_excerpt'] ) ) : '',
+			'post_content' => ( isset( $_POST['post_content'] ) ) ? wp_kses_post( wp_unslash( $_POST['post_content'] ) ) : ''
 		);
 
 		if ( ! $this->post || ! $this->post->post_name ) {
@@ -289,7 +272,8 @@ class Rcl_EditPost {
 		}
 
 		do_action( 'pre_update_post_rcl', $postdata );
-
+		
+		$formID = false;
 		if ( isset( $_POST['form_id'] ) ) {
 			$formID = intval( $_POST['form_id'] );
 		}
@@ -337,7 +321,7 @@ class Rcl_EditPost {
 		do_action( 'update_post_rcl', $this->post_id, $postdata, $this->update, $this );
 
 		if ( ! $this->required ) {
-			wp_redirect( add_query_arg( [
+			wp_safe_redirect( add_query_arg( [
 				'notice-warning' => 'required-fields',
 				'rcl-post-edit'  => $this->post_id
 			], get_permalink( rcl_get_option( 'public_form_page_rcl' ) ) ) );
@@ -345,7 +329,7 @@ class Rcl_EditPost {
 		}
 
 		if ( isset( $_POST['save-as-draft'] ) ) {
-			wp_redirect( add_query_arg( [
+			wp_safe_redirect( add_query_arg( [
 				'notice-success' => 'draft-saved',
 				'rcl-post-edit'  => $this->post_id
 			], get_permalink( rcl_get_option( 'public_form_page_rcl' ) ) ) );

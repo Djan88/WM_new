@@ -61,20 +61,16 @@ function rcl_update_feed_data( $args ) {
 function rcl_add_feed_author( $author_id ) {
 	global $user_ID;
 
-	$result = rcl_insert_feed_data( array(
+	return rcl_insert_feed_data( array(
 		'user_id'     => $user_ID,
 		'object_id'   => $author_id,
 		'feed_type'   => 'author',
 		'feed_status' => 1
 	) );
-
-	return $result;
 }
 
 //удаляем подписку текущему пользователю на указанного пользователя
 function rcl_remove_feed_author( $author_id ) {
-	global $user_ID, $wpdb;
-
 	$feed_id = rcl_get_feed_author_current_user( $author_id );
 
 	return rcl_remove_feed( $feed_id );
@@ -84,7 +80,9 @@ add_action( 'delete_user', 'rcl_remove_user_feed', 10 );
 function rcl_remove_user_feed( $user_id ) {
 	global $wpdb;
 
-	return $wpdb->query( "DELETE FROM " . RCL_PREF . "feeds WHERE user_id='$user_id' OR object_id='$user_id'" );
+	return $wpdb->query(
+		$wpdb->prepare( "DELETE FROM " . RCL_PREF . "feeds WHERE user_id=%d OR object_id=%d", absint( $user_id ), absint( $user_id ) ) //phpcs:ignore
+	);
 }
 
 //получаем данные фида по ИД
@@ -104,11 +102,9 @@ function rcl_remove_feed( $feed_id ) {
 
 	do_action( 'rcl_pre_remove_feed', $feed );
 
-	$result = $wpdb->query(
-		$wpdb->prepare( "DELETE FROM " . RCL_PREF . "feeds WHERE feed_id='%d'", $feed_id )
+	return $wpdb->query(
+		$wpdb->prepare( "DELETE FROM " . RCL_PREF . "feeds WHERE feed_id='%d'", $feed_id ) //phpcs:ignore
 	);
-
-	return $result;
 }
 
 function rcl_is_ignored_feed_author( $author_id ) {
@@ -168,30 +164,32 @@ function rcl_feed_count_subscribers( $user_id ) {
 	] )->get_count( 'feed_id', 'cache' );
 }
 
-rcl_ajax_action( 'rcl_feed_callback', false );
+rcl_ajax_action( 'rcl_feed_callback' );
 function rcl_feed_callback() {
 
 	rcl_verify_ajax_nonce();
 
-	$allowedCallbacks = apply_filters('rcl_feed_allowed_callbacks', [
+	$allowedCallbacks = apply_filters( 'rcl_feed_allowed_callbacks', [
 		'rcl_ignored_feed_author',
 		'rcl_update_feed_current_user'
-	]);
+	] );
 
-	$callback = $_POST['callback'];
+	$callback = isset( $_POST['callback'] ) ? sanitize_key( $_POST['callback'] ) : '';
 
-	if(!in_array($callback, $allowedCallbacks))
+	if ( ! in_array( $callback, $allowedCallbacks ) ) {
 		exit;
+	}
 
-	$data     = $_POST['data'];
-	$content  = $callback( $data );
+	$data    = isset( $_POST['data'] ) ? intval( $_POST['data'] ) : 0;
+	$content = $callback( $data );
 
 	wp_send_json( $content );
 }
 
 function rcl_feed_content() {
 	global $rcl_feed;
-	echo apply_filters( 'rcl_feed_content', $rcl_feed->feed_content );
+
+	echo wp_kses_post( apply_filters( 'rcl_feed_content', $rcl_feed->feed_content ) );
 }
 
 add_filter( 'rcl_feed_content', 'rcl_add_feed_content_meta', 10 );
@@ -201,12 +199,11 @@ function rcl_add_feed_content_meta( $content ) {
 	switch ( $rcl_feed->feed_type ) {
 		case 'posts':
 			return $content;
-			break;
 		case 'comments':
-			$content .= '<div class="feed-content-meta">' . __( 'For publication', 'wp-recall' ) . ' <a href="' . get_permalink( $rcl_feed->feed_parent ) . '">' . get_the_title( $rcl_feed->feed_parent ) . '</a></div>';
+			$content .= '<div class="feed-content-meta">' . esc_html__( 'For publication', 'wp-recall' ) . ' <a href="' . get_permalink( $rcl_feed->feed_parent ) . '">' . get_the_title( $rcl_feed->feed_parent ) . '</a></div>';
 			break;
 		case 'answers':
-			$content .= '<div class="feed-content-meta">' . __( 'In response to', 'wp-recall' ) . ' <a href="' . get_comment_link( $rcl_feed->feed_parent ) . '">' . __( 'your comment', 'wp-recall' ) . '</a></div>';
+			$content .= '<div class="feed-content-meta">' . esc_html__( 'In response to', 'wp-recall' ) . ' <a href="' . get_comment_link( $rcl_feed->feed_parent ) . '">' . __( 'your comment', 'wp-recall' ) . '</a></div>';
 			break;
 		default:
 			return $content;
@@ -238,7 +235,7 @@ add_filter( 'rcl_feed_content', 'rcl_get_feed_excerpt', 20 );
 function rcl_get_feed_excerpt( $content ) {
 	global $rcl_feed;
 
-	if ( $rcl_feed->show_full ) {
+	if ( isset( $rcl_feed->show_full ) ) {
 		return $content;
 	}
 
@@ -278,9 +275,7 @@ function rcl_get_feed_attachment( $content ) {
 
 	$src = wp_get_attachment_image_src( $rcl_feed->feed_ID, 'medium' );
 
-	$content = '<a href="' . $rcl_feed->feed_permalink . '"><img class="aligncenter" src="' . $src[0] . '" alt="" /></a>' . $content;
-
-	return $content;
+	return '<a href="' . $rcl_feed->feed_permalink . '"><img class="aligncenter" src="' . $src[0] . '" alt="" /></a>' . $content;
 }
 
 function rcl_feed_options() {
@@ -289,11 +284,11 @@ function rcl_feed_options() {
 	$content = '<div class="feed-options">'
 	           . '<i class="rcli fa-times"></i>'
 	           . '<div class="options-box">'
-	           . rcl_get_feed_callback_link( $rcl_feed->feed_author, __( 'Ignore publications', 'wp-recall' ) . ' ' . get_the_author_meta( 'display_name', $rcl_feed->feed_author ), 'rcl_ignored_feed_author' )
+	           . rcl_get_feed_callback_link( $rcl_feed->feed_author, esc_html__( 'Ignore publications', 'wp-recall' ) . ' ' . get_the_author_meta( 'display_name', $rcl_feed->feed_author ), 'rcl_ignored_feed_author' )
 	           . '</div>'
 	           . '</div>';
 
-	echo $content;
+	echo wp_kses( $content, rcl_kses_allowed_html() );
 }
 
 function rcl_get_author_feed_data( $author_id ) {
@@ -345,7 +340,7 @@ function rcl_ignored_feed_author( $author_id ) {
 }
 
 function rcl_get_feed_array( $user_id, $type_feed = 'author' ) {
-	global $wpdb;
+	global $user_ID;
 
 	$cachekey = json_encode( array( 'rcl_get_feed_array', $user_id, $type_feed ) );
 	$cache    = wp_cache_get( $cachekey );
@@ -355,7 +350,7 @@ function rcl_get_feed_array( $user_id, $type_feed = 'author' ) {
 
 	$users = RQ::tbl( new Rcl_Feed_Query() )->select( [ 'object_id' ] )->where( [
 		'user_id'   => $user_ID,
-		'object_id' => $author_id,
+		'object_id' => $user_id,
 		'feed_type' => 'author'
 	] )->get_col();
 
@@ -379,13 +374,13 @@ function rcl_get_feed_array( $user_id, $type_feed = 'author' ) {
 
 function rcl_feed_title() {
 	global $rcl_feed;
-	echo apply_filters( 'rcl_feed_title', $rcl_feed->feed_title );
+
+	echo wp_kses_post( apply_filters( 'rcl_feed_title', $rcl_feed->feed_title ) );
 }
 
 add_filter( 'rcl_feed_title', 'rcl_add_link_feed_title', 10 );
 function rcl_add_link_feed_title( $feed_title ) {
 	global $rcl_feed;
-	$feed_title = ( $rcl_feed->feed_permalink ) ? sprintf( '<a href="%s">%s</a>', $rcl_feed->feed_permalink, $feed_title ) : $feed_title;
 
-	return $feed_title;
+	return ( $rcl_feed->feed_permalink ) ? sprintf( '<a href="%s">%s</a>', esc_url( $rcl_feed->feed_permalink ), $feed_title ) : $feed_title;
 }
