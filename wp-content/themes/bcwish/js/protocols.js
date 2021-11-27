@@ -16667,14 +16667,6 @@ mmt_2 = function(){
     jQuery('.wizard_main_screen').fadeIn(500).removeClass('hidden').css('display', 'flex');
     jQuery('.wizard_heading').text('Перенесите зоны на фото и можно будет продолжить работу.');
   });
-
-
-  // curient moon day
-  let moonBegin = 1613032380000;
-  let moonMonth = 29.53059 * 24 * 60 * 60 * 1000;
-  let now = Date.now();
-  let moonDay = ((now - moonBegin) %  moonMonth)/(moonMonth/30)|0;
-  console.log(`Сейчас ${moonDay} лунный день`);
   
   checkPoints = function(){
     jQuery('.zone_movable').each(function() {
@@ -16730,37 +16722,6 @@ mmt_2 = function(){
         } else if (protocol == 'visceral') {
           mmt();
           jQuery('.status_title').text('Висцеральный протокол');
-        } else if (protocol == 'moon') {
-          if (moonDay == 8 || moonDay == 22) {
-            moon_8();
-          } else if (moonDay == 9 || moonDay == 21) {
-            moon_9();
-          } else if (moonDay == 10 || moonDay == 20) {
-            moon_10();
-          } else if (moonDay == 11 || moonDay == 19) {
-            moon_11();
-          } else if (moonDay == 12 || moonDay == 18) {
-            moon_12();
-          } else if (moonDay == 14 || moonDay == 15 || moonDay == 16) {
-            moon_14();
-          } else if (moonDay == 13 || moonDay == 17) {
-            moon_13();
-          } else if (moonDay == 29 || moonDay == 30 || moonDay == 1) {
-            moon_1();
-          } else if (moonDay == 2 || moonDay == 28) {
-            moon_2();
-          } else if (moonDay == 3 || moonDay == 27) {
-            moon_3();
-          } else if (moonDay == 4 || moonDay == 26) {
-            moon_4();
-          } else if (moonDay == 5 || moonDay == 25) {
-            moon_5();
-          } else if (moonDay == 6 || moonDay == 24) {
-            moon_6();
-          } else if (moonDay == 7 || moonDay == 23) {
-            moon_7();
-          }
-          jQuery('.status_title').text('Протокол '+moonDay+' лунного дня');
         }
       }
       pausedStatus = false;
