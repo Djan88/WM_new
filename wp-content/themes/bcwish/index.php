@@ -548,6 +548,9 @@
                             <p>
                               Протокол на каждый день. Программа прорабатывает зоны в соответствии с текущим лунным днем. 
                             </p>
+                            <p class="cur_moon_day">
+                              
+                            </p>
                             <p><button class="btn wizard_blue wizard_protocol wizard_protocol_0 wizard_prot_0 wow bounceInUp" data-wow-duration="1.4s">Активировать протокол</button></p>
                           </div>
                         </li>

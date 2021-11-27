@@ -19341,6 +19341,7 @@ mmt_2 = function(){
   let now = Date.now();
   let moonDay = ((now - moonBegin) %  moonMonth)/(moonMonth/30)|0;
   console.log(`Сейчас ${moonDay} лунный день`);
+  jQuery('.cur_moon_day').text(`Сейчас ${moonDay} лунный день`);
 
   jQuery('.wizard_play, .wizard_starter_alt').on('click', function(event) {
     checkPoints();
