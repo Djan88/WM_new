@@ -2435,6 +2435,10 @@ button.wizard_starter_alt.btn.btn-success
 {
   margin-top: 20px;
 }
+.cur_moon_day_val
+{
+  color: #28a745;
+}
 
 /*Animation*/
 
