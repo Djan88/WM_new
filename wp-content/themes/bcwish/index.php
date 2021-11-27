@@ -541,6 +541,17 @@
                       <div class="btn btn-success test_btn_alt">Диагностика</div>
                     </div>
                     <ul id="faq-list" class="wow fadeInUp">
+                      <?php if(current_user_can('administrator')){ ?>
+                        <li>
+                          <a data-toggle="collapse" href="#faq0" class="collapsed">ПРОТОКОЛ ЛУННОГО ДНЯ <i class="ion-android-remove"></i></a>
+                          <div id="faq0" class="collapse" data-parent="#faq-list">
+                            <p>
+                              Протокол на каждый день. Программа прорабатывает зоны в соответствии с текущим лунным днем. 
+                            </p>
+                            <p><button class="btn wizard_blue wizard_protocol wizard_protocol_0 wizard_prot_0 wow bounceInUp" data-wow-duration="1.4s">Активировать протокол</button></p>
+                          </div>
+                        </li>
+                      <?php } ?>
                       <li>
                         <a data-toggle="collapse" href="#faq9" class="collapsed">УНИВЕРСАЛЬНЫЙ <i class="ion-android-remove"></i></a>
                         <div id="faq9" class="collapse" data-parent="#faq-list">
