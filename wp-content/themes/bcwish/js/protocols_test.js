@@ -108,6 +108,7 @@ jQuery(function() {
   onEnd = function(){
     jQuery('.ring').removeClass('in_progress');
     jQuery('.btn-to_endNow').addClass('hidden');
+    jQuery('.wizard_stop').removeClass('hidden');
     jQuery('.btn_start').removeAttr('disabled');
     jQuery('.wizard_percent').text('100%');
     rotate_one = 0;
@@ -19537,7 +19538,7 @@ mmt_2 = function(){
     reloadTime = 0;
     cur_animation_val = 0;
     count_animation = 1;
-    jQuery('.ring').removeClass('hidden');
+    jQuery('.ring').addClass('hidden');
     jQuery('.ring, .zone_ring').css('transform', 'rotate(0deg)');
     jQuery('.zone_d5, .zone_d6, .zone_d3, .zone_d4').css({
         color: 'transparent',
@@ -19761,6 +19762,7 @@ mmt_2 = function(){
           carma();
           jQuery('.status_title').text('Кармический протокол');
         } else if (protocol == 'moon') {
+          jQuery('.wizard_stop').addClass('hidden');
           if (moonDay == 8 || moonDay == 22) {
             moon_8();
           } else if (moonDay == 9 || moonDay == 21) {
