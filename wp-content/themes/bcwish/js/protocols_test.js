@@ -19221,6 +19221,67 @@ mmt_2 = function(){
     }, 250);
   }
 
+
+  moon_8 = function(){
+    jQuery('.wizard_heading').text('Выполняется "Лунный" протокол');
+    jQuery('.wizard_percent').text('0%');
+    reloadTime = 0;
+    cur_animation_val = 0;
+    count_animation = 1;
+    jQuery('.ring').removeClass('hidden');
+    jQuery('.ring, .zone_ring').css('transform', 'rotate(0deg)');
+    jQuery('.zone_d5, .zone_d6, .zone_d3, .zone_d4, .zone_s4, .zone_s5').css({
+        color: 'transparent',
+        borderColor: 'transparent',
+        transform: 'scale(1.5)',
+        opacity: 0.8,
+        borderWidth: '1px',
+        paddingTop: '4px',
+        zIndex: '1000'
+    });
+    
+    phaseOne = setInterval(function(){
+      if (count_animation <= 450){
+        if (count_animation == 49 || count_animation == 149 || count_animation == 199 || count_animation == 249 || count_animation == 299 || count_animation == 349 || count_animation == 399 || count_animation == 449){
+            reloadSound.play();
+        };
+        if (count_animation <= 50){
+          jQuery('.zone_d5, .zone_d6, .zone_d3, .zone_d4, .zone_s4, .zone_s5').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+        } else if (count_animation > 50 && count_animation <= 100){
+          jQuery('.zone_d5, .zone_d6, .zone_d3, .zone_d4, .zone_s4, .zone_s5').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+        } else if (count_animation > 100 && count_animation <= 150){
+          jQuery('.zone_d5, .zone_d6, .zone_d3, .zone_d4, .zone_s4, .zone_s5').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+        } else if (count_animation > 150 && count_animation <= 200){
+          jQuery('.zone_d5, .zone_d6, .zone_d3, .zone_d4, .zone_s4, .zone_s5').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+        } else if (count_animation > 200 && count_animation <= 250){
+          jQuery('.zone_d5, .zone_d6, .zone_d3, .zone_d4, .zone_s4, .zone_s5').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+        } else if (count_animation > 250 && count_animation <= 300){
+          jQuery('.zone_d5, .zone_d6, .zone_d3, .zone_d4, .zone_s4, .zone_s5').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+        } else if (count_animation > 300 && count_animation <= 350){
+          jQuery('.zone_d5, .zone_d6, .zone_d3, .zone_d4, .zone_s4, .zone_s5').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+        } else if (count_animation > 350 && count_animation <= 400){
+          jQuery('.zone_d5, .zone_d6, .zone_d3, .zone_d4, .zone_s4, .zone_s5').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+        } else if (count_animation > 400 && count_animation <= 450){
+          jQuery('.zone_d5, .zone_d6, .zone_d3, .zone_d4, .zone_s4, .zone_s5').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+        }
+        reloadTime += 1;
+        count_animation += 1;
+      } else {
+        clearInterval(phaseOne);
+        count_animation = 1;
+        jQuery('.zone_d5, .zone_d6, .zone_d3, .zone_d4, .zone_s4, .zone_s5').css({
+            background: '#fff',
+            color: '#413e66',
+            borderColor: '#413e66',
+            transform: 'rotate(0deg) scale(1)',
+            paddingTop: '2px',
+            zIndex: '2'
+        });
+        // carma_2();
+      }
+    }, 250);
+  }
+
 // Если есть незавершенный протокол
   if (localStorage.getItem('paused')) {
     jQuery('.wizard_continue').removeClass('hidden');
@@ -19345,11 +19406,11 @@ mmt_2 = function(){
 
   jQuery('.wizard_play, .wizard_starter_alt').on('click', function(event) {
     checkPoints();
-    if(pointsStatus == false){
-      swal("Не все зоны перенесены!", "Перед началом процедуры необходимо перенести на фото калибровочное кольцо и все зоны.", "info");
-      alert_altSound.play();
-      pointsStatus = true;
-    } else {
+    // if(pointsStatus == false){
+    //   swal("Не все зоны перенесены!", "Перед началом процедуры необходимо перенести на фото калибровочное кольцо и все зоны.", "info");
+    //   alert_altSound.play();
+    //   pointsStatus = true;
+    // } else {
       if (pausedStatus == true) {
         // jQuery('.wizard_returned').attr('src', localStorage.getItem('pausedPhoto'));
         // console.log(localStorage.getItem('pausedPhoto'));
@@ -19414,7 +19475,8 @@ mmt_2 = function(){
           } else if (moonDay == 5 || moonDay == 25) {
             moon_5();
           } else if (moonDay == 6 || moonDay == 24) {
-            moon_6();
+            // moon_6();
+            moon_8();
           } else if (moonDay == 7 || moonDay == 23) {
             moon_7();
           }
@@ -19431,7 +19493,7 @@ mmt_2 = function(){
       localStorage.removeItem('paused');
       localStorage.removeItem('pausedPhoto');
       jQuery('.wizard_stop').removeClass('wizard_stop_inProgress');
-    }
+    // }
   });
 
 
