@@ -19233,6 +19233,391 @@ mmt_2 = function(){
     jQuery('.ring, .zone_ring').css('transform', 'rotate(0deg)');
     cur_animation_val = 10;
     count_animation = 1;
+    jQuery('.zone_d4, .zone_d5, .zone_d6, .zone_d3, .zone_s4').css({
+      background: '#fff url(/wp-content/themes/bcwish/img/mo_right.png) center center/100% no-repeat',
+      transform: 'scale(1.5)',
+      color: 'transparent',
+      borderColor: 'transparent',
+      opacity: 0.8,
+      borderWidth: '1px',
+      paddingTop: '4px',
+      zIndex: '1000'
+    });
+
+    jQuery('.zone_d4, .zone_d5, .zone_d6, .zone_d3, .zone_s4').addClass('rot_mo_4');
+
+    phaseSeven_one = setInterval(function(){
+        if (count_animation <= 40){
+          if (reloadTime == 0){
+              sound.stop();
+              reloadSound.play();
+          };
+          reloadTime += 1;
+          count_animation += 1;
+        } else if(count_animation <= 57) {
+            count_animation += 1;
+        } else {
+          clearInterval(phaseSeven_one);
+          count_animation = 1;
+          jQuery('.zone_d4, .zone_d5, .zone_d6, .zone_d3, .zone_s4').css({
+            background: '#fff',
+            color: '#413e66',
+            borderColor: '#413e66',
+            transform: 'rotate(-'+0+'deg) scale(1)',
+            paddingTop: '2px',
+            zIndex: '2'
+          });
+          jQuery('.zone_d4, .zone_d5, .zone_d6, .zone_d3, .zone_s4').removeClass('rot_mo_4');
+          onEnd();
+        }
+    }, 1000);
+  }
+
+  moon_7_5 = function(){
+    jQuery('.wizard_heading').text('Выполняется протокол Лунного дня');
+    jQuery('.wizard_percent').text('87%');
+    reloadTime = 0;
+    reloadTime1 = 0;
+    d12Val = 0;
+    rotateVal = 0;
+    jQuery('.ring').addClass('hidden');
+    jQuery('.ring, .zone_ring').css('transform', 'rotate(0deg)');
+    cur_animation_val = 10;
+    count_animation = 1;
+    jQuery('.zone_d4, .zone_d5, .zone_d6, .zone_d3, .zone_s4').css({
+      background: '#fff url(/wp-content/themes/bcwish/img/mo_left.png) center center/100% no-repeat',
+      transform: 'scale(1.5)',
+      color: 'transparent',
+      borderColor: 'transparent',
+      opacity: 0.8,
+      borderWidth: '1px',
+      paddingTop: '4px',
+      zIndex: '1000'
+    });
+
+    jQuery('.zone_d4, .zone_d5, .zone_d6, .zone_d3, .zone_s4').addClass('rot_mo_3');
+
+    phaseSeven_one = setInterval(function(){
+        if (count_animation <= 40){
+          if (reloadTime == 0){                                                                       //1
+              sound.stop();
+              reloadSound.play();
+          };
+          reloadTime += 1;
+          count_animation += 1;
+        } else if(count_animation <= 57) {
+            count_animation += 1;
+        } else {
+          clearInterval(phaseSeven_one);
+          count_animation = 1;
+          jQuery('.zone_d4, .zone_d5, .zone_d6, .zone_d3, .zone_s4').css({
+            background: '#fff',
+            color: '#413e66',
+            borderColor: '#413e66',
+            transform: 'rotate(-'+0+'deg) scale(1)',
+            paddingTop: '2px',
+            zIndex: '2'
+          });
+          jQuery('.zone_d4, .zone_d5, .zone_d6, .zone_d3, .zone_s4').removeClass('rot_mo_3');
+          moon_7_6();
+        }
+    }, 1000);
+  } 
+
+  moon_7_4 = function(){
+    jQuery('.wizard_heading').text('Выполняется протокол Лунного дня');
+    jQuery('.wizard_percent').text('71%');
+    reloadTime = 0;
+    reloadTime1 = 0;
+    d12Val = 0;
+    rotateVal = 0;
+    jQuery('.ring').addClass('hidden');
+    jQuery('.ring, .zone_ring').css('transform', 'rotate(0deg)');
+    cur_animation_val = 10;
+    count_animation = 1;
+    jQuery('.zone_d4, .zone_d5, .zone_d6, .zone_d3, .zone_s4').css({
+      background: '#fff url(/wp-content/themes/bcwish/img/mo_left.png) center center/100% no-repeat',
+      transform: 'scale(1.5)',
+      color: 'transparent',
+      borderColor: 'transparent',
+      opacity: 0.8,
+      borderWidth: '1px',
+      paddingTop: '4px',
+      zIndex: '1000'
+    });
+
+    jQuery('.zone_d4, .zone_d5, .zone_d6, .zone_d3, .zone_s4').addClass('rot_mo_2');
+    phaseSeven_one = setInterval(function(){
+        if (count_animation <= 40){
+          if (reloadTime == 0){                                                                       //1
+              sound.stop();
+              reloadSound.play();
+          };
+          reloadTime += 1;
+          count_animation += 1;
+        } else if(count_animation <= 57) {
+            count_animation += 1;
+        } else {
+          clearInterval(phaseSeven_one);
+          count_animation = 1;
+          jQuery('.zone_d4, .zone_d5, .zone_d6, .zone_d3, .zone_s4').css({
+            background: '#fff',
+            color: '#413e66',
+            borderColor: '#413e66',
+            transform: 'rotate(-'+0+'deg) scale(1)',
+            paddingTop: '2px',
+            zIndex: '2'
+          });
+          jQuery('.zone_d4, .zone_d5, .zone_d6, .zone_d3, .zone_s4').removeClass('rot_mo_2');
+          moon_7_5()
+        }
+    }, 1000);
+  } 
+
+  moon_7_3 = function(){
+    jQuery('.wizard_heading').text('Выполняется протокол Лунного дня');
+    jQuery('.wizard_percent').text('63%');
+    reloadTime = 0;
+    reloadTime1 = 0;
+    d12Val = 0;
+    rotateVal = 0;
+    jQuery('.ring').addClass('hidden');
+    jQuery('.ring, .zone_ring').css('transform', 'rotate(0deg)');
+    cur_animation_val = 10;
+    count_animation = 1;
+    jQuery('.zone_d4, .zone_d5, .zone_d6, .zone_d3, .zone_s4').css({
+      background: '#fff url(/wp-content/themes/bcwish/img/mo_right.png) center center/100% no-repeat',
+      transform: 'scale(1.5)',
+      color: 'transparent',
+      borderColor: 'transparent',
+      opacity: 0.8,
+      borderWidth: '1px',
+      paddingTop: '4px',
+      zIndex: '1000'
+    });
+    var zone_gsap = gsap.timeline();
+    jQuery('.zone_d4, .zone_d5, .zone_d6, .zone_d3, .zone_s4').addClass('rot_mo_1');
+    phaseSeven_one = setInterval(function(){
+        if (count_animation <= 40){
+          if (reloadTime == 0){                                                                       //1
+              sound.stop();
+              reloadSound.play();
+          };
+          reloadTime += 1;
+          count_animation += 1;
+        } else if(count_animation <= 57) {
+            count_animation += 1;
+        } else {
+          clearInterval(phaseSeven_one);
+          count_animation = 1;
+          jQuery('.zone_d4, .zone_d5, .zone_d6, .zone_d3, .zone_s4').css({
+            background: '#fff',
+            color: '#413e66',
+            borderColor: '#413e66',
+            transform: 'rotate(-'+0+'deg) scale(1)',
+            paddingTop: '2px',
+            zIndex: '2'
+          });
+          jQuery('.zone_d4, .zone_d5, .zone_d6, .zone_d3, .zone_s4').removeClass('rot_mo_1');
+          moon_7_4(); 
+        }
+    }, 1000);
+  }  
+
+  moon_7_2 = function(){
+    jQuery('.wizard_heading').text('Выполняется протокол Лунного дня');
+    reloadTime = 0;
+    cur_animation_val = 0;
+    count_animation = 1;
+    jQuery('.ring').addClass('hidden');
+    jQuery('.ring, .zone_ring').css('transform', 'rotate(0deg)');
+    jQuery('.zone_d4, .zone_d5, .zone_d6, .zone_d3, .zone_s4').css({
+        color: 'transparent',
+        borderColor: 'transparent',
+        transform: 'scale(1.5)',
+        opacity: 0.8,
+        borderWidth: '1px',
+        paddingTop: '4px',
+        zIndex: '1000'
+    });
+    
+    phaseOne = setInterval(function(){
+      if (count_animation <= 360){
+        if (count_animation == 120 || count_animation == 240){
+            reloadSound.play();
+        };
+        if (count_animation > 0 && count_animation <= 120) {
+          jQuery('.zone_d4, .zone_d5, .zone_d6, .zone_d3, .zone_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/disfunction.png) center center/100% no-repeat'});
+        } else if (count_animation > 120 && count_animation <= 220) {
+          jQuery('.zone_d4, .zone_d5, .zone_d6, .zone_d3, .zone_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/travma.png) center center/100% no-repeat'});
+        } else if (count_animation > 220 && count_animation <= 360) {
+          jQuery('.zone_d4, .zone_d5, .zone_d6, .zone_d3, .zone_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/povregdenie_demona.png) center center/100% no-repeat'});
+        }
+        reloadTime += 1;
+        count_animation += 1;
+      } else {
+        clearInterval(phaseOne);
+        count_animation = 1;
+        jQuery('.zone_d4, .zone_d5, .zone_d6, .zone_d3, .zone_s4').css({
+            background: '#fff',
+            color: '#413e66',
+            borderColor: '#413e66',
+            transform: 'rotate(0deg) scale(1)',
+            paddingTop: '2px',
+            zIndex: '2'
+        });
+        moon_7_3();
+      }
+    }, 250);
+  }
+
+  moon_7_1 = function(){
+    jQuery('.wizard_heading').text('Выполняется протокол Лунного дня');
+    reloadTime = 0;
+    cur_animation_val = 0;
+    count_animation = 1;
+    jQuery('.ring').addClass('hidden');
+    jQuery('.ring, .zone_ring').css('transform', 'rotate(0deg)');
+    jQuery('.zone_s4').css({
+        color: 'transparent',
+        borderColor: 'transparent',
+        transform: 'scale(1.5)',
+        opacity: 0.8,
+        borderWidth: '1px',
+        paddingTop: '4px',
+        zIndex: '1000'
+    });
+    
+    phaseOne = setInterval(function(){
+      if (count_animation <= 1080){
+        if (count_animation == 120 || count_animation == 240 || count_animation == 360 || count_animation == 480 || count_animation == 600 || count_animation == 720 || count_animation == 840 || count_animation == 960 || count_animation == 1080){
+            reloadSound.play();
+        };
+        if (count_animation <= 120){
+          jQuery('.zone_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+        } else if (count_animation > 120 && count_animation <= 240){
+          jQuery('.wizard_percent').text('27%');
+          jQuery('.zone_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+        } else if (count_animation > 240 && count_animation <= 360){
+          jQuery('.wizard_percent').text('30%');
+          jQuery('.zone_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+        } else if (count_animation > 360 && count_animation <= 480){
+          jQuery('.wizard_percent').text('33%');
+          jQuery('.zone_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+        } else if (count_animation > 480 && count_animation <= 600){
+          jQuery('.wizard_percent').text('36%');
+          jQuery('.zone_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+        } else if (count_animation > 600 && count_animation <= 720){
+          jQuery('.wizard_percent').text('39%');
+          jQuery('.zone_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+        } else if (count_animation > 720 && count_animation <= 840){
+          jQuery('.wizard_percent').text('41%');
+          jQuery('.zone_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+        } else if (count_animation > 840 && count_animation <= 960){
+          jQuery('.wizard_percent').text('44%');
+          jQuery('.zone_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+        } else if (count_animation > 960 && count_animation <= 1080){
+          jQuery('.wizard_percent').text('47%');
+          jQuery('.zone_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+        }
+        reloadTime += 1;
+        count_animation += 1;
+      } else {
+        clearInterval(phaseOne);
+        count_animation = 1;
+        jQuery('.zone_s4').css({
+            background: '#fff',
+            color: '#413e66',
+            borderColor: '#413e66',
+            transform: 'rotate(0deg) scale(1)',
+            paddingTop: '2px',
+            zIndex: '2'
+        });
+        moon_7_2();
+      }
+    }, 250);
+  }
+
+  moon_7 = function(){
+    jQuery('.wizard_heading').text('Выполняется протокол Лунного дня');
+    jQuery('.wizard_percent').text('0%');
+    jQuery('.wizard_stop').css('display', 'none');
+    reloadTime = 0;
+    cur_animation_val = 0;
+    count_animation = 1;
+    jQuery('.ring').addClass('hidden');
+    jQuery('.ring, .zone_ring').css('transform', 'rotate(0deg)');
+    jQuery('.zone_d4, .zone_d5, .zone_d6, .zone_d3').css({
+        color: 'transparent',
+        borderColor: 'transparent',
+        transform: 'scale(1.5)',
+        opacity: 0.8,
+        borderWidth: '1px',
+        paddingTop: '4px',
+        zIndex: '1000'
+    });
+    
+    phaseOne = setInterval(function(){
+      if (count_animation <= 1080){
+        if (count_animation == 120 || count_animation == 240 || count_animation == 360 || count_animation == 480 || count_animation == 600 || count_animation == 720 || count_animation == 840 || count_animation == 960 || count_animation == 1080){
+            reloadSound.play();
+        };
+        if (count_animation <= 120){
+          jQuery('.zone_d4, .zone_d5, .zone_d6, .zone_d3').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+        } else if (count_animation > 120 && count_animation <= 240){
+          jQuery('.wizard_percent').text('3%');
+          jQuery('.zone_d4, .zone_d5, .zone_d6, .zone_d3').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+        } else if (count_animation > 240 && count_animation <= 360){
+          jQuery('.wizard_percent').text('6%');
+          jQuery('.zone_d4, .zone_d5, .zone_d6, .zone_d3').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+        } else if (count_animation > 360 && count_animation <= 480){
+          jQuery('.wizard_percent').text('9%');
+          jQuery('.zone_d4, .zone_d5, .zone_d6, .zone_d3').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+        } else if (count_animation > 480 && count_animation <= 600){
+          jQuery('.wizard_percent').text('12%');
+          jQuery('.zone_d4, .zone_d5, .zone_d6, .zone_d3').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+        } else if (count_animation > 600 && count_animation <= 720){
+          jQuery('.wizard_percent').text('15%');
+          jQuery('.zone_d4, .zone_d5, .zone_d6, .zone_d3').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+        } else if (count_animation > 720 && count_animation <= 840){
+          jQuery('.wizard_percent').text('18%');
+          jQuery('.zone_d4, .zone_d5, .zone_d6, .zone_d3').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+        } else if (count_animation > 840 && count_animation <= 960){
+          jQuery('.wizard_percent').text('21%');
+          jQuery('.zone_d4, .zone_d5, .zone_d6, .zone_d3').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+        } else if (count_animation > 960 && count_animation <= 1080){
+          jQuery('.wizard_percent').text('24%');
+          jQuery('.zone_d4, .zone_d5, .zone_d6, .zone_d3').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+        }
+        reloadTime += 1;
+        count_animation += 1;
+      } else {
+        clearInterval(phaseOne);
+        count_animation = 1;
+        jQuery('.zone_d4, .zone_d5, .zone_d6, .zone_d3').css({
+            background: '#fff',
+            color: '#413e66',
+            borderColor: '#413e66',
+            transform: 'rotate(0deg) scale(1)',
+            paddingTop: '2px',
+            zIndex: '2'
+        });
+        moon_7_1();
+      }
+    }, 250);
+  }
+
+  moon_5_6 = function(){
+    jQuery('.wizard_heading').text('Выполняется протокол Лунного дня');
+    jQuery('.wizard_percent').text('92%');
+    reloadTime = 0;
+    reloadTime1 = 0;
+    d12Val = 0;
+    rotateVal = 0;
+    jQuery('.ring').addClass('hidden');
+    jQuery('.ring, .zone_ring').css('transform', 'rotate(0deg)');
+    cur_animation_val = 10;
+    count_animation = 1;
     jQuery('.zone_d4, .zone_s3, .zone_s2_').css({
       background: '#fff url(/wp-content/themes/bcwish/img/mo_right.png) center center/100% no-repeat',
       transform: 'scale(1.5)',
@@ -20960,7 +21345,7 @@ mmt_2 = function(){
             moon_5();
           } else if (moonDay == 6 || moonDay == 24) {
             // moon_6();
-            moon_5();
+            moon_7();
           } else if (moonDay == 7 || moonDay == 23) {
             moon_7();
           }
