@@ -19614,7 +19614,7 @@ mmt_2 = function(){
     count_animation = 1;
     jQuery('.ring').addClass('hidden');
     jQuery('.ring, .zone_ring').css('transform', 'rotate(0deg)');
-    jQuery('.zone_d6., .zone_d2_').css({
+    jQuery('.zone_d6, .zone_d2_').css({
         color: 'transparent',
         borderColor: 'transparent',
         transform: 'scale(1.5)',
@@ -19630,38 +19630,38 @@ mmt_2 = function(){
             reloadSound.play();
         };
         if (count_animation <= 120){
-          jQuery('.zone_d6., .zone_d2_').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+          jQuery('.zone_d6, .zone_d2_').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
         } else if (count_animation > 120 && count_animation <= 240){
           jQuery('.wizard_percent').text('2%');
-          jQuery('.zone_d6., .zone_d2_').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+          jQuery('.zone_d6, .zone_d2_').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
         } else if (count_animation > 240 && count_animation <= 360){
           jQuery('.wizard_percent').text('4%');
-          jQuery('.zone_d6., .zone_d2_').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+          jQuery('.zone_d6, .zone_d2_').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
         } else if (count_animation > 360 && count_animation <= 480){
           jQuery('.wizard_percent').text('6%');
-          jQuery('.zone_d6., .zone_d2_').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+          jQuery('.zone_d6, .zone_d2_').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
         } else if (count_animation > 480 && count_animation <= 600){
           jQuery('.wizard_percent').text('8%');
-          jQuery('.zone_d6., .zone_d2_').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+          jQuery('.zone_d6, .zone_d2_').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
         } else if (count_animation > 600 && count_animation <= 720){
           jQuery('.wizard_percent').text('10%');
-          jQuery('.zone_d6., .zone_d2_').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+          jQuery('.zone_d6, .zone_d2_').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
         } else if (count_animation > 720 && count_animation <= 840){
           jQuery('.wizard_percent').text('12%');
-          jQuery('.zone_d6., .zone_d2_').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+          jQuery('.zone_d6, .zone_d2_').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
         } else if (count_animation > 840 && count_animation <= 960){
           jQuery('.wizard_percent').text('14%');
-          jQuery('.zone_d6., .zone_d2_').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+          jQuery('.zone_d6, .zone_d2_').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
         } else if (count_animation > 960 && count_animation <= 1080){
           jQuery('.wizard_percent').text('16%');
-          jQuery('.zone_d6., .zone_d2_').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+          jQuery('.zone_d6, .zone_d2_').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
         }
         reloadTime += 1;
         count_animation += 1;
       } else {
         clearInterval(phaseOne);
         count_animation = 1;
-        jQuery('.zone_d6., .zone_d2_').css({
+        jQuery('.zone_d6, .zone_d2_').css({
             background: '#fff',
             color: '#413e66',
             borderColor: '#413e66',
