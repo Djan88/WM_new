@@ -21730,7 +21730,7 @@ mmt_2 = function(){
             moon_5();
           } else if (moonDay == 6 || moonDay == 24) {
             // moon_6();
-            moon_7();
+            moon_3();
           } else if (moonDay == 7 || moonDay == 23) {
             moon_7();
           }
