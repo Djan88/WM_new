@@ -19344,6 +19344,8 @@ mmt_2 = function(){
       cur_protocol = 'universal';
     } else if (that.hasClass('wizard_protocol_10')) {
       cur_protocol = 'carma';
+    } else if (that.hasClass('wizard_protocol_0')) {
+      cur_protocol = 'moon';
     }
     localStorage.setItem('cur_protocol', cur_protocol);
   }
