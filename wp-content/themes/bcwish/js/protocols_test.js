@@ -19594,7 +19594,7 @@ mmt_2 = function(){
       } else {
         clearInterval(phaseOne);
         count_animation = 1;
-        jQuery('..zone_d2, .zone_d5, .zone_d6').css({
+        jQuery('.zone_d2, .zone_d5, .zone_d6').css({
             background: '#fff',
             color: '#413e66',
             borderColor: '#413e66',
