@@ -19473,12 +19473,12 @@ mmt_2 = function(){
   }
 
   moon_8_1 = function(){
-    jQuery('.wizard_heading').text('Выполняется Лунного дня');
+    jQuery('.wizard_heading').text('Выполняется протокол Лунного дня');
     jQuery('.wizard_percent').text('0%');
     reloadTime = 0;
     cur_animation_val = 0;
     count_animation = 1;
-    jQuery('.ring').removeClass('hidden');
+    jQuery('.ring').addClass('hidden');
     jQuery('.ring, .zone_ring').css('transform', 'rotate(0deg)');
     jQuery('.zone_s4, .zone_s5').css({
         color: 'transparent',
@@ -19491,27 +19491,27 @@ mmt_2 = function(){
     });
     
     phaseOne = setInterval(function(){
-      if (count_animation <= 450){
-        if (count_animation == 50 || count_animation == 150 || count_animation == 200 || count_animation == 250 || count_animation == 300 || count_animation == 350 || count_animation == 400 || count_animation == 450){
+      if (count_animation <= 1080){
+        if (count_animation == 120 || count_animation == 240 || count_animation == 360 || count_animation == 480 || count_animation == 600 || count_animation == 720 || count_animation == 840 || count_animation == 960 || count_animation == 1080){
             reloadSound.play();
         };
-        if (count_animation <= 50){
+        if (count_animation <= 120){
           jQuery('.zone_s4, .zone_s5').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
-        } else if (count_animation > 50 && count_animation <= 100){
+        } else if (count_animation > 120 && count_animation <= 240){
           jQuery('.zone_s4, .zone_s5').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
-        } else if (count_animation > 100 && count_animation <= 150){
+        } else if (count_animation > 240 && count_animation <= 360){
           jQuery('.zone_s4, .zone_s5').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
-        } else if (count_animation > 150 && count_animation <= 200){
+        } else if (count_animation > 360 && count_animation <= 480){
           jQuery('.zone_s4, .zone_s5').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
-        } else if (count_animation > 200 && count_animation <= 250){
+        } else if (count_animation > 480 && count_animation <= 600){
           jQuery('.zone_s4, .zone_s5').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
-        } else if (count_animation > 250 && count_animation <= 300){
+        } else if (count_animation > 600 && count_animation <= 720){
           jQuery('.zone_s4, .zone_s5').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
-        } else if (count_animation > 300 && count_animation <= 350){
+        } else if (count_animation > 720 && count_animation <= 840){
           jQuery('.zone_s4, .zone_s5').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
-        } else if (count_animation > 350 && count_animation <= 400){
+        } else if (count_animation > 840 && count_animation <= 960){
           jQuery('.zone_s4, .zone_s5').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
-        } else if (count_animation > 400 && count_animation <= 450){
+        } else if (count_animation > 960 && count_animation <= 1080){
           jQuery('.zone_s4, .zone_s5').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
         }
         reloadTime += 1;
@@ -19533,7 +19533,7 @@ mmt_2 = function(){
   }
 
   moon_8 = function(){
-    jQuery('.wizard_heading').text('Выполняется Лунного дня');
+    jQuery('.wizard_heading').text('Выполняется протокол Лунного дня');
     jQuery('.wizard_percent').text('0%');
     reloadTime = 0;
     cur_animation_val = 0;
@@ -19551,28 +19551,28 @@ mmt_2 = function(){
     });
     
     phaseOne = setInterval(function(){
-      if (count_animation <= 450){
-        if (count_animation == 50 || count_animation == 150 || count_animation == 200 || count_animation == 250 || count_animation == 300 || count_animation == 350 || count_animation == 400 || count_animation == 450){
+      if (count_animation <= 1080){
+        if (count_animation == 120 || count_animation == 240 || count_animation == 360 || count_animation == 480 || count_animation == 600 || count_animation == 720 || count_animation == 840 || count_animation == 960 || count_animation == 1080){
             reloadSound.play();
         };
-        if (count_animation <= 50){
-          jQuery('.zone_d5, .zone_d6, .zone_d3, .zone_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
-        } else if (count_animation > 50 && count_animation <= 100){
-          jQuery('.zone_d5, .zone_d6, .zone_d3, .zone_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
-        } else if (count_animation > 100 && count_animation <= 150){
-          jQuery('.zone_d5, .zone_d6, .zone_d3, .zone_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
-        } else if (count_animation > 150 && count_animation <= 200){
-          jQuery('.zone_d5, .zone_d6, .zone_d3, .zone_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
-        } else if (count_animation > 200 && count_animation <= 250){
-          jQuery('.zone_d5, .zone_d6, .zone_d3, .zone_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
-        } else if (count_animation > 250 && count_animation <= 300){
-          jQuery('.zone_d5, .zone_d6, .zone_d3, .zone_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
-        } else if (count_animation > 300 && count_animation <= 350){
-          jQuery('.zone_d5, .zone_d6, .zone_d3, .zone_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
-        } else if (count_animation > 350 && count_animation <= 400){
-          jQuery('.zone_d5, .zone_d6, .zone_d3, .zone_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
-        } else if (count_animation > 400 && count_animation <= 450){
-          jQuery('.zone_d5, .zone_d6, .zone_d3, .zone_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+        if (count_animation <= 120){
+          jQuery('zone_d5, .zone_d6, .zone_d3, .zone_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+        } else if (count_animation > 120 && count_animation <= 240){
+          jQuery('zone_d5, .zone_d6, .zone_d3, .zone_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+        } else if (count_animation > 240 && count_animation <= 360){
+          jQuery('zone_d5, .zone_d6, .zone_d3, .zone_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+        } else if (count_animation > 360 && count_animation <= 480){
+          jQuery('zone_d5, .zone_d6, .zone_d3, .zone_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+        } else if (count_animation > 480 && count_animation <= 600){
+          jQuery('zone_d5, .zone_d6, .zone_d3, .zone_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+        } else if (count_animation > 600 && count_animation <= 720){
+          jQuery('zone_d5, .zone_d6, .zone_d3, .zone_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+        } else if (count_animation > 720 && count_animation <= 840){
+          jQuery('zone_d5, .zone_d6, .zone_d3, .zone_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+        } else if (count_animation > 840 && count_animation <= 960){
+          jQuery('zone_d5, .zone_d6, .zone_d3, .zone_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+        } else if (count_animation > 960 && count_animation <= 1080){
+          jQuery('zone_d5, .zone_d6, .zone_d3, .zone_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
         }
         reloadTime += 1;
         count_animation += 1;
