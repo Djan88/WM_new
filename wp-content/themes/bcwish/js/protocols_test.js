@@ -24803,8 +24803,7 @@ mmt_2 = function(){
           } else if (moonDay == 5 || moonDay == 25) {
             moon_5();
           } else if (moonDay == 6 || moonDay == 24) {
-            // moon_6();
-            moon_1();
+            moon_6();
           } else if (moonDay == 7 || moonDay == 23) {
             moon_7();
           }
