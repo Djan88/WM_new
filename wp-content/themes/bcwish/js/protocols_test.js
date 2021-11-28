@@ -19222,7 +19222,7 @@ mmt_2 = function(){
     }, 250);
   }
 
-  moon_11_6 = function(){
+  moon_2_6 = function(){
     jQuery('.wizard_heading').text('Выполняется протокол Лунного дня');
     jQuery('.wizard_percent').text('92%');
     reloadTime = 0;
@@ -19273,7 +19273,7 @@ mmt_2 = function(){
     }, 1000);
   }
 
-  moon_11_5 = function(){
+  moon_2_5 = function(){
     jQuery('.wizard_heading').text('Выполняется протокол Лунного дня');
     jQuery('.wizard_percent').text('87%');
     reloadTime = 0;
@@ -19324,7 +19324,7 @@ mmt_2 = function(){
     }, 1000);
   } 
 
-  moon_11_4 = function(){
+  moon_2_4 = function(){
     jQuery('.wizard_heading').text('Выполняется протокол Лунного дня');
     jQuery('.wizard_percent').text('71%');
     reloadTime = 0;
@@ -19369,12 +19369,12 @@ mmt_2 = function(){
             zIndex: '2'
           });
           jQuery('.zone_d2, .zone_d5, .zone_d6, .zone_v-').removeClass('rot_mo_2');
-          moon_11_5()
+          moon_2_5()
         }
     }, 1000);
   } 
 
-  moon_11_3 = function(){
+  moon_2_3 = function(){
     jQuery('.wizard_heading').text('Выполняется протокол Лунного дня');
     jQuery('.wizard_percent').text('63%');
     reloadTime = 0;
@@ -19419,12 +19419,12 @@ mmt_2 = function(){
             zIndex: '2'
           });
           jQuery('.zone_d2, .zone_d5, .zone_d6, .zone_v-').removeClass('rot_mo_1');
-          moon_11_4(); 
+          moon_2_4(); 
         }
     }, 1000);
   }  
 
-  moon_11_2 = function(){
+  moon_2_2 = function(){
     jQuery('.wizard_heading').text('Выполняется протокол Лунного дня');
     reloadTime = 0;
     cur_animation_val = 0;
@@ -19467,12 +19467,12 @@ mmt_2 = function(){
             paddingTop: '2px',
             zIndex: '2'
         });
-        moon_11_3();
+        moon_2_3();
       }
     }, 250);
   }
 
-  moon_11_1 = function(){
+  moon_2_1 = function(){
     jQuery('.wizard_heading').text('Выполняется протокол Лунного дня');
     reloadTime = 0;
     cur_animation_val = 0;
@@ -19534,12 +19534,12 @@ mmt_2 = function(){
             paddingTop: '2px',
             zIndex: '2'
         });
-        moon_11_2();
+        moon_2_2();
       }
     }, 250);
   }
 
-  moon_11 = function(){
+  moon_2 = function(){
     jQuery('.wizard_heading').text('Выполняется протокол Лунного дня');
     jQuery('.wizard_percent').text('0%');
     reloadTime = 0;
@@ -19602,7 +19602,7 @@ mmt_2 = function(){
             paddingTop: '2px',
             zIndex: '2'
         });
-        moon_11_1();
+        moon_2_1();
       }
     }, 250);
   }
@@ -20188,7 +20188,7 @@ mmt_2 = function(){
             moon_5();
           } else if (moonDay == 6 || moonDay == 24) {
             // moon_6();
-            moon_11();
+            moon_2();
           } else if (moonDay == 7 || moonDay == 23) {
             moon_7();
           }
