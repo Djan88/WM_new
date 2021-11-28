@@ -23881,9 +23881,6 @@ mmt_2 = function(){
     
     phaseOne = setInterval(function(){
       if (count_animation <= 360){
-        if (count_animation == 120 || count_animation == 240){
-            reloadSound.play();
-        };
         jQuery('.zone_v0').css({background: '#fff url(/wp-content/themes/bcwish/img/vig_.png) center center/100% no-repeat'});
         jQuery('.zone_v-').css({background: '#fff url(/wp-content/themes/bcwish/img/edinenie_s_tvorcom.png) center center/100% no-repeat'});
         jQuery('.zone_v3').css({background: '#fff url(/wp-content/themes/bcwish/img/plod.png) center center/100% no-repeat'});
@@ -24807,7 +24804,7 @@ mmt_2 = function(){
             moon_5();
           } else if (moonDay == 6 || moonDay == 24) {
             // moon_6();
-            moon_13();
+            moon_1();
           } else if (moonDay == 7 || moonDay == 23) {
             moon_7();
           }
