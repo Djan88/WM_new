@@ -24796,7 +24796,7 @@ mmt_2 = function(){
             moon_1();
           } else if (moonDay == 2 || moonDay == 28) {
             // moon_2();
-            moon_7();
+            moon_8();
           } else if (moonDay == 3 || moonDay == 27) {
             moon_3();
           } else if (moonDay == 4 || moonDay == 26) {
@@ -24821,6 +24821,9 @@ mmt_2 = function(){
       localStorage.removeItem('paused');
       localStorage.removeItem('pausedPhoto');
       jQuery('.wizard_stop').removeClass('wizard_stop_inProgress');
+      if (protocol == 'moon') {
+        jQuery('.wizard_stop').css('display', 'none');
+      }
     // }
   });
 
