@@ -108,7 +108,8 @@ jQuery(function() {
   onEnd = function(){
     jQuery('.ring').removeClass('in_progress');
     jQuery('.btn-to_endNow').addClass('hidden');
-    jQuery('.wizard_stop').css('display', 'inline-block');
+    jQuery('.wizard_stop').css('borderColor', '#1bb1dc');
+    jQuery('.wizard_stop_icon').css('display', 'auto');
     jQuery('.btn_start').removeAttr('disabled');
     jQuery('.wizard_percent').text('100%');
     rotate_one = 0;
@@ -24782,7 +24783,7 @@ mmt_2 = function(){
             moon_1();
           } else if (moonDay == 2 || moonDay == 28) {
             // moon_2();
-            moon_8();
+            moon_9();
           } else if (moonDay == 3 || moonDay == 27) {
             moon_3();
           } else if (moonDay == 4 || moonDay == 26) {
