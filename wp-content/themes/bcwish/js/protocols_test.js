@@ -19608,7 +19608,6 @@ mmt_2 = function(){
   moon_12 = function(){
     jQuery('.wizard_heading').text('Выполняется протокол Лунного дня');
     jQuery('.wizard_percent').text('0%');
-    jQuery('.wizard_stop').css('display', 'none');
     reloadTime = 0;
     cur_animation_val = 0;
     count_animation = 1;
@@ -20060,7 +20059,6 @@ mmt_2 = function(){
   moon_11 = function(){
     jQuery('.wizard_heading').text('Выполняется протокол Лунного дня');
     jQuery('.wizard_percent').text('0%');
-    jQuery('.wizard_stop').css('display', 'none');
     reloadTime = 0;
     cur_animation_val = 0;
     count_animation = 1;
@@ -20512,7 +20510,6 @@ mmt_2 = function(){
   moon_9 = function(){
     jQuery('.wizard_heading').text('Выполняется протокол Лунного дня');
     jQuery('.wizard_percent').text('0%');
-    jQuery('.wizard_stop').css('display', 'none');
     reloadTime = 0;
     cur_animation_val = 0;
     count_animation = 1;
@@ -20964,7 +20961,6 @@ mmt_2 = function(){
   moon_6 = function(){
     jQuery('.wizard_heading').text('Выполняется протокол Лунного дня');
     jQuery('.wizard_percent').text('0%');
-    jQuery('.wizard_stop').css('display', 'none');
     reloadTime = 0;
     cur_animation_val = 0;
     count_animation = 1;
@@ -21349,7 +21345,6 @@ mmt_2 = function(){
   moon_3 = function(){
     jQuery('.wizard_heading').text('Выполняется протокол Лунного дня');
     jQuery('.wizard_percent').text('0%');
-    jQuery('.wizard_stop').css('display', 'none');
     reloadTime = 0;
     cur_animation_val = 0;
     count_animation = 1;
@@ -21734,7 +21729,6 @@ mmt_2 = function(){
   moon_7 = function(){
     jQuery('.wizard_heading').text('Выполняется протокол Лунного дня');
     jQuery('.wizard_percent').text('0%');
-    jQuery('.wizard_stop').css('display', 'none');
     reloadTime = 0;
     cur_animation_val = 0;
     count_animation = 1;
@@ -22119,7 +22113,6 @@ mmt_2 = function(){
   moon_5 = function(){
     jQuery('.wizard_heading').text('Выполняется протокол Лунного дня');
     jQuery('.wizard_percent').text('0%');
-    jQuery('.wizard_stop').css('display', 'none');
     reloadTime = 0;
     cur_animation_val = 0;
     count_animation = 1;
@@ -22505,7 +22498,6 @@ mmt_2 = function(){
   moon_4 = function(){
     jQuery('.wizard_heading').text('Выполняется протокол Лунного дня');
     jQuery('.wizard_percent').text('0%');
-    jQuery('.wizard_stop').css('display', 'none');
     reloadTime = 0;
     cur_animation_val = 0;
     count_animation = 1;
@@ -22891,7 +22883,6 @@ mmt_2 = function(){
   moon_2 = function(){
     jQuery('.wizard_heading').text('Выполняется протокол Лунного дня');
     jQuery('.wizard_percent').text('0%');
-    jQuery('.wizard_stop').css('display', 'none');
     reloadTime = 0;
     cur_animation_val = 0;
     count_animation = 1;
@@ -23276,7 +23267,6 @@ mmt_2 = function(){
   moon_8 = function(){
     jQuery('.wizard_heading').text('Выполняется протокол Лунного дня');
     jQuery('.wizard_percent').text('0%');
-    jQuery('.wizard_stop').css('display', 'none');
     reloadTime = 0;
     cur_animation_val = 0;
     count_animation = 1;
@@ -23594,7 +23584,6 @@ mmt_2 = function(){
   moon_10 = function(){
     jQuery('.wizard_heading').text('Выполняется протокол Лунного дня');
     jQuery('.wizard_percent').text('0%');
-    jQuery('.wizard_stop').css('display', 'none');
     reloadTime = 0;
     cur_animation_val = 0;
     count_animation = 1;
@@ -23905,7 +23894,6 @@ mmt_2 = function(){
   moon_14 = function(){
     jQuery('.wizard_heading').text('Выполняется протокол Лунного дня');
     jQuery('.wizard_percent').text('0%');
-    jQuery('.wizard_stop').css('display', 'none');
     reloadTime = 0;
     cur_animation_val = 0;
     count_animation = 1;
@@ -24223,7 +24211,6 @@ mmt_2 = function(){
   moon_13 = function(){
     jQuery('.wizard_heading').text('Выполняется протокол Лунного дня');
     jQuery('.wizard_percent').text('0%');
-    jQuery('.wizard_stop').css('display', 'none');
     reloadTime = 0;
     cur_animation_val = 0;
     count_animation = 1;
@@ -24542,7 +24529,6 @@ mmt_2 = function(){
   moon_1 = function(){
     jQuery('.wizard_heading').text('Выполняется протокол Лунного дня');
     jQuery('.wizard_percent').text('0%');
-    jQuery('.wizard_stop').css('display', 'none');
     reloadTime = 0;
     cur_animation_val = 0;
     count_animation = 1;
@@ -24822,7 +24808,8 @@ mmt_2 = function(){
       localStorage.removeItem('pausedPhoto');
       jQuery('.wizard_stop').removeClass('wizard_stop_inProgress');
       if (protocol == 'moon') {
-        jQuery('.wizard_stop').css('display', 'none');
+        jQuery('.wizard_stop').css('borderColor', 'transparent');
+        jQuery('.wizard_stop_icon').css('display', 'none');
       }
     // }
   });
@@ -24837,14 +24824,16 @@ mmt_2 = function(){
   }
 
   jQuery('.wizard_stop') .on('click', function(event) {
-    jQuery('.wizard_stop').addClass('wizard_stop_inProgress');
-    jQuery('.header-title').text('Программа останавливается');
-    // endStatus = true;
-    jQuery('.wizard_stop').popover('show');
-    setTimeout(hideNote, 10000);
-    localStorage.setItem('pausedPhoto', jQuery('.wizard_returned').attr('src'));
-    pausedStatus = true;
-    // console.log('pausedStatus = true');
+    if (!protocol == 'moon') {
+      jQuery('.wizard_stop').addClass('wizard_stop_inProgress');
+      jQuery('.header-title').text('Программа останавливается');
+      // endStatus = true;
+      jQuery('.wizard_stop').popover('show');
+      setTimeout(hideNote, 10000);
+      localStorage.setItem('pausedPhoto', jQuery('.wizard_returned').attr('src'));
+      pausedStatus = true;
+      // console.log('pausedStatus = true');
+    }
   });
 
   jQuery('.wizard_disbledMove').on('click', function(event) {
