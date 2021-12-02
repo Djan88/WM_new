@@ -24795,7 +24795,8 @@ mmt_2 = function(){
           } else if (moonDay == 29 || moonDay == 30 || moonDay == 1) {
             moon_1();
           } else if (moonDay == 2 || moonDay == 28) {
-            moon_2();
+            // moon_2();
+            moon_1();
           } else if (moonDay == 3 || moonDay == 27) {
             moon_3();
           } else if (moonDay == 4 || moonDay == 26) {
