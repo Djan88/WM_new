@@ -109,7 +109,7 @@ jQuery(function() {
     jQuery('.ring').removeClass('in_progress');
     jQuery('.btn-to_endNow').addClass('hidden');
     jQuery('.wizard_stop').css('borderColor', '#1bb1dc');
-    jQuery('.wizard_stop_icon').css('display', 'auto');
+    jQuery('.wizard_stop_icon').css('display', 'inline-block');
     jQuery('.btn_start').removeAttr('disabled');
     jQuery('.wizard_percent').text('100%');
     rotate_one = 0;
