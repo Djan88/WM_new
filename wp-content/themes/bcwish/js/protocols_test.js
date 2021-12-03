@@ -24780,8 +24780,7 @@ mmt_2 = function(){
           } else if (moonDay == 13 || moonDay == 17) {
             moon_13();
           } else if (moonDay == 29 || moonDay == 30 || moonDay == 1) {
-            // moon_1();
-            moon_14();
+            moon_1();
           } else if (moonDay == 2 || moonDay == 28) {
             moon_2();
           } else if (moonDay == 3 || moonDay == 27) {
