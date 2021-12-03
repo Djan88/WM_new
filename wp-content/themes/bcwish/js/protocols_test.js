@@ -23637,7 +23637,7 @@ mmt_2 = function(){
       } else {
         clearInterval(phaseOne);
         count_animation = 1;
-        jQuery('..zone_d2_, .zone_d6, .zone_d3, .zone_d4, .zone_d5').css({
+        jQuery('.zone_d2_, .zone_d6, .zone_d3, .zone_d4, .zone_d5').css({
             background: '#fff',
             color: '#413e66',
             borderColor: '#413e66',
