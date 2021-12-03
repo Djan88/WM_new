@@ -546,7 +546,7 @@
                           <a data-toggle="collapse" href="#faq0" class="collapsed">ПРОТОКОЛ ЛУННОГО ДНЯ <i class="ion-android-remove"></i></a>
                           <div id="faq0" class="collapse" data-parent="#faq-list">
                             <p>
-                              Протокол на каждый день. Программа прорабатывает зоны в соответствии с текущим лунным днем. 
+                              Протокол Лунного дня учитывает напряжение зон DSV в зависимости от фазы Луны
                             </p>
                             <p class="cur_moon_day">Сейчас <span class="cur_moon_day_val"></span> лунный день.</p>
                             <p><button class="btn wizard_blue wizard_protocol wizard_protocol_0 wizard_prot_0 wow bounceInUp" data-wow-duration="1.4s">Активировать протокол</button></p>
