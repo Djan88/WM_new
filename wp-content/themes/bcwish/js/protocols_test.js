@@ -19386,7 +19386,7 @@ mmt_2 = function(){
     jQuery('.ring, .zone_ring').css('transform', 'rotate(0deg)');
     cur_animation_val = 10;
     count_animation = 1;
-    jQuery('.zone_d6. .zone_d2_, .zone_v1, .zone_s6, .zone_s2_').css({
+    jQuery('.zone_d6, .zone_d2_, .zone_v1, .zone_s6, .zone_s2_').css({
       background: '#fff url(/wp-content/themes/bcwish/img/mo_right.png) center center/100% no-repeat',
       transform: 'scale(1.5)',
       color: 'transparent',
@@ -19397,7 +19397,7 @@ mmt_2 = function(){
       zIndex: '1000'
     });
     var zone_gsap = gsap.timeline();
-    jQuery('.zone_d6. .zone_d2_, .zone_v1, .zone_s6, .zone_s2_').addClass('rot_mo_1');
+    jQuery('.zone_d6, .zone_d2_, .zone_v1, .zone_s6, .zone_s2_').addClass('rot_mo_1');
     phaseSeven_one = setInterval(function(){
         if (count_animation <= 40){
           if (reloadTime == 0){                                                                       //1
@@ -19411,7 +19411,7 @@ mmt_2 = function(){
         } else {
           clearInterval(phaseSeven_one);
           count_animation = 1;
-          jQuery('.zone_d6. .zone_d2_, .zone_v1, .zone_s6, .zone_s2_').css({
+          jQuery('.zone_d6, .zone_d2_, .zone_v1, .zone_s6, .zone_s2_').css({
             background: '#fff',
             color: '#413e66',
             borderColor: '#413e66',
@@ -19419,7 +19419,7 @@ mmt_2 = function(){
             paddingTop: '2px',
             zIndex: '2'
           });
-          jQuery('.zone_d6. .zone_d2_, .zone_v1, .zone_s6, .zone_s2_').removeClass('rot_mo_1');
+          jQuery('.zone_d6, .zone_d2_, .zone_v1, .zone_s6, .zone_s2_').removeClass('rot_mo_1');
           moon_12_5(); 
         }
     }, 1000);
