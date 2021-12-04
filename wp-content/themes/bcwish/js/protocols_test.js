@@ -23871,9 +23871,9 @@ mmt_2 = function(){
     
     phaseOne = setInterval(function(){
       if (count_animation <= 360){
-        jQuery('.zone_v0').css({background: '#fff url(/wp-content/themes/bcwish/img/vig_.png) center center/100% no-repeat'});
-        jQuery('.zone_v-').css({background: '#fff url(/wp-content/themes/bcwish/img/edinenie_s_tvorcom.png) center center/100% no-repeat'});
-        jQuery('.zone_v3').css({background: '#fff url(/wp-content/themes/bcwish/img/plod.png) center center/100% no-repeat'});
+        jQuery('.zone_v0').css({background: '#fff url(/wp-content/themes/bcwish/img/plod.png) center center/100% no-repeat'});
+        jQuery('.zone_v-').css({background: '#fff url(/wp-content/themes/bcwish/img/vig_.png) center center/100% no-repeat'});
+        jQuery('.zone_v3').css({background: '#fff url(/wp-content/themes/bcwish/img/edinenie_s_tvorcom.png) center center/100% no-repeat'});
         reloadTime += 1;
         count_animation += 1;
       } else {
@@ -24495,7 +24495,7 @@ mmt_2 = function(){
         paddingTop: '4px',
         zIndex: '1000'
     });
-    jQuery('.zone_v0').css({background: '#fff url(/wp-content/themes/bcwish/img/vig_.png) center center/100% no-repeat'});
+    jQuery('.zone_v0').css({background: '#fff url(/wp-content/themes/bcwish/img/plod.png) center center/100% no-repeat'});
     
     phaseOne = setInterval(function(){
       if (count_animation <= 360){
