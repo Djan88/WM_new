@@ -24716,7 +24716,7 @@ mmt_2 = function(){
   let moonMonth = 29.53059 * 24 * 60 * 60 * 1000;
   let now = Date.now();
   let moonDay = ((now - moonBegin) %  moonMonth)/(moonMonth/30)|0;
-  if moonDay == 0 {
+  if (moonDay == 0) {
     moonDay = 1;
   }
   console.log(`Сейчас ${moonDay} лунный день`);
