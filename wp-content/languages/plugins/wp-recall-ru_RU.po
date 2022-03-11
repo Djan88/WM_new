@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - WP-Recall &#8211; Registration, Profile, Commerce &amp; More - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-11-13 08:41:38+0000\n"
+"PO-Revision-Date: 2021-12-12 09:03:59+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1195,15 +1195,15 @@ msgstr "Кол-во к выбору"
 msgid "Group category"
 msgstr "Категории группы"
 
-#: add-on/rcl-chat/core.php:211
+#: add-on/rcl-chat/core.php:215
 msgid "Failed to refresh user status in the chat"
 msgstr "Не удалось обновить статус пользователя в чате"
 
-#: add-on/rcl-chat/core.php:184
+#: add-on/rcl-chat/core.php:188
 msgid "Failed to send mets data of the message"
 msgstr "Не удалось добавить метаданные сообщения"
 
-#: add-on/rcl-chat/core.php:131
+#: add-on/rcl-chat/core.php:135
 msgid "Failed to add user to the chat"
 msgstr "Не удалось добавить пользователя в чат"
 
@@ -4574,11 +4574,11 @@ msgstr "Ваш аккаунт не подтвержден! Подтвердит�
 msgid "To admin area"
 msgstr "В админку"
 
-#: functions/register.php:518
-msgid "The passwords match"
-msgstr "Пароли совпадают"
+#: functions/register.php:514
+msgid "The passwords match!"
+msgstr "Пароли совпадают!"
 
-#: functions/register.php:517
+#: functions/register.php:516
 msgid "The passwords do not match!"
 msgstr "Пароли не совпадают!"
 
@@ -5576,15 +5576,15 @@ msgid "Personal cabinet"
 msgstr "Личный кабинет"
 
 #: add-on/groups/classes/class-rcl-groups-list.php:201
-#: classes/class-rcl-users-list.php:608
+#: classes/class-rcl-users-list.php:607
 msgid "Filter by"
 msgstr "Фильтр по"
 
-#: classes/class-rcl-users-list.php:603
+#: classes/class-rcl-users-list.php:602
 msgid "Rated"
 msgstr "Рейтингу"
 
-#: classes/class-rcl-users-list.php:599 functions/frontend.php:164
+#: classes/class-rcl-users-list.php:598 functions/frontend.php:164
 #: functions/loginform.php:70 functions/loginform.php:88
 #: functions/loginform.php:117 templates/form-register.php:15
 #: templates/form-remember.php:6 templates/form-sign.php:15
@@ -5592,21 +5592,21 @@ msgid "Registration"
 msgstr "Регистрация"
 
 #: add-on/feed/classes/class-rcl-feed-list.php:377
-#: add-on/rating-system/index.php:37 classes/class-rcl-users-list.php:598
+#: add-on/rating-system/index.php:37 classes/class-rcl-users-list.php:597
 #: functions/frontend.php:110 templates/user-cards.php:6
 msgid "Comments"
 msgstr "Комментарии"
 
 #: add-on/groups/classes/class-rcl-groups-list.php:188
-#: classes/class-rcl-users-list.php:597
+#: classes/class-rcl-users-list.php:596
 msgid "Publications"
 msgstr "Публикациям"
 
-#: classes/class-rcl-users-list.php:596
+#: classes/class-rcl-users-list.php:595
 msgid "Activity"
 msgstr "Активности"
 
-#: classes/class-rcl-users-list.php:575
+#: classes/class-rcl-users-list.php:574
 msgid "Total number of users"
 msgstr "Всего пользователей"
 
@@ -5720,12 +5720,12 @@ msgstr "Читеришь, гадёныш?"
 #: add-on/groups/admin/index.php:39
 #: add-on/profile/classes/class-rcl-profile-fields.php:99
 #: add-on/publicpost/classes/class-rcl-list-terms.php:57
-#: add-on/publicpost/classes/class-rcl-list-terms.php:87 rcl-functions.php:1702
+#: add-on/publicpost/classes/class-rcl-list-terms.php:87 rcl-functions.php:1700
 #: rcl-widgets.php:94 rcl-widgets.php:188
 msgid "Not selected"
 msgstr "Не выбрано"
 
-#: add-on/prime-forum/functions-post-content.php:248 rcl-functions.php:1615
+#: add-on/prime-forum/functions-post-content.php:248 rcl-functions.php:1613
 msgid "not specified"
 msgstr "не указано"
 
