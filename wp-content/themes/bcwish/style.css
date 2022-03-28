@@ -2465,7 +2465,7 @@ button.wizard_starter_alt.btn.btn-success
 {
   opacity: 0.7;
 }
-.zone-testing_item.zone-testing_item_checked
+.zone-testing_item.zone-testing_item__checked
 {
   visibility: hidden;
 }

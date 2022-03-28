@@ -521,13 +521,11 @@ let zoneTimeDiff = function(){
 
 for (var i = 0; i < zone_testing.length; i++) {
   zone_testing[i].onmousedown = function(){
-    console.log(event.target);
     if (!event.target.classList.contains('zone-testing_item__checked')) {
       zone_time_start = new Date();
     }
   };
   zone_testing[i].onmouseup = function(){
-    console.log(event.target);
     if (!event.target.classList.contains('zone-testing_item__checked')) {
       zone_time_end = new Date();
       if (event.target.classList.contains('zone-testing_item_1')) {
@@ -546,6 +544,7 @@ for (var i = 0; i < zone_testing.length; i++) {
       zone_time_start = 0;
       zone_time_end = 0;
       event.target.classList.add('zone-testing_item__checked');
+      console.log(zones_time);
     }
   };
 }
