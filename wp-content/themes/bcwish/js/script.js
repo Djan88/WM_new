@@ -564,11 +564,8 @@ document.querySelector('.zones_reset').onclick = function(){
   document.querySelector('.zone_recommend').classList.add('hidden');
   zone_recommend.innerHTML = '';
   for (var i = 0; i < zone_testing.length; i++) {
-    zone_testing[i].onmousedown = function(){
-      zone_testing[i].classList.add('zone-testing_item__check')
-    }
+    zone_testing[i].classList.add('zone-testing_item__check');
   }
-  console.log(zones_time);
 }
 
 //CROPPING SCRIPT
