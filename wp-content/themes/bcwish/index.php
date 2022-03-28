@@ -1444,8 +1444,8 @@
                     <?php } ?>
                   </div>
                   <?php if (current_user_can('administrator')) { ?>
-                  <div class="col-sm-12 zone_recommend hidden" style="text-align: center;">
-                    <span class="zone_recommend_text"></span><button type="button" class="zones_reset header_btn"><i class="fa fa-trash"></i></button>
+                  <div class="col-sm-12 zone_recommend hidden">
+                    <span class="zone_recommend_text"></span><button type="button" class="zones_reset btn btn-sm btn-warning">Сбросить: <i class="fa fa-trash"></i></button>
                   </div>
                   <?php } ?>
                   <div class="col-sm-12" style="text-align: center;">

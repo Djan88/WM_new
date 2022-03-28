@@ -523,6 +523,8 @@ let zones_satus = function (){
       zone_recommend.innerHTML = 'Рекомендуется протокол "V1"';
     }
     document.querySelector('.zone_recommend').classList.remove('hidden');
+    max_val = 0;
+    max_zone = 0;
   }
 }
 
@@ -556,6 +558,17 @@ for (var i = 0; i < zone_testing.length; i++) {
       zones_satus();
     }
   };
+}
+
+document.querySelector('.zones_reset').onClick = function(){
+  zones_time = [0,0,0,0,0,0];
+  document.querySelector('.zone_recommend').classList.add('hidden');
+  zone_recommend.innerHTML = '';
+  for (var i = 0; i < zone_testing.length; i++) {
+    zone_testing[i].onmousedown = function(){
+      zone_testing[i].classList.add('zone-testing_item__check')
+    }
+  }
 }
 
 //CROPPING SCRIPT

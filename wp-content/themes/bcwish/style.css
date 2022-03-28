@@ -2470,6 +2470,17 @@ button.wizard_starter_alt.btn.btn-success
 {
   visibility: visible;
 }
+.zone_recommend
+{
+  text-align: center;
+  margin-bottom: 10px;
+}
+.zone_recommend_text
+{
+  color: #535074;
+  font-size: 20px;
+  padding-right: 15px;
+}
 /*Animation*/
 
 .rot_d_one {
