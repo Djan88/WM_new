@@ -518,7 +518,7 @@ let zoneTimeDiff = function(){
   return zone_time_end - zone_time_start;
 }
 let zones_satus = function (){
-  if (!document.querySelectorAll('.zone-testing_item__check')) {
+  if (document.querySelectorAll('.zone-testing_item__check') <= 0) {
     console.log('elems not exist');
   }
 }
