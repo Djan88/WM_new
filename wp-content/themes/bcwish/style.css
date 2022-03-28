@@ -2095,7 +2095,7 @@ h3.wizard_heading
 .wizard_grafic_photo
 {
   position: relative;
-  padding: 30px 0;
+  margin: 30px 0;
 }
 .wizard_stop .fa-stop-circle
 {
@@ -2444,13 +2444,22 @@ button.wizard_starter_alt.btn.btn-success
 {
   position: absolute;
   display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
+  left: 0;
+  top: 0;
 }
 .zone-testing_item
 {
   background: #fff;
   opacity: 0.5;
+  flex: 1;
+  margin-bottom: 5px;
+}
+.zone-testing_item:last-child
+{
+  margin-bottom: 0;
 }
 .zone-testing_item:hover
 {

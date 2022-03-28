@@ -501,6 +501,11 @@ jQuery('.btn_test__reset').on('click', function(event) {
   jQuery('.test_item_1_1_19').removeClass('hidden');
 });
 
+let zone_testing;
+document.querySelectorAll('.zone-testing_item').onclick = function() {
+  console.log('Спасибо');
+};
+
 //CROPPING SCRIPT
   // convert bytes into friendly format
   function bytesToSize(bytes) {
