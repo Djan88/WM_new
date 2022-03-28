@@ -519,7 +519,7 @@ let zones_satus = function (){
     max_zone = zones_time.indexOf(max_val);
     console.log(zones_time);
     console.log('elems not exist ' + ' max position '+ max_zone);
-    if (true) {
+    if (max_zone === 0) {
       zone_recommend.innerHTML = 'Рекомендуется протокол "V1"';
     }
     document.querySelector('.zone_recommend').classList.remove('hidden');

@@ -1440,6 +1440,7 @@
                       <div class="zone-testing_item zone-testing_item_4 zone-testing_item__check"></div>
                       <div class="zone-testing_item zone-testing_item_5 zone-testing_item__check"></div>
                       <div class="zone-testing_item zone-testing_item_6 zone-testing_item__check"></div>
+                      <div class="zone-testing_item zone-testing_item_7 zone-testing_item__check"></div>
                     </div>
                     <?php } ?>
                   </div>
