@@ -2456,6 +2456,7 @@ button.wizard_starter_alt.btn.btn-success
   opacity: 0.5;
   flex: 1;
   margin-bottom: 5px;
+  visibility: hidden;
 }
 .zone-testing_item:last-child
 {
@@ -2467,7 +2468,7 @@ button.wizard_starter_alt.btn.btn-success
 }
 .zone-testing_item.zone-testing_item__checked
 {
-  visibility: hidden;
+  visibility: visible;
 }
 /*Animation*/
 
