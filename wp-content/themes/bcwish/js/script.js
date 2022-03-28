@@ -518,7 +518,7 @@ let zoneTimeDiff = function(){
   return zone_time_end - zone_time_start;
 }
 let zones_satus = function (){
-  if (!document.querySelectorAll('zone-testing_item__checked')) {
+  if (!document.querySelectorAll('zone-testing_item__check')) {
     console.log('elems not exist');
   }
 }
@@ -526,12 +526,12 @@ let zones_satus = function (){
 
 for (var i = 0; i < zone_testing.length; i++) {
   zone_testing[i].onmousedown = function(){
-    if (event.target.classList.contains('zone-testing_item__checked')) {
+    if (event.target.classList.contains('zone-testing_item__check')) {
       zone_time_start = new Date();
     }
   };
   zone_testing[i].onmouseup = function(){
-    if (event.target.classList.contains('zone-testing_item__checked')) {
+    if (event.target.classList.contains('zone-testing_item__check')) {
       zone_time_end = new Date();
       if (event.target.classList.contains('zone-testing_item_1')) {
         zones_time.zone_1 = zoneTimeDiff()
@@ -548,7 +548,7 @@ for (var i = 0; i < zone_testing.length; i++) {
       }
       zone_time_start = 0;
       zone_time_end = 0;
-      event.target.classList.remove('zone-testing_item__checked');
+      event.target.classList.remove('zone-testing_item__check');
       // console.log(zones_time);
       zones_satus();
     }

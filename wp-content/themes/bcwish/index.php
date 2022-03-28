@@ -1434,12 +1434,12 @@
                     <img src="" class="wizard_returned" alt="wizard_returned">
                     <?php if (current_user_can('administrator')) { ?>
                     <div class="zone-testing">
-                      <div class="zone-testing_item zone-testing_item_1"></div>
-                      <div class="zone-testing_item zone-testing_item_2"></div>
-                      <div class="zone-testing_item zone-testing_item_3"></div>
-                      <div class="zone-testing_item zone-testing_item_4"></div>
-                      <div class="zone-testing_item zone-testing_item_5"></div>
-                      <div class="zone-testing_item zone-testing_item_6"></div>
+                      <div class="zone-testing_item zone-testing_item_1 zone-testing_item__check"></div>
+                      <div class="zone-testing_item zone-testing_item_2 zone-testing_item__check"></div>
+                      <div class="zone-testing_item zone-testing_item_3 zone-testing_item__check"></div>
+                      <div class="zone-testing_item zone-testing_item_4 zone-testing_item__check"></div>
+                      <div class="zone-testing_item zone-testing_item_5 zone-testing_item__check"></div>
+                      <div class="zone-testing_item zone-testing_item_6 zone-testing_item__check"></div>
                     </div>
                     <?php } ?>
                   </div>
