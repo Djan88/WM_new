@@ -503,8 +503,11 @@ jQuery('.btn_test__reset').on('click', function(event) {
 
 const zone_testing = document.querySelectorAll('.zone-testing_item');
 
-zone_testing.onClick = function(event){
-  console.log(event.target);
+for (var i = 0; i < zone_testing.length; i++) {
+  zone_testing[i].onclick = function(){
+    console.log('test');
+    console.log(event.target);
+  };
 }
 
 //CROPPING SCRIPT
