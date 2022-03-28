@@ -501,12 +501,52 @@ jQuery('.btn_test__reset').on('click', function(event) {
   jQuery('.test_item_1_1_19').removeClass('hidden');
 });
 
+
+// zone testing
 const zone_testing = document.querySelectorAll('.zone-testing_item');
+let zones_time = {
+  zone_1: 0,
+  zone_2: 0,
+  zone_3: 0,
+  zone_4: 0,
+  zone_5: 0,
+  zone_6: 0
+}
+let zone_time_start = 0;
+let zone_time_end = 0;
+let zoneTimeDiff = function(){
+  return zone_time_end - zone_time_start;
+}
+
 
 for (var i = 0; i < zone_testing.length; i++) {
-  zone_testing[i].onclick = function(){
-    console.log('test');
+  zone_testing[i].onmousedown = function(){
     console.log(event.target);
+    if (!event.target.hasClass('zone-testing_item__checked')) {
+      zone_time_start = new Date();
+    }
+  };
+  zone_testing[i].onmouseup = function(){
+    console.log(event.target);
+    if (!event.target.hasClass('zone-testing_item__checked')) {
+      zone_time_end = new Date();
+      if (event.target.hasClass('zone-testing_item_1')) {
+        zones_time.zone_1 = zoneTimeDiff()
+      } else if (event.target.hasClass('zone-testing_item_2')) {
+        zones_time.zone_2 = zoneTimeDiff()
+      } else if (event.target.hasClass('zone-testing_item_3')) {
+        zones_time.zone_3 = zoneTimeDiff()
+      } else if (event.target.hasClass('zone-testing_item_4')) {
+        zones_time.zone_4 = zoneTimeDiff()
+      } else if (event.target.hasClass('zone-testing_item_5')) {
+        zones_time.zone_5 = zoneTimeDiff()
+      } else if (event.target.hasClass('zone-testing_item_6')) {
+        zones_time.zone_6 = zoneTimeDiff()
+      }
+      zone_time_start = 0;
+      zone_time_end = 0;
+      event.target.addClass('zone-testing_item__checked');
+    }
   };
 }
 

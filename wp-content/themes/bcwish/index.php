@@ -1432,6 +1432,7 @@
                   </div>
                   <div class="col-sm-6 wizard_grafic_photo">
                     <img src="" class="wizard_returned" alt="wizard_returned">
+                    <?php if (current_user_can('administrator')) { ?>
                     <div class="zone-testing">
                       <div class="zone-testing_item zone-testing_item_1"></div>
                       <div class="zone-testing_item zone-testing_item_2"></div>
@@ -1440,6 +1441,7 @@
                       <div class="zone-testing_item zone-testing_item_5"></div>
                       <div class="zone-testing_item zone-testing_item_6"></div>
                     </div>
+                    <?php } ?>
                   </div>
                   <div class="col-sm-12" style="text-align: center;">
                     <div class="btn btn-success btn_prot_choice_fromDiag back-to-top_2">Протокол</div>
