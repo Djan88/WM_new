@@ -504,22 +504,20 @@ jQuery('.btn_test__reset').on('click', function(event) {
 
 // zone testing
 const zone_testing = document.querySelectorAll('.zone-testing_item');
-let zones_time = {
-  zone_1: 0,
-  zone_2: 0,
-  zone_3: 0,
-  zone_4: 0,
-  zone_5: 0,
-  zone_6: 0
-}
+let zones_time = [0,0,0,0,0,0]
 let zone_time_start = 0;
 let zone_time_end = 0;
+let max_val = 0;
+let max_zone = 0;
 let zoneTimeDiff = function(){
   return zone_time_end - zone_time_start;
 }
 let zones_satus = function (){
   if (document.querySelectorAll('.zone-testing_item__check').length <= 0) {
-    console.log('elems not exist');
+    max_val = Math.max.apply(null, zones_time);
+    max_zone = zones_time.indexOf(max_val);
+    console.log(zones_time);
+    console.log('elems not exist ' + ' max position '+ max_zone);
   }
 }
 
@@ -534,17 +532,17 @@ for (var i = 0; i < zone_testing.length; i++) {
     if (event.target.classList.contains('zone-testing_item__check')) {
       zone_time_end = new Date();
       if (event.target.classList.contains('zone-testing_item_1')) {
-        zones_time.zone_1 = zoneTimeDiff()
+        zones_time[0] = zoneTimeDiff()
       } else if (event.target.classList.contains('zone-testing_item_2')) {
-        zones_time.zone_2 = zoneTimeDiff()
+        zones_time[1] = zoneTimeDiff()
       } else if (event.target.classList.contains('zone-testing_item_3')) {
-        zones_time.zone_3 = zoneTimeDiff()
+        zones_time[2] = zoneTimeDiff()
       } else if (event.target.classList.contains('zone-testing_item_4')) {
-        zones_time.zone_4 = zoneTimeDiff()
+        zones_time[3] = zoneTimeDiff()
       } else if (event.target.classList.contains('zone-testing_item_5')) {
-        zones_time.zone_5 = zoneTimeDiff()
+        zones_time[4] = zoneTimeDiff()
       } else if (event.target.classList.contains('zone-testing_item_6')) {
-        zones_time.zone_6 = zoneTimeDiff()
+        zones_time[5] = zoneTimeDiff()
       }
       zone_time_start = 0;
       zone_time_end = 0;
