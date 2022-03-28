@@ -1443,6 +1443,11 @@
                     </div>
                     <?php } ?>
                   </div>
+                  <?php if (current_user_can('administrator')) { ?>
+                  <div class="col-sm-12 zone_recommend hidden" style="text-align: center;">
+                    <span class="zone_recommend_text"></span><button type="button" class="zones_reset header_btn"><i class="fa fa-trash"></i></button>
+                  </div>
+                  <?php } ?>
                   <div class="col-sm-12" style="text-align: center;">
                     <div class="btn btn-success btn_prot_choice_fromDiag back-to-top_2">Протокол</div>
                     <div class="btn btn-success test_btn_fromDiag">Диагностика</div>

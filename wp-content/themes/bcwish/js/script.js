@@ -509,6 +509,7 @@ let zone_time_start = 0;
 let zone_time_end = 0;
 let max_val = 0;
 let max_zone = 0;
+const zone_recommend = document.querySelector('.zone_recommend_text');
 let zoneTimeDiff = function(){
   return zone_time_end - zone_time_start;
 }
@@ -518,6 +519,10 @@ let zones_satus = function (){
     max_zone = zones_time.indexOf(max_val);
     console.log(zones_time);
     console.log('elems not exist ' + ' max position '+ max_zone);
+    if (true) {
+      zone_recommend.text('Рекомендуется протокол "V1"');
+    }
+    document.querySelector('.zone_recommend').classList.remove('hidden');
   }
 }
 
