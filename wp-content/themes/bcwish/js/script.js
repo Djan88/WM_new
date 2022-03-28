@@ -560,7 +560,7 @@ for (var i = 0; i < zone_testing.length; i++) {
   };
 }
 
-document.querySelector('.zones_reset').onClick = function(){
+document.querySelector('.zones_reset').onclick = function(){
   zones_time = [0,0,0,0,0,0];
   document.querySelector('.zone_recommend').classList.add('hidden');
   zone_recommend.innerHTML = '';
