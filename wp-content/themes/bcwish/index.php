@@ -1432,6 +1432,14 @@
                   </div>
                   <div class="col-sm-6 wizard_grafic_photo">
                     <img src="" class="wizard_returned" alt="wizard_returned">
+                    <div class="zone-testing">
+                      <div class="zone-testing_item zone-testing_item_1"></div>
+                      <div class="zone-testing_item zone-testing_item_2"></div>
+                      <div class="zone-testing_item zone-testing_item_3"></div>
+                      <div class="zone-testing_item zone-testing_item_4"></div>
+                      <div class="zone-testing_item zone-testing_item_5"></div>
+                      <div class="zone-testing_item zone-testing_item_6"></div>
+                    </div>
                   </div>
                   <div class="col-sm-12" style="text-align: center;">
                     <div class="btn btn-success btn_prot_choice_fromDiag back-to-top_2">Протокол</div>

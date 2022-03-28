@@ -2094,6 +2094,7 @@ h3.wizard_heading
 }
 .wizard_grafic_photo
 {
+  position: relative;
   padding: 30px 0;
 }
 .wizard_stop .fa-stop-circle
@@ -2439,7 +2440,26 @@ button.wizard_starter_alt.btn.btn-success
 {
   color: #28a745;
 }
-
+.zone-testing
+{
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.zone-testing_item
+{
+  background: #fff;
+  opacity: 0.5;
+}
+.zone-testing_item:hover
+{
+  opacity: 0.7;
+}
+.zone-testing_item.zone-testing_item_checked
+{
+  visibility: hidden;
+}
 /*Animation*/
 
 .rot_d_one {
