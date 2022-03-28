@@ -522,25 +522,25 @@ let zoneTimeDiff = function(){
 for (var i = 0; i < zone_testing.length; i++) {
   zone_testing[i].onmousedown = function(){
     console.log(event.target);
-    if (!event.target.hasClass('zone-testing_item__checked')) {
+    if (!event.target.classList.contains('zone-testing_item__checked')) {
       zone_time_start = new Date();
     }
   };
   zone_testing[i].onmouseup = function(){
     console.log(event.target);
-    if (!event.target.hasClass('zone-testing_item__checked')) {
+    if (!event.target.classList.contains('zone-testing_item__checked')) {
       zone_time_end = new Date();
-      if (event.target.hasClass('zone-testing_item_1')) {
+      if (event.target.classList.contains('zone-testing_item_1')) {
         zones_time.zone_1 = zoneTimeDiff()
-      } else if (event.target.hasClass('zone-testing_item_2')) {
+      } else if (event.target.classList.contains('zone-testing_item_2')) {
         zones_time.zone_2 = zoneTimeDiff()
-      } else if (event.target.hasClass('zone-testing_item_3')) {
+      } else if (event.target.classList.contains('zone-testing_item_3')) {
         zones_time.zone_3 = zoneTimeDiff()
-      } else if (event.target.hasClass('zone-testing_item_4')) {
+      } else if (event.target.classList.contains('zone-testing_item_4')) {
         zones_time.zone_4 = zoneTimeDiff()
-      } else if (event.target.hasClass('zone-testing_item_5')) {
+      } else if (event.target.classList.contains('zone-testing_item_5')) {
         zones_time.zone_5 = zoneTimeDiff()
-      } else if (event.target.hasClass('zone-testing_item_6')) {
+      } else if (event.target.classList.contains('zone-testing_item_6')) {
         zones_time.zone_6 = zoneTimeDiff()
       }
       zone_time_start = 0;
