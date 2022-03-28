@@ -545,7 +545,7 @@ for (var i = 0; i < zone_testing.length; i++) {
       }
       zone_time_start = 0;
       zone_time_end = 0;
-      event.target.addClass('zone-testing_item__checked');
+      event.target.classList.add('zone-testing_item__checked');
     }
   };
 }
