@@ -504,7 +504,7 @@ jQuery('.btn_test__reset').on('click', function(event) {
 
 // zone testing
 const zone_testing = document.querySelectorAll('.zone-testing_item');
-let zones_time = [0,0,0,0,0,0]
+let zones_time = [0,0,0,0,0,0,0]
 let zone_time_start = 0;
 let zone_time_end = 0;
 let max_val = 0;
@@ -520,11 +520,25 @@ let zones_satus = function (){
     console.log(zones_time);
     console.log('elems not exist ' + ' max position '+ max_zone);
     if (max_zone === 0) {
+      zone_recommend.innerHTML = 'Рекомендуется протокол "V1 + Дренажный"';
+    } else if (max_zone === 1) {
       zone_recommend.innerHTML = 'Рекомендуется протокол "V1"';
+    } else if (max_zone === 2) {
+      zone_recommend.innerHTML = 'Рекомендуется протокол "V2-5"';
+    } else if (max_zone === 3) {
+      zone_recommend.innerHTML = 'Рекомендуется протокол "V3-4"';
+    } else if (max_zone === 4) {
+      zone_recommend.innerHTML = 'Рекомендуется протокол "V4-3"';
+    } else if (max_zone === 5) {
+      zone_recommend.innerHTML = 'Рекомендуется протокол "V5-2"';
+    } else if (max_zone === 6) {
+      zone_recommend.innerHTML = 'Рекомендуется протокол "V5-2 + Висцеральный"';
     }
     document.querySelector('.zone_recommend').classList.remove('hidden');
     max_val = 0;
     max_zone = 0;
+    zone_time_start = 0;
+    zone_time_end = 0;
   }
 }
 
@@ -550,9 +564,9 @@ for (var i = 0; i < zone_testing.length; i++) {
         zones_time[4] = zoneTimeDiff()
       } else if (event.target.classList.contains('zone-testing_item_6')) {
         zones_time[5] = zoneTimeDiff()
+      } else if (event.target.classList.contains('zone-testing_item_7')) {
+        zones_time[6] = zoneTimeDiff()
       }
-      zone_time_start = 0;
-      zone_time_end = 0;
       event.target.classList.remove('zone-testing_item__check');
       zones_satus();
     }
@@ -560,7 +574,7 @@ for (var i = 0; i < zone_testing.length; i++) {
 }
 
 document.querySelector('.zones_reset').onclick = function(){
-  zones_time = [0,0,0,0,0,0];
+  zones_time = [0,0,0,0,0,0,0];
   document.querySelector('.zone_recommend').classList.add('hidden');
   zone_recommend.innerHTML = '';
   for (var i = 0; i < zone_testing.length; i++) {
