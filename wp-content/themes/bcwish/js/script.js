@@ -554,7 +554,6 @@ for (var i = 0; i < zone_testing.length; i++) {
       zone_time_start = 0;
       zone_time_end = 0;
       event.target.classList.remove('zone-testing_item__check');
-      // console.log(zones_time);
       zones_satus();
     }
   };
@@ -569,6 +568,7 @@ document.querySelector('.zones_reset').onclick = function(){
       zone_testing[i].classList.add('zone-testing_item__check')
     }
   }
+  console.log(zones_time);
 }
 
 //CROPPING SCRIPT
