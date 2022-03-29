@@ -2458,9 +2458,9 @@ button.wizard_starter_alt.btn.btn-success
   margin-bottom: 5px;
   visibility: hidden;
 }
-.zone-testing_item:nth-of-type(5)
+.zone-testing_item:nth-of-type(4)
 {
-  flex: 2;
+  flex: 3;
 }
 .zone-testing_item:last-child
 {
