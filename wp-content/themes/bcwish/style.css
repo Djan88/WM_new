@@ -2457,6 +2457,7 @@ button.wizard_starter_alt.btn.btn-success
   flex: 1;
   margin-bottom: 5px;
   visibility: hidden;
+  width: 65%;
 }
 .zone-testing_item:nth-of-type(6)
 {
