@@ -686,7 +686,7 @@ jQuery('.btn_test__reset').on('click', function(event) {
 
   // zone testing
   const zone_testing = document.querySelectorAll('.zone-testing_item');
-  let zones_time = [0,0,0,0,0,0]
+  let zones_time = [0,0,0,0,0,0,0]
   let zone_time_start = 0;
   let zone_time_end = 0;
   let max_val = 0;
@@ -713,6 +713,8 @@ jQuery('.btn_test__reset').on('click', function(event) {
         zone_recommend.innerHTML = 'Рекомендуется протокол "V4-3"';
       } else if (max_zone === 5) {
         zone_recommend.innerHTML = 'Рекомендуется протокол "V5-2"';
+      } else if (max_zone === 6) {
+        zone_recommend.innerHTML = 'Рекомендуется протокол ?';
       }
       document.querySelector('.zone_recommend').classList.remove('hidden');
       max_val = 0;
@@ -744,6 +746,8 @@ jQuery('.btn_test__reset').on('click', function(event) {
           zones_time[4] = zoneTimeDiff()
         } else if (event.target.classList.contains('zone-testing_item_6')) {
           zones_time[5] = zoneTimeDiff()
+        } else if (event.target.classList.contains('zone-testing_item_7')) {
+          zones_time[5] = zoneTimeDiff()
         }
         event.target.classList.remove('zone-testing_item__check');
         zones_satus();
@@ -752,7 +756,7 @@ jQuery('.btn_test__reset').on('click', function(event) {
   }
 
   document.querySelector('.zones_reset').onclick = function(){
-    zones_time = [0,0,0,0,0,0];
+    zones_time = [0,0,0,0,0,0,0];
     document.querySelector('.zone_recommend').classList.add('hidden');
     zone_recommend.innerHTML = '';
     for (var i = 0; i < zone_testing.length; i++) {

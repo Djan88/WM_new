@@ -1432,11 +1432,11 @@
                   </div>
                   <div class="col-sm-6 wizard_grafic_photo">
                     <img src="" class="wizard_returned" alt="wizard_returned">
-                    <?php { ?>
+                    <?php 
                       $cur_user_id = get_current_user_id();
-                      $testng_user = 212;
-                    <?php } ?>
-                    <?php if (current_user_can('administrator')|| $cur_user_id === $testng_user) { ?>
+                      $testing_user = 212;
+                    ?>
+                    <?php if (current_user_can('administrator')|| $cur_user_id === $testing_user) { ?>
                     <div class="zone-testing">
                       <div class="zone-testing_item zone-testing_item_1 zone-testing_item__check"></div>
                       <div class="zone-testing_item zone-testing_item_2 zone-testing_item__check"></div>
@@ -1444,6 +1444,7 @@
                       <div class="zone-testing_item zone-testing_item_4 zone-testing_item__check"></div>
                       <div class="zone-testing_item zone-testing_item_5 zone-testing_item__check"></div>
                       <div class="zone-testing_item zone-testing_item_6 zone-testing_item__check"></div>
+                      <div class="zone-testing_item zone-testing_item_7 zone-testing_item__check"></div>
                     </div>
                     <?php } ?>
                   </div>
