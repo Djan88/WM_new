@@ -2491,6 +2491,10 @@ button.wizard_starter_alt.btn.btn-success
   font-size: 20px;
   padding-right: 15px;
 }
+.zone-testing_item_n
+{
+  background: red;
+}
 /*Animation*/
 
 .rot_d_one {
