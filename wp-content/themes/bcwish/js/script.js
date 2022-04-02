@@ -700,7 +700,7 @@ jQuery('.btn_test__reset').on('click', function(event) {
       max_val = Math.max.apply(null, zones_time);
       max_zone = zones_time.indexOf(max_val);
       console.log(zones_time);
-      console.log('elems not exist ' + ' max position '+ max_zone);
+      console.log('elems not exist ' + ' max position '+ max_zone+1);
       if (max_zone === 0) {
         zone_recommend.innerHTML = 'Максимальная зона 1';
       } else if (max_zone === 1) {
