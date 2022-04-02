@@ -2452,6 +2452,7 @@ button.wizard_starter_alt.btn.btn-success
 }
 .zone-testing_item
 {
+  position: relative;
   background: #fff;
   opacity: 0.5;
   flex: 1;
@@ -2494,6 +2495,16 @@ button.wizard_starter_alt.btn.btn-success
 .zone-testing_item_n
 {
   background: red;
+  border-radius: 50%;
+  position: absolute;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  left: 10px;
+  top: 10px;
+  text-align: center;
+  color: #fff;
+  padding-top: 3px;
 }
 /*Animation*/
 

@@ -747,7 +747,7 @@ jQuery('.btn_test__reset').on('click', function(event) {
         } else if (event.target.classList.contains('zone-testing_item_6')) {
           zones_time[5] = zoneTimeDiff()
         } else if (event.target.classList.contains('zone-testing_item_7')) {
-          zones_time[5] = zoneTimeDiff()
+          zones_time[6] = zoneTimeDiff()
         }
         event.target.classList.remove('zone-testing_item__check');
         zones_satus();
