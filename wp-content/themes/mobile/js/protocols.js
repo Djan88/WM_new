@@ -15977,16 +15977,16 @@ universal = function(){
 
 karma_54 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
+  jQuery('.status_pahaze_all').text('54');
   localStorage.setItem('pausedPhases', '54');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('100%');
+  jQuery('.status_pahaze_now').text('54');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_v3'));
       jQuery('.draggable_v3').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -16009,23 +16009,23 @@ karma_54 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('100%');
       onEnd();
     }
   }, 250);
 }
 karma_53 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
+  jQuery('.status_pahaze_all').text('54');
   localStorage.setItem('pausedPhases', '53');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('97%');
+  jQuery('.status_pahaze_now').text('53');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_v4'));
       jQuery('.draggable_v4').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -16048,7 +16048,7 @@ karma_53 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('97%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_54');
         endNow()
@@ -16061,16 +16061,16 @@ karma_53 = function(){
 }
 karma_52 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
+  jQuery('.status_pahaze_all').text('54');
   localStorage.setItem('pausedPhases', '52');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('95%');
+  jQuery('.status_pahaze_now').text('52');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_d5'));
       jQuery('.draggable_d5').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -16093,7 +16093,7 @@ karma_52 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('95%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_53');
         endNow()
@@ -16106,16 +16106,16 @@ karma_52 = function(){
 }
 karma_51 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
-  localStorage.setItem('pausedPhases', '3');
+  jQuery('.status_pahaze_all').text('54');
+  localStorage.setItem('pausedPhases', '51');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('93%');
+  jQuery('.status_pahaze_now').text('51');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_d4'));
       jQuery('.draggable_d4').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -16138,7 +16138,7 @@ karma_51 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('93%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_52');
         endNow()
@@ -16151,16 +16151,16 @@ karma_51 = function(){
 }
 karma_50 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
-  localStorage.setItem('pausedPhases', '2');
+  jQuery('.status_pahaze_all').text('54');
+  localStorage.setItem('pausedPhases', '50');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('91%');
+  jQuery('.status_pahaze_now').text('50');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_d3'));
       jQuery('.draggable_d3').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -16183,7 +16183,7 @@ karma_50 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3');
+      jQuery('.status_percent').text('91%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_51');
         endNow()
@@ -16196,16 +16196,16 @@ karma_50 = function(){
 }
 karma_49 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
-  localStorage.setItem('pausedPhases', '1');
+  jQuery('.status_pahaze_all').text('54');
+  localStorage.setItem('pausedPhases', '49');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('90%');
+  jQuery('.status_pahaze_now').text('49');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_v2'));
       jQuery('.draggable_v2').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -16228,7 +16228,7 @@ karma_49 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('90%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_50');
         endNow()
@@ -16241,16 +16241,16 @@ karma_49 = function(){
 }
 karma_48 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
-  localStorage.setItem('pausedPhases', '6');
+  jQuery('.status_pahaze_all').text('54');
+  localStorage.setItem('pausedPhases', '48');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('88%');
+  jQuery('.status_pahaze_now').text('48');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_v3'));
       jQuery('.draggable_v3').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -16273,7 +16273,7 @@ karma_48 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('88%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_49');
         endNow()
@@ -16286,16 +16286,16 @@ karma_48 = function(){
 }
 karma_47 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
-  localStorage.setItem('pausedPhases', '5');
+  jQuery('.status_pahaze_all').text('54');
+  localStorage.setItem('pausedPhases', '47');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('86%');
+  jQuery('.status_pahaze_now').text('47');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_v4'));
       jQuery('.draggable_v4').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -16318,7 +16318,7 @@ karma_47 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('86%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_48');
         endNow()
@@ -16331,16 +16331,16 @@ karma_47 = function(){
 }
 karma_46 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
-  localStorage.setItem('pausedPhases', '4');
+  jQuery('.status_pahaze_all').text('54');
+  localStorage.setItem('pausedPhases', '46');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('84%');
+  jQuery('.status_pahaze_now').text('46');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_d5'));
       jQuery('.draggable_d5').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -16363,7 +16363,7 @@ karma_46 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('84%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_47');
         endNow()
@@ -16376,16 +16376,16 @@ karma_46 = function(){
 }
 karma_45 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
-  localStorage.setItem('pausedPhases', '3');
+  jQuery('.status_pahaze_all').text('54');
+  localStorage.setItem('pausedPhases', '45');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('82%');
+  jQuery('.status_pahaze_now').text('45');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_d4'));
       jQuery('.draggable_d4').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -16408,7 +16408,7 @@ karma_45 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('82%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_46');
         endNow()
@@ -16421,16 +16421,16 @@ karma_45 = function(){
 }
 karma_44 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
-  localStorage.setItem('pausedPhases', '2');
+  jQuery('.status_pahaze_all').text('54');
+  localStorage.setItem('pausedPhases', '44');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('80%');
+  jQuery('.status_pahaze_now').text('44');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_d3'));
       jQuery('.draggable_d3').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -16453,7 +16453,7 @@ karma_44 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3');
+      jQuery('.status_percent').text('80%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_45');
         endNow()
@@ -16466,16 +16466,16 @@ karma_44 = function(){
 }
 karma_43 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
-  localStorage.setItem('pausedPhases', '1');
+  jQuery('.status_pahaze_all').text('54');
+  localStorage.setItem('pausedPhases', '43');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('79%');
+  jQuery('.status_pahaze_now').text('43');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_v2'));
       jQuery('.draggable_v2').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -16498,7 +16498,7 @@ karma_43 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('79%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_44');
         endNow()
@@ -16511,16 +16511,16 @@ karma_43 = function(){
 }
 karma_42 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
-  localStorage.setItem('pausedPhases', '6');
+  jQuery('.status_pahaze_all').text('54');
+  localStorage.setItem('pausedPhases', '42');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('77%');
+  jQuery('.status_pahaze_now').text('42');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_v3'));
       jQuery('.draggable_v3').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -16543,7 +16543,7 @@ karma_42 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('77%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_43');
         endNow()
@@ -16556,16 +16556,16 @@ karma_42 = function(){
 }
 karma_41 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
-  localStorage.setItem('pausedPhases', '5');
+  jQuery('.status_pahaze_all').text('54');
+  localStorage.setItem('pausedPhases', '41');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('75%');
+  jQuery('.status_pahaze_now').text('41');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_v4'));
       jQuery('.draggable_v4').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -16588,7 +16588,7 @@ karma_41 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('75%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_42');
         endNow()
@@ -16601,16 +16601,16 @@ karma_41 = function(){
 }
 karma_40 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
-  localStorage.setItem('pausedPhases', '4');
+  jQuery('.status_pahaze_all').text('54');
+  localStorage.setItem('pausedPhases', '40');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('73%');
+  jQuery('.status_pahaze_now').text('40');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_d5'));
       jQuery('.draggable_d5').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -16633,7 +16633,7 @@ karma_40 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('73%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_41');
         endNow()
@@ -16646,16 +16646,16 @@ karma_40 = function(){
 }
 karma_39 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
-  localStorage.setItem('pausedPhases', '3');
+  jQuery('.status_pahaze_all').text('54');
+  localStorage.setItem('pausedPhases', '39');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('71%');
+  jQuery('.status_pahaze_now').text('39');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_d4'));
       jQuery('.draggable_d4').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -16678,7 +16678,7 @@ karma_39 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('71%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_40');
         endNow()
@@ -16691,16 +16691,16 @@ karma_39 = function(){
 }
 karma_38 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
-  localStorage.setItem('pausedPhases', '2');
+  jQuery('.status_pahaze_all').text('54');
+  localStorage.setItem('pausedPhases', '38');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('70%');
+  jQuery('.status_pahaze_now').text('38');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_d3'));
       jQuery('.draggable_d3').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -16723,7 +16723,7 @@ karma_38 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3');
+      jQuery('.status_percent').text('70%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_39');
         endNow()
@@ -16736,16 +16736,16 @@ karma_38 = function(){
 }
 karma_37 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
-  localStorage.setItem('pausedPhases', '1');
+  jQuery('.status_pahaze_all').text('54');
+  localStorage.setItem('pausedPhases', '37');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('68%');
+  jQuery('.status_pahaze_now').text('37');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_v2'));
       jQuery('.draggable_v2').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -16768,7 +16768,7 @@ karma_37 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('68%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_38');
         endNow()
@@ -16781,16 +16781,16 @@ karma_37 = function(){
 }
 karma_36 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
-  localStorage.setItem('pausedPhases', '6');
+  jQuery('.status_pahaze_all').text('54');
+  localStorage.setItem('pausedPhases', '36');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('66%');
+  jQuery('.status_pahaze_now').text('36');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_v3'));
       jQuery('.draggable_v3').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -16813,7 +16813,7 @@ karma_36 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('66%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_37');
         endNow()
@@ -16826,16 +16826,16 @@ karma_36 = function(){
 }
 karma_35 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
-  localStorage.setItem('pausedPhases', '5');
+  jQuery('.status_pahaze_all').text('54');
+  localStorage.setItem('pausedPhases', '35');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('64%');
+  jQuery('.status_pahaze_now').text('35');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_v4'));
       jQuery('.draggable_v4').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -16858,7 +16858,7 @@ karma_35 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('64%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_36');
         endNow()
@@ -16871,16 +16871,16 @@ karma_35 = function(){
 }
 karma_34 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
-  localStorage.setItem('pausedPhases', '4');
+  jQuery('.status_pahaze_all').text('54');
+  localStorage.setItem('pausedPhases', '43');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('62%');
+  jQuery('.status_pahaze_now').text('34');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_d5'));
       jQuery('.draggable_d5').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -16903,7 +16903,7 @@ karma_34 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('62%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_35');
         endNow()
@@ -16916,16 +16916,16 @@ karma_34 = function(){
 }
 karma_33 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
-  localStorage.setItem('pausedPhases', '3');
+  jQuery('.status_pahaze_all').text('54');
+  localStorage.setItem('pausedPhases', '33');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('60%');
+  jQuery('.status_pahaze_now').text('33');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_d4'));
       jQuery('.draggable_d4').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -16948,7 +16948,7 @@ karma_33 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('60%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_34');
         endNow()
@@ -16961,16 +16961,16 @@ karma_33 = function(){
 }
 karma_32 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
-  localStorage.setItem('pausedPhases', '2');
+  jQuery('.status_pahaze_all').text('54');
+  localStorage.setItem('pausedPhases', '32');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('59%');
+  jQuery('.status_pahaze_now').text('32');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_d3'));
       jQuery('.draggable_d3').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -16993,7 +16993,7 @@ karma_32 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3');
+      jQuery('.status_percent').text('59%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_33');
         endNow()
@@ -17006,16 +17006,16 @@ karma_32 = function(){
 }
 karma_31 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
-  localStorage.setItem('pausedPhases', '1');
+  jQuery('.status_pahaze_all').text('54');
+  localStorage.setItem('pausedPhases', '31');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('57%');
+  jQuery('.status_pahaze_now').text('31');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_v2'));
       jQuery('.draggable_v2').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -17038,7 +17038,7 @@ karma_31 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('57%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_32');
         endNow()
@@ -17051,16 +17051,16 @@ karma_31 = function(){
 }
 karma_30 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
-  localStorage.setItem('pausedPhases', '6');
+  jQuery('.status_pahaze_all').text('54');
+  localStorage.setItem('pausedPhases', '30');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('55%');
+  jQuery('.status_pahaze_now').text('30');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_v3'));
       jQuery('.draggable_v3').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -17083,7 +17083,7 @@ karma_30 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('55%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_31');
         endNow()
@@ -17096,16 +17096,16 @@ karma_30 = function(){
 }
 karma_29 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
+  jQuery('.status_pahaze_all').text('54');
   localStorage.setItem('pausedPhases', '29');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('53%');
+  jQuery('.status_pahaze_now').text('29');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_v4'));
       jQuery('.draggable_v4').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -17128,7 +17128,7 @@ karma_29 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('53%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_30');
         endNow()
@@ -17141,16 +17141,16 @@ karma_29 = function(){
 }
 karma_28 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
+  jQuery('.status_pahaze_all').text('54');
   localStorage.setItem('pausedPhases', '28');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('51%');
+  jQuery('.status_pahaze_now').text('28');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_d5'));
       jQuery('.draggable_d5').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -17173,7 +17173,7 @@ karma_28 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('51%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_29');
         endNow()
@@ -17186,16 +17186,16 @@ karma_28 = function(){
 }
 karma_27 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
+  jQuery('.status_pahaze_all').text('54');
   localStorage.setItem('pausedPhases', '27');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('50%');
+  jQuery('.status_pahaze_now').text('27');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_d4'));
       jQuery('.draggable_d4').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -17218,7 +17218,7 @@ karma_27 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('50%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_28');
         endNow()
@@ -17231,16 +17231,16 @@ karma_27 = function(){
 }
 karma_26 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
+  jQuery('.status_pahaze_all').text('54');
   localStorage.setItem('pausedPhases', '26');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('48%');
+  jQuery('.status_pahaze_now').text('26');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_d3'));
       jQuery('.draggable_d3').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -17263,7 +17263,7 @@ karma_26 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3');
+      jQuery('.status_percent').text('48%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_27');
         endNow()
@@ -17276,16 +17276,16 @@ karma_26 = function(){
 }
 karma_25 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
+  jQuery('.status_pahaze_all').text('54');
   localStorage.setItem('pausedPhases', '25');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('46%');
+  jQuery('.status_pahaze_now').text('25');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_v2'));
       jQuery('.draggable_v2').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -17308,7 +17308,7 @@ karma_25 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('46%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_26');
         endNow()
@@ -17321,16 +17321,16 @@ karma_25 = function(){
 }
 karma_24 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
+  jQuery('.status_pahaze_all').text('54');
   localStorage.setItem('pausedPhases', '24');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('44%');
+  jQuery('.status_pahaze_now').text('24');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_v3'));
       jQuery('.draggable_v3').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -17353,7 +17353,7 @@ karma_24 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('44%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_25');
         endNow()
@@ -17366,16 +17366,16 @@ karma_24 = function(){
 }
 karma_23 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
+  jQuery('.status_pahaze_all').text('54');
   localStorage.setItem('pausedPhases', '23');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('42%');
+  jQuery('.status_pahaze_now').text('23');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_v4'));
       jQuery('.draggable_v4').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -17398,7 +17398,7 @@ karma_23 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('42%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_24');
         endNow()
@@ -17411,16 +17411,16 @@ karma_23 = function(){
 }
 karma_22 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
+  jQuery('.status_pahaze_all').text('54');
   localStorage.setItem('pausedPhases', '22');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('40%');
+  jQuery('.status_pahaze_now').text('22');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_d5'));
       jQuery('.draggable_d5').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -17443,7 +17443,7 @@ karma_22 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('40%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_23');
         endNow()
@@ -17456,16 +17456,16 @@ karma_22 = function(){
 }
 karma_21 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
+  jQuery('.status_pahaze_all').text('54');
   localStorage.setItem('pausedPhases', '21');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('39%');
+  jQuery('.status_pahaze_now').text('21');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_d4'));
       jQuery('.draggable_d4').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -17488,7 +17488,7 @@ karma_21 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('39%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_22');
         endNow()
@@ -17501,16 +17501,16 @@ karma_21 = function(){
 }
 karma_20 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
+  jQuery('.status_pahaze_all').text('54');
   localStorage.setItem('pausedPhases', '20');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('37%');
+  jQuery('.status_pahaze_now').text('20');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_d3'));
       jQuery('.draggable_d3').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -17533,7 +17533,7 @@ karma_20 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3');
+      jQuery('.status_percent').text('37%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_21');
         endNow()
@@ -17546,16 +17546,16 @@ karma_20 = function(){
 }
 karma_19 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
+  jQuery('.status_pahaze_all').text('54');
   localStorage.setItem('pausedPhases', '19');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('35%');
+  jQuery('.status_pahaze_now').text('19');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_v2'));
       jQuery('.draggable_v2').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -17578,7 +17578,7 @@ karma_19 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('35%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_20');
         endNow()
@@ -17591,16 +17591,16 @@ karma_19 = function(){
 }
 karma_18 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
+  jQuery('.status_pahaze_all').text('54');
   localStorage.setItem('pausedPhases', '18');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('33%');
+  jQuery('.status_pahaze_now').text('18');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_v3'));
       jQuery('.draggable_v3').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -17623,7 +17623,7 @@ karma_18 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('33%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_19');
         endNow()
@@ -17636,16 +17636,16 @@ karma_18 = function(){
 }
 karma_17 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
+  jQuery('.status_pahaze_all').text('54');
   localStorage.setItem('pausedPhases', '17');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('31%');
+  jQuery('.status_pahaze_now').text('17');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_v4'));
       jQuery('.draggable_v4').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -17668,7 +17668,7 @@ karma_17 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('31%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_18');
         endNow()
@@ -17681,16 +17681,16 @@ karma_17 = function(){
 }
 karma_16 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
+  jQuery('.status_pahaze_all').text('54');
   localStorage.setItem('pausedPhases', '16');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('29%');
+  jQuery('.status_pahaze_now').text('16');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_d5'));
       jQuery('.draggable_d5').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -17713,7 +17713,7 @@ karma_16 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('29%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_17');
         endNow()
@@ -17726,16 +17726,16 @@ karma_16 = function(){
 }
 karma_15 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
+  jQuery('.status_pahaze_all').text('54');
   localStorage.setItem('pausedPhases', '15');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('28%');
+  jQuery('.status_pahaze_now').text('15');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_d4'));
       jQuery('.draggable_d4').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -17758,7 +17758,7 @@ karma_15 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('28%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_16');
         endNow()
@@ -17771,16 +17771,16 @@ karma_15 = function(){
 }
 karma_14 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
-  localStorage.setItem('pausedPhases', '2');
+  jQuery('.status_pahaze_all').text('54');
+  localStorage.setItem('pausedPhases', '14');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('26%');
+  jQuery('.status_pahaze_now').text('14');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_d3'));
       jQuery('.draggable_d3').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -17803,7 +17803,7 @@ karma_14 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3');
+      jQuery('.status_percent').text('26%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_15');
         endNow()
@@ -17816,16 +17816,16 @@ karma_14 = function(){
 }
 karma_13 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
+  jQuery('.status_pahaze_all').text('54');
   localStorage.setItem('pausedPhases', '13');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('24%');
+  jQuery('.status_pahaze_now').text('13');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_v2'));
       jQuery('.draggable_v2').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -17848,7 +17848,7 @@ karma_13 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('24%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_14');
         endNow()
@@ -17861,16 +17861,16 @@ karma_13 = function(){
 }
 karma_12 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
+  jQuery('.status_pahaze_all').text('54');
   localStorage.setItem('pausedPhases', '12');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('22%');
+  jQuery('.status_pahaze_now').text('12');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_v3'));
       jQuery('.draggable_v3').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -17893,7 +17893,7 @@ karma_12 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('22%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_13');
         endNow()
@@ -17906,16 +17906,16 @@ karma_12 = function(){
 }
 karma_11 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
-  localStorage.setItem('pausedPhases', '5');
+  jQuery('.status_pahaze_all').text('54');
+  localStorage.setItem('pausedPhases', '11');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('20%');
+  jQuery('.status_pahaze_now').text('11');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_v4'));
       jQuery('.draggable_v4').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -17938,7 +17938,7 @@ karma_11 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('20%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_12');
         endNow()
@@ -17951,16 +17951,16 @@ karma_11 = function(){
 }
 karma_10 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
+  jQuery('.status_pahaze_all').text('54');
   localStorage.setItem('pausedPhases', '10');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('19%');
+  jQuery('.status_pahaze_now').text('10');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_d5'));
       jQuery('.draggable_d5').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -17983,7 +17983,7 @@ karma_10 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('19%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_11');
         endNow()
@@ -17996,16 +17996,15 @@ karma_10 = function(){
 }
 karma_9 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
-  localStorage.setItem('pausedPhases', '3');
+  jQuery('.status_pahaze_all').text('54');
+  localStorage.setItem('pausedPhases', '9');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_pahaze_now').text('9');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_d4'));
       jQuery('.draggable_d4').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -18028,7 +18027,7 @@ karma_9 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
+      jQuery('.status_percent').text('9%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_10');
         endNow()
@@ -18041,16 +18040,16 @@ karma_9 = function(){
 }
 karma_8 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
+  jQuery('.status_pahaze_all').text('54');
   localStorage.setItem('pausedPhases', '8');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('15%');
+  jQuery('.status_pahaze_now').text('8');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_d3'));
       jQuery('.draggable_d3').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -18073,7 +18072,6 @@ karma_8 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_9');
         endNow()
@@ -18086,16 +18084,16 @@ karma_8 = function(){
 }
 karma_7 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
+  jQuery('.status_pahaze_all').text('54');
   localStorage.setItem('pausedPhases', '7');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('13%');
+  jQuery('.status_pahaze_now').text('7');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_v2'));
       jQuery('.draggable_v2').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -18118,7 +18116,6 @@ karma_7 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_8');
         endNow()
@@ -18131,16 +18128,16 @@ karma_7 = function(){
 }
 karma_6 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
+  jQuery('.status_pahaze_all').text('54');
   localStorage.setItem('pausedPhases', '6');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('11%');
+  jQuery('.status_pahaze_now').text('6');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_v3'));
       jQuery('.draggable_v3').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -18163,7 +18160,6 @@ karma_6 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_7');
         endNow()
@@ -18176,16 +18172,16 @@ karma_6 = function(){
 }
 karma_5 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
+  jQuery('.status_pahaze_all').text('54');
   localStorage.setItem('pausedPhases', '5');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('9%');
+  jQuery('.status_pahaze_now').text('5');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_v4'));
       jQuery('.draggable_v4').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -18208,7 +18204,6 @@ karma_5 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_6');
         endNow()
@@ -18221,16 +18216,16 @@ karma_5 = function(){
 }
 karma_4 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
+  jQuery('.status_pahaze_all').text('54');
   localStorage.setItem('pausedPhases', '4');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('8%');
+  jQuery('.status_pahaze_now').text('4');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_d5'));
       jQuery('.draggable_d5').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -18253,7 +18248,6 @@ karma_4 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_5');
         endNow()
@@ -18266,16 +18260,16 @@ karma_4 = function(){
 }
 karma_3 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
+  jQuery('.status_pahaze_all').text('54');
   localStorage.setItem('pausedPhases', '3');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('6%');
+  jQuery('.status_pahaze_now').text('3');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_d4'));
       jQuery('.draggable_d4').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -18298,7 +18292,6 @@ karma_3 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_4');
         endNow()
@@ -18311,16 +18304,16 @@ karma_3 = function(){
 }
 karma_2 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
+  jQuery('.status_pahaze_all').text('54');
   localStorage.setItem('pausedPhases', '2');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('4%');
+  jQuery('.status_pahaze_now').text('2');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_d3'));
       jQuery('.draggable_d3').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -18343,7 +18336,6 @@ karma_2 = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_3');
         endNow()
@@ -18356,16 +18348,16 @@ karma_2 = function(){
 }
 karma = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('67676767');
+  jQuery('.status_pahaze_all').text('54');
   localStorage.setItem('pausedPhases', '1');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
-  jQuery('.status_percent').text('0%');
+  jQuery('.status_percent').text('2%');
   jQuery('.status_pahaze_now').text('1');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      sideFormuls(count_animation, jQuery('.draggable_v2'));
       jQuery('.draggable_v2').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
@@ -18388,7 +18380,6 @@ karma = function(){
         opacity: 1
       });
       count_animation = 0;
-      jQuery('.status_percent').text('3%');
       if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_2');
         endNow()
