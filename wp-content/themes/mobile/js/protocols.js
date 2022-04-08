@@ -15973,6 +15973,47 @@ universal = function(){
 }
 
 
+karma = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('3');
+  localStorage.setItem('pausedPhases', '3');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  console.log('Фаза 1/1');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_v2').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_one').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v2, .draggable_d2').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+    }
+  }, 250);
+}
+
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -16046,6 +16087,9 @@ jQuery('.btn_start').on('click', function(event) {
       } else if (protocol == 'visceral') {
         mmt();
         jQuery('.status_title').text('Висцеральный протокол');
+      } else if (protocol == 'karma') {
+        karma();
+        jQuery('.status_title').text('Кармический протокол');
       }
       jQuery('.header-title').text('Программа выполняется');
       jQuery('.btn_start').attr('disabled', 'disabled');

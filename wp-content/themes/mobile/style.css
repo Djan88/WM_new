@@ -442,6 +442,223 @@ input.wpcf7-form-control.wpcf7-submit
 {
   display: none!important;
 }
+/*Animation*/
+
+.rot_d_one {
+  animation: 26s linear 0s normal none running rot_d_one;
+  -webkit-animation: 26s linear 0s normal none running rot_d_one;
+}
+@keyframes rot_d_one {
+  0% {
+    transform: rotate(0deg) scale(1.5);
+  }
+  3% {
+    transform: rotate(-311deg) scale(1.5);
+  }
+  97% {
+    transform: rotate(-311deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1.5);
+  }
+}
+@-webkit-keyframes rot_d_one {
+  0% {
+    transform: rotate(0deg) scale(1.5);
+  }
+  3% {
+    transform: rotate(-311deg) scale(1.5);
+  }
+  97% {
+    transform: rotate(-311deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1.5);
+  }
+}
+.rot_d_two {
+  animation: 26s linear 0s normal none running rot_d_two;
+  -webkit-animation: 26s linear 0s normal none running rot_d_two;
+}
+@keyframes rot_d_two {
+  0% {
+    transform: rotate(0deg) scale(1.5);
+  }
+  3% {
+    transform: rotate(-210deg) scale(1.5);
+  }
+  97% {
+    transform: rotate(-210deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1.5);
+  }
+}
+@-webkit-keyframes rot_d_two {
+  0% {
+    transform: rotate(0deg) scale(1.5);
+  }
+  3% {
+    transform: rotate(-210deg) scale(1.5);
+  }
+  97% {
+    transform: rotate(-210deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1.5);
+  }
+}
+.rot_d_three {
+  animation: 26s linear 0s normal none running rot_d_three;
+  -webkit-animation: 26s linear 0s normal none running rot_d_three;
+}
+@keyframes rot_d_three {
+  0% {
+    transform: rotate(0deg) scale(1.5);
+  }
+  3% {
+    transform: rotate(-195deg) scale(1.5);
+  }
+  97% {
+    transform: rotate(-195deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1.5);
+  }
+}
+@-webkit-keyframes rot_d_three {
+  0% {
+    transform: rotate(0deg) scale(1.5);
+  }
+  3% {
+    transform: rotate(-195deg) scale(1.5);
+  }
+  97% {
+    transform: rotate(-195deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1.5);
+  }
+}
+.rot_d_four {
+  animation: 26s linear 0s normal none running rot_d_four;
+  -webkit-animation: 26s linear 0s normal none running rot_d_four;
+}
+@keyframes rot_d_four {
+  0% {
+    transform: rotate(0deg) scale(1.5);
+  }
+  3% {
+    transform: rotate(-185deg) scale(1.5);
+  }
+  97% {
+    transform: rotate(-185deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1.5);
+  }
+}
+@-webkit-keyframes rot_d_four {
+  0% {
+    transform: rotate(0deg) scale(1.5);
+  }
+  3% {
+    transform: rotate(-185deg) scale(1.5);
+  }
+  97% {
+    transform: rotate(-185deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1.5);
+  }
+}
+
+.rot_d_five {
+  animation: 26s linear 0s normal none running rot_d_five;
+  -webkit-animation: 26s linear 0s normal none running rot_d_five;
+}
+@keyframes rot_d_five {
+  0% {
+    transform: rotate(0deg) scale(1.5);
+  }
+  3% {
+    transform: rotate(-225deg) scale(1.5);
+  }
+  97% {
+    transform: rotate(-225deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1.5);
+  }
+}
+@-webkit-keyframes rot_d_five {
+  0% {
+    transform: rotate(0deg) scale(1.5);
+  }
+  3% {
+    transform: rotate(-225deg) scale(1.5);
+  }
+  97% {
+    transform: rotate(-225deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1.5);
+  }
+}
+
+.rot_d_six {
+  animation: 26s linear 0s normal none running rot_d_six;
+  -webkit-animation: 26s linear 0s normal none running rot_d_six;
+}
+@keyframes rot_d_six {
+  0% {
+    transform: rotate(0deg) scale(1.5);
+  }
+  3% {
+    transform: rotate(-260deg) scale(1.5);
+  }
+  97% {
+    transform: rotate(-260deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1.5);
+  }
+}
+@-webkit-keyframes rot_d_six {
+  0% {
+    transform: rotate(0deg) scale(1.5);
+  }
+  3% {
+    transform: rotate(-260deg) scale(1.5);
+  }
+  97% {
+    transform: rotate(-260deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(-360deg) scale(1.5);
+  }
+}
+.rot_zone_supersolis {
+  animation: 26s linear 0s normal none infinite running rot_zone_supersolis;
+  -webkit-animation: 26s linear 0s normal none infinite running rot_zone_supersolis;
+}
+@keyframes rot_zone_supersolis {
+  0% {
+    transform: rotate(0deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.5);
+  }
+}
+@-webkit-keyframes rot_zone_supersolis {
+  0% {
+    transform: rotate(0deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(360deg) scale(1.5);
+  }
+}
+
 @media (min-width: 600px) {
   .sweet-alert
   {
