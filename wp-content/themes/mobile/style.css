@@ -485,10 +485,10 @@ input.wpcf7-form-control.wpcf7-submit
     transform: rotate(0deg) scale(1.5);
   }
   3% {
-    transform: rotate(-200deg) scale(1.5);
+    transform: rotate(-190deg) scale(1.5);
   }
   97% {
-    transform: rotate(-200deg) scale(1.5);
+    transform: rotate(-190deg) scale(1.5);
   }
   100% {
     transform: rotate(-360deg) scale(1.5);
@@ -499,10 +499,10 @@ input.wpcf7-form-control.wpcf7-submit
     transform: rotate(0deg) scale(1.5);
   }
   3% {
-    transform: rotate(-200deg) scale(1.5);
+    transform: rotate(-190deg) scale(1.5);
   }
   97% {
-    transform: rotate(-200deg) scale(1.5);
+    transform: rotate(-190deg) scale(1.5);
   }
   100% {
     transform: rotate(-360deg) scale(1.5);

@@ -15972,15 +15972,191 @@ universal = function(){
   }, 1000);
 }
 
-karma_2 = function(){
+
+
+
+karma_54 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('3');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '54');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_v3').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_six').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v3, .draggable_d2').removeClass('rot_d_six rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      onEnd();
+    }
+  }, 250);
+}
+karma_53 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '53');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_v4').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_five').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v4, .draggable_d2').removeClass('rot_d_five rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_54');
+        endNow()
+      } else {
+        karma_54();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_52 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '52');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_d5').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_four').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d5, .draggable_d2').removeClass('rot_d_four rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_53');
+        endNow()
+      } else {
+        karma_53();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_51 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
   localStorage.setItem('pausedPhases', '3');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
   jQuery('.status_percent').text('0%');
   jQuery('.status_pahaze_now').text('1');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
-  console.log('Фаза 2/1');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_d4').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_three').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d4, .draggable_d2').removeClass('rot_d_three rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_52');
+        endNow()
+      } else {
+        karma_52();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_50 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '2');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
@@ -16000,7 +16176,52 @@ karma_2 = function(){
       count_animation += 1;
     } else {
       clearInterval(phaseOne);
-      jQuery('.draggable_d3, .draggable_d2').removeClass('rot_d_one rot_zone_supersolis').css({
+      jQuery('.draggable_d3, .draggable_d2').removeClass('rot_d_two rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_51');
+        endNow()
+      } else {
+        karma_51();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_49 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '1');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_v2').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_one').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v2, .draggable_d2').removeClass('rot_d_one rot_zone_supersolis').css({
         color: '#FFF0C7',
         transform: 'scale(1)',
         background: 'rgba(83, 35, 69, 0.4)',
@@ -16009,24 +16230,2138 @@ karma_2 = function(){
       count_animation = 0;
       jQuery('.status_percent').text('3%');
       if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_50');
+        endNow()
+      } else {
+        karma_50();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_48 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '6');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_v3').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_six').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v3, .draggable_d2').removeClass('rot_d_six rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_49');
+        endNow()
+      } else {
+        karma_49();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_47 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '5');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_v4').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_five').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v4, .draggable_d2').removeClass('rot_d_five rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_48');
+        endNow()
+      } else {
+        karma_48();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_46 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '4');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_d5').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_four').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d5, .draggable_d2').removeClass('rot_d_four rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_47');
+        endNow()
+      } else {
+        karma_47();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_45 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '3');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_d4').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_three').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d4, .draggable_d2').removeClass('rot_d_three rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_46');
+        endNow()
+      } else {
+        karma_46();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_44 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '2');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_d3').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_two').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d3, .draggable_d2').removeClass('rot_d_two rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_45');
+        endNow()
+      } else {
+        karma_45();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_43 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '1');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_v2').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_one').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v2, .draggable_d2').removeClass('rot_d_one rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_44');
+        endNow()
+      } else {
+        karma_44();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_42 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '6');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_v3').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_six').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v3, .draggable_d2').removeClass('rot_d_six rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_43');
+        endNow()
+      } else {
+        karma_43();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_41 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '5');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_v4').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_five').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v4, .draggable_d2').removeClass('rot_d_five rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_42');
+        endNow()
+      } else {
+        karma_42();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_40 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '4');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_d5').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_four').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d5, .draggable_d2').removeClass('rot_d_four rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_41');
+        endNow()
+      } else {
+        karma_41();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_39 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '3');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_d4').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_three').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d4, .draggable_d2').removeClass('rot_d_three rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_40');
+        endNow()
+      } else {
+        karma_40();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_38 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '2');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_d3').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_two').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d3, .draggable_d2').removeClass('rot_d_two rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_39');
+        endNow()
+      } else {
+        karma_39();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_37 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '1');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_v2').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_one').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v2, .draggable_d2').removeClass('rot_d_one rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_38');
+        endNow()
+      } else {
+        karma_38();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_36 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '6');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_v3').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_six').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v3, .draggable_d2').removeClass('rot_d_six rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_37');
+        endNow()
+      } else {
+        karma_37();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_35 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '5');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_v4').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_five').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v4, .draggable_d2').removeClass('rot_d_five rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_36');
+        endNow()
+      } else {
+        karma_36();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_34 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '4');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_d5').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_four').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d5, .draggable_d2').removeClass('rot_d_four rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_35');
+        endNow()
+      } else {
+        karma_35();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_33 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '3');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_d4').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_three').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d4, .draggable_d2').removeClass('rot_d_three rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_34');
+        endNow()
+      } else {
+        karma_34();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_32 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '2');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_d3').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_two').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d3, .draggable_d2').removeClass('rot_d_two rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_33');
+        endNow()
+      } else {
+        karma_33();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_31 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '1');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_v2').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_one').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v2, .draggable_d2').removeClass('rot_d_one rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_32');
+        endNow()
+      } else {
+        karma_32();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_30 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '6');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_v3').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_six').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v3, .draggable_d2').removeClass('rot_d_six rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_31');
+        endNow()
+      } else {
+        karma_31();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_29 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '29');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_v4').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_five').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v4, .draggable_d2').removeClass('rot_d_five rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_30');
+        endNow()
+      } else {
+        karma_30();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_28 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '28');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_d5').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_four').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d5, .draggable_d2').removeClass('rot_d_four rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_29');
+        endNow()
+      } else {
+        karma_29();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_27 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '27');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_d4').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_three').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d4, .draggable_d2').removeClass('rot_d_three rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_28');
+        endNow()
+      } else {
+        karma_28();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_26 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '26');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_d3').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_two').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d3, .draggable_d2').removeClass('rot_d_two rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_27');
+        endNow()
+      } else {
+        karma_27();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_25 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '25');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_v2').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_one').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v2, .draggable_d2').removeClass('rot_d_one rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_26');
+        endNow()
+      } else {
+        karma_26();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_24 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '24');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_v3').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_six').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v3, .draggable_d2').removeClass('rot_d_six rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_25');
+        endNow()
+      } else {
+        karma_25();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_23 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '23');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_v4').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_five').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v4, .draggable_d2').removeClass('rot_d_five rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_24');
+        endNow()
+      } else {
+        karma_24();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_22 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '22');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_d5').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_four').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d5, .draggable_d2').removeClass('rot_d_four rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_23');
+        endNow()
+      } else {
+        karma_23();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_21 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '21');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_d4').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_three').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d4, .draggable_d2').removeClass('rot_d_three rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_22');
+        endNow()
+      } else {
+        karma_22();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_20 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '20');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_d3').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_two').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d3, .draggable_d2').removeClass('rot_d_two rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_21');
+        endNow()
+      } else {
+        karma_21();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_19 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '19');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_v2').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_one').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v2, .draggable_d2').removeClass('rot_d_one rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_20');
+        endNow()
+      } else {
+        karma_20();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_18 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '18');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_v3').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_six').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v3, .draggable_d2').removeClass('rot_d_six rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_19');
+        endNow()
+      } else {
+        karma_19();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_17 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '17');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_v4').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_five').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v4, .draggable_d2').removeClass('rot_d_five rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_18');
+        endNow()
+      } else {
+        karma_18();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_16 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '16');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_d5').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_four').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d5, .draggable_d2').removeClass('rot_d_four rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_17');
+        endNow()
+      } else {
+        karma_17();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_15 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '15');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_d4').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_three').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d4, .draggable_d2').removeClass('rot_d_three rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_16');
+        endNow()
+      } else {
+        karma_16();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_14 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '2');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_d3').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_two').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d3, .draggable_d2').removeClass('rot_d_two rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_15');
+        endNow()
+      } else {
+        karma_15();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_13 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '13');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_v2').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_one').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v2, .draggable_d2').removeClass('rot_d_one rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_14');
+        endNow()
+      } else {
+        karma_14();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_12 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '12');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_v3').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_six').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v3, .draggable_d2').removeClass('rot_d_six rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_13');
+        endNow()
+      } else {
+        karma_13();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_11 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '5');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_v4').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_five').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v4, .draggable_d2').removeClass('rot_d_five rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_12');
+        endNow()
+      } else {
+        karma_12();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_10 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '10');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_d5').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_four').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d5, .draggable_d2').removeClass('rot_d_four rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_11');
+        endNow()
+      } else {
+        karma_11();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_9 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '3');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_d4').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_three').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d4, .draggable_d2').removeClass('rot_d_three rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_10');
+        endNow()
+      } else {
+        karma_10();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_8 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '8');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_d3').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_two').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d3, .draggable_d2').removeClass('rot_d_two rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_9');
+        endNow()
+      } else {
+        karma_9();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_7 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '7');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_v2').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_one').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v2, .draggable_d2').removeClass('rot_d_one rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_8');
+        endNow()
+      } else {
+        karma_8();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_6 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '6');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_v3').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_six').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v3, .draggable_d2').removeClass('rot_d_six rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_7');
+        endNow()
+      } else {
+        karma_7();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_5 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '5');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_v4').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_five').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v4, .draggable_d2').removeClass('rot_d_five rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_6');
+        endNow()
+      } else {
+        karma_6();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_4 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '4');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_d5').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_four').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d5, .draggable_d2').removeClass('rot_d_four rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_5');
+        endNow()
+      } else {
+        karma_5();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_3 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '3');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_d4').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_three').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d4, .draggable_d2').removeClass('rot_d_three rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3%');
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_4');
+        endNow()
+      } else {
+        karma_4();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+karma_2 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '2');
+  localStorage.setItem('pausedProtName', 'Кармический протокол');
+  jQuery('.status_percent').text('0%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_d2'));
+      jQuery('.draggable_d3').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_two').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d3, .draggable_d2').removeClass('rot_d_two rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      jQuery('.status_percent').text('3');
+      if (pausedStatus == true) {
         localStorage.setItem('paused', 'karma_3');
         endNow()
       } else {
-        // karma_3();
-        console.log('continue');
+        karma_3();
+        // console.log('continue');
       } 
     }
   }, 250);
 }
 karma = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('3');
-  localStorage.setItem('pausedPhases', '3');
+  jQuery('.status_pahaze_all').text('67676767');
+  localStorage.setItem('pausedPhases', '1');
   localStorage.setItem('pausedProtName', 'Кармический протокол');
   jQuery('.status_percent').text('0%');
   jQuery('.status_pahaze_now').text('1');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
-  console.log('Фаза 1/1');
   count_animation = 0;
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
