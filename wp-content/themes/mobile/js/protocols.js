@@ -15972,7 +15972,7 @@ universal = function(){
   }, 1000);
 }
 
-karma2 = function(){
+karma_2 = function(){
   jQuery('.status').removeClass('hidden');
   jQuery('.status_pahaze_all').text('3');
   localStorage.setItem('pausedPhases', '3');
