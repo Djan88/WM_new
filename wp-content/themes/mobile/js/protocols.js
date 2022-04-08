@@ -15985,13 +15985,13 @@ karma_2 = function(){
   phaseOne = setInterval(function(){
     if (count_animation <= 104){
       sideFormuls(count_animation, jQuery('.draggable_d2'));
-      jQuery('.draggable_v2').addClass('rot_zone_supersolis').css({
+      jQuery('.draggable_d3').addClass('rot_zone_supersolis').css({
         color: 'transparent',
         transform: 'scale(1.3)',
         background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
         opacity: 0.8
       });
-      jQuery('.draggable_d3').addClass('rot_d_two').css({
+      jQuery('.draggable_d2').addClass('rot_d_two').css({
         color: 'transparent',
         transform: 'scale(1.3)',
         background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
@@ -16000,7 +16000,7 @@ karma_2 = function(){
       count_animation += 1;
     } else {
       clearInterval(phaseOne);
-      jQuery('.draggable_v2, .draggable_d3').removeClass('rot_d_one rot_zone_supersolis').css({
+      jQuery('.draggable_d3, .draggable_d2').removeClass('rot_d_one rot_zone_supersolis').css({
         color: '#FFF0C7',
         transform: 'scale(1)',
         background: 'rgba(83, 35, 69, 0.4)',
