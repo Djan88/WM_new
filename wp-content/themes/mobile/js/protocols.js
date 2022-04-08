@@ -16001,7 +16001,7 @@ karma = function(){
       count_animation += 1;
     } else {
       clearInterval(phaseOne);
-      jQuery('.draggable_v2, .draggable_d2').css({
+      jQuery('.draggable_v2, .draggable_d2').removeClass('rot_d_one rot_zone_supersolis').css({
         color: '#FFF0C7',
         transform: 'scale(1)',
         background: 'rgba(83, 35, 69, 0.4)',
