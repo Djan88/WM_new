@@ -18408,9 +18408,9 @@ moon_1 = function(){
   phaseOne = setInterval(function(){
     if (count_animation <= 1080){
       sideFormuls(count_animation, jQuery('.draggable_s2'));
-      if (count_animation == 1 || count_animation == 120 || count_animation == 240 || count_animation == 360 || count_animation == 480 || count_animation == 600 || count_animation == 720 || count_animation == 840 || count_animation == 960 || count_animation == 1080){
-          reloadSound.play();
-      };
+      // if (count_animation == 1 || count_animation == 120 || count_animation == 240 || count_animation == 360 || count_animation == 480 || count_animation == 600 || count_animation == 720 || count_animation == 840 || count_animation == 960 || count_animation == 1080){
+      //     reloadSound.play();
+      // };
       if (count_animation <= 120){
         jQuery('.zone_v0, .zone_v1, .zone_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
       } else if (count_animation > 120 && count_animation <= 240){
