@@ -18391,12 +18391,130 @@ karma = function(){
   }, 250);
 }
 
+
+
+
+moon_1_6 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('rtrtrtrt');
+  localStorage.setItem('pausedPhases', '1');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('92%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_v0, .draggable_v1, .draggable_s2').addClass('rot_mo_4').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_right.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    console.log(count_animation);
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_s2'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v0, .draggable_v1, .draggable_s2').removeClass('rot_mo_4').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      onEnd();
+    }
+  }, 250);
+}
+
+moon_1_5 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('rtrtrtrt');
+  localStorage.setItem('pausedPhases', '1');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('87%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_v0, .draggable_v1, .draggable_s2').addClass('rot_mo_3').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_left.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    console.log(count_animation);
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_s2'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v0, .draggable_v1, .draggable_s2').removeClass('rot_mo_3').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_1_6');
+        endNow()
+      } else {
+        moon_1_6();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_1_4 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('rtrtrtrt');
+  localStorage.setItem('pausedPhases', '1');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('71%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_v0, .draggable_v1, .draggable_s2').addClass('rot_mo_2').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_left.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    console.log(count_animation);
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_s2'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v0, .draggable_v1, .draggable_s2').removeClass('rot_mo_2').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_1_5');
+        endNow()
+      } else {
+        moon_1_5();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
 moon_1_3 = function(){
   jQuery('.status').removeClass('hidden');
   jQuery('.status_pahaze_all').text('rtrtrtrt');
   localStorage.setItem('pausedPhases', '1');
   localStorage.setItem('pausedProtName', 'Лунный протокол');
   jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_percent').text('63%');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   jQuery('.draggable_v0, .draggable_v1, .draggable_s2').addClass('rot_mo_1').css({
@@ -18423,8 +18541,8 @@ moon_1_3 = function(){
         localStorage.setItem('paused', 'moon_1_4');
         endNow()
       } else {
-        // moon_1_4();
-        console.log('continue');
+        moon_1_4();
+        // console.log('continue');
       } 
     }
   }, 250);
