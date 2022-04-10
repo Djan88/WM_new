@@ -18392,6 +18392,52 @@ karma = function(){
 }
 
 
+moon_1 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('54');
+  localStorage.setItem('pausedPhases', '1');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_percent').text('2%');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  phaseOne = setInterval(function(){
+    if (count_animation <= 104){
+      sideFormuls(count_animation, jQuery('.draggable_v2'));
+      jQuery('.draggable_v2').addClass('rot_zone_supersolis').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      jQuery('.draggable_d2').addClass('rot_d_one').css({
+        color: 'transparent',
+        transform: 'scale(1.3)',
+        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
+        opacity: 0.8
+      });
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v2, .draggable_d2').removeClass('rot_d_one rot_zone_supersolis').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'karma_2');
+        endNow()
+      } else {
+        karma_2();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -18408,6 +18454,16 @@ checkPoints = function(){
     }
   });
 }
+
+// curient moon day
+let moonBegin = 1613032380000;
+let moonMonth = 29.53059 * 24 * 60 * 60 * 1000;
+let now = Date.now();
+let moonDay = ((now - moonBegin) %  moonMonth)/(moonMonth/30)|0;
+if (moonDay == 0) {
+  moonDay = 1;
+}
+console.log(`Сейчас ${moonDay} лунный день`);
 
 // START
 jQuery('.btn_start').on('click', function(event) {
@@ -18468,6 +18524,37 @@ jQuery('.btn_start').on('click', function(event) {
       } else if (protocol == 'karma') {
         karma();
         jQuery('.status_title').text('Кармический протокол');
+      } else if (protocol == 'moon') {
+        if (moonDay == 8 || moonDay == 22) {
+          moon_8();
+        } else if (moonDay == 9 || moonDay == 21) {
+          moon_9();
+        } else if (moonDay == 10 || moonDay == 20) {
+          moon_10();
+        } else if (moonDay == 11 || moonDay == 19) {
+          moon_11();
+        } else if (moonDay == 12 || moonDay == 18) {
+          moon_12();
+        } else if (moonDay == 14 || moonDay == 15 || moonDay == 16) {
+          moon_14();
+        } else if (moonDay == 13 || moonDay == 17) {
+          moon_13();
+        } else if (moonDay == 29 || moonDay == 30 || moonDay == 1) {
+          moon_1();
+        } else if (moonDay == 2 || moonDay == 28) {
+          moon_2();
+        } else if (moonDay == 3 || moonDay == 27) {
+          moon_3();
+        } else if (moonDay == 4 || moonDay == 26) {
+          moon_4();
+        } else if (moonDay == 5 || moonDay == 25) {
+          moon_5();
+        } else if (moonDay == 6 || moonDay == 24) {
+          moon_6();
+        } else if (moonDay == 7 || moonDay == 23) {
+          moon_7();
+        }
+        jQuery('.status_title').text('Протокол лунного дня');
       }
       jQuery('.header-title').text('Программа выполняется');
       jQuery('.btn_start').attr('disabled', 'disabled');
