@@ -658,6 +658,200 @@ input.wpcf7-form-control.wpcf7-submit
     transform: rotate(360deg) scale(1.5);
   }
 }
+.rot_mo_1 {
+  animation: 58s linear 0s normal none infinite running rot_mo_1;
+  -webkit-animation: 58s linear 0s normal none infinite running rot_mo_1;
+}
+@keyframes rot_mo_1 {
+  0% {
+    transform: rotate(-10deg) scale(1.5);
+  }
+  67% {
+    transform: rotate(-70deg) scale(1.5);
+  }
+  99% {
+    transform: rotate(-70deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(0deg) scale(1.5);
+  }
+}
+@-webkit-keyframes rot_mo_1 {
+  0% {
+    transform: rotate(-10deg) scale(1.5);
+  }
+  67% {
+    transform: rotate(-70deg) scale(1.5);
+  }
+  99% {
+    transform: rotate(-70deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(0deg) scale(1.5);
+  }
+}
+.rot_mo_2 {
+  animation: 58s linear 0s normal none infinite running rot_mo_2;
+  -webkit-animation: 58s linear 0s normal none infinite running rot_mo_2;
+}
+@keyframes rot_mo_2 {
+  0% {
+    transform: rotate(20deg) scale(1.5);
+  }
+  67% {
+    transform: rotate(80deg) scale(1.5);
+  }
+  99% {
+    transform: rotate(80deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(0deg) scale(1.5);
+  }
+}
+@-webkit-keyframes rot_mo_2 {
+  0% {
+    transform: rotate(20deg) scale(1.5);
+  }
+  67% {
+    transform: rotate(80deg) scale(1.5);
+  }
+  99% {
+    transform: rotate(80deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(0deg) scale(1.5);
+  }
+}
+.rot_mo_3 {
+  animation: 58s linear 0s normal none infinite running rot_mo_3;
+  -webkit-animation: 58s linear 0s normal none infinite running rot_mo_3;
+}
+@keyframes rot_mo_3 {
+  0% {
+    transform: rotate(270deg) scale(1.5);
+  }
+  67% {
+    transform: rotate(330deg) scale(1.5);
+  }
+  99% {
+    transform: rotate(330deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(0deg) scale(1.5);
+  }
+}
+@-webkit-keyframes rot_mo_3 {
+  0% {
+    transform: rotate(270deg) scale(1.5);
+  }
+  67% {
+    transform: rotate(330deg) scale(1.5);
+  }
+  99% {
+    transform: rotate(330deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(0deg) scale(1.5);
+  }
+}
+.rot_mo_4 {
+  animation: 58s linear 0s normal none infinite running rot_mo_4;
+  -webkit-animation: 58s linear 0s normal none infinite running rot_mo_4;
+}
+@keyframes rot_mo_4 {
+  0% {
+    transform: rotate(-320deg) scale(1.5);
+  }
+  67% {
+    transform: rotate(-380deg) scale(1.5);
+  }
+  99% {
+    transform: rotate(-380deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(0deg) scale(1.5);
+  }
+}
+@-webkit-keyframes rot_mo_4 {
+  0% {
+    transform: rotate(-320deg) scale(1.5);
+  }
+  67% {
+    transform: rotate(-380deg) scale(1.5);
+  }
+  99% {
+    transform: rotate(-380deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(0deg) scale(1.5);
+  }
+}
+
+.rot_mo_5 {
+  animation: 58s linear 0s normal none infinite running rot_mo_5;
+  -webkit-animation: 58s linear 0s normal none infinite running rot_mo_5;
+}
+@keyframes rot_mo_5 {
+  0% {
+    transform: rotate(-300deg) scale(1.5);
+  }
+  67% {
+    transform: rotate(-360deg) scale(1.5);
+  }
+  99% {
+    transform: rotate(-360deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(0deg) scale(1.5);
+  }
+}
+@-webkit-keyframes rot_mo_5 {
+  0% {
+    transform: rotate(-300deg) scale(1.5);
+  }
+  67% {
+    transform: rotate(-360deg) scale(1.5);
+  }
+  99% {
+    transform: rotate(-360deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(0deg) scale(1.5);
+  }
+}
+
+.rot_mo_6 {
+  animation: 58s linear 0s normal none infinite running rot_mo_6;
+  -webkit-animation: 58s linear 0s normal none infinite running rot_mo_6;
+}
+@keyframes rot_mo_6 {
+  0% {
+    transform: rotate(-55deg) scale(1.5);
+  }
+  67% {
+    transform: rotate(-95deg) scale(1.5);
+  }
+  99% {
+    transform: rotate(-95deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(0deg) scale(1.5);
+  }
+}
+@-webkit-keyframes rot_mo_6 {
+  0% {
+    transform: rotate(-55deg) scale(1.5);
+  }
+  67% {
+    transform: rotate(-95deg) scale(1.5);
+  }
+  99% {
+    transform: rotate(-95deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(0deg) scale(1.5);
+  }
+}
 
 @media (min-width: 600px) {
   .sweet-alert

@@ -18391,6 +18391,95 @@ karma = function(){
   }, 250);
 }
 
+moon_1_3 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('rtrtrtrt');
+  localStorage.setItem('pausedPhases', '1');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_v0, .draggable_v1, .draggable_s2').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_right.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  jQuery('.draggable_v0, .draggable_v1, .draggable_s2').addClass('rot_mo_1');
+  phaseOne = setInterval(function(){
+    if (count_animation <= 160){
+      sideFormuls(count_animation, jQuery('.draggable_s2'));
+      count_animation += 1;
+    } else if(count_animation <= 228) {
+        // count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v0, .draggable_v1, .draggable_s2').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      jQuery('.draggable_v0, .draggable_v1, .draggable_s2').removeClass('rot_mo_1');
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_1_4');
+        endNow()
+      } else {
+        // moon_1_4();
+        console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_1_2 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('rtrtrtrt');
+  localStorage.setItem('pausedPhases', '1');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_v0, .draggable_v1, .draggable_s2').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  jQuery('.draggable_v0').css({background: '#fff url(/wp-content/themes/bcwish/img/plod.png) center center/100% no-repeat'});
+  phaseOne = setInterval(function(){
+    if (count_animation <= 360){
+      sideFormuls(count_animation, jQuery('.draggable_s2'));
+      // if (count_animation == 1 || count_animation == 120 || count_animation == 240 || count_animation == 360 || count_animation == 480 || count_animation == 600 || count_animation == 720 || count_animation == 840 || count_animation == 960 || count_animation == 1080){
+      //     reloadSound.play();
+      // };
+      if (count_animation > 0 && count_animation <= 120) {
+        jQuery('.draggable_v1, .draggable_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/disfunction.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 220) {
+        jQuery('.draggable_v1, .draggable_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/travma.png) center center/100% no-repeat'});
+      } else if (count_animation > 220 && count_animation <= 360) {
+        jQuery('.draggable_v1, .draggable_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/povregdenie_demona.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v0, .draggable_v1, .draggable_s2').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_1_3');
+        endNow()
+      } else {
+        moon_1_3();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
 
 moon_1 = function(){
   jQuery('.status').removeClass('hidden');
@@ -18452,8 +18541,8 @@ moon_1 = function(){
         localStorage.setItem('paused', 'moon_1_2');
         endNow()
       } else {
-        // moon_1_2();
-        console.log('continue');
+        moon_1_2();
+        // console.log('continue');
       } 
     }
   }, 250);
