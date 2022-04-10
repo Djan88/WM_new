@@ -18411,7 +18411,7 @@ moon_1_3 = function(){
       sideFormuls(count_animation, jQuery('.draggable_s2'));
       count_animation += 1;
     } else if(count_animation <= 228) {
-        // count_animation += 1;
+        count_animation += 1;
     } else {
       clearInterval(phaseOne);
       jQuery('.draggable_v0, .draggable_v1, .draggable_s2').removeClass('rot_mo_1').css({
