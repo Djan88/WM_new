@@ -18394,32 +18394,54 @@ karma = function(){
 
 moon_1 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('54');
+  jQuery('.status_pahaze_all').text('rtrtrtrt');
   localStorage.setItem('pausedPhases', '1');
   localStorage.setItem('pausedProtName', 'Лунный протокол');
-  jQuery('.status_percent').text('2%');
   jQuery('.status_pahaze_now').text('1');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
+  jQuery('.zone_v0, .zone_v1, .zone_s2').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
   phaseOne = setInterval(function(){
-    if (count_animation <= 104){
-      sideFormuls(count_animation, jQuery('.draggable_v2'));
-      jQuery('.draggable_v2').addClass('rot_zone_supersolis').css({
-        color: 'transparent',
-        transform: 'scale(1.3)',
-        background: '#fff url(/wp-content/themes/mobile/img/super_plod.png) 0 0/100% no-repeat',
-        opacity: 0.8
-      });
-      jQuery('.draggable_d2').addClass('rot_d_one').css({
-        color: 'transparent',
-        transform: 'scale(1.3)',
-        background: '#fff url(/wp-content/themes/mobile/img/d_.png) 0 0/100% no-repeat',
-        opacity: 0.8
-      });
+    if (count_animation <= 1080){
+      sideFormuls(count_animation, jQuery('.draggable_s2'));
+      if (count_animation == 1 || count_animation == 120 || count_animation == 240 || count_animation == 360 || count_animation == 480 || count_animation == 600 || count_animation == 720 || count_animation == 840 || count_animation == 960 || count_animation == 1080){
+          reloadSound.play();
+      };
+      if (count_animation <= 120){
+        jQuery('.zone_v0, .zone_v1, .zone_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 240){
+        jQuery('.status_percent').text('5%');
+        jQuery('.zone_v0, .zone_v1, .zone_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 240 && count_animation <= 360){
+        jQuery('.status_percent').text('10%');
+        jQuery('.zone_v0, .zone_v1, .zone_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 360 && count_animation <= 480){
+        jQuery('.status_percent').text('15%');
+        jQuery('.zone_v0, .zone_v1, .zone_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 480 && count_animation <= 600){
+        jQuery('.status_percent').text('20%');
+        jQuery('.zone_v0, .zone_v1, .zone_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 600 && count_animation <= 720){
+        jQuery('.status_percent').text('25%');
+        jQuery('.zone_v0, .zone_v1, .zone_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 720 && count_animation <= 840){
+        jQuery('.status_percent').text('30%');
+        jQuery('.zone_v0, .zone_v1, .zone_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 840 && count_animation <= 960){
+        jQuery('.status_percent').text('35%');
+        jQuery('.zone_v0, .zone_v1, .zone_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 960 && count_animation <= 1080){
+        jQuery('.status_percent').text('40%');
+        jQuery('.zone_v0, .zone_v1, .zone_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      }
       count_animation += 1;
     } else {
       clearInterval(phaseOne);
-      jQuery('.draggable_v2, .draggable_d2').removeClass('rot_d_one rot_zone_supersolis').css({
+      jQuery('.zone_v0, .zone_v1, .zone_s2').css({
         color: '#FFF0C7',
         transform: 'scale(1)',
         background: 'rgba(83, 35, 69, 0.4)',
@@ -18427,11 +18449,11 @@ moon_1 = function(){
       });
       count_animation = 0;
       if (pausedStatus == true) {
-        localStorage.setItem('paused', 'karma_2');
+        localStorage.setItem('paused', 'moon_1_2');
         endNow()
       } else {
-        karma_2();
-        // console.log('continue');
+        // moon_1_2();
+        console.log('continue');
       } 
     }
   }, 250);
