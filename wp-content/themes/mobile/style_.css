@@ -122,6 +122,7 @@ div#recallbar, div#wpadminbar
 {
   background: #94B49F;
   color: #FFF;
+  z-index: 500;
   transform: scale(1.1);
 }
 .photo_upload
