@@ -211,6 +211,18 @@
 							</div>
 						</div>
 						<div class="row">
+							<?php 
+							  $cur_user_id = get_current_user_id();
+							  $testing_user = 212;
+							?>
+							<div class="testing_mode col-12">
+								<div class="btn-group" role="group" aria-label="Testing Mode">
+								  <button type="button" class="btn btn-primary active">P 300</button>
+								  <button type="button" class="btn btn-primary">График</button>
+								</div>
+							</div>
+						</div>
+						<div class="row">
 							<div class="col-2 text_center diagnostic_container">
 								<div class="zone zone_diag draggable_y">
 									<i class="fas fa-arrows-alt-v"></i>
@@ -218,10 +230,6 @@
 							</div>
 							<div class="col-10 text_center zone_diag diagnostic_rezult">
 								<img class="loaded_img" src="" alt="">
-								<?php 
-								  $cur_user_id = get_current_user_id();
-								  $testing_user = 212;
-								?>
 								<?php if (current_user_can('administrator')|| $cur_user_id === $testing_user) { ?>
 								<div class="zone-testing">
 								  <div class="zone-testing_item zone-testing_item_1 zone-testing_item__check"><span class="zone-testing_item_n">1</span></div>

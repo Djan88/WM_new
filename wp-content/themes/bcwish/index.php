@@ -1431,11 +1431,11 @@
                     </div>
                   </div>
                   <div class="col-sm-6 wizard_grafic_photo">
-                    <img src="" class="wizard_returned" alt="wizard_returned">
                     <?php 
                       $cur_user_id = get_current_user_id();
                       $testing_user = 212;
                     ?>
+                    <img src="" class="wizard_returned" alt="wizard_returned">
                     <?php if (current_user_can('administrator')|| $cur_user_id === $testing_user) { ?>
                     <div class="zone-testing">
                       <div class="zone-testing_item zone-testing_item_1 zone-testing_item__check"><span class="zone-testing_item_n">1</span></div>
