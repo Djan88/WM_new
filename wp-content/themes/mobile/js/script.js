@@ -250,12 +250,12 @@ jQuery(document).ready(function () {
   }
 
   document.querySelector('.testing_mode_item_p').onclick = function(){
-    document.querySelector('.testing_mode_item_p').addClass('active');
-    document.querySelector('.testing_mode_item_g').removeClass('active');
+    document.querySelector('.testing_mode_item_p').classList.add('active');
+    document.querySelector('.testing_mode_item_g').classList.remove('active');
   }
   document.querySelector('.testing_mode_item_g').onclick = function(){
-    document.querySelector('.testing_mode_item_g').addClass('active');
-    document.querySelector('.testing_mode_item_p').removeClass('active');
+    document.querySelector('.testing_mode_item_g').classList.add('active');
+    document.querySelector('.testing_mode_item_p').classList.remove('active');
   }
 
   for (var i = 0; i < zone_testing.length; i++) {
