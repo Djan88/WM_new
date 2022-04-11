@@ -94,7 +94,7 @@
             <a target="_blank" href="https://www.youtube.com/watch?v=nu73-7soe8g&t=191s" class="youtube"><i class="fa fa-youtube"></i></a>
             <a class="hidden" target="_blank" href="https://www.facebook.com/profile.php?id=100012253260685&pnref" class="facebook"><i class="fa fa-facebook"></i></a>
             <a target="_blank" href="https://vk.com/chikurov_studio" class="vk"><i class="fa fa-vk"></i></a>
-            <a target="_blank" href="https://chikurov.com" class="site"><i class="fa fa-globe"></i></a>
+            <a target="_blank" href="https://chikurov.eu" class="site"><i class="fa fa-globe"></i></a>
           </div>
         </div>
       </div>
@@ -148,7 +148,7 @@
                 <a target="_blank" href="https://www.youtube.com/user/ThePractik01/" class="youtube"><i class="fa fa-youtube"></i></a>
                 <a class="hidden" target="_blank" href="https://www.facebook.com/profile.php?id=100012253260685&pnref" class="facebook"><i class="fa fa-facebook"></i></a>
                 <a target="_blank" href="https://vk.com/chikurov_studio" class="vk"><i class="fa fa-vk"></i></a>
-                <a target="_blank" href="https://chikurov.com" class="site"><i class="fa fa-globe"></i></a>
+                <a target="_blank" href="https://chikurov.eu" class="site"><i class="fa fa-globe"></i></a>
               </div>
             </li>
           </ul>
@@ -1708,7 +1708,7 @@
                 <a target="_blank" href="https://www.youtube.com/user/ThePractik01/" class="youtube"><i class="fa fa-youtube"></i></a>
                 <a class="hidden" target="_blank" href="https://www.facebook.com/profile.php?id=100012253260685&pnref" class="facebook"><i class="fa fa-facebook"></i></a>
                 <a target="_blank" href="https://vk.com/chikurov_studio" class="vk"><i class="fa fa-vk"></i></a>
-                <a target="_blank" href="https://chikurov.com" class="site hidden"><i class="fa fa-globe"></i></a>
+                <a target="_blank" href="https://chikurov.eu" class="site hidden"><i class="fa fa-globe"></i></a>
               </div>
             </div>
             <div class="col-sm-4">
