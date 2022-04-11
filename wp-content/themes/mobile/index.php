@@ -187,7 +187,7 @@
 			  	    <div data-protocol="karma" class="col protocols_item protocols_item_10 text_center">
 			  	      <span class="protocols_item_title">Кармический</span>
 			  	      <div class="protocols_item_img">
-			  	      	<i class="fas fa-eye-open"></i>
+			  	      	<i class="fas fa-eye"></i>
 			  	      </div>
 			  	      <div class="protocols_item_content hidden">Протокол предназначен для очистки накопленной личной истории (Кармы). Рекомендуем использовать не чаще раза в месяц</div>
 			  	    </div>
