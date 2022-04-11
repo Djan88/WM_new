@@ -86,7 +86,8 @@ div#recallbar, div#wpadminbar
 {
   position: fixed;
   width: 100%;
-  z-index: 598;
+  z-index: 999;
+  box-shadow: 0 6px 16px rgb(26 61 107 / 16%);
 }
 .content
 {
@@ -108,19 +109,20 @@ div#recallbar, div#wpadminbar
 {
   position: relative;
   color: #FFF0C7;
-  transition: all 1s linear;
+  transition: all .3s linear;
   margin: 5px;
-  border: 1px solid #f7cb52;
+  border: 1px solid #196166;
   border-radius: 6px;
   cursor: pointer;
-  background: #795371;
-  background: linear-gradient(#6c586f, #4d2449);
+  background: #196166;
+  /*background: linear-gradient(#6c586f, #4d2449);*/
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 }
 .protocols_item.active, .mode-item.active
 {
-  background: radial-gradient(#FFF0C7, transparent);
+  background: #94B49F;
   color: #FFF;
+  transform: scale(1.1);
 }
 .photo_upload
 {
@@ -149,6 +151,7 @@ div#recallbar, div#wpadminbar
 {
   font-size: 18px;
   height: 130px;
+  font-weight: 500;
   overflow: scroll;
 }
 .choice_protocol 
@@ -208,8 +211,8 @@ span.menu_item_img
   text-align: center;
   padding-left: 15px;
   padding-top: 10px;
-  border-top: 1px solid #FDCD6D;
-  color: #FDCD6D;
+  border-top: 1px solid #196166;
+  color: #196166;
   margin-top: 20px;
 }
 .credits_heading 
@@ -218,7 +221,7 @@ span.menu_item_img
 }
 .user_avatar img
 {
-  border: 1px solid #FDCD6D;
+  border: 1px solid #196166;
   border-radius: 50%;
   margin-top: -10px;
 }
@@ -310,7 +313,7 @@ span.menu_item_img
 }
 .zones
 {
-  background: #673158;
+  background: #B4CFB0;
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
   padding: 5px 0 10px;
   border-radius: 6px;
@@ -326,8 +329,8 @@ span.menu_item_img
 {
   z-index: 500;
   cursor: pointer;
-  background: #522345;
-  border: 1px solid #FFF0C7;
+  background: #fff;
+  border: 1px solid #196166;
   border-radius: 50%;
   display: inline-block;
   width: 30px;
@@ -405,7 +408,7 @@ input.crop_photo
   border-top-right-radius: 50%;
   border-bottom-right-radius: 50%;
   max-width: 30%;
-  background: #2f0707;
+  background: #196166;
   position: absolute;
   -webkit-transition: width 0.5s linear;
   -moz-transition: width 0.5s linear;
