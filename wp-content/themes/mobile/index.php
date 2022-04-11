@@ -170,7 +170,7 @@
 			      </div>
 			      <div class="protocols_item_content hidden">Универсальный протокол подходит для большинства типичных дисфункций. Если вы затрудняетесь с выбором типа протокола - смело выбирайте универсальный!</div>
 			    </div>
-			    <div data-protocol="visceral" class="col protocols_item protocols_item_8 text_center">
+			    <div data-protocol="visceral" class="col protocols_item protocols_item_9 text_center">
 			      <span class="protocols_item_title">Висцеральный</span>
 			      <div class="protocols_item_img">
 			      	<i class="fab fa-stumbleupon"></i>
@@ -178,6 +178,28 @@
 			      <div class="protocols_item_content hidden">Предназначен для оптимального энергетического баланса внутренних органов, включая нормализацию обмена веществ, иммунитета и гормонов! Может быть использован в комбинации с другими DSV протоколами либо самостоятельно.</div>
 			    </div>
 			  </div>
+			  <?php 
+			    $cur_user_id = get_current_user_id();
+			    $testing_user = 212;
+			  ?>
+			  <?php if (current_user_can('administrator')|| $cur_user_id === $testing_user) { ?>
+			  		<div class="row">
+			  	    <div data-protocol="karma" class="col protocols_item protocols_item_10 text_center">
+			  	      <span class="protocols_item_title">Кармический</span>
+			  	      <div class="protocols_item_img">
+			  	      	<i class="fas fa-eye-open"></i>
+			  	      </div>
+			  	      <div class="protocols_item_content hidden">Протокол предназначен для очистки накопленной личной истории (Кармы). Рекомендуем использовать не чаще раза в месяц</div>
+			  	    </div>
+			  	    <div data-protocol="moon" class="col protocols_item protocols_item_11 text_center">
+			  	      <span class="protocols_item_title">Лунный</span>
+			  	      <div class="protocols_item_img">
+			  	      	<i class="fas fa-moon"></i>
+			  	      </div>
+			  	      <div class="protocols_item_content hidden">Протокол Лунного дня учитывает напряжение зон DSV в зависимости от фазы Луны. Подходит для ежедневного применения</div>
+			  	    </div>
+			  	  </div>
+			  <?php } ?>
 			</div>
 			<!-- manual diagnostic -->
 			<div class="mobile_screen mobile_screen_manual hidden">
