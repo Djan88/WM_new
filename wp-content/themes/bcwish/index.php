@@ -1775,7 +1775,7 @@
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
           </div>
           <div class="modal-text">
-            <div class="row" style="text-align: center;padding: 20px;font-size: 23px;">
+            <div class="row" style="text-align: center;padding: 20px;font-size: 30px;">
               <div class="col-sm-12 arrow_w_wrap">
                 <div class="row">
                   <div class="col-sm-4 col-xs-4 arrow_in_popup">
