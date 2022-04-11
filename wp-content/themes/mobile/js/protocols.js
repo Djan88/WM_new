@@ -18392,14 +18392,4319 @@ karma = function(){
 }
 
 
-
-
-moon_1_6 = function(){
+moon_12_7 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('rtrtrtrt');
+  jQuery('.status_pahaze_all').text('8');
+  localStorage.setItem('pausedPhases', '8');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('8');
+  jQuery('.status_percent').text('92%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d6, .draggable_d2, .draggable_v1, .draggable_s6, .draggable_s2').addClass('rot_mo_4').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_right.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_s6'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d6, .draggable_d2, .draggable_v1, .draggable_s6, .draggable_s2').removeClass('rot_mo_4').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      onEnd();
+    }
+  }, 250);
+}
+
+moon_12_6 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('8');
+  localStorage.setItem('pausedPhases', '7');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('7');
+  jQuery('.status_percent').text('87%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d6, .draggable_d2, .draggable_v1, .draggable_s6, .draggable_s2').addClass('rot_mo_3').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_left.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_s6'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d6, .draggable_d2, .draggable_v1, .draggable_s6, .draggable_s2').removeClass('rot_mo_3').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_12_7');
+        endNow()
+      } else {
+        moon_12_7();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_12_5 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('8');
+  localStorage.setItem('pausedPhases', '6');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('6');
+  jQuery('.status_percent').text('71%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d6, .draggable_d2, .draggable_v1, .draggable_s6, .draggable_s2').addClass('rot_mo_2').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_left.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_s6'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d6, .draggable_d2, .draggable_v1, .draggable_s6, .draggable_s2').removeClass('rot_mo_2').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_12_6');
+        endNow()
+      } else {
+        moon_12_6();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_12_4 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('8');
+  localStorage.setItem('pausedPhases', '5');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('5');
+  jQuery('.status_percent').text('63%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d6, .draggable_d2, .draggable_v1, .draggable_s6, .draggable_s2').addClass('rot_mo_1').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_right.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    console.log(count_animation);
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_s6'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d6, .draggable_d2, .draggable_v1, .draggable_s6, .draggable_s2').removeClass('rot_mo_1').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_12_5');
+        endNow()
+      } else {
+        moon_12_5();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_12_3 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('8');
+  localStorage.setItem('pausedPhases', '4');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('4');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d6, .draggable_d2, .draggable_v1, .draggable_s6, .draggable_s2').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 360){
+      sideFormuls(count_animation, jQuery('.draggable_s6'));
+      // if (count_animation == 1 || count_animation == 120 || count_animation == 240 || count_animation == 360 || count_animation == 480 || count_animation == 600 || count_animation == 720 || count_animation == 840 || count_animation == 960 || count_animation == 1080){
+      //     reloadSound.play();
+      // };
+      if (count_animation > 0 && count_animation <= 120) {
+        jQuery('.draggable_d6, .draggable_d2, .draggable_v1, .draggable_s6, .draggable_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/disfunction.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 220) {
+        jQuery('.draggable_d6, .draggable_d2, .draggable_v1, .draggable_s6, .draggable_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/travma.png) center center/100% no-repeat'});
+      } else if (count_animation > 220 && count_animation <= 360) {
+        jQuery('.draggable_d6, .draggable_d2, .draggable_v1, .draggable_s6, .draggable_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/povregdenie_demona.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d6, .draggable_d2, .draggable_v1, .draggable_s6, .draggable_s2').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_12_4');
+        endNow()
+      } else {
+        moon_12_4();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_12_2 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('8');
+  localStorage.setItem('pausedPhases', '3');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('3');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_s6, .draggable_s2').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 1080){
+      sideFormuls(count_animation, jQuery('.draggable_s2'));
+      if (count_animation <= 120){
+        jQuery('.draggable_s6, .draggable_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 240){
+        jQuery('.status_percent').text('5%');
+        jQuery('.draggable_s6, .draggable_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 240 && count_animation <= 360){
+        jQuery('.status_percent').text('10%');
+        jQuery('.draggable_s6, .draggable_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 360 && count_animation <= 480){
+        jQuery('.status_percent').text('15%');
+        jQuery('.draggable_s6, .draggable_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 480 && count_animation <= 600){
+        jQuery('.status_percent').text('20%');
+        jQuery('.draggable_s6, .draggable_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 600 && count_animation <= 720){
+        jQuery('.status_percent').text('25%');
+        jQuery('.draggable_s6, .draggable_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 720 && count_animation <= 840){
+        jQuery('.status_percent').text('30%');
+        jQuery('.draggable_s6, .draggable_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 840 && count_animation <= 960){
+        jQuery('.status_percent').text('35%');
+        jQuery('.draggable_s6, .draggable_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 960 && count_animation <= 1080){
+        jQuery('.status_percent').text('40%');
+        jQuery('.draggable_s6, .draggable_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_s6, .draggable_s2').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_12_3');
+        endNow()
+      } else {
+        moon_12_3();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_12_1 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('8');
+  localStorage.setItem('pausedPhases', '2');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('2');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_v1').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 1080){
+      sideFormuls(count_animation, jQuery('.draggable_v1'));
+      if (count_animation <= 120){
+        jQuery('.draggable_v1').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 240){
+        jQuery('.status_percent').text('5%');
+        jQuery('.draggable_v1').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 240 && count_animation <= 360){
+        jQuery('.status_percent').text('10%');
+        jQuery('.draggable_v1').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 360 && count_animation <= 480){
+        jQuery('.status_percent').text('15%');
+        jQuery('.draggable_v1').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 480 && count_animation <= 600){
+        jQuery('.status_percent').text('20%');
+        jQuery('.draggable_v1').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 600 && count_animation <= 720){
+        jQuery('.status_percent').text('25%');
+        jQuery('.draggable_v1').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 720 && count_animation <= 840){
+        jQuery('.status_percent').text('30%');
+        jQuery('.draggable_v1').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 840 && count_animation <= 960){
+        jQuery('.status_percent').text('35%');
+        jQuery('.draggable_v1').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 960 && count_animation <= 1080){
+        jQuery('.status_percent').text('40%');
+        jQuery('.draggable_v1').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v1').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_12_2');
+        endNow()
+      } else {
+        moon_12_2();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_12 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('8');
   localStorage.setItem('pausedPhases', '1');
   localStorage.setItem('pausedProtName', 'Лунный протокол');
   jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d6, .draggable_d2').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 1080){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      if (count_animation <= 120){
+        jQuery('.draggable_d6, .draggable_d2').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 240){
+        jQuery('.status_percent').text('5%');
+        jQuery('.draggable_d6, .draggable_d2').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 240 && count_animation <= 360){
+        jQuery('.status_percent').text('10%');
+        jQuery('.draggable_d6, .draggable_d2').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 360 && count_animation <= 480){
+        jQuery('.status_percent').text('15%');
+        jQuery('.draggable_d6, .draggable_d2').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 480 && count_animation <= 600){
+        jQuery('.status_percent').text('20%');
+        jQuery('.draggable_d6, .draggable_d2').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 600 && count_animation <= 720){
+        jQuery('.status_percent').text('25%');
+        jQuery('.draggable_d6, .draggable_d2').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 720 && count_animation <= 840){
+        jQuery('.status_percent').text('30%');
+        jQuery('.draggable_d6, .draggable_d2').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 840 && count_animation <= 960){
+        jQuery('.status_percent').text('35%');
+        jQuery('.draggable_d6, .draggable_d2').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 960 && count_animation <= 1080){
+        jQuery('.status_percent').text('40%');
+        jQuery('.draggable_d6, .draggable_d2').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d6, .draggable_d2').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_12_1');
+        endNow()
+      } else {
+        moon_12_1();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_11_7 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('8');
+  localStorage.setItem('pausedPhases', '8');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('8');
+  jQuery('.status_percent').text('92%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d6, .draggable_v5, .draggable_v1, .draggable_s6').addClass('rot_mo_4').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_right.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_s6'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d6, .draggable_v5, .draggable_v1, .draggable_s6').removeClass('rot_mo_4').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      onEnd();
+    }
+  }, 250);
+}
+
+moon_11_6 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('8');
+  localStorage.setItem('pausedPhases', '7');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('7');
+  jQuery('.status_percent').text('87%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d6, .draggable_v5, .draggable_v1, .draggable_s6').addClass('rot_mo_3').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_left.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_s6'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d6, .draggable_v5, .draggable_v1, .draggable_s6').removeClass('rot_mo_3').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_11_7');
+        endNow()
+      } else {
+        moon_11_7();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_11_5 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('8');
+  localStorage.setItem('pausedPhases', '6');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('6');
+  jQuery('.status_percent').text('71%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d6, .draggable_v5, .draggable_v1, .draggable_s6').addClass('rot_mo_2').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_left.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_s6'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d6, .draggable_v5, .draggable_v1, .draggable_s6').removeClass('rot_mo_2').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_11_6');
+        endNow()
+      } else {
+        moon_11_6();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_11_4 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('8');
+  localStorage.setItem('pausedPhases', '5');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('5');
+  jQuery('.status_percent').text('63%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d6, .draggable_v5, .draggable_v1, .draggable_s6').addClass('rot_mo_1').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_right.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    console.log(count_animation);
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_s6'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d6, .draggable_v5, .draggable_v1, .draggable_s6').removeClass('rot_mo_1').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_11_5');
+        endNow()
+      } else {
+        moon_11_5();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_11_3 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('8');
+  localStorage.setItem('pausedPhases', '4');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('4');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d6, .draggable_v5, .draggable_v1, .draggable_s6').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 360){
+      sideFormuls(count_animation, jQuery('.draggable_s6'));
+      // if (count_animation == 1 || count_animation == 120 || count_animation == 240 || count_animation == 360 || count_animation == 480 || count_animation == 600 || count_animation == 720 || count_animation == 840 || count_animation == 960 || count_animation == 1080){
+      //     reloadSound.play();
+      // };
+      if (count_animation > 0 && count_animation <= 120) {
+        jQuery('.draggable_d6, .draggable_v5, .draggable_v1, .draggable_s6').css({background: '#fff url(/wp-content/themes/bcwish/img/disfunction.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 220) {
+        jQuery('.draggable_d6, .draggable_v5, .draggable_v1, .draggable_s6').css({background: '#fff url(/wp-content/themes/bcwish/img/travma.png) center center/100% no-repeat'});
+      } else if (count_animation > 220 && count_animation <= 360) {
+        jQuery('.draggable_d6, .draggable_v5, .draggable_v1, .draggable_s6').css({background: '#fff url(/wp-content/themes/bcwish/img/povregdenie_demona.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d6, .draggable_v5, .draggable_v1, .draggable_s6').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_11_4');
+        endNow()
+      } else {
+        moon_11_4();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_11_2 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('8');
+  localStorage.setItem('pausedPhases', '3');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('3');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_s6').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 1080){
+      sideFormuls(count_animation, jQuery('.draggable_s6'));
+      if (count_animation <= 120){
+        jQuery('.draggable_s6').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 240){
+        jQuery('.status_percent').text('5%');
+        jQuery('.draggable_s6').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 240 && count_animation <= 360){
+        jQuery('.status_percent').text('10%');
+        jQuery('.draggable_s6').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 360 && count_animation <= 480){
+        jQuery('.status_percent').text('15%');
+        jQuery('.draggable_s6').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 480 && count_animation <= 600){
+        jQuery('.status_percent').text('20%');
+        jQuery('.draggable_s6').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 600 && count_animation <= 720){
+        jQuery('.status_percent').text('25%');
+        jQuery('.draggable_s6').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 720 && count_animation <= 840){
+        jQuery('.status_percent').text('30%');
+        jQuery('.draggable_s6').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 840 && count_animation <= 960){
+        jQuery('.status_percent').text('35%');
+        jQuery('.draggable_s6').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 960 && count_animation <= 1080){
+        jQuery('.status_percent').text('40%');
+        jQuery('.draggable_s6').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_s6').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_11_3');
+        endNow()
+      } else {
+        moon_11_3();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_11_1 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('8');
+  localStorage.setItem('pausedPhases', '2');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('2');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_v5, .draggable_v1').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 1080){
+      sideFormuls(count_animation, jQuery('.draggable_v5'));
+      if (count_animation <= 120){
+        jQuery('.draggable_v5, .draggable_v1').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 240){
+        jQuery('.status_percent').text('5%');
+        jQuery('.draggable_v5, .draggable_v1').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 240 && count_animation <= 360){
+        jQuery('.status_percent').text('10%');
+        jQuery('.draggable_v5, .draggable_v1').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 360 && count_animation <= 480){
+        jQuery('.status_percent').text('15%');
+        jQuery('.draggable_v5, .draggable_v1').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 480 && count_animation <= 600){
+        jQuery('.status_percent').text('20%');
+        jQuery('.draggable_v5, .draggable_v1').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 600 && count_animation <= 720){
+        jQuery('.status_percent').text('25%');
+        jQuery('.draggable_v5, .draggable_v1').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 720 && count_animation <= 840){
+        jQuery('.status_percent').text('30%');
+        jQuery('.draggable_v5, .draggable_v1').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 840 && count_animation <= 960){
+        jQuery('.status_percent').text('35%');
+        jQuery('.draggable_v5, .draggable_v1').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 960 && count_animation <= 1080){
+        jQuery('.status_percent').text('40%');
+        jQuery('.draggable_v5, .draggable_v1').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v5, .draggable_v1').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_11_2');
+        endNow()
+      } else {
+        moon_11_2();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_11 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('8');
+  localStorage.setItem('pausedPhases', '1');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d6').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 1080){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      if (count_animation <= 120){
+        jQuery('.draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 240){
+        jQuery('.status_percent').text('5%');
+        jQuery('.draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 240 && count_animation <= 360){
+        jQuery('.status_percent').text('10%');
+        jQuery('.draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 360 && count_animation <= 480){
+        jQuery('.status_percent').text('15%');
+        jQuery('.draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 480 && count_animation <= 600){
+        jQuery('.status_percent').text('20%');
+        jQuery('.draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 600 && count_animation <= 720){
+        jQuery('.status_percent').text('25%');
+        jQuery('.draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 720 && count_animation <= 840){
+        jQuery('.status_percent').text('30%');
+        jQuery('.draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 840 && count_animation <= 960){
+        jQuery('.status_percent').text('35%');
+        jQuery('.draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 960 && count_animation <= 1080){
+        jQuery('.status_percent').text('40%');
+        jQuery('.draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d6').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_11_1');
+        endNow()
+      } else {
+        moon_11_1();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_9_7 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('8');
+  localStorage.setItem('pausedPhases', '8');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('8');
+  jQuery('.status_percent').text('92%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d2, .draggable_d5, .draggable_d6, .draggable_v5, .draggable_s4').addClass('rot_mo_4').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_right.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d2, .draggable_d5, .draggable_d6, .draggable_v5, .draggable_s4').removeClass('rot_mo_4').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      onEnd();
+    }
+  }, 250);
+}
+
+moon_9_6 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('8');
+  localStorage.setItem('pausedPhases', '7');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('7');
+  jQuery('.status_percent').text('87%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d2, .draggable_d5, .draggable_d6, .draggable_v5, .draggable_s4').addClass('rot_mo_3').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_left.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d2, .draggable_d5, .draggable_d6, .draggable_v5, .draggable_s4').removeClass('rot_mo_3').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_9_7');
+        endNow()
+      } else {
+        moon_9_7();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_9_5 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('8');
+  localStorage.setItem('pausedPhases', '6');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('6');
+  jQuery('.status_percent').text('71%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d2, .draggable_d5, .draggable_d6, .draggable_v5, .draggable_s4').addClass('rot_mo_2').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_left.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d2, .draggable_d5, .draggable_d6, .draggable_v5, .draggable_s4').removeClass('rot_mo_2').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_9_6');
+        endNow()
+      } else {
+        moon_9_6();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_9_4 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('8');
+  localStorage.setItem('pausedPhases', '5');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('5');
+  jQuery('.status_percent').text('63%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d2, .draggable_d5, .draggable_d6, .draggable_v5, .draggable_s4').addClass('rot_mo_1').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_right.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    console.log(count_animation);
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d2, .draggable_d5, .draggable_d6, .draggable_v5, .draggable_s4').removeClass('rot_mo_1').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_9_5');
+        endNow()
+      } else {
+        moon_9_5();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_9_3 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('8');
+  localStorage.setItem('pausedPhases', '4');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('4');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d2, .draggable_d5, .draggable_d6, .draggable_v5, .draggable_s4').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 360){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      // if (count_animation == 1 || count_animation == 120 || count_animation == 240 || count_animation == 360 || count_animation == 480 || count_animation == 600 || count_animation == 720 || count_animation == 840 || count_animation == 960 || count_animation == 1080){
+      //     reloadSound.play();
+      // };
+      if (count_animation > 0 && count_animation <= 120) {
+        jQuery('.draggable_d2, .draggable_d5, .draggable_d6, .draggable_v5, .draggable_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/disfunction.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 220) {
+        jQuery('.draggable_d2, .draggable_d5, .draggable_d6, .draggable_v5, .draggable_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/travma.png) center center/100% no-repeat'});
+      } else if (count_animation > 220 && count_animation <= 360) {
+        jQuery('.draggable_d2, .draggable_d5, .draggable_d6, .draggable_v5, .draggable_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/povregdenie_demona.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d2, .draggable_d5, .draggable_d6, .draggable_v5, .draggable_s4').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_9_4');
+        endNow()
+      } else {
+        moon_9_4();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_9_2 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('8');
+  localStorage.setItem('pausedPhases', '3');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('3');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_s4').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 1080){
+      sideFormuls(count_animation, jQuery('.draggable_s4'));
+      if (count_animation <= 120){
+        jQuery('.draggable_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 240){
+        jQuery('.status_percent').text('5%');
+        jQuery('.draggable_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 240 && count_animation <= 360){
+        jQuery('.status_percent').text('10%');
+        jQuery('.draggable_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 360 && count_animation <= 480){
+        jQuery('.status_percent').text('15%');
+        jQuery('.draggable_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 480 && count_animation <= 600){
+        jQuery('.status_percent').text('20%');
+        jQuery('.draggable_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 600 && count_animation <= 720){
+        jQuery('.status_percent').text('25%');
+        jQuery('.draggable_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 720 && count_animation <= 840){
+        jQuery('.status_percent').text('30%');
+        jQuery('.draggable_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 840 && count_animation <= 960){
+        jQuery('.status_percent').text('35%');
+        jQuery('.draggable_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 960 && count_animation <= 1080){
+        jQuery('.status_percent').text('40%');
+        jQuery('.draggable_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_s4').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_9_3');
+        endNow()
+      } else {
+        moon_9_3();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_9_1 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('8');
+  localStorage.setItem('pausedPhases', '2');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('2');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_v5').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 1080){
+      sideFormuls(count_animation, jQuery('.draggable_v5'));
+      if (count_animation <= 120){
+        jQuery('.draggable_v5').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 240){
+        jQuery('.status_percent').text('5%');
+        jQuery('.draggable_v5').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 240 && count_animation <= 360){
+        jQuery('.status_percent').text('10%');
+        jQuery('.draggable_v5').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 360 && count_animation <= 480){
+        jQuery('.status_percent').text('15%');
+        jQuery('.draggable_v5').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 480 && count_animation <= 600){
+        jQuery('.status_percent').text('20%');
+        jQuery('.draggable_v5').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 600 && count_animation <= 720){
+        jQuery('.status_percent').text('25%');
+        jQuery('.draggable_v5').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 720 && count_animation <= 840){
+        jQuery('.status_percent').text('30%');
+        jQuery('.draggable_v5').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 840 && count_animation <= 960){
+        jQuery('.status_percent').text('35%');
+        jQuery('.draggable_v5').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 960 && count_animation <= 1080){
+        jQuery('.status_percent').text('40%');
+        jQuery('.draggable_v5').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v5').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_9_2');
+        endNow()
+      } else {
+        moon_9_2();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_9 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('8');
+  localStorage.setItem('pausedPhases', '1');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d2, .draggable_d5, .draggable_d6').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 1080){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      if (count_animation <= 120){
+        jQuery('.draggable_d2, .draggable_d5, .draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 240){
+        jQuery('.status_percent').text('5%');
+        jQuery('.draggable_d2, .draggable_d5, .draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 240 && count_animation <= 360){
+        jQuery('.status_percent').text('10%');
+        jQuery('.draggable_d2, .draggable_d5, .draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 360 && count_animation <= 480){
+        jQuery('.status_percent').text('15%');
+        jQuery('.draggable_d2, .draggable_d5, .draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 480 && count_animation <= 600){
+        jQuery('.status_percent').text('20%');
+        jQuery('.draggable_d2, .draggable_d5, .draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 600 && count_animation <= 720){
+        jQuery('.status_percent').text('25%');
+        jQuery('.draggable_d2, .draggable_d5, .draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 720 && count_animation <= 840){
+        jQuery('.status_percent').text('30%');
+        jQuery('.draggable_d2, .draggable_d5, .draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 840 && count_animation <= 960){
+        jQuery('.status_percent').text('35%');
+        jQuery('.draggable_d2, .draggable_d5, .draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 960 && count_animation <= 1080){
+        jQuery('.status_percent').text('40%');
+        jQuery('.draggable_d2, .draggable_d5, .draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d2, .draggable_d5, .draggable_d6').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_9_1');
+        endNow()
+      } else {
+        moon_9_1();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_6_7 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('8');
+  localStorage.setItem('pausedPhases', '8');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('8');
+  jQuery('.status_percent').text('92%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_s3, .draggable_v1, .draggable_v4, .draggable_d4').addClass('rot_mo_4').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_right.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_d5'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_s3, .draggable_v1, .draggable_v4, .draggable_d4').removeClass('rot_mo_4').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      onEnd();
+    }
+  }, 250);
+}
+
+moon_6_6 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('8');
+  localStorage.setItem('pausedPhases', '7');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('7');
+  jQuery('.status_percent').text('87%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_s3, .draggable_v1, .draggable_v4, .draggable_d4').addClass('rot_mo_3').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_left.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_d5'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_s3, .draggable_v1, .draggable_v4, .draggable_d4').removeClass('rot_mo_3').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_6_7');
+        endNow()
+      } else {
+        moon_6_7();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_6_5 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('8');
+  localStorage.setItem('pausedPhases', '6');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('6');
+  jQuery('.status_percent').text('71%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_s3, .draggable_v1, .draggable_v4, .draggable_d4').addClass('rot_mo_2').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_left.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_d5'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_s3, .draggable_v1, .draggable_v4, .draggable_d4').removeClass('rot_mo_2').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_6_6');
+        endNow()
+      } else {
+        moon_6_6();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_6_4 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('8');
+  localStorage.setItem('pausedPhases', '5');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('5');
+  jQuery('.status_percent').text('63%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_s3, .draggable_v1, .draggable_v4, .draggable_d4').addClass('rot_mo_1').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_right.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    console.log(count_animation);
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_d5'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_s3, .draggable_v1, .draggable_v4, .draggable_d4').removeClass('rot_mo_1').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_6_5');
+        endNow()
+      } else {
+        moon_6_5();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_6_3 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('8');
+  localStorage.setItem('pausedPhases', '4');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('4');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_s3, .draggable_v1, .draggable_v4, .draggable_d4').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 360){
+      sideFormuls(count_animation, jQuery('.draggable_d5'));
+      // if (count_animation == 1 || count_animation == 120 || count_animation == 240 || count_animation == 360 || count_animation == 480 || count_animation == 600 || count_animation == 720 || count_animation == 840 || count_animation == 960 || count_animation == 1080){
+      //     reloadSound.play();
+      // };
+      if (count_animation > 0 && count_animation <= 120) {
+        jQuery('.draggable_s3, .draggable_v1, .draggable_v4, .draggable_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/disfunction.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 220) {
+        jQuery('.draggable_s3, .draggable_v1, .draggable_v4, .draggable_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/travma.png) center center/100% no-repeat'});
+      } else if (count_animation > 220 && count_animation <= 360) {
+        jQuery('.draggable_s3, .draggable_v1, .draggable_v4, .draggable_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/povregdenie_demona.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_s3, .draggable_v1, .draggable_v4, .draggable_d4').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_6_4');
+        endNow()
+      } else {
+        moon_6_4();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_6_2 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('8');
+  localStorage.setItem('pausedPhases', '3');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('3');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_s3').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 1080){
+      sideFormuls(count_animation, jQuery('.draggable_s3'));
+      if (count_animation <= 120){
+        jQuery('.draggable_s3').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 240){
+        jQuery('.status_percent').text('5%');
+        jQuery('.draggable_s3').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 240 && count_animation <= 360){
+        jQuery('.status_percent').text('10%');
+        jQuery('.draggable_s3').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 360 && count_animation <= 480){
+        jQuery('.status_percent').text('15%');
+        jQuery('.draggable_s3').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 480 && count_animation <= 600){
+        jQuery('.status_percent').text('20%');
+        jQuery('.draggable_s3').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 600 && count_animation <= 720){
+        jQuery('.status_percent').text('25%');
+        jQuery('.draggable_s3').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 720 && count_animation <= 840){
+        jQuery('.status_percent').text('30%');
+        jQuery('.draggable_s3').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 840 && count_animation <= 960){
+        jQuery('.status_percent').text('35%');
+        jQuery('.draggable_s3').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 960 && count_animation <= 1080){
+        jQuery('.status_percent').text('40%');
+        jQuery('.draggable_s3').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_s3').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_6_3');
+        endNow()
+      } else {
+        moon_6_3();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_6_1 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('8');
+  localStorage.setItem('pausedPhases', '2');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('2');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_v1, .draggable_v4').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 1080){
+      sideFormuls(count_animation, jQuery('.draggable_v4'));
+      if (count_animation <= 120){
+        jQuery('.draggable_v1, .draggable_v4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 240){
+        jQuery('.status_percent').text('5%');
+        jQuery('.draggable_v1, .draggable_v4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 240 && count_animation <= 360){
+        jQuery('.status_percent').text('10%');
+        jQuery('.draggable_v1, .draggable_v4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 360 && count_animation <= 480){
+        jQuery('.status_percent').text('15%');
+        jQuery('.draggable_v1, .draggable_v4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 480 && count_animation <= 600){
+        jQuery('.status_percent').text('20%');
+        jQuery('.draggable_v1, .draggable_v4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 600 && count_animation <= 720){
+        jQuery('.status_percent').text('25%');
+        jQuery('.draggable_v1, .draggable_v4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 720 && count_animation <= 840){
+        jQuery('.status_percent').text('30%');
+        jQuery('.draggable_v1, .draggable_v4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 840 && count_animation <= 960){
+        jQuery('.status_percent').text('35%');
+        jQuery('.draggable_v1, .draggable_v4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 960 && count_animation <= 1080){
+        jQuery('.status_percent').text('40%');
+        jQuery('.draggable_v1, .draggable_v4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v1, .draggable_v4').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_6_2');
+        endNow()
+      } else {
+        moon_6_2();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_6 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('8');
+  localStorage.setItem('pausedPhases', '1');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d4').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 1080){
+      sideFormuls(count_animation, jQuery('.draggable_d4'));
+      if (count_animation <= 120){
+        jQuery('.draggable_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 240){
+        jQuery('.status_percent').text('5%');
+        jQuery('.draggable_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 240 && count_animation <= 360){
+        jQuery('.status_percent').text('10%');
+        jQuery('.draggable_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 360 && count_animation <= 480){
+        jQuery('.status_percent').text('15%');
+        jQuery('.draggable_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 480 && count_animation <= 600){
+        jQuery('.status_percent').text('20%');
+        jQuery('.draggable_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 600 && count_animation <= 720){
+        jQuery('.status_percent').text('25%');
+        jQuery('.draggable_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 720 && count_animation <= 840){
+        jQuery('.status_percent').text('30%');
+        jQuery('.draggable_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 840 && count_animation <= 960){
+        jQuery('.status_percent').text('35%');
+        jQuery('.draggable_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 960 && count_animation <= 1080){
+        jQuery('.status_percent').text('40%');
+        jQuery('.draggable_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d4').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_6_1');
+        endNow()
+      } else {
+        moon_6_1();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_3_6 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '7');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('7');
+  jQuery('.status_percent').text('92%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_v1, .draggable_v2, .draggable_d5').addClass('rot_mo_4').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_right.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_d5'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v1, .draggable_v2, .draggable_d5').removeClass('rot_mo_4').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      onEnd();
+    }
+  }, 250);
+}
+
+moon_3_5 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '6');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('6');
+  jQuery('.status_percent').text('87%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_v1, .draggable_v2, .draggable_d5').addClass('rot_mo_3').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_left.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_d5'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v1, .draggable_v2, .draggable_d5').removeClass('rot_mo_3').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_3_6');
+        endNow()
+      } else {
+        moon_3_6();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_3_4 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '5');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('5');
+  jQuery('.status_percent').text('71%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_v1, .draggable_v2, .draggable_d5').addClass('rot_mo_2').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_left.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_d5'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v1, .draggable_v2, .draggable_d5').removeClass('rot_mo_2').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_3_5');
+        endNow()
+      } else {
+        moon_3_5();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_3_3 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '4');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('4');
+  jQuery('.status_percent').text('63%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_v1, .draggable_v2, .draggable_d5').addClass('rot_mo_1').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_right.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    console.log(count_animation);
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_d5'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v1, .draggable_v2, .draggable_d5').removeClass('rot_mo_1').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_3_4');
+        endNow()
+      } else {
+        moon_3_4();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_3_2 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '3');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('3');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_v1, .draggable_v2, .draggable_d5').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 360){
+      sideFormuls(count_animation, jQuery('.draggable_d5'));
+      // if (count_animation == 1 || count_animation == 120 || count_animation == 240 || count_animation == 360 || count_animation == 480 || count_animation == 600 || count_animation == 720 || count_animation == 840 || count_animation == 960 || count_animation == 1080){
+      //     reloadSound.play();
+      // };
+      if (count_animation > 0 && count_animation <= 120) {
+        jQuery('.draggable_v1, .draggable_v2, .draggable_d5').css({background: '#fff url(/wp-content/themes/bcwish/img/disfunction.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 220) {
+        jQuery('.draggable_v1, .draggable_v2, .draggable_d5').css({background: '#fff url(/wp-content/themes/bcwish/img/travma.png) center center/100% no-repeat'});
+      } else if (count_animation > 220 && count_animation <= 360) {
+        jQuery('.draggable_v1, .draggable_v2, .draggable_d5').css({background: '#fff url(/wp-content/themes/bcwish/img/povregdenie_demona.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v1, .draggable_v2, .draggable_d5').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_3_3');
+        endNow()
+      } else {
+        moon_3_3();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_3_1 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '2');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('2');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_v1, .draggable_v2').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 1080){
+      sideFormuls(count_animation, jQuery('.draggable_v2'));
+      if (count_animation <= 120){
+        jQuery('.draggable_v1, .draggable_v2').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 240){
+        jQuery('.status_percent').text('5%');
+        jQuery('.draggable_v1, .draggable_v2').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 240 && count_animation <= 360){
+        jQuery('.status_percent').text('10%');
+        jQuery('.draggable_v1, .draggable_v2').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 360 && count_animation <= 480){
+        jQuery('.status_percent').text('15%');
+        jQuery('.draggable_v1, .draggable_v2').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 480 && count_animation <= 600){
+        jQuery('.status_percent').text('20%');
+        jQuery('.draggable_v1, .draggable_v2').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 600 && count_animation <= 720){
+        jQuery('.status_percent').text('25%');
+        jQuery('.draggable_v1, .draggable_v2').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 720 && count_animation <= 840){
+        jQuery('.status_percent').text('30%');
+        jQuery('.draggable_v1, .draggable_v2').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 840 && count_animation <= 960){
+        jQuery('.status_percent').text('35%');
+        jQuery('.draggable_v1, .draggable_v2').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 960 && count_animation <= 1080){
+        jQuery('.status_percent').text('40%');
+        jQuery('.draggable_v1, .draggable_v2').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v1, .draggable_v2').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_3_2');
+        endNow()
+      } else {
+        moon_3_2();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_3 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '1');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d5').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 1080){
+      sideFormuls(count_animation, jQuery('.draggable_d5'));
+      if (count_animation <= 120){
+        jQuery('.draggable_d5').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 240){
+        jQuery('.status_percent').text('5%');
+        jQuery('.draggable_d5').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 240 && count_animation <= 360){
+        jQuery('.status_percent').text('10%');
+        jQuery('.draggable_d5').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 360 && count_animation <= 480){
+        jQuery('.status_percent').text('15%');
+        jQuery('.draggable_d5').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 480 && count_animation <= 600){
+        jQuery('.status_percent').text('20%');
+        jQuery('.draggable_d5').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 600 && count_animation <= 720){
+        jQuery('.status_percent').text('25%');
+        jQuery('.draggable_d5').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 720 && count_animation <= 840){
+        jQuery('.status_percent').text('30%');
+        jQuery('.draggable_d5').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 840 && count_animation <= 960){
+        jQuery('.status_percent').text('35%');
+        jQuery('.draggable_d5').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 960 && count_animation <= 1080){
+        jQuery('.status_percent').text('40%');
+        jQuery('.draggable_d5').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d5').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_3_1');
+        endNow()
+      } else {
+        moon_3_1();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_7_6 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '7');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('7');
+  jQuery('.status_percent').text('92%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d4, .draggable_d5, .draggable_d6, .draggable_d3, .draggable_s4').addClass('rot_mo_4').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_right.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d4, .draggable_d5, .draggable_d6, .draggable_d3, .draggable_s4').removeClass('rot_mo_4').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      onEnd();
+    }
+  }, 250);
+}
+
+moon_7_5 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '6');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('6');
+  jQuery('.status_percent').text('87%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d4, .draggable_d5, .draggable_d6, .draggable_d3, .draggable_s4').addClass('rot_mo_3').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_left.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d4, .draggable_d5, .draggable_d6, .draggable_d3, .draggable_s4').removeClass('rot_mo_3').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_7_6');
+        endNow()
+      } else {
+        moon_7_6();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_7_4 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '5');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('5');
+  jQuery('.status_percent').text('71%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d4, .draggable_d5, .draggable_d6, .draggable_d3, .draggable_s4').addClass('rot_mo_2').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_left.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d4, .draggable_d5, .draggable_d6, .draggable_d3, .draggable_s4').removeClass('rot_mo_2').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_7_5');
+        endNow()
+      } else {
+        moon_7_5();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_7_3 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '4');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('4');
+  jQuery('.status_percent').text('63%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d4, .draggable_d5, .draggable_d6, .draggable_d3, .draggable_s4').addClass('rot_mo_1').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_right.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    console.log(count_animation);
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d4, .draggable_d5, .draggable_d6, .draggable_d3, .draggable_s4').removeClass('rot_mo_1').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_7_4');
+        endNow()
+      } else {
+        moon_7_4();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_7_2 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '3');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('3');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d4, .draggable_d5, .draggable_d6, .draggable_d3, .draggable_s4').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 360){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      // if (count_animation == 1 || count_animation == 120 || count_animation == 240 || count_animation == 360 || count_animation == 480 || count_animation == 600 || count_animation == 720 || count_animation == 840 || count_animation == 960 || count_animation == 1080){
+      //     reloadSound.play();
+      // };
+      if (count_animation > 0 && count_animation <= 120) {
+        jQuery('.draggable_d4, .draggable_d5, .draggable_d6, .draggable_d3, .draggable_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/disfunction.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 220) {
+        jQuery('.draggable_d4, .draggable_d5, .draggable_d6, .draggable_d3, .draggable_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/travma.png) center center/100% no-repeat'});
+      } else if (count_animation > 220 && count_animation <= 360) {
+        jQuery('.draggable_d4, .draggable_d5, .draggable_d6, .draggable_d3, .draggable_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/povregdenie_demona.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d4, .draggable_d5, .draggable_d6, .draggable_d3, .draggable_s4').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_7_3');
+        endNow()
+      } else {
+        moon_7_3();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_7_1 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '2');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('2');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_s4').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 1080){
+      sideFormuls(count_animation, jQuery('.draggable_s4'));
+      if (count_animation <= 120){
+        jQuery('.draggable_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 240){
+        jQuery('.status_percent').text('5%');
+        jQuery('.draggable_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 240 && count_animation <= 360){
+        jQuery('.status_percent').text('10%');
+        jQuery('.draggable_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 360 && count_animation <= 480){
+        jQuery('.status_percent').text('15%');
+        jQuery('.draggable_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 480 && count_animation <= 600){
+        jQuery('.status_percent').text('20%');
+        jQuery('.draggable_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 600 && count_animation <= 720){
+        jQuery('.status_percent').text('25%');
+        jQuery('.draggable_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 720 && count_animation <= 840){
+        jQuery('.status_percent').text('30%');
+        jQuery('.draggable_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 840 && count_animation <= 960){
+        jQuery('.status_percent').text('35%');
+        jQuery('.draggable_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 960 && count_animation <= 1080){
+        jQuery('.status_percent').text('40%');
+        jQuery('.draggable_s4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_s4').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_7_2');
+        endNow()
+      } else {
+        moon_7_2();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_7 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '1');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d4, .draggable_d5, .draggable_d6, .draggable_d3').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 1080){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      if (count_animation <= 120){
+        jQuery('.draggable_d4, .draggable_d5, .draggable_d6, .draggable_d3').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 240){
+        jQuery('.status_percent').text('5%');
+        jQuery('.draggable_d4, .draggable_d5, .draggable_d6, .draggable_d3').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 240 && count_animation <= 360){
+        jQuery('.status_percent').text('10%');
+        jQuery('.draggable_d4, .draggable_d5, .draggable_d6, .draggable_d3').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 360 && count_animation <= 480){
+        jQuery('.status_percent').text('15%');
+        jQuery('.draggable_d4, .draggable_d5, .draggable_d6, .draggable_d3').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 480 && count_animation <= 600){
+        jQuery('.status_percent').text('20%');
+        jQuery('.draggable_d4, .draggable_d5, .draggable_d6, .draggable_d3').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 600 && count_animation <= 720){
+        jQuery('.status_percent').text('25%');
+        jQuery('.draggable_d4, .draggable_d5, .draggable_d6, .draggable_d3').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 720 && count_animation <= 840){
+        jQuery('.status_percent').text('30%');
+        jQuery('.draggable_d4, .draggable_d5, .draggable_d6, .draggable_d3').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 840 && count_animation <= 960){
+        jQuery('.status_percent').text('35%');
+        jQuery('.draggable_d4, .draggable_d5, .draggable_d6, .draggable_d3').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 960 && count_animation <= 1080){
+        jQuery('.status_percent').text('40%');
+        jQuery('.draggable_d4, .draggable_d5, .draggable_d6, .draggable_d3').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d4, .draggable_d5, .draggable_d6, .draggable_d3').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_7_1');
+        endNow()
+      } else {
+        moon_7_1();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_5_6 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '7');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('7');
+  jQuery('.status_percent').text('92%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d4, .draggable_s3, .draggable_s2').addClass('rot_mo_4').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_right.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_s2'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d4, .draggable_s3, .draggable_s2').removeClass('rot_mo_4').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      onEnd();
+    }
+  }, 250);
+}
+
+moon_5_5 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '6');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('6');
+  jQuery('.status_percent').text('87%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d4, .draggable_s3, .draggable_s2').addClass('rot_mo_3').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_left.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_s2'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d4, .draggable_s3, .draggable_s2').removeClass('rot_mo_3').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_5_6');
+        endNow()
+      } else {
+        moon_5_6();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_5_4 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '5');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('5');
+  jQuery('.status_percent').text('71%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d4, .draggable_s3, .draggable_s2').addClass('rot_mo_2').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_left.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_s2'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d4, .draggable_s3, .draggable_s2').removeClass('rot_mo_2').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_5_5');
+        endNow()
+      } else {
+        moon_5_5();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_5_3 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '4');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('4');
+  jQuery('.status_percent').text('63%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d4, .draggable_s3, .draggable_s2').addClass('rot_mo_1').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_right.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    console.log(count_animation);
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_s2'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d4, .draggable_s3, .draggable_s2').removeClass('rot_mo_1').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_5_4');
+        endNow()
+      } else {
+        moon_5_4();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_5_2 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '3');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('3');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d4, .draggable_s3, .draggable_s2').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 360){
+      sideFormuls(count_animation, jQuery('.draggable_s2'));
+      // if (count_animation == 1 || count_animation == 120 || count_animation == 240 || count_animation == 360 || count_animation == 480 || count_animation == 600 || count_animation == 720 || count_animation == 840 || count_animation == 960 || count_animation == 1080){
+      //     reloadSound.play();
+      // };
+      if (count_animation > 0 && count_animation <= 120) {
+        jQuery('.draggable_d4, .draggable_s3, .draggable_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/disfunction.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 220) {
+        jQuery('.draggable_d4, .draggable_s3, .draggable_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/travma.png) center center/100% no-repeat'});
+      } else if (count_animation > 220 && count_animation <= 360) {
+        jQuery('.draggable_d4, .draggable_s3, .draggable_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/povregdenie_demona.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d4, .draggable_s3, .draggable_s2').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_5_3');
+        endNow()
+      } else {
+        moon_5_3();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_5_1 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '2');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('2');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_s3, .draggable_s2').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 1080){
+      sideFormuls(count_animation, jQuery('.draggable_s2'));
+      if (count_animation <= 120){
+        jQuery('.draggable_s3, .draggable_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 240){
+        jQuery('.status_percent').text('5%');
+        jQuery('.draggable_s3, .draggable_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 240 && count_animation <= 360){
+        jQuery('.status_percent').text('10%');
+        jQuery('.draggable_s3, .draggable_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 360 && count_animation <= 480){
+        jQuery('.status_percent').text('15%');
+        jQuery('.draggable_s3, .draggable_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 480 && count_animation <= 600){
+        jQuery('.status_percent').text('20%');
+        jQuery('.draggable_s3, .draggable_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 600 && count_animation <= 720){
+        jQuery('.status_percent').text('25%');
+        jQuery('.draggable_s3, .draggable_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 720 && count_animation <= 840){
+        jQuery('.status_percent').text('30%');
+        jQuery('.draggable_s3, .draggable_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 840 && count_animation <= 960){
+        jQuery('.status_percent').text('35%');
+        jQuery('.draggable_s3, .draggable_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 960 && count_animation <= 1080){
+        jQuery('.status_percent').text('40%');
+        jQuery('.draggable_s3, .draggable_s2').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_s3, .draggable_s2').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_5_2');
+        endNow()
+      } else {
+        moon_5_2();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_5 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '1');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d4').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 1080){
+      sideFormuls(count_animation, jQuery('.draggable_d4'));
+      if (count_animation <= 120){
+        jQuery('.draggable_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 240){
+        jQuery('.status_percent').text('5%');
+        jQuery('.draggable_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 240 && count_animation <= 360){
+        jQuery('.status_percent').text('10%');
+        jQuery('.draggable_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 360 && count_animation <= 480){
+        jQuery('.status_percent').text('15%');
+        jQuery('.draggable_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 480 && count_animation <= 600){
+        jQuery('.status_percent').text('20%');
+        jQuery('.draggable_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 600 && count_animation <= 720){
+        jQuery('.status_percent').text('25%');
+        jQuery('.draggable_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 720 && count_animation <= 840){
+        jQuery('.status_percent').text('30%');
+        jQuery('.draggable_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 840 && count_animation <= 960){
+        jQuery('.status_percent').text('35%');
+        jQuery('.draggable_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 960 && count_animation <= 1080){
+        jQuery('.status_percent').text('40%');
+        jQuery('.draggable_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d4, .draggable_d6').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_5_1');
+        endNow()
+      } else {
+        moon_5_1();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_4_6 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '7');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('7');
+  jQuery('.status_percent').text('92%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d4, .draggable_d6, .draggable_v3, .draggable_v2').addClass('rot_mo_4').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_right.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d4, .draggable_d6, .draggable_v3, .draggable_v2').removeClass('rot_mo_4').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      onEnd();
+    }
+  }, 250);
+}
+
+moon_4_5 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '6');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('6');
+  jQuery('.status_percent').text('87%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d4, .draggable_d6, .draggable_v3, .draggable_v2').addClass('rot_mo_3').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_left.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d4, .draggable_d6, .draggable_v3, .draggable_v2').removeClass('rot_mo_3').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_4_6');
+        endNow()
+      } else {
+        moon_4_6();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_4_4 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '5');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('5');
+  jQuery('.status_percent').text('71%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d4, .draggable_d6, .draggable_v3, .draggable_v2').addClass('rot_mo_2').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_left.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d4, .draggable_d6, .draggable_v3, .draggable_v2').removeClass('rot_mo_2').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_4_5');
+        endNow()
+      } else {
+        moon_4_5();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_4_3 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '4');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('4');
+  jQuery('.status_percent').text('63%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d4, .draggable_d6, .draggable_v3, .draggable_v2').addClass('rot_mo_1').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_right.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    console.log(count_animation);
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d4, .draggable_d6, .draggable_v3, .draggable_v2').removeClass('rot_mo_1').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_4_4');
+        endNow()
+      } else {
+        moon_4_4();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_4_2 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '3');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('3');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d4, .draggable_d6, .draggable_v3, .draggable_v2').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  jQuery('.draggable_v3').css({background: '#fff url(/wp-content/themes/bcwish/img/vig_.png) center center/100% no-repeat'});
+  phaseOne = setInterval(function(){
+    if (count_animation <= 360){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      // if (count_animation == 1 || count_animation == 120 || count_animation == 240 || count_animation == 360 || count_animation == 480 || count_animation == 600 || count_animation == 720 || count_animation == 840 || count_animation == 960 || count_animation == 1080){
+      //     reloadSound.play();
+      // };
+      if (count_animation > 0 && count_animation <= 120) {
+        jQuery('.draggable_d4, .draggable_d6, .draggable_v2').css({background: '#fff url(/wp-content/themes/bcwish/img/disfunction.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 220) {
+        jQuery('.draggable_d4, .draggable_d6, .draggable_v2').css({background: '#fff url(/wp-content/themes/bcwish/img/travma.png) center center/100% no-repeat'});
+      } else if (count_animation > 220 && count_animation <= 360) {
+        jQuery('.draggable_d4, .draggable_d6, .draggable_v2').css({background: '#fff url(/wp-content/themes/bcwish/img/povregdenie_demona.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d4, .draggable_d6, .draggable_v3, .draggable_v2').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_4_3');
+        endNow()
+      } else {
+        moon_4_3();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_4_1 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '2');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('2');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_v3, .draggable_v2').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 1080){
+      sideFormuls(count_animation, jQuery('.draggable_v3'));
+      if (count_animation <= 120){
+        jQuery('.draggable_v3, .draggable_v2').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 240){
+        jQuery('.status_percent').text('5%');
+        jQuery('.draggable_v3, .draggable_v2').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 240 && count_animation <= 360){
+        jQuery('.status_percent').text('10%');
+        jQuery('.draggable_v3, .draggable_v2').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 360 && count_animation <= 480){
+        jQuery('.status_percent').text('15%');
+        jQuery('.draggable_v3, .draggable_v2').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 480 && count_animation <= 600){
+        jQuery('.status_percent').text('20%');
+        jQuery('.draggable_v3, .draggable_v2').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 600 && count_animation <= 720){
+        jQuery('.status_percent').text('25%');
+        jQuery('.draggable_v3, .draggable_v2').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 720 && count_animation <= 840){
+        jQuery('.status_percent').text('30%');
+        jQuery('.draggable_v3, .draggable_v2').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 840 && count_animation <= 960){
+        jQuery('.status_percent').text('35%');
+        jQuery('.draggable_v3, .draggable_v2').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 960 && count_animation <= 1080){
+        jQuery('.status_percent').text('40%');
+        jQuery('.draggable_v3, .draggable_v2').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v3, .draggable_v2').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_4_2');
+        endNow()
+      } else {
+        moon_4_2();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_4 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '1');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d4, .draggable_d6').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 1080){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      if (count_animation <= 120){
+        jQuery('.draggable_d4, .draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 240){
+        jQuery('.status_percent').text('5%');
+        jQuery('.draggable_d4, .draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 240 && count_animation <= 360){
+        jQuery('.status_percent').text('10%');
+        jQuery('.draggable_d4, .draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 360 && count_animation <= 480){
+        jQuery('.status_percent').text('15%');
+        jQuery('.draggable_d4, .draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 480 && count_animation <= 600){
+        jQuery('.status_percent').text('20%');
+        jQuery('.draggable_d4, .draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 600 && count_animation <= 720){
+        jQuery('.status_percent').text('25%');
+        jQuery('.draggable_d4, .draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 720 && count_animation <= 840){
+        jQuery('.status_percent').text('30%');
+        jQuery('.draggable_d4, .draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 840 && count_animation <= 960){
+        jQuery('.status_percent').text('35%');
+        jQuery('.draggable_d4, .draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 960 && count_animation <= 1080){
+        jQuery('.status_percent').text('40%');
+        jQuery('.draggable_d4, .draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d4, .draggable_d6').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_4_1');
+        endNow()
+      } else {
+        moon_4_1();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_2_6 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '7');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('7');
+  jQuery('.status_percent').text('92%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d2, .draggable_d5, .draggable_d6, .draggable_v-').addClass('rot_mo_4').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_right.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d2, .draggable_d5, .draggable_d6, .draggable_v-').removeClass('rot_mo_4').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      onEnd();
+    }
+  }, 250);
+}
+
+moon_2_5 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '6');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('6');
+  jQuery('.status_percent').text('87%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d2, .draggable_d5, .draggable_d6, .draggable_v-').addClass('rot_mo_3').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_left.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d2, .draggable_d5, .draggable_d6, .draggable_v-').removeClass('rot_mo_3').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_2_6');
+        endNow()
+      } else {
+        moon_2_6();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_2_4 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '5');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('5');
+  jQuery('.status_percent').text('71%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d2, .draggable_d5, .draggable_d6, .draggable_v-').addClass('rot_mo_2').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_left.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d2, .draggable_d5, .draggable_d6, .draggable_v-').removeClass('rot_mo_2').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_2_5');
+        endNow()
+      } else {
+        moon_2_5();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_2_3 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '4');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('4');
+  jQuery('.status_percent').text('63%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d2, .draggable_d5, .draggable_d6, .draggable_v-').addClass('rot_mo_1').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_right.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    console.log(count_animation);
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d2, .draggable_d5, .draggable_d6, .draggable_v-').removeClass('rot_mo_1').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_2_4');
+        endNow()
+      } else {
+        moon_2_4();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_2_2 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '3');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('3');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d2, .draggable_d5, .draggable_d6, .draggable_v-').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  jQuery('.draggable_v-').css({background: '#fff url(/wp-content/themes/bcwish/img/vig_.png) center center/100% no-repeat'});
+  phaseOne = setInterval(function(){
+    if (count_animation <= 360){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      // if (count_animation == 1 || count_animation == 120 || count_animation == 240 || count_animation == 360 || count_animation == 480 || count_animation == 600 || count_animation == 720 || count_animation == 840 || count_animation == 960 || count_animation == 1080){
+      //     reloadSound.play();
+      // };
+      if (count_animation > 0 && count_animation <= 120) {
+        jQuery('.draggable_d2, .draggable_d5, .draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/disfunction.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 220) {
+        jQuery('.draggable_d2, .draggable_d5, .draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/travma.png) center center/100% no-repeat'});
+      } else if (count_animation > 220 && count_animation <= 360) {
+        jQuery('.draggable_d2, .draggable_d5, .draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/povregdenie_demona.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d2, .draggable_d5, .draggable_d6, .draggable_v-').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_2_3');
+        endNow()
+      } else {
+        moon_2_3();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_2_1 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '2');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('2');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_v-').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 1080){
+      sideFormuls(count_animation, jQuery('.draggable_v-'));
+      if (count_animation <= 120){
+        jQuery('.draggable_v-').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 240){
+        jQuery('.status_percent').text('5%');
+        jQuery('.draggable_v-').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 240 && count_animation <= 360){
+        jQuery('.status_percent').text('10%');
+        jQuery('.draggable_v-').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 360 && count_animation <= 480){
+        jQuery('.status_percent').text('15%');
+        jQuery('.draggable_v-').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 480 && count_animation <= 600){
+        jQuery('.status_percent').text('20%');
+        jQuery('.draggable_v-').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 600 && count_animation <= 720){
+        jQuery('.status_percent').text('25%');
+        jQuery('.draggable_v-').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 720 && count_animation <= 840){
+        jQuery('.status_percent').text('30%');
+        jQuery('.draggable_v-').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 840 && count_animation <= 960){
+        jQuery('.status_percent').text('35%');
+        jQuery('.draggable_v-').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 960 && count_animation <= 1080){
+        jQuery('.status_percent').text('40%');
+        jQuery('.draggable_v-').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v-').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_2_2');
+        endNow()
+      } else {
+        moon_2_2();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_2 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '1');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d2, .draggable_d5, .draggable_d6').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 1080){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      if (count_animation <= 120){
+        jQuery('.draggable_d2, .draggable_d5, .draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 240){
+        jQuery('.status_percent').text('5%');
+        jQuery('.draggable_d2, .draggable_d5, .draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 240 && count_animation <= 360){
+        jQuery('.status_percent').text('10%');
+        jQuery('.draggable_d2, .draggable_d5, .draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 360 && count_animation <= 480){
+        jQuery('.status_percent').text('15%');
+        jQuery('.draggable_d2, .draggable_d5, .draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 480 && count_animation <= 600){
+        jQuery('.status_percent').text('20%');
+        jQuery('.draggable_d2, .draggable_d5, .draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 600 && count_animation <= 720){
+        jQuery('.status_percent').text('25%');
+        jQuery('.draggable_d2, .draggable_d5, .draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 720 && count_animation <= 840){
+        jQuery('.status_percent').text('30%');
+        jQuery('.draggable_d2, .draggable_d5, .draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 840 && count_animation <= 960){
+        jQuery('.status_percent').text('35%');
+        jQuery('.draggable_d2, .draggable_d5, .draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 960 && count_animation <= 1080){
+        jQuery('.status_percent').text('40%');
+        jQuery('.draggable_d2, .draggable_d5, .draggable_d6').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d2, .draggable_d5, .draggable_d6').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_2_1');
+        endNow()
+      } else {
+        moon_2_1();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_8_6 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '7');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('7');
+  jQuery('.status_percent').text('92%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d5, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_s4, .draggable_s5').addClass('rot_mo_4').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_right.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d5, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_s4, .draggable_s5').removeClass('rot_mo_4').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      onEnd();
+    }
+  }, 250);
+}
+
+moon_8_5 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '6');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('6');
+  jQuery('.status_percent').text('87%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d5, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_s4, .draggable_s5').addClass('rot_mo_3').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_left.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d5, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_s4, .draggable_s5').removeClass('rot_mo_3').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_8_6');
+        endNow()
+      } else {
+        moon_8_6();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_8_4 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '5');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('5');
+  jQuery('.status_percent').text('71%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d5, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_s4, .draggable_s5').addClass('rot_mo_2').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_left.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d5, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_s4, .draggable_s5').removeClass('rot_mo_2').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_8_5');
+        endNow()
+      } else {
+        moon_8_5();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_8_3 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '4');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('4');
+  jQuery('.status_percent').text('63%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d5, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_s4, .draggable_s5').addClass('rot_mo_1').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_right.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    console.log(count_animation);
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d5, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_s4, .draggable_s5').removeClass('rot_mo_1').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_8_4');
+        endNow()
+      } else {
+        moon_8_4();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_8_2 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '3');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('3');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d5, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_s4, .draggable_s5').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 360){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      // if (count_animation == 1 || count_animation == 120 || count_animation == 240 || count_animation == 360 || count_animation == 480 || count_animation == 600 || count_animation == 720 || count_animation == 840 || count_animation == 960 || count_animation == 1080){
+      //     reloadSound.play();
+      // };
+      if (count_animation > 0 && count_animation <= 120) {
+        jQuery('.draggable_d5, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_s4, .draggable_s5').css({background: '#fff url(/wp-content/themes/bcwish/img/disfunction.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 220) {
+        jQuery('.draggable_d5, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_s4, .draggable_s5').css({background: '#fff url(/wp-content/themes/bcwish/img/travma.png) center center/100% no-repeat'});
+      } else if (count_animation > 220 && count_animation <= 360) {
+        jQuery('.draggable_d5, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_s4, .draggable_s5').css({background: '#fff url(/wp-content/themes/bcwish/img/povregdenie_demona.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d5, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_s4, .draggable_s5').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_8_3');
+        endNow()
+      } else {
+        moon_8_3();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_8_1 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '2');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('2');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('draggable_s4, draggable_s5').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 1080){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      if (count_animation <= 120){
+        jQuery('draggable_s4, draggable_s5').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 240){
+        jQuery('.status_percent').text('5%');
+        jQuery('draggable_s4, draggable_s5').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 240 && count_animation <= 360){
+        jQuery('.status_percent').text('10%');
+        jQuery('draggable_s4, draggable_s5').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 360 && count_animation <= 480){
+        jQuery('.status_percent').text('15%');
+        jQuery('draggable_s4, draggable_s5').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 480 && count_animation <= 600){
+        jQuery('.status_percent').text('20%');
+        jQuery('draggable_s4, draggable_s5').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 600 && count_animation <= 720){
+        jQuery('.status_percent').text('25%');
+        jQuery('draggable_s4, draggable_s5').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 720 && count_animation <= 840){
+        jQuery('.status_percent').text('30%');
+        jQuery('draggable_s4, draggable_s5').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 840 && count_animation <= 960){
+        jQuery('.status_percent').text('35%');
+        jQuery('draggable_s4, draggable_s5').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 960 && count_animation <= 1080){
+        jQuery('.status_percent').text('40%');
+        jQuery('draggable_s4, draggable_s5').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('draggable_s4, draggable_s5').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_8_2');
+        endNow()
+      } else {
+        moon_8_2();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_8 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('7');
+  localStorage.setItem('pausedPhases', '1');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d5, .draggable_d6, .draggable_d3, .draggable_d4').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 1080){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      if (count_animation <= 120){
+        jQuery('.draggable_d5, .draggable_d6, .draggable_d3, .draggable_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 240){
+        jQuery('.status_percent').text('5%');
+        jQuery('.draggable_d5, .draggable_d6, .draggable_d3, .draggable_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 240 && count_animation <= 360){
+        jQuery('.status_percent').text('10%');
+        jQuery('.draggable_d5, .draggable_d6, .draggable_d3, .draggable_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 360 && count_animation <= 480){
+        jQuery('.status_percent').text('15%');
+        jQuery('.draggable_d5, .draggable_d6, .draggable_d3, .draggable_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 480 && count_animation <= 600){
+        jQuery('.status_percent').text('20%');
+        jQuery('.draggable_d5, .draggable_d6, .draggable_d3, .draggable_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 600 && count_animation <= 720){
+        jQuery('.status_percent').text('25%');
+        jQuery('.draggable_d5, .draggable_d6, .draggable_d3, .draggable_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 720 && count_animation <= 840){
+        jQuery('.status_percent').text('30%');
+        jQuery('.draggable_d5, .draggable_d6, .draggable_d3, .draggable_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 840 && count_animation <= 960){
+        jQuery('.status_percent').text('35%');
+        jQuery('.draggable_d5, .draggable_d6, .draggable_d3, .draggable_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 960 && count_animation <= 1080){
+        jQuery('.status_percent').text('40%');
+        jQuery('.draggable_d5, .draggable_d6, .draggable_d3, .draggable_d4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d5, .draggable_d6, .draggable_d3, .draggable_d4').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_8_1');
+        endNow()
+      } else {
+        moon_8_1();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_10_6 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('6');
+  localStorage.setItem('pausedPhases', '6');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('6');
+  jQuery('.status_percent').text('92%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d2, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_d5').addClass('rot_mo_4').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_right.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d2, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_d5').removeClass('rot_mo_4').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      onEnd();
+    }
+  }, 250);
+}
+
+moon_10_5 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('6');
+  localStorage.setItem('pausedPhases', '5');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('5');
+  jQuery('.status_percent').text('87%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d2, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_d5').addClass('rot_mo_3').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_left.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d2, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_d5').removeClass('rot_mo_3').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_10_6');
+        endNow()
+      } else {
+        moon_10_6();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_10_4 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('6');
+  localStorage.setItem('pausedPhases', '4');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('4');
+  jQuery('.status_percent').text('71%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d2, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_d5').addClass('rot_mo_2').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_left.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d2, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_d5').removeClass('rot_mo_2').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_10_5');
+        endNow()
+      } else {
+        moon_10_5();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_10_3 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('6');
+  localStorage.setItem('pausedPhases', '3');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('3');
+  jQuery('.status_percent').text('63%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d2, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_d5').addClass('rot_mo_1').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_right.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    console.log(count_animation);
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d2, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_d5').removeClass('rot_mo_1').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_10_4');
+        endNow()
+      } else {
+        moon_10_4();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_10_2 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('6');
+  localStorage.setItem('pausedPhases', '2');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('2');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d2, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_d5').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 360){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      // if (count_animation == 1 || count_animation == 120 || count_animation == 240 || count_animation == 360 || count_animation == 480 || count_animation == 600 || count_animation == 720 || count_animation == 840 || count_animation == 960 || count_animation == 1080){
+      //     reloadSound.play();
+      // };
+      if (count_animation > 0 && count_animation <= 120) {
+        jQuery('.draggable_d2, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_d5').css({background: '#fff url(/wp-content/themes/bcwish/img/disfunction.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 220) {
+        jQuery('.draggable_d2, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_d5').css({background: '#fff url(/wp-content/themes/bcwish/img/travma.png) center center/100% no-repeat'});
+      } else if (count_animation > 220 && count_animation <= 360) {
+        jQuery('.draggable_d2, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_d5').css({background: '#fff url(/wp-content/themes/bcwish/img/povregdenie_demona.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d2, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_d5').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_10_3');
+        endNow()
+      } else {
+        moon_10_3();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_10 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('6');
+  localStorage.setItem('pausedPhases', '1');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_d2, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_d5').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 1080){
+      sideFormuls(count_animation, jQuery('.draggable_d6'));
+      if (count_animation <= 120){
+        jQuery('.draggable_d2, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_d5').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 240){
+        jQuery('.status_percent').text('5%');
+        jQuery('.draggable_d2, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_d5').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 240 && count_animation <= 360){
+        jQuery('.status_percent').text('10%');
+        jQuery('.draggable_d2, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_d5').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 360 && count_animation <= 480){
+        jQuery('.status_percent').text('15%');
+        jQuery('.draggable_d2, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_d5').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 480 && count_animation <= 600){
+        jQuery('.status_percent').text('20%');
+        jQuery('.draggable_d2, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_d5').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 600 && count_animation <= 720){
+        jQuery('.status_percent').text('25%');
+        jQuery('.draggable_d2, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_d5').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 720 && count_animation <= 840){
+        jQuery('.status_percent').text('30%');
+        jQuery('.draggable_d2, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_d5').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 840 && count_animation <= 960){
+        jQuery('.status_percent').text('35%');
+        jQuery('.draggable_d2, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_d5').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 960 && count_animation <= 1080){
+        jQuery('.status_percent').text('40%');
+        jQuery('.draggable_d2, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_d5').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_d2, .draggable_d6, .draggable_d3, .draggable_d4, .draggable_d5').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_10_2');
+        endNow()
+      } else {
+        moon_10_2();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_14_6 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('6');
+  localStorage.setItem('pausedPhases', '6');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('6');
+  jQuery('.status_percent').text('92%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_v0, .draggable_v-, .draggable_v3').addClass('rot_mo_4').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_right.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_v3'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v0, .draggable_v-, .draggable_v3').removeClass('rot_mo_4').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      onEnd();
+    }
+  }, 250);
+}
+
+moon_14_5 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('6');
+  localStorage.setItem('pausedPhases', '5');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('5');
+  jQuery('.status_percent').text('87%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_v0, .draggable_v-, .draggable_v3').addClass('rot_mo_3').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_left.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_v3'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v0, .draggable_v-, .draggable_v3').removeClass('rot_mo_3').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_14_6');
+        endNow()
+      } else {
+        moon_14_6();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_14_4 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('6');
+  localStorage.setItem('pausedPhases', '4');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('4');
+  jQuery('.status_percent').text('71%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_v0, .draggable_v-, .draggable_v3').addClass('rot_mo_2').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_left.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_v3'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v0, .draggable_v-, .draggable_v3').removeClass('rot_mo_2').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_14_5');
+        endNow()
+      } else {
+        moon_14_5();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_14_3 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('6');
+  localStorage.setItem('pausedPhases', '3');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('3');
+  jQuery('.status_percent').text('63%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_v0, .draggable_v-, .draggable_v3').addClass('rot_mo_1').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_right.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    console.log(count_animation);
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_v3'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v0, .draggable_v-, .draggable_v3').removeClass('rot_mo_1').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_14_4');
+        endNow()
+      } else {
+        moon_14_4();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_14_2 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('6');
+  localStorage.setItem('pausedPhases', '2');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('2');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_v0, .draggable_v-, .draggable_v3').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 360){
+      sideFormuls(count_animation, jQuery('.draggable_v3'));
+      // if (count_animation == 1 || count_animation == 120 || count_animation == 240 || count_animation == 360 || count_animation == 480 || count_animation == 600 || count_animation == 720 || count_animation == 840 || count_animation == 960 || count_animation == 1080){
+      //     reloadSound.play();
+      // };
+      if (count_animation > 0 && count_animation <= 120) {
+        jQuery('.draggable_v0, .draggable_v-, .draggable_v3').css({background: '#fff url(/wp-content/themes/bcwish/img/disfunction.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 220) {
+        jQuery('.draggable_v0, .draggable_v-, .draggable_v3').css({background: '#fff url(/wp-content/themes/bcwish/img/travma.png) center center/100% no-repeat'});
+      } else if (count_animation > 220 && count_animation <= 360) {
+        jQuery('.draggable_v0, .draggable_v-, .draggable_v3').css({background: '#fff url(/wp-content/themes/bcwish/img/povregdenie_demona.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v0, .draggable_v-, .draggable_v3').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_14_3');
+        endNow()
+      } else {
+        moon_14_3();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_14 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('6');
+  localStorage.setItem('pausedPhases', '1');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_v0, .draggable_v-, .draggable_v3').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 1080){
+      sideFormuls(count_animation, jQuery('.draggable_v3'));
+      // if (count_animation == 1 || count_animation == 120 || count_animation == 240 || count_animation == 360 || count_animation == 480 || count_animation == 600 || count_animation == 720 || count_animation == 840 || count_animation == 960 || count_animation == 1080){
+      //     reloadSound.play();
+      // };
+      if (count_animation <= 120){
+        jQuery('.draggable_v0, .draggable_v-, .draggable_v3').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 240){
+        jQuery('.status_percent').text('5%');
+        jQuery('.draggable_v0, .draggable_v-, .draggable_v3').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 240 && count_animation <= 360){
+        jQuery('.status_percent').text('10%');
+        jQuery('.draggable_v0, .draggable_v-, .draggable_v3').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 360 && count_animation <= 480){
+        jQuery('.status_percent').text('15%');
+        jQuery('.draggable_v0, .draggable_v-, .draggable_v3').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 480 && count_animation <= 600){
+        jQuery('.status_percent').text('20%');
+        jQuery('.draggable_v0, .draggable_v-, .draggable_v3').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 600 && count_animation <= 720){
+        jQuery('.status_percent').text('25%');
+        jQuery('.draggable_v0, .draggable_v-, .draggable_v3').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 720 && count_animation <= 840){
+        jQuery('.status_percent').text('30%');
+        jQuery('.draggable_v0, .draggable_v-, .draggable_v3').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 840 && count_animation <= 960){
+        jQuery('.status_percent').text('35%');
+        jQuery('.draggable_v0, .draggable_v-, .draggable_v3').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 960 && count_animation <= 1080){
+        jQuery('.status_percent').text('40%');
+        jQuery('.draggable_v0, .draggable_v-, .draggable_v3').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v0, .draggable_v-, .draggable_v3').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_14_2');
+        endNow()
+      } else {
+        moon_14_2();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_13_6 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('6');
+  localStorage.setItem('pausedPhases', '6');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('6');
+  jQuery('.status_percent').text('92%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_v2, .draggable_v1, .draggable_v5, .draggable_v4').addClass('rot_mo_4').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_right.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_v4'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v2, .draggable_v1, .draggable_v5, .draggable_v4').removeClass('rot_mo_4').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      onEnd();
+    }
+  }, 250);
+}
+
+moon_13_5 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('6');
+  localStorage.setItem('pausedPhases', '5');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('5');
+  jQuery('.status_percent').text('87%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_v2, .draggable_v1, .draggable_v5, .draggable_v4').addClass('rot_mo_3').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_left.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_v4'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v2, .draggable_v1, .draggable_v5, .draggable_v4').removeClass('rot_mo_3').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_13_6');
+        endNow()
+      } else {
+        moon_13_6();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_13_4 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('6');
+  localStorage.setItem('pausedPhases', '4');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('4');
+  jQuery('.status_percent').text('71%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_v2, .draggable_v1, .draggable_v5, .draggable_v4').addClass('rot_mo_2').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_left.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_v4'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v2, .draggable_v1, .draggable_v5, .draggable_v4').removeClass('rot_mo_2').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_13_5');
+        endNow()
+      } else {
+        moon_13_5();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_13_3 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('6');
+  localStorage.setItem('pausedPhases', '3');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('3');
+  jQuery('.status_percent').text('63%');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_v2, .draggable_v1, .draggable_v5, .draggable_v4').addClass('rot_mo_1').css({
+    color: 'transparent',
+    background: '#fff url(/wp-content/themes/bcwish/img/mo_right.png) center center/100% no-repeat',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    console.log(count_animation);
+    if (count_animation <= 228){
+      sideFormuls(count_animation, jQuery('.draggable_v4'));
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v2, .draggable_v1, .draggable_v5, .draggable_v4').removeClass('rot_mo_1').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_13_4');
+        endNow()
+      } else {
+        moon_13_4();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_13_2 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('6');
+  localStorage.setItem('pausedPhases', '2');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('2');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_v2, .draggable_v1, .draggable_v5, .draggable_v4').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 360){
+      sideFormuls(count_animation, jQuery('.draggable_v4'));
+      // if (count_animation == 1 || count_animation == 120 || count_animation == 240 || count_animation == 360 || count_animation == 480 || count_animation == 600 || count_animation == 720 || count_animation == 840 || count_animation == 960 || count_animation == 1080){
+      //     reloadSound.play();
+      // };
+      if (count_animation > 0 && count_animation <= 120) {
+        jQuery('.draggable_v2, .draggable_v1, .draggable_v5, .draggable_v4').css({background: '#fff url(/wp-content/themes/bcwish/img/disfunction.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 220) {
+        jQuery('.draggable_v2, .draggable_v1, .draggable_v5, .draggable_v4').css({background: '#fff url(/wp-content/themes/bcwish/img/travma.png) center center/100% no-repeat'});
+      } else if (count_animation > 220 && count_animation <= 360) {
+        jQuery('.draggable_v2, .draggable_v1, .draggable_v5, .draggable_v4').css({background: '#fff url(/wp-content/themes/bcwish/img/povregdenie_demona.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v2, .draggable_v1, .draggable_v5, .draggable_v4').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_13_3');
+        endNow()
+      } else {
+        moon_13_3();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_13 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('6');
+  localStorage.setItem('pausedPhases', '1');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('1');
+  jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
+  count_animation = 0;
+  jQuery('.draggable_v2, .draggable_v1, .draggable_v5, .draggable_v4').css({
+    color: 'transparent',
+    transform: 'scale(1.3)',
+    opacity: 0.8
+  });
+  phaseOne = setInterval(function(){
+    if (count_animation <= 1080){
+      sideFormuls(count_animation, jQuery('.draggable_v4'));
+      if (count_animation <= 120){
+        jQuery('.draggable_v2, .draggable_v1, .draggable_v5, .draggable_v4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 120 && count_animation <= 240){
+        jQuery('.status_percent').text('5%');
+        jQuery('.draggable_v2, .draggable_v1, .draggable_v5, .draggable_v4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 240 && count_animation <= 360){
+        jQuery('.status_percent').text('10%');
+        jQuery('.draggable_v2, .draggable_v1, .draggable_v5, .draggable_v4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 360 && count_animation <= 480){
+        jQuery('.status_percent').text('15%');
+        jQuery('.draggable_v2, .draggable_v1, .draggable_v5, .draggable_v4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 480 && count_animation <= 600){
+        jQuery('.status_percent').text('20%');
+        jQuery('.draggable_v2, .draggable_v1, .draggable_v5, .draggable_v4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 600 && count_animation <= 720){
+        jQuery('.status_percent').text('25%');
+        jQuery('.draggable_v2, .draggable_v1, .draggable_v5, .draggable_v4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 720 && count_animation <= 840){
+        jQuery('.status_percent').text('30%');
+        jQuery('.draggable_v2, .draggable_v1, .draggable_v5, .draggable_v4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      } else if (count_animation > 840 && count_animation <= 960){
+        jQuery('.status_percent').text('35%');
+        jQuery('.draggable_v2, .draggable_v1, .draggable_v5, .draggable_v4').css({background: '#fff url(/wp-content/themes/bcwish/img/veter.png) center center/100% no-repeat'});
+      } else if (count_animation > 960 && count_animation <= 1080){
+        jQuery('.status_percent').text('40%');
+        jQuery('.draggable_v2, .draggable_v1, .draggable_v5, .draggable_v4').css({background: '#fff url(/wp-content/themes/bcwish/img/life_vater.png) center center/100% no-repeat'});
+      }
+      count_animation += 1;
+    } else {
+      clearInterval(phaseOne);
+      jQuery('.draggable_v2, .draggable_v1, .draggable_v5, .draggable_v4').css({
+        color: '#FFF0C7',
+        transform: 'scale(1)',
+        background: 'rgba(83, 35, 69, 0.4)',
+        opacity: 1
+      });
+      count_animation = 0;
+      if (pausedStatus == true) {
+        localStorage.setItem('paused', 'moon_13_2');
+        endNow()
+      } else {
+        moon_13_2();
+        // console.log('continue');
+      } 
+    }
+  }, 250);
+}
+
+moon_1_6 = function(){
+  jQuery('.status').removeClass('hidden');
+  jQuery('.status_pahaze_all').text('6');
+  localStorage.setItem('pausedPhases', '6');
+  localStorage.setItem('pausedProtName', 'Лунный протокол');
+  jQuery('.status_pahaze_now').text('6');
   jQuery('.status_percent').text('92%');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
@@ -18410,7 +22715,6 @@ moon_1_6 = function(){
     opacity: 0.8
   });
   phaseOne = setInterval(function(){
-    console.log(count_animation);
     if (count_animation <= 228){
       sideFormuls(count_animation, jQuery('.draggable_s2'));
       count_animation += 1;
@@ -18430,10 +22734,10 @@ moon_1_6 = function(){
 
 moon_1_5 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('rtrtrtrt');
-  localStorage.setItem('pausedPhases', '1');
+  jQuery('.status_pahaze_all').text('6');
+  localStorage.setItem('pausedPhases', '5');
   localStorage.setItem('pausedProtName', 'Лунный протокол');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_pahaze_now').text('5');
   jQuery('.status_percent').text('87%');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
@@ -18444,7 +22748,6 @@ moon_1_5 = function(){
     opacity: 0.8
   });
   phaseOne = setInterval(function(){
-    console.log(count_animation);
     if (count_animation <= 228){
       sideFormuls(count_animation, jQuery('.draggable_s2'));
       count_animation += 1;
@@ -18470,10 +22773,10 @@ moon_1_5 = function(){
 
 moon_1_4 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('rtrtrtrt');
-  localStorage.setItem('pausedPhases', '1');
+  jQuery('.status_pahaze_all').text('6');
+  localStorage.setItem('pausedPhases', '4');
   localStorage.setItem('pausedProtName', 'Лунный протокол');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_pahaze_now').text('4');
   jQuery('.status_percent').text('71%');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
@@ -18484,7 +22787,6 @@ moon_1_4 = function(){
     opacity: 0.8
   });
   phaseOne = setInterval(function(){
-    console.log(count_animation);
     if (count_animation <= 228){
       sideFormuls(count_animation, jQuery('.draggable_s2'));
       count_animation += 1;
@@ -18510,10 +22812,10 @@ moon_1_4 = function(){
 
 moon_1_3 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('rtrtrtrt');
-  localStorage.setItem('pausedPhases', '1');
+  jQuery('.status_pahaze_all').text('6');
+  localStorage.setItem('pausedPhases', '3');
   localStorage.setItem('pausedProtName', 'Лунный протокол');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_pahaze_now').text('3');
   jQuery('.status_percent').text('63%');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
@@ -18550,10 +22852,10 @@ moon_1_3 = function(){
 
 moon_1_2 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('rtrtrtrt');
-  localStorage.setItem('pausedPhases', '1');
+  jQuery('.status_pahaze_all').text('6');
+  localStorage.setItem('pausedPhases', '2');
   localStorage.setItem('pausedProtName', 'Лунный протокол');
-  jQuery('.status_pahaze_now').text('1');
+  jQuery('.status_pahaze_now').text('2');
   jQuery('.zone_x, .zone_l').removeClass('hidden').css('transform', 'rotate(-90deg) scale(1.3)');
   count_animation = 0;
   jQuery('.draggable_v0, .draggable_v1, .draggable_s2').css({
@@ -18598,7 +22900,7 @@ moon_1_2 = function(){
 
 moon_1 = function(){
   jQuery('.status').removeClass('hidden');
-  jQuery('.status_pahaze_all').text('rtrtrtrt');
+  jQuery('.status_pahaze_all').text('6');
   localStorage.setItem('pausedPhases', '1');
   localStorage.setItem('pausedProtName', 'Лунный протокол');
   jQuery('.status_pahaze_now').text('1');

@@ -12,7 +12,11 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/jquery.Jcrop.min.css" type="text/css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/sweet-alert.css" type="text/css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" type="text/css">
+    <?php if(is_user_logged_in()&&current_user_can('administrator')) { ?>
+      <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style_.css" type="text/css">  
+    <?php } else { ?>
+      <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" type="text/css">
+    <?php } ?>
   </head>
   <body>
     <div class="container-fluid">
