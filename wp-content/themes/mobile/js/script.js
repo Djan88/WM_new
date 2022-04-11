@@ -249,6 +249,15 @@ jQuery(document).ready(function () {
     }
   }
 
+  document.querySelector('.testing_mode_item_p').onclick = function(){
+    document.querySelector('.testing_mode_item_p').addClass('active');
+    document.querySelector('.testing_mode_item_g').removeClass('active');
+  }
+  document.querySelector('.testing_mode_item_g').onclick = function(){
+    document.querySelector('.testing_mode_item_g').addClass('active');
+    document.querySelector('.testing_mode_item_p').removeClass('active');
+  }
+
   for (var i = 0; i < zone_testing.length; i++) {
     zone_testing[i].onmousedown = function(){
       if (event.target.classList.contains('zone-testing_item__check')) {

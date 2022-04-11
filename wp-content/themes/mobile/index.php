@@ -217,8 +217,8 @@
 							?>
 							<div class="testing_mode col-12">
 								<div class="btn-group" role="group" aria-label="Testing Mode">
-								  <button type="button" class="btn btn-primary active">P 300</button>
-								  <button type="button" class="btn btn-primary">График</button>
+								  <button type="button" class="btn testing_mode_item testing_mode_item_p btn-primary active">P 300</button>
+								  <button type="button" class="btn testing_mode_item testing_mode_item_g btn-primary">График</button>
 								</div>
 							</div>
 						</div>
