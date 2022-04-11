@@ -2460,6 +2460,12 @@ button.wizard_starter_alt.btn.btn-success
   visibility: hidden;
   width: 62%;
   box-shadow: 0px 0px 30px rgb(127 137 161 / 30%);
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;  
 }
 .zone-testing_item:nth-of-type(6)
 {
