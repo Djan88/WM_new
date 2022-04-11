@@ -38,6 +38,7 @@ div#recallbar, div#wpadminbar
   font-size: 18px;
   color: #196166;
   font-weight: 500;
+  white-space: nowrap;
 }
 #image_file
 {
@@ -447,6 +448,74 @@ input.wpcf7-form-control.wpcf7-submit
 .grecaptcha-badge 
 {
   display: none!important;
+}
+/*Testing*/
+
+.zone-testing
+{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  left: 15px;
+  top: 0;
+}
+.zone-testing_item
+{
+  position: relative;
+  background: #fff;
+  opacity: 0.5;
+  flex: 1;
+  margin-bottom: 5px;
+  visibility: hidden;
+  width: 62%;
+  box-shadow: 0px 0px 30px rgb(127 137 161 / 30%);
+}
+.zone-testing_item:nth-of-type(6)
+{
+  flex: 4;
+}
+.zone-testing_item:nth-of-type(7)
+{
+  flex: 1.6;
+}
+.zone-testing_item:last-child
+{
+  margin-bottom: 0;
+}
+.zone-testing_item:hover
+{
+  opacity: 0.7;
+}
+.zone-testing_item.zone-testing_item__check
+{
+  visibility: visible;
+}
+.zone_recommend
+{
+  text-align: center;
+  margin-bottom: 10px;
+}
+.zone_recommend_text
+{
+  color: #535074;
+  font-size: 20px;
+  padding-right: 15px;
+}
+.zone-testing_item_n
+{
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  left: 10px;
+  top: 10px;
+  text-align: center;
+  color: #fff;
+  padding-top: 3px;
 }
 /*Animation*/
 

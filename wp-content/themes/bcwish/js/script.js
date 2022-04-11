@@ -702,19 +702,19 @@ jQuery('.btn_test__reset').on('click', function(event) {
       console.log(zones_time);
       console.log('elems not exist ' + ' max position '+ max_zone);
       if (max_zone === 0) {
-        zone_recommend.innerHTML = 'Максимальная зона 1';
+        zone_recommend.innerHTML = 'Рекомендуется протокол V1';
       } else if (max_zone === 1) {
-        zone_recommend.innerHTML = 'Максимальная зона 2';
+        zone_recommend.innerHTML = 'Рекомендуется протокол V2-V5';
       } else if (max_zone === 2) {
-        zone_recommend.innerHTML = 'Максимальная зона 3';
+        zone_recommend.innerHTML = 'Рекомендуется протокол V3-V4';
       } else if (max_zone === 3) {
-        zone_recommend.innerHTML = 'Максимальная зона 4';
+        zone_recommend.innerHTML = 'Рекомендуется протокол V4-V3';
       } else if (max_zone === 4) {
-        zone_recommend.innerHTML = 'Максимальная зона 5';
+        zone_recommend.innerHTML = 'Рекомендуется протокол V5-V2';
       } else if (max_zone === 5) {
-        zone_recommend.innerHTML = 'Максимальная зона 6';
+        zone_recommend.innerHTML = 'Рекомендуется протокол V5-V2';
       } else if (max_zone === 6) {
-        zone_recommend.innerHTML = 'Максимальная зона 7';
+        zone_recommend.innerHTML = 'Рекомендуется протокол V5-V2';
       }
       document.querySelector('.zone_recommend').classList.remove('hidden');
       max_val = 0;

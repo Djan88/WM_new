@@ -218,7 +218,27 @@
 							</div>
 							<div class="col-10 text_center zone_diag diagnostic_rezult">
 								<img class="loaded_img" src="" alt="">
+								<?php 
+								  $cur_user_id = get_current_user_id();
+								  $testing_user = 212;
+								?>
+								<?php if (current_user_can('administrator')|| $cur_user_id === $testing_user) { ?>
+								<div class="zone-testing">
+								  <div class="zone-testing_item zone-testing_item_1 zone-testing_item__check"><span class="zone-testing_item_n">1</span></div>
+								  <div class="zone-testing_item zone-testing_item_2 zone-testing_item__check"><span class="zone-testing_item_n">2</span></div>
+								  <div class="zone-testing_item zone-testing_item_3 zone-testing_item__check"><span class="zone-testing_item_n">3</span></div>
+								  <div class="zone-testing_item zone-testing_item_4 zone-testing_item__check"><span class="zone-testing_item_n">4</span></div>
+								  <div class="zone-testing_item zone-testing_item_5 zone-testing_item__check"><span class="zone-testing_item_n">5</span></div>
+								  <div class="zone-testing_item zone-testing_item_6 zone-testing_item__check"><span class="zone-testing_item_n">6</span></div>
+								  <div class="zone-testing_item zone-testing_item_7 zone-testing_item__check"><span class="zone-testing_item_n">7</span></div>
+								</div>
+								<?php } ?>
 							</div>
+							<?php if (current_user_can('administrator')|| $cur_user_id === $testing_user) { ?>
+							<div class="col-sm-12 zone_recommend hidden">
+							  <span class="zone_recommend_text"></span><button type="button" class="zones_reset btn btn-sm btn-warning">Сбросить: <i class="fa fa-trash"></i></button>
+							</div>
+							<?php } ?>
 						</div>
 					</div>
 				</div>
