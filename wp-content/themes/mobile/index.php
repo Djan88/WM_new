@@ -215,12 +215,14 @@
 							  $cur_user_id = get_current_user_id();
 							  $testing_user = 212;
 							?>
+							<?php if (current_user_can('administrator')|| $cur_user_id === $testing_user) { ?>
 							<div class="testing_mode col-12">
 								<div class="btn-group" role="group" aria-label="Testing Mode">
 								  <button type="button" class="btn testing_mode_item testing_mode_item_p btn-primary active">P 300</button>
 								  <button type="button" class="btn testing_mode_item testing_mode_item_g btn-primary">График</button>
 								</div>
 							</div>
+							<?php } ?>
 						</div>
 						<div class="row">
 							<div class="col-2 text_center diagnostic_container">
