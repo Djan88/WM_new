@@ -65,7 +65,7 @@ div#recallbar, div#wpadminbar
 {
   display: none;
 }
-.zone_final.hidden, .zone-testing.hidden
+.zone_final.hidden
 {
   display: none!important;
 }
