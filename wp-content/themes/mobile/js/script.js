@@ -425,6 +425,7 @@ jQuery(document).ready(function () {
     document.querySelector('.testing_mode_item_p').onclick = function(){
       document.querySelector('.testing_mode_item_p').classList.add('active');
       document.querySelector('.diagnostic_container, .dragger_rate').classList.add('hidden');
+      document.querySelector('.zone-testing, .zone_recommend').classList.remove('hidden');
       document.querySelector('.diagnostic_rezult').classList.remove('col-10');
       document.querySelector('.diagnostic_rezult').classList.add('col-12');
       document.querySelector('.testing_mode_item_g').classList.remove('active');
@@ -432,6 +433,7 @@ jQuery(document).ready(function () {
     document.querySelector('.testing_mode_item_g').onclick = function(){
       document.querySelector('.testing_mode_item_g').classList.add('active');
       document.querySelector('.diagnostic_container, .dragger_rate').classList.remove('hidden');
+      document.querySelector('.zone-testing, .zone_recommend').classList.add('hidden');
       document.querySelector('.diagnostic_rezult').classList.add('col-10');
       document.querySelector('.diagnostic_rezult').classList.remove('col-12');
       document.querySelector('.testing_mode_item_p').classList.remove('active');
