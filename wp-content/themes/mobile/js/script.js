@@ -209,94 +209,6 @@ jQuery(document).ready(function () {
     jQuery('.header-title').text('Выберите режим');
   }
 
-  // zone testing
-  const zone_testing = document.querySelectorAll('.zone-testing_item');
-  let zones_time = [0,0,0,0,0,0,0]
-  let zone_time_start = 0;
-  let zone_time_end = 0;
-  let max_val = 0;
-  let max_zone = 0;
-  const zone_recommend = document.querySelector('.zone_recommend_text');
-  let zoneTimeDiff = function(){
-    return zone_time_end - zone_time_start;
-  }
-  let zones_satus = function (){
-    if (document.querySelectorAll('.zone-testing_item__check').length <= 0) {
-      max_val = Math.max.apply(null, zones_time);
-      max_zone = zones_time.indexOf(max_val);
-      console.log(zones_time);
-      console.log('elems not exist ' + ' max position '+ max_zone);
-      if (max_zone === 0) {
-        zone_recommend.innerHTML = 'Рекомендуется протокол V1';
-      } else if (max_zone === 1) {
-        zone_recommend.innerHTML = 'Рекомендуется протокол V2-V5';
-      } else if (max_zone === 2) {
-        zone_recommend.innerHTML = 'Рекомендуется протокол V3-V4';
-      } else if (max_zone === 3) {
-        zone_recommend.innerHTML = 'Рекомендуется протокол V4-V3';
-      } else if (max_zone === 4) {
-        zone_recommend.innerHTML = 'Рекомендуется протокол V5-V2';
-      } else if (max_zone === 5) {
-        zone_recommend.innerHTML = 'Рекомендуется протокол V5-V2';
-      } else if (max_zone === 6) {
-        zone_recommend.innerHTML = 'Рекомендуется протокол V5-V2';
-      }
-      document.querySelector('.zone_recommend').classList.remove('hidden');
-      max_val = 0;
-      max_zone = 0;
-      zone_time_start = 0;
-      zone_time_end = 0;
-    }
-  }
-
-  document.querySelector('.testing_mode_item_p').onclick = function(){
-    document.querySelector('.testing_mode_item_p').classList.add('active');
-    document.querySelector('.testing_mode_item_g').classList.remove('active');
-  }
-  document.querySelector('.testing_mode_item_g').onclick = function(){
-    document.querySelector('.testing_mode_item_g').classList.add('active');
-    document.querySelector('.testing_mode_item_p').classList.remove('active');
-  }
-
-  for (var i = 0; i < zone_testing.length; i++) {
-    zone_testing[i].onmousedown = function(){
-      if (event.target.classList.contains('zone-testing_item__check')) {
-        zone_time_start = new Date();
-      }
-    };
-    zone_testing[i].onmouseup = function(){
-      if (event.target.classList.contains('zone-testing_item__check')) {
-        zone_time_end = new Date();
-        if (event.target.classList.contains('zone-testing_item_1')) {
-          zones_time[0] = zoneTimeDiff()
-        } else if (event.target.classList.contains('zone-testing_item_2')) {
-          zones_time[1] = zoneTimeDiff()
-        } else if (event.target.classList.contains('zone-testing_item_3')) {
-          zones_time[2] = zoneTimeDiff()
-        } else if (event.target.classList.contains('zone-testing_item_4')) {
-          zones_time[3] = zoneTimeDiff()
-        } else if (event.target.classList.contains('zone-testing_item_5')) {
-          zones_time[4] = zoneTimeDiff()
-        } else if (event.target.classList.contains('zone-testing_item_6')) {
-          zones_time[5] = zoneTimeDiff()
-        } else if (event.target.classList.contains('zone-testing_item_7')) {
-          zones_time[6] = zoneTimeDiff()
-        }
-        event.target.classList.remove('zone-testing_item__check');
-        zones_satus();
-      }
-    };
-  }
-
-  document.querySelector('.zones_reset').onclick = function(){
-    zones_time = [0,0,0,0,0,0,0];
-    document.querySelector('.zone_recommend').classList.add('hidden');
-    zone_recommend.innerHTML = '';
-    for (var i = 0; i < zone_testing.length; i++) {
-      zone_testing[i].classList.add('zone-testing_item__check');
-    }
-  }
-
   // second crop btn
   jQuery('.btn_crop').on('click', function(event) {
     jQuery('.crop_photo').click();
@@ -469,4 +381,92 @@ jQuery(document).ready(function () {
         oReader.readAsDataURL(oFile);
     }
     jQuery('#image_file').on('change', fileSelectHandler);
+
+    // zone testing
+    const zone_testing = document.querySelectorAll('.zone-testing_item');
+    let zones_time = [0,0,0,0,0,0,0]
+    let zone_time_start = 0;
+    let zone_time_end = 0;
+    let max_val = 0;
+    let max_zone = 0;
+    const zone_recommend = document.querySelector('.zone_recommend_text');
+    let zoneTimeDiff = function(){
+      return zone_time_end - zone_time_start;
+    }
+    let zones_satus = function (){
+      if (document.querySelectorAll('.zone-testing_item__check').length <= 0) {
+        max_val = Math.max.apply(null, zones_time);
+        max_zone = zones_time.indexOf(max_val);
+        console.log(zones_time);
+        console.log('elems not exist ' + ' max position '+ max_zone);
+        if (max_zone === 0) {
+          zone_recommend.innerHTML = 'Рекомендуется протокол V1';
+        } else if (max_zone === 1) {
+          zone_recommend.innerHTML = 'Рекомендуется протокол V2-V5';
+        } else if (max_zone === 2) {
+          zone_recommend.innerHTML = 'Рекомендуется протокол V3-V4';
+        } else if (max_zone === 3) {
+          zone_recommend.innerHTML = 'Рекомендуется протокол V4-V3';
+        } else if (max_zone === 4) {
+          zone_recommend.innerHTML = 'Рекомендуется протокол V5-V2';
+        } else if (max_zone === 5) {
+          zone_recommend.innerHTML = 'Рекомендуется протокол V5-V2';
+        } else if (max_zone === 6) {
+          zone_recommend.innerHTML = 'Рекомендуется протокол V5-V2';
+        }
+        document.querySelector('.zone_recommend').classList.remove('hidden');
+        max_val = 0;
+        max_zone = 0;
+        zone_time_start = 0;
+        zone_time_end = 0;
+      }
+    }
+
+    document.querySelector('.testing_mode_item_p').onclick = function(){
+      document.querySelector('.testing_mode_item_p').classList.add('active');
+      document.querySelector('.testing_mode_item_g').classList.remove('active');
+    }
+    document.querySelector('.testing_mode_item_g').onclick = function(){
+      document.querySelector('.testing_mode_item_g').classList.add('active');
+      document.querySelector('.testing_mode_item_p').classList.remove('active');
+    }
+
+    for (var i = 0; i < zone_testing.length; i++) {
+      zone_testing[i].onmousedown = function(){
+        if (event.target.classList.contains('zone-testing_item__check')) {
+          zone_time_start = new Date();
+        }
+      };
+      zone_testing[i].onmouseup = function(){
+        if (event.target.classList.contains('zone-testing_item__check')) {
+          zone_time_end = new Date();
+          if (event.target.classList.contains('zone-testing_item_1')) {
+            zones_time[0] = zoneTimeDiff()
+          } else if (event.target.classList.contains('zone-testing_item_2')) {
+            zones_time[1] = zoneTimeDiff()
+          } else if (event.target.classList.contains('zone-testing_item_3')) {
+            zones_time[2] = zoneTimeDiff()
+          } else if (event.target.classList.contains('zone-testing_item_4')) {
+            zones_time[3] = zoneTimeDiff()
+          } else if (event.target.classList.contains('zone-testing_item_5')) {
+            zones_time[4] = zoneTimeDiff()
+          } else if (event.target.classList.contains('zone-testing_item_6')) {
+            zones_time[5] = zoneTimeDiff()
+          } else if (event.target.classList.contains('zone-testing_item_7')) {
+            zones_time[6] = zoneTimeDiff()
+          }
+          event.target.classList.remove('zone-testing_item__check');
+          zones_satus();
+        }
+      };
+    }
+
+    document.querySelector('.zones_reset').onclick = function(){
+      zones_time = [0,0,0,0,0,0,0];
+      document.querySelector('.zone_recommend').classList.add('hidden');
+      zone_recommend.innerHTML = '';
+      for (var i = 0; i < zone_testing.length; i++) {
+        zone_testing[i].classList.add('zone-testing_item__check');
+      }
+    }
 });
