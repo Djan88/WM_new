@@ -434,8 +434,8 @@ jQuery(document).ready(function () {
       document.querySelector('.testing_mode_item_g').classList.add('active');
       document.querySelector('.diagnostic_rezult').classList.add('col-10');
       document.querySelector('.diagnostic_rezult').classList.remove('col-12');
-      document.querySelector('.mobile_screen_manual').classList.add('testing_p');
-      document.querySelector('.mobile_screen_manual').classList.remove('testing_g');
+      document.querySelector('.mobile_screen_manual').classList.remove('testing_p');
+      document.querySelector('.mobile_screen_manual').classList.add('testing_g');
       document.querySelector('.testing_mode_item_p').classList.remove('active');
     }
 
