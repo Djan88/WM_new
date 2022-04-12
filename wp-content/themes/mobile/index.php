@@ -246,7 +246,7 @@
 							</div>
 							<?php if (current_user_can('administrator')|| $cur_user_id === $testing_user) { ?>
 							<div class="col-sm-12 zone_recommend hidden">
-							  <span class="zone_recommend_text"></span><button type="button" class="zones_reset btn btn-sm btn-warning">Сбросить: <i class="fa fa-trash"></i></button>
+							  <span class="zone_recommend_text"></span><button type="button" class="zones_reset btn btn-sm btn-warning">Сбросить: <i class="fa fa-trash"></i></button><button type="button" class="btn_protocols btn btn-sm btn-success">Сбросить: <i class="fa fa-check"></i></button>
 							</div>
 							<?php } ?>
 						</div>
