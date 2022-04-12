@@ -32,7 +32,7 @@
             </ul>
             <div class="credits">
               <div class="credits_heading">Юрий Чикуров</div>
-              <div><a href="https://chikurov.com" target="_blank" class="btn btn-outline-info btn-lg">www.chikurov.com</a></div>
+              <div><a href="https://chikurov.eu" target="_blank" class="btn btn-outline-info btn-lg">www.chikurov.eu</a></div>
               <div>Все права защищены</div>
             </div>
           </div>
