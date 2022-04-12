@@ -429,7 +429,7 @@ jQuery(document).ready(function () {
           document.querySelector('.btn_test_accept').dataset.protocol_name = 'V2-V5';
         } else if (max_zone === 2) {
           zone_recommend.innerHTML = 'Рекомендуется протокол V3-V4';
-          document.querySelector('.btn_test_accept').dataset.protocol = 'v4';
+          document.querySelector('.btn_test_accept').dataset.protocol = 'v3';
           document.querySelector('.btn_test_accept').dataset.protocol_name = 'V3-V4';
         } else if (max_zone === 3) {
           zone_recommend.innerHTML = 'Рекомендуется протокол V4-V3';

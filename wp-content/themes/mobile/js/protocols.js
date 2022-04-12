@@ -23000,7 +23000,7 @@ jQuery('.btn_start').on('click', function(event) {
   //   swal("Не все зоны перенесены", "Перед началом процедуры необходимо перенести на фото все зоны", "info");
   //   pointsStatus = true;
   // } else {
-    jQuery('.header-title').text('Программа выполняется');
+    jQuery('.header-title').text('Выполняется');
     jQuery('.zone').css('background', 'rgba(83,35,69, 0.4)');
     jQuery('.btn-to_protocols, .btn-to_manual').addClass('hidden');
     jQuery('.zone_x').css('background', '#fff url(/wp-content/themes/mobile/img/plod.png) 0 0/100% no-repeat');
