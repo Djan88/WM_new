@@ -2512,6 +2512,11 @@ button.wizard_starter_alt.btn.btn-success
   color: #fff;
   padding-top: 3px;
 }
+
+#w_error .modal-dialog.modal-lg
+{
+  max-width: 600px;
+}
 /*Animation*/
 
 .rot_d_one {
