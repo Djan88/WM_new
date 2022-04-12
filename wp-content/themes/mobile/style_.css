@@ -528,7 +528,10 @@ input.wpcf7-form-control.wpcf7-submit
   padding-top: 3px;
 }
 
-.testing_p .diagnostic_container
+.testing_p .diagnostic_container, 
+.testing_p .dragger_rate, 
+.testing_g .zone_recommend, 
+.testing_g .zone-testing
 {
   display: none;
 }
