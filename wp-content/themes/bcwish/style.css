@@ -2517,6 +2517,15 @@ button.wizard_starter_alt.btn.btn-success
 {
   max-width: 600px;
 }
+#w_error .modal-header .close
+{
+  padding: 2rem 2rem;
+}
+#w_error .modal-title
+{
+  line-height: 2.5;
+  font-size: 2.5rem;
+}
 /*Animation*/
 
 .rot_d_one {
