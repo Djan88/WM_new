@@ -119,7 +119,7 @@ jQuery(document).ready(function () {
     jQuery('.header-title').text('Перенесите зоны');
     jQuery('.mobile_screen_manual').addClass('hidden').css('display', 'none');
     jQuery('.mobile_screen_final').fadeIn(500);
-    jQuery('.btn-to_mode, .btn-to_manual').addClass('hidden');
+    jQuery('.btn-to_mode, .btn-to_manual, .clear_graph, .btn_protocols').addClass('hidden');
     jQuery('.btn-to_manual, .btn_man_with_zones, .btn_start').removeClass('hidden');
     jQuery('.zone_final').css('height', jQuery('.zone_final').css('width'));
   });
