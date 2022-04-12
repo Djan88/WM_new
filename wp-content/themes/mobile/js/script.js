@@ -87,6 +87,7 @@ jQuery(document).ready(function () {
   // clear graph
   jQuery('.clear_graph').on('click', function(event) {
     jQuery('.dragger_rate').detach();
+    jQuery('.zone_diag').css('top', '0');
   });
 
   // final screen show
