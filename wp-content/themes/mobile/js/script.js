@@ -97,11 +97,30 @@ jQuery(document).ready(function () {
     localStorage.removeItem('pausedPhoto');
     pausedStatus = false;
     jQuery('.btn-to_endNow').css('color', '#fff');
-    jQuery('.header-title').text('Перенесите зоны на фото');
+    jQuery('.header-title').text('Перенесите зоны');
     jQuery('.mobile_screen_protocols').addClass('hidden').css('display', 'none');
     jQuery('.mobile_screen_final').fadeIn(500);
     jQuery('.btn-to_mode, .btn-to_manual').addClass('hidden');
     jQuery('.btn-to_protocols, .btn_man_with_zones, .btn_start').removeClass('hidden');
+    jQuery('.zone_final').css('height', jQuery('.zone_final').css('width'));
+  });
+
+
+  jQuery('.btn_test_accept').on('click', function(event) {
+    endStatus = false;
+    localStorage.removeItem('paused');
+    localStorage.removeItem('pausedPhoto');
+    pausedStatus = false;
+    cur_protocol = jQuery(this).data('protocol');
+    cur_protocol_name = jQuery(this).data('protocol_name');
+    localStorage.setItem('protocol', cur_protocol);
+    localStorage.setItem('protocolName', cur_protocol_name);
+    jQuery('.btn-to_endNow').css('color', '#fff');
+    jQuery('.header-title').text('Перенесите зоны');
+    jQuery('.mobile_screen_manual').addClass('hidden').css('display', 'none');
+    jQuery('.mobile_screen_final').fadeIn(500);
+    jQuery('.btn-to_mode, .btn-to_manual').addClass('hidden');
+    jQuery('.btn-to_manual, .btn_man_with_zones, .btn_start').removeClass('hidden');
     jQuery('.zone_final').css('height', jQuery('.zone_final').css('width'));
   });
 
@@ -402,18 +421,32 @@ jQuery(document).ready(function () {
         console.log('elems not exist ' + ' max position '+ max_zone);
         if (max_zone === 0) {
           zone_recommend.innerHTML = 'Рекомендуется протокол V1';
+          document.querySelector('.btn_test_accept').dataset.protocol = 'v1';
+          document.querySelector('.btn_test_accept').dataset.protocol_name = 'V1';
         } else if (max_zone === 1) {
           zone_recommend.innerHTML = 'Рекомендуется протокол V2-V5';
+          document.querySelector('.btn_test_accept').dataset.protocol = 'v2';
+          document.querySelector('.btn_test_accept').dataset.protocol_name = 'V2-V5';
         } else if (max_zone === 2) {
           zone_recommend.innerHTML = 'Рекомендуется протокол V3-V4';
+          document.querySelector('.btn_test_accept').dataset.protocol = 'v4';
+          document.querySelector('.btn_test_accept').dataset.protocol_name = 'V3-V4';
         } else if (max_zone === 3) {
           zone_recommend.innerHTML = 'Рекомендуется протокол V4-V3';
+          document.querySelector('.btn_test_accept').dataset.protocol = 'v4';
+          document.querySelector('.btn_test_accept').dataset.protocol_name = 'V4-V3';
         } else if (max_zone === 4) {
           zone_recommend.innerHTML = 'Рекомендуется протокол V5-V2';
+          document.querySelector('.btn_test_accept').dataset.protocol = 'v5';
+          document.querySelector('.btn_test_accept').dataset.protocol_name = 'V5-V2';
         } else if (max_zone === 5) {
           zone_recommend.innerHTML = 'Рекомендуется протокол V5-V2';
+          document.querySelector('.btn_test_accept').dataset.protocol = 'v5';
+          document.querySelector('.btn_test_accept').dataset.protocol_name = 'V5-V2';
         } else if (max_zone === 6) {
           zone_recommend.innerHTML = 'Рекомендуется протокол V5-V2';
+          document.querySelector('.btn_test_accept').dataset.protocol = 'v5';
+          document.querySelector('.btn_test_accept').dataset.protocol_name = 'V5-V2';
         }
         document.querySelector('.zone_recommend').classList.remove('hidden');
         max_val = 0;
