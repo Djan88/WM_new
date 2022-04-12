@@ -2520,6 +2520,7 @@ button.wizard_starter_alt.btn.btn-success
 #w_error .modal-header .close
 {
   padding: 2rem 2rem;
+  font-size: 4.5rem;
 }
 #w_error .modal-title
 {
