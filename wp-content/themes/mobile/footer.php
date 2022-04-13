@@ -25,7 +25,7 @@
                 <?php //echo do_shortcode( '[theme_switcha_select text="Выберите версию"]' ); ?>
               </li> -->
               <li>
-                <a href="<?php echo home_url(); ?>/?am_force_theme_layout=mobile" class=" row align-items-center">
+                <a href="<?php echo home_url(); ?>/?am_force_theme_layout=desktop" class=" row align-items-center">
                   <span class="menu_item_img"><i class="fas fa-sync"></i></span>Полная версия
                 </a>
               </li>
