@@ -20,9 +20,12 @@
                 </a>
               </li>
               <?php } ?>
-              <li style="padding-left: 16px;text-align: center;background: #795371;height: 60px;position: relative;">
+              <!-- <li style="padding-left: 16px;text-align: center;background: #795371;height: 60px;position: relative;">
               <span class="menu_item_img" style="position: absolute;left: 35px;"><i class="fas fa-sync"></i></span>
-                <?php echo do_shortcode( '[theme_switcha_select text="Выберите версию"]' ); ?>
+                <?php //echo do_shortcode( '[theme_switcha_select text="Выберите версию"]' ); ?>
+              </li> -->
+              <li>
+                <i class="fas fa-sign-out-alt"></i> <?php echo do_shortcode('[show_theme_switch_link]'); ?>
               </li>
               <li>
                 <a href="<?php echo home_url(); ?>/wp-login.php?action=logout&amp;_wpnonce=a6cad512ba" class=" row align-items-center">
