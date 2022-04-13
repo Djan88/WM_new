@@ -78,7 +78,7 @@ function theme_switcha_core($current, $key = 'Template') {
 	
 	$options = $theme_switcha_options;
 	
-	if (!$options['enable_plugin']) return $current;
+	if (!isset($options['enable_plugin']) || !$options['enable_plugin']) return $current;
 	
 	if (!theme_switcha_check_permissions($options)) return $current;
 	
@@ -188,7 +188,9 @@ function theme_switcha_active_theme() {
 	
 	$active_theme = $get_theme->get('Name');
 	
-	if (isset($_COOKIE['theme_switcha_theme_'. COOKIEHASH])) {
+	$custom = apply_filters('theme_switcha_active_theme_custom', true);
+	
+	if (isset($_COOKIE['theme_switcha_theme_'. COOKIEHASH]) && $custom) {
 		
 		$active_theme = $_COOKIE['theme_switcha_theme_'. COOKIEHASH];
 		

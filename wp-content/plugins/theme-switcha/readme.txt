@@ -8,10 +8,10 @@ Author: Jeff Starr
 Contributors: specialk
 Author URI: https://plugin-planet.com/
 Donate link: https://monzillamedia.com/donate.html
-Requires at least: 4.1
-Tested up to: 5.8
-Stable tag: 2.8
-Version: 2.8
+Requires at least: 4.6
+Tested up to: 5.9
+Stable tag: 2.9
+Version: 2.9
 Requires PHP: 5.6.20
 Text Domain: theme-switcha
 Domain Path: /languages
@@ -27,7 +27,7 @@ Theme switching done right.
 > Develop themes privately behind the scenes
 > Enable your visitors to switch themes 
 
-There are many theme-switch plugins but none of them provide the simplicity, performance, and reliability that I require for my own sites. So I wrote my own plugin using the WP API and kept the plugin as focused and solid as possible. Only essential theme-switching features have been added, along with a simple yet informative UI. This gives you a consistent, quality theme-switching experience that you can optionally share with your visitors.
+There are many theme-switcher plugins but none of them provide the simplicity, performance, and reliability that I require for my own sites. So I wrote my own plugin using the WP API and kept the plugin as focused and solid as possible. Only essential theme-switching features have been added, along with a simple yet informative UI. This gives you a consistent, quality theme-switching experience that you can optionally share with your visitors.
 
 > Switch to an alternate theme for preview or development while visitors use the default theme :)
 
@@ -46,6 +46,8 @@ Theme Switcha:
 **What it's NOT for..**
 
 This plugin **should not** be used together with WordPress features such as Gutenberg Block Editor, Theme Customizer, Widgets, Menus, and other theme-related options. Doing so may result in private changes being made public on the current active theme. [Learn more](https://wordpress.org/support/topic/important-please-read-2/).
+
+> Theme Switcha = Best Theme Switcher for WordPress
 
 
 **Plugin Features**
@@ -358,7 +360,7 @@ It should work fine with Multisite, but it hasn't been officially tested yet.
 
 **I am having problems with white screens or other errors?**
 
-Two things: 1) deactivate the plugin or remove via FTP, and 2) [report the issue](https://perishablepress.com/contact/) so I can investigate and try to fix any bugs.
+Two things: 1) deactivate the plugin or remove via FTP, and 2) [report the issue](https://plugin-planet.com/support/#contact) so I can investigate and try to fix any bugs.
 
 
 **How is the CSS included for the front-end shortcodes?**
@@ -424,7 +426,7 @@ __Note:__ For any admin-related features like the Customizer, Widgets, Menus, an
 
 **Got a question?**
 
-Send any questions or feedback via my [contact form](https://perishablepress.com/contact/)
+Send any questions or feedback via my [contact form](https://plugin-planet.com/support/#contact)
 
 
 
@@ -436,6 +438,7 @@ I develop and maintain this free plugin with love for the WordPress community. T
 * [Digging into WordPress](https://digwp.com/)
 * [.htaccess made easy](https://htaccessbook.com/)
 * [WordPress Themes In Depth](https://wp-tao.com/wordpress-themes-book/)
+* [Wizard's SQL Recipes for WordPress](https://books.perishablepress.com/downloads/wizards-collection-sql-recipes-wordpress/)
 
 And/or purchase one of my premium WordPress plugins:
 
@@ -453,6 +456,17 @@ Links, tweets and likes also appreciated. Thanks! :)
 
 If you like Theme Switcha, please take a moment to [give a 5-star rating](https://wordpress.org/support/plugin/theme-switcha/reviews/?rate=5#new-post). It helps to keep development and support going strong. Thank you!
 
+
+**2.9 (2022/01/17)**
+
+* Adds filter hook `theme_switcha_active_theme_custom`
+* Fixes "array offset" bug (Thanks to [@jjtristargroup](https://wordpress.org/support/topic/cron-php-notice/))
+* Improves loading of translations
+* Updates settings page product blurb
+* Updates some links to external resources
+* Generates new default translation template
+* Changes minimum required WP version to 4.6
+* Tests on WordPress 5.9
 
 **2.8 (2021/07/17)**
 

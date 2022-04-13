@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-17 20:08+0000\n"
+"POT-Creation-Date: 2022-01-18 00:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -24,11 +24,11 @@ msgstr ""
 msgid " or higher, and has been deactivated! "
 msgstr ""
 
-#: inc/settings-register.php:101
+#: inc/settings-register.php:105
 msgid "(None)"
 msgstr ""
 
-#: inc/plugin-core.php:303
+#: inc/plugin-core.php:305
 msgid "Admin Theme"
 msgstr ""
 
@@ -48,15 +48,15 @@ msgstr ""
 msgid "Cheatin&rsquo; huh?"
 msgstr ""
 
-#: inc/plugin-core.php:305 inc/plugin-core.php:371
+#: inc/plugin-core.php:307 inc/plugin-core.php:373
 msgid "Child Theme"
 msgstr ""
 
-#: inc/plugin-core.php:19 inc/plugin-core.php:596
+#: inc/plugin-core.php:19 inc/plugin-core.php:598
 msgid "Choose a theme.."
 msgstr ""
 
-#: inc/settings-register.php:105
+#: inc/settings-register.php:109
 msgid "Click any thumbnail to switch themes."
 msgstr ""
 
@@ -88,7 +88,7 @@ msgstr ""
 msgid "Enable theme switching"
 msgstr ""
 
-#: inc/settings-register.php:129
+#: inc/settings-register.php:133
 msgid "Everyone"
 msgstr ""
 
@@ -100,7 +100,7 @@ msgstr ""
 msgid "Go&nbsp;Pro"
 msgstr ""
 
-#: inc/settings-register.php:239
+#: inc/settings-register.php:243
 msgid ""
 "Help keep Theme Switcha going strong! A huge THANK YOU for your support!"
 msgstr ""
@@ -129,7 +129,7 @@ msgstr ""
 msgid "More info &raquo;"
 msgstr ""
 
-#: inc/settings-register.php:69
+#: inc/settings-register.php:79
 msgid "Need help?"
 msgstr ""
 
@@ -141,11 +141,11 @@ msgstr ""
 msgid "No, abort mission."
 msgstr ""
 
-#: inc/settings-register.php:121
+#: inc/settings-register.php:125
 msgid "Only Admin"
 msgstr ""
 
-#: inc/settings-register.php:125
+#: inc/settings-register.php:129
 msgid "Only with Passkey"
 msgstr ""
 
@@ -165,7 +165,7 @@ msgstr ""
 msgid "Pro version of "
 msgstr ""
 
-#: inc/settings-register.php:107
+#: inc/settings-register.php:111
 msgid "Public Theme:"
 msgstr ""
 
@@ -181,11 +181,11 @@ msgstr ""
 msgid "Restore default options?"
 msgstr ""
 
-#: inc/settings-register.php:29 inc/settings-register.php:230
+#: inc/settings-register.php:29 inc/settings-register.php:234
 msgid "Restore default plugin options"
 msgstr ""
 
-#: inc/settings-register.php:110
+#: inc/settings-register.php:114
 msgid ""
 "right-click any thumbnail and copy the link address to get the theme-switch "
 "URL."
@@ -195,24 +195,24 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: inc/settings-register.php:30 inc/settings-register.php:240
+#: inc/settings-register.php:30 inc/settings-register.php:244
 msgid "Show support with a 5-star rating &raquo;"
 msgstr ""
 
-#: inc/settings-register.php:108
+#: inc/settings-register.php:112
 msgid "Switched Theme:"
 msgstr ""
 
-#: inc/settings-register.php:67
+#: inc/settings-register.php:77
 msgid "Thanks for using Theme Switcha :)"
 msgstr ""
 
 #. Name of the plugin
-#: inc/plugin-core.php:23 inc/plugin-core.php:610
+#: inc/plugin-core.php:23 inc/plugin-core.php:612
 msgid "Theme Switcha"
 msgstr ""
 
-#: inc/plugin-core.php:345 inc/plugin-core.php:441 inc/plugin-core.php:540
+#: inc/plugin-core.php:347 inc/plugin-core.php:443 inc/plugin-core.php:542
 msgid "Theme switching currently disabled."
 msgstr ""
 
@@ -220,7 +220,7 @@ msgstr ""
 msgid "Theme switching done right."
 msgstr ""
 
-#: inc/settings-register.php:110
+#: inc/settings-register.php:114
 msgid "Tip:"
 msgstr ""
 
@@ -228,16 +228,16 @@ msgstr ""
 msgid "to upgrade WordPress and try again."
 msgstr ""
 
-#: inc/plugin-core.php:297 inc/plugin-core.php:365 inc/plugin-core.php:461 
-#: inc/plugin-core.php:568
+#: inc/plugin-core.php:299 inc/plugin-core.php:367 inc/plugin-core.php:463 
+#: inc/plugin-core.php:570
 msgid "Untitled"
 msgstr ""
 
-#: inc/plugin-core.php:293 inc/plugin-core.php:361 inc/plugin-core.php:457
+#: inc/plugin-core.php:295 inc/plugin-core.php:363 inc/plugin-core.php:459
 msgid "Version "
 msgstr ""
 
-#: inc/settings-register.php:71
+#: inc/settings-register.php:81
 msgid "Visit the plugins docs"
 msgstr ""
 
@@ -245,7 +245,11 @@ msgstr ""
 msgid "Warning:"
 msgstr ""
 
-#: inc/settings-register.php:79 inc/settings-register.php:81
+#: inc/settings-register.php:66 inc/settings-register.php:67
+msgid "Wizard&rsquo;s SQL Recipes for WordPress"
+msgstr ""
+
+#: inc/settings-register.php:63 inc/settings-register.php:64
 msgid "WordPress Themes In Depth"
 msgstr ""
 

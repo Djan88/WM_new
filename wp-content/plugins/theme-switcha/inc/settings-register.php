@@ -60,6 +60,16 @@ function theme_switcha_validate_options($input) {
 
 function theme_switcha_settings_section_options() {
 	
+	$item_1  = '<a target="_blank" rel="noopener noreferrer" href="https://wp-tao.com/wordpress-themes-book/" title="'. esc_html__('WordPress Themes In Depth', 'theme-switcha') .'">';
+	$item_1 .= '<img src="'. plugins_url('img/wp-themes-480x120.jpg', dirname(__FILE__)) .'" width="240" height="60" alt="'. esc_html__('WordPress Themes In Depth', 'theme-switcha') .'"></a>';
+
+	$item_2  = '<a target="_blank" rel="noopener noreferrer" href="https://books.perishablepress.com/downloads/wizards-collection-sql-recipes-wordpress/" title="'. esc_html__('Wizard&rsquo;s SQL Recipes for WordPress', 'theme-switcha') .'">';
+	$item_2 .= '<img src="'. plugins_url('img/wizards-sql-480x120.jpg', dirname(__FILE__)) .'" width="240" height="60" alt="'. esc_html__('Wizard&rsquo;s SQL Recipes for WordPress', 'theme-switcha') .'"></a>';
+	
+	$items  = array($item_1, $item_2);
+	$key    = array_rand($items);
+	$random = isset($items[$key]) ? $items[$key] : '';
+	
 	echo '<div class="plugin-wrap">';
 	
 	echo '<div class="plugin-intro">';
@@ -74,13 +84,7 @@ function theme_switcha_settings_section_options() {
 	
 	echo '</div>';
 	
-	echo '<div class="book-blurb">';
-	
-	echo '<a target="_blank" rel="noopener noreferrer" href="https://wp-tao.com/wordpress-themes-book/" title="'. esc_html__('WordPress Themes In Depth', 'theme-switcha') .'">';
-	
-	echo '<img src="'. plugins_url('img/wp-themes-480x120.jpg', dirname(__FILE__)) .'" width="240" height="60" alt="'. esc_html__('WordPress Themes In Depth', 'theme-switcha') .'"></a>';
-	
-	echo '</div>';
+	echo '<div class="book-blurb">'. $random .'</div>';
 	
 	echo '</div>';
 	
