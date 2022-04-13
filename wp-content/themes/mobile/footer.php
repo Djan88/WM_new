@@ -25,7 +25,9 @@
                 <?php //echo do_shortcode( '[theme_switcha_select text="Выберите версию"]' ); ?>
               </li> -->
               <li>
-                <span class="menu_item_img"><i class="fas fa-sign-out-alt"></i></span> <?php echo do_shortcode('[show_theme_switch_link]'); ?>
+                <a href="<?php echo home_url(); ?>/?am_force_theme_layout=mobile" class=" row align-items-center">
+                  <span class="menu_item_img"><i class="fas fa-sync"></i></span>Полная версия
+                </a>
               </li>
               <li>
                 <a href="<?php echo home_url(); ?>/wp-login.php?action=logout&amp;_wpnonce=a6cad512ba" class=" row align-items-center">

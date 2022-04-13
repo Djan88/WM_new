@@ -133,7 +133,7 @@
             <?php } ?>
             <li>
               <?php //echo do_shortcode( '[theme_switcha_select text="Выберите версию"]' ); ?>
-              <?php echo do_shortcode('[show_theme_switch_link]'); ?>
+              <li><a href="<?php echo home_url(); ?>/?am_force_theme_layout=desktop">Мобильная версия</a></li>
             </li>
             <li><a class="mobile-nav-toggle mobile-nav-toggle_open" href="" data-toggle="modal" data-target="#mail">Обратная связь</a></li>
             <li><a class="link-warning" target="_blank" href="https://youtu.be/fzaWUCoDGbk">Учебное видео</a></li>
@@ -1797,7 +1797,7 @@
                 </div>
               </div>
               <div class="col-sm-12">
-                Ширина экрана устройства не должна быть меньше 600px. Для работы на небольших планшетах и смартфонах предусмотрена "Мобильная версия". Переключиться на Мобильную версию программы можно выберав ее из списка ниже.
+                Ширина экрана устройства не должна быть меньше 600px. Для работы на небольших планшетах и смартфонах предусмотрена "Мобильная версия". <a href="<?php echo home_url(); ?>/?am_force_theme_layout=desktop">Переключиться на Мобильную версию</a>
               </div>
               <div class="col-sm-12" style="margin-top: 10px;">
                 <?php //echo do_shortcode( '[theme_switcha_select text="Выберите версию"]' ); ?>
