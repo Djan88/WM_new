@@ -283,6 +283,7 @@ jQuery(function() {
   jQuery('.wizard_clean_graf').on('click', function(event) {
     jQuery('.knife_rate').detach();
     jQuery(this).addClass('hidden');
+    jQuery('.marakata').css('top', '0');
   });
 
 
