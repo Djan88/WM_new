@@ -221,7 +221,9 @@
 							  <button type="button" class="btn testing_mode_item testing_mode_item_g btn-primary">График</button>
 							</div>
 						</div>
-						<div class="col-12 testing_sub_title">Коснитесь каждой зоны на теле в любой последовательности.</div>
+						<div class="row testing_sub_title">
+							<div class="col-12">Коснитесь каждой зоны на теле в любой последовательности.</div>
+						</div>
 						</div>
 						<div class="row">
 							<div class="col-2 text_center diagnostic_container">
