@@ -1426,6 +1426,7 @@
                   </div>
                 </div>
                 <div class="row wizard_diag hidden">
+                  <div class="col-xs-12 ">Коснитесь каждой зоны на теле в любой последовательност.</div>
                   <div class="col-sm-6 wizard_grafic">
                     <div class="row">
                       <img src="<?php bloginfo('template_url'); ?>/img/marakata.png" class="marakata" alt="">
@@ -1801,7 +1802,6 @@
               </div>
               <div class="col-sm-12" style="margin-top: 10px;">
                 <?php //echo do_shortcode( '[theme_switcha_select text="Выберите версию"]' ); ?>
-                <?php echo do_shortcode('[show_theme_switch_link]'); ?>
               </div>
               <div class="col-sm-12">
                 Если Вы хотите продолжить работу в Полной версии, то просто закройте это сообщение.

@@ -46,7 +46,7 @@
 						<div class="current_protocol_img">
 							<i class="fas fa-user-plus"></i>
 						</div>
-						<form id="upload_form" action="/wizard/" enctype="multipart/form-data" method="post"><!-- hidden crop params -->
+						<form id="upload_form" action="/wizard/?am_force_theme_layout=mobile" enctype="multipart/form-data" method="post"><!-- hidden crop params -->
 						<input id="x1" name="mci_x1" type="hidden" />
 						<input id="y1" name="mci_y1" type="hidden" />
 						<input id="x2" name="mci_x2" type="hidden" />
