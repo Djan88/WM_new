@@ -24828,7 +24828,7 @@ mmt_2 = function(){
 
   jQuery('.wizard_stop') .on('click', function(event) {
     console.log(protocol);
-
+    if (protocol != 'moon') {
       jQuery('.wizard_stop').addClass('wizard_stop_inProgress');
       jQuery('.header-title').text('Программа останавливается');
       // endStatus = true;
@@ -24837,7 +24837,7 @@ mmt_2 = function(){
       localStorage.setItem('pausedPhoto', jQuery('.wizard_returned').attr('src'));
       pausedStatus = true;
       // console.log('pausedStatus = true');
-
+    }
   });
 
   jQuery('.wizard_disbledMove').on('click', function(event) {
