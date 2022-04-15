@@ -259,7 +259,6 @@ span.menu_item_img
   margin: auto;
   max-width: 400px;
   padding: 0;
-  padding-right: 5px;
   padding-bottom: 10px;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -539,6 +538,11 @@ input.wpcf7-form-control.wpcf7-submit
 .tesing_mode_item:focus
 {
   outline: none;
+}
+.testing_sub_title 
+{
+  padding-top: 10px;
+  font-weight: 400;
 }
 /*Animation*/
 
