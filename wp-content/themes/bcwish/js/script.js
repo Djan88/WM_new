@@ -729,16 +729,16 @@ jQuery('.btn_test__reset').on('click', function(event) {
     document.querySelector('.testing_mode_item_p').classList.add('active');
     document.querySelector('.diagnostic_rezult').classList.remove('col-10');
     document.querySelector('.diagnostic_rezult').classList.add('col-12');
-    document.querySelector('.mobile_screen_manual').classList.remove('testing_g');
-    document.querySelector('.mobile_screen_manual').classList.add('testing_p');
+    document.querySelector('.wizard_diag').classList.remove('testing_g');
+    document.querySelector('.wizard_diag').classList.add('testing_p');
     document.querySelector('.testing_mode_item_g').classList.remove('active');
   }
   document.querySelector('.testing_mode_item_g').onclick = function(){
     document.querySelector('.testing_mode_item_g').classList.add('active');
     document.querySelector('.diagnostic_rezult').classList.add('col-10');
     document.querySelector('.diagnostic_rezult').classList.remove('col-12');
-    document.querySelector('.mobile_screen_manual').classList.remove('testing_p');
-    document.querySelector('.mobile_screen_manual').classList.add('testing_g');
+    document.querySelector('.wizard_diag').classList.remove('testing_p');
+    document.querySelector('.wizard_diag').classList.add('testing_g');
     document.querySelector('.testing_mode_item_p').classList.remove('active');
   }
 
