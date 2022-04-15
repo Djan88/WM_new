@@ -537,7 +537,7 @@ input.wpcf7-form-control.wpcf7-submit
 }
 .tesing_mode_item:focus
 {
-  outline: none;
+  box-shadow: none;
 }
 .testing_sub_title 
 {
