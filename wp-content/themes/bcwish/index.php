@@ -1444,7 +1444,6 @@
                       $testing_user = 212;
                     ?>
                     <img src="" class="wizard_returned" alt="wizard_returned">
-                    <?php if (current_user_can('administrator')|| $cur_user_id === $testing_user) { ?>
                     <div class="zone-testing">
                       <div class="zone-testing_item zone-testing_item_1 zone-testing_item__check"><span class="zone-testing_item_n">1</span></div>
                       <div class="zone-testing_item zone-testing_item_2 zone-testing_item__check"><span class="zone-testing_item_n">2</span></div>
@@ -1454,13 +1453,10 @@
                       <div class="zone-testing_item zone-testing_item_6 zone-testing_item__check"><span class="zone-testing_item_n">6</span></div>
                       <div class="zone-testing_item zone-testing_item_7 zone-testing_item__check"><span class="zone-testing_item_n">7</span></div>
                     </div>
-                    <?php } ?>
                   </div>
-                  <?php if (current_user_can('administrator')|| $cur_user_id === $testing_user) { ?>
                   <div class="col-sm-12 zone_recommend hidden">
                     <span class="zone_recommend_text"></span><button type="button" class="zones_reset btn btn-sm btn-warning" style="margin-right: 5px;">Сбросить <i class="fa fa-trash"></i></button><button type="button" class="btn_test_accept wizard_protocol btn btn-sm btn-primary">Применить <i class="fa fa-check"></i></button>
                   </div>
-                  <?php } ?>
                   <div class="col-sm-12" style="text-align: center;">
                     <div class="btn btn-success btn_prot_choice_fromDiag back-to-top_2">Протокол</div>
                     <div class="btn btn-success test_btn_fromDiag">Диагностика</div>
