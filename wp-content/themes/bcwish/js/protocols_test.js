@@ -24827,6 +24827,7 @@ mmt_2 = function(){
   }
 
   jQuery('.wizard_stop') .on('click', function(event) {
+    console.log('DIN');
     if (!protocol == 'moon') {
       jQuery('.wizard_stop').addClass('wizard_stop_inProgress');
       jQuery('.header-title').text('Программа останавливается');
