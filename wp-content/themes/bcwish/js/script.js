@@ -237,7 +237,7 @@ jQuery(function() {
   });
   //Назад. К диагностике
   jQuery('.wizard_to_protDiag, .diag_btn_alt').on('click', function(event) {
-    jQuery('.wizard_prots, .wizard_test').addClass('hidden');
+    jQuery('.wizard_prots, .wizard_test, .wizard_main_screen').addClass('hidden');
     jQuery('.wizard_to_protDiag').addClass('hidden');
     jQuery('.wizard_to_what_way, .wizard_clean_graf').fadeIn(500).removeClass('hidden');
     jQuery('.wizard_diag').fadeIn(500).removeClass('hidden').css('display', 'flex');
