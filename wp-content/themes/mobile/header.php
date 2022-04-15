@@ -12,15 +12,7 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/jquery.Jcrop.min.css" type="text/css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/sweet-alert.css" type="text/css">
-    <?php 
-      $cur_user_id = get_current_user_id();
-      $testing_user = 212;
-    ?>
-    <?php if(current_user_can('administrator')|| $cur_user_id === $testing_user) { ?>
-      <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style_.css" type="text/css">  
-    <?php } else { ?>
-      <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" type="text/css">
-    <?php } ?>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" type="text/css">
   </head>
   <body>
     <div class="container-fluid">
