@@ -533,9 +533,8 @@ input.wpcf7-form-control.wpcf7-submit
 .testing_g .zone_recommend, 
 .testing_g .zone-testing,
 .testing_g .testing_sub_title,
-.testing_g .zone_diag,
 {
-  display: none;
+  display: none!!important;
 }
 /*Animation*/
 
