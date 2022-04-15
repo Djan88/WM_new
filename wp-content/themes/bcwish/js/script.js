@@ -180,6 +180,7 @@ jQuery(function() {
     localStorage.setItem('protocolName', cur_protocol_name);
     jQuery('.wizard_diag, .wizard_test').addClass('hidden');
     jQuery('.wizard_to_what_way, .wizard_clean_graf').addClass('hidden');
+    jQuery('.wizard_to_protDiag').fadeIn(500).removeClass('hidden');
     jQuery('.wizard_main_screen').fadeIn(500).removeClass('hidden').css('display', 'flex');
     jQuery('.wizard_heading').text('Осталось перенести зоны на фото и можно начинать!');
     
