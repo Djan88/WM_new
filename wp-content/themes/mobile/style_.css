@@ -535,7 +535,7 @@ input.wpcf7-form-control.wpcf7-submit
 {
   display: none;
 }
-.tesing_mode_item, .tesing_mode_item:focus
+.btn.testing_mode_item.btn-primary.active:focus
 {
   box-shadow: none!important;
 }
