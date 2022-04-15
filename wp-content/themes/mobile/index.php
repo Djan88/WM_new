@@ -182,24 +182,22 @@
 			    $cur_user_id = get_current_user_id();
 			    $testing_user = 212;
 			  ?>
-			  <?php if (current_user_can('administrator')|| $cur_user_id === $testing_user) { ?>
-			  		<div class="row">
-			  	    <div data-protocol="karma" class="col protocols_item protocols_item_10 text_center">
-			  	      <span class="protocols_item_title">Кармический</span>
-			  	      <div class="protocols_item_img">
-			  	      	<i class="fas fa-eye"></i>
-			  	      </div>
-			  	      <div class="protocols_item_content hidden">Протокол предназначен для очистки накопленной личной истории (Кармы). Рекомендуем использовать не чаще раза в месяц</div>
-			  	    </div>
-			  	    <div data-protocol="moon" class="col protocols_item protocols_item_11 text_center">
-			  	      <span class="protocols_item_title">Лунный</span>
-			  	      <div class="protocols_item_img">
-			  	      	<i class="fas fa-moon"></i>
-			  	      </div>
-			  	      <div class="protocols_item_content hidden">Протокол Лунного дня учитывает напряжение зон DSV в зависимости от фазы Луны. Подходит для ежедневного применения</div>
-			  	    </div>
-			  	  </div>
-			  <?php } ?>
+	  		<div class="row">
+	  	    <div data-protocol="karma" class="col protocols_item protocols_item_10 text_center">
+	  	      <span class="protocols_item_title">Кармический</span>
+	  	      <div class="protocols_item_img">
+	  	      	<i class="fas fa-eye"></i>
+	  	      </div>
+	  	      <div class="protocols_item_content hidden">Протокол предназначен для очистки накопленной личной истории (Кармы). Рекомендуем использовать не чаще раза в месяц</div>
+	  	    </div>
+	  	    <div data-protocol="moon" class="col protocols_item protocols_item_11 text_center">
+	  	      <span class="protocols_item_title">Лунный</span>
+	  	      <div class="protocols_item_img">
+	  	      	<i class="fas fa-moon"></i>
+	  	      </div>
+	  	      <div class="protocols_item_content hidden">Протокол Лунного дня учитывает напряжение зон DSV в зависимости от фазы Луны. Подходит для ежедневного применения</div>
+	  	    </div>
+	  	  </div>
 			</div>
 			<!-- manual diagnostic -->
 			<div class="mobile_screen mobile_screen_manual testing_p hidden">

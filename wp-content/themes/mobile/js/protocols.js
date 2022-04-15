@@ -22996,10 +22996,10 @@ console.log(`Сейчас ${moonDay} лунный день`);
 // START
 jQuery('.btn_start').on('click', function(event) {
   checkPoints();
-  // if(pointsStatus == false){
-  //   swal("Не все зоны перенесены", "Перед началом процедуры необходимо перенести на фото все зоны", "info");
-  //   pointsStatus = true;
-  // } else {
+  if(pointsStatus == false){
+    swal("Не все зоны перенесены", "Перед началом процедуры необходимо перенести на фото все зоны", "info");
+    pointsStatus = true;
+  } else {
     jQuery('.header-title').text('Выполняется');
     jQuery('.zone').css('background', 'rgba(83,35,69, 0.4)');
     jQuery('.btn-to_protocols, .btn-to_manual').addClass('hidden');
@@ -23087,7 +23087,7 @@ jQuery('.btn_start').on('click', function(event) {
       jQuery('.header-title').text('Программа выполняется');
       jQuery('.btn_start').attr('disabled', 'disabled');
     }
-  // }
+  }
 });
 // STOP
 function hideNote() {

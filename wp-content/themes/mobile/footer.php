@@ -9,7 +9,7 @@
                 </a>
               </li>
               <li>
-                <a href="/kabinet" class="row align-items-center user_avatar">
+                <a href="/kabinet/?am_force_theme_layout=mobile" class="row align-items-center user_avatar">
                   <span class="menu_item_img"><?php echo get_avatar( $user_ID, 40 ); ?></span>Личный кабинет
                 </a>
               </li>

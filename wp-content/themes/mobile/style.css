@@ -542,6 +542,7 @@ input.wpcf7-form-control.wpcf7-submit
 {
   padding-top: 10px;
   font-weight: 400;
+  width: 100%;
 }
 .hidden
 {
