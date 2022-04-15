@@ -24685,7 +24685,7 @@ mmt_2 = function(){
           swal.close()
         } else {
           jQuery('.zone_ring').addClass('hidden');
-          jQuery('.wizard_operation').addClass('hidden');
+          jQuery('.wizard_operation, .wizard_diag').addClass('hidden');
           jQuery('.ring').removeClass('hidden');
           jQuery('.ring, .zone_ring').css('transform', 'rotate(0deg)');
           jQuery('.wizard_to_what_way, .wizard_to_protDiag').addClass('hidden');
