@@ -24630,7 +24630,7 @@ mmt_2 = function(){
   not_ended = localStorage.getItem('paused');
   set_protocol = function (that) {
     jQuery('.zone_ring').addClass('hidden');
-    jQuery('.wizard_operation').addClass('hidden');
+    jQuery('.wizard_operation, .wizard_diag').addClass('hidden');
     jQuery('.ring').removeClass('hidden');
     jQuery('.ring, .zone_ring').css('transform', 'rotate(0deg)');
     jQuery('.wizard_to_what_way, .wizard_to_protDiag').addClass('hidden');
