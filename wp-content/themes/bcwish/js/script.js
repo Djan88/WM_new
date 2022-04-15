@@ -239,7 +239,7 @@ jQuery(function() {
   jQuery('.wizard_to_protDiag, .diag_btn_alt').on('click', function(event) {
     jQuery('.wizard_prots, .wizard_test, .wizard_main_screen').addClass('hidden');
     jQuery('.wizard_to_protDiag').addClass('hidden');
-    if (jQuery('.knife_rate').length) {
+    if (jQuery('.wizard_diag').hasClass('testing_g') && jQuery('.knife_rate').length) {
       jQuery('.wizard_clean_graf').fadeIn(500).removeClass('hidden');
     }
     jQuery('.wizard_to_what_way').fadeIn(500).removeClass('hidden');
@@ -767,6 +767,9 @@ jQuery('.btn_test__reset').on('click', function(event) {
     document.querySelector('.testing_mode_item_g').classList.remove('active');
   }
   document.querySelector('.testing_mode_item_g').onclick = function(){
+    if (jQuery('.knife_rate').length) {
+      jQuery('.wizard_clean_graf').fadeIn(500).removeClass('hidden');
+    }
     document.querySelector('.testing_mode_item_g').classList.add('active');
     document.querySelector('.wizard_grafic_photo').classList.add('col-sm-6');
     document.querySelector('.wizard_grafic_photo').classList.remove('col-sm-12');
