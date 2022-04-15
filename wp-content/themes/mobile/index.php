@@ -202,7 +202,7 @@
 			  <?php } ?>
 			</div>
 			<!-- manual diagnostic -->
-			<div class="mobile_screen mobile_screen_manual hidden">
+			<div class="mobile_screen mobile_screen_manual testing_p hidden">
 				<div class="row protocols_info">
 					<div class="col text_center">
 						<div class="row">
@@ -222,6 +222,7 @@
 								  <button type="button" class="btn testing_mode_item testing_mode_item_g btn-primary">График</button>
 								</div>
 							</div>
+							<div class="col-12 testing_sub_title">Коснитесь каждой зоны на теле в любой последовательности.</div>
 							<?php } ?>
 						</div>
 						<div class="row">
