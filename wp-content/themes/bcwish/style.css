@@ -2549,6 +2549,26 @@ button.wizard_starter_alt.btn.btn-success
 {
   display: none;
 }
+.testing_p .wizard_grafic_photo
+{
+  display: flex;
+  justify-content: center;
+}
+.testing_p .wizard_grafic_photo img
+{
+  display: flex;
+  width: 350px;
+}
+.testing_p .zone-testing
+{
+  display: flex;
+  width: 350px;
+  left: auto;
+}
+.testing_p .zone-testing_item
+{
+  width: 3100%;
+}
 .btn.testing_mode_item.btn-primary.active:focus
 {
   box-shadow: none!important;

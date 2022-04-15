@@ -1438,7 +1438,7 @@
                       <img src="<?php bloginfo('template_url'); ?>/img/marakata.png" class="marakata" alt="">
                     </div>
                   </div>
-                  <div class="col-sm-6 wizard_grafic_photo">
+                  <div class="col-sm-12 wizard_grafic_photo">
                     <?php 
                       $cur_user_id = get_current_user_id();
                       $testing_user = 212;
@@ -1462,8 +1462,8 @@
                   </div>
                   <?php } ?>
                   <div class="col-sm-12" style="text-align: center;">
-                    <div class="btn btn-success btn_prot_choice_fromDiag back-to-top_2">Протокол</div>
-                    <div class="btn btn-success test_btn_fromDiag">Диагностика</div>
+                    <div class="btn btn-success btn_prot_choice_fromDiag back-to-top_2" style="margin-right: 5px;">Протокол</div>
+                    <div class="btn btn-primary test_btn_fromDiag">Диагностика</div>
                   </div>
                 </div>
                 <div class="row wizard_test hidden">

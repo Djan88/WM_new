@@ -727,16 +727,16 @@ jQuery('.btn_test__reset').on('click', function(event) {
 
   document.querySelector('.testing_mode_item_p').onclick = function(){
     document.querySelector('.testing_mode_item_p').classList.add('active');
-    // document.querySelector('.diagnostic_rezult').classList.remove('col-10');
-    // document.querySelector('.diagnostic_rezult').classList.add('col-12');
+    document.querySelector('.wizard_grafic_photo').classList.remove('col-sm-6');
+    document.querySelector('.wizard_grafic_photo').classList.add('col-sm-12');
     document.querySelector('.wizard_diag').classList.remove('testing_g');
     document.querySelector('.wizard_diag').classList.add('testing_p');
     document.querySelector('.testing_mode_item_g').classList.remove('active');
   }
   document.querySelector('.testing_mode_item_g').onclick = function(){
     document.querySelector('.testing_mode_item_g').classList.add('active');
-    // document.querySelector('.diagnostic_rezult').classList.add('col-10');
-    // document.querySelector('.diagnostic_rezult').classList.remove('col-12');
+    document.querySelector('.wizard_grafic_photo').classList.add('col-sm-6');
+    document.querySelector('.wizard_grafic_photo').classList.remove('col-sm-12');
     document.querySelector('.wizard_diag').classList.remove('testing_p');
     document.querySelector('.wizard_diag').classList.add('testing_g');
     document.querySelector('.testing_mode_item_p').classList.remove('active');
