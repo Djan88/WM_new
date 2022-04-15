@@ -536,6 +536,10 @@ input.wpcf7-form-control.wpcf7-submit
 {
   display: none;
 }
+.tesing_mode_item:focus
+{
+  outline: none;
+}
 /*Animation*/
 
 .rot_d_one {

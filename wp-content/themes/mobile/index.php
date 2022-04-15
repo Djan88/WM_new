@@ -231,7 +231,7 @@
 									<i class="fas fa-arrows-alt-v"></i>
 								</div>
 							</div>
-							<div class="col-10 text_center zone_diag diagnostic_rezult">
+							<div class="col-12 text_center zone_diag diagnostic_rezult">
 								<img class="loaded_img" src="" alt="">
 								<?php if (current_user_can('administrator')|| $cur_user_id === $testing_user) { ?>
 								<div class="zone-testing">
