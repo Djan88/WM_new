@@ -2535,6 +2535,19 @@ button.wizard_starter_alt.btn.btn-success
   padding-bottom: 15px;
   font-size: 16px;
 }
+.testing_mode
+{
+  margin: auto;
+  padding-bottom: 5px;
+}
+.testing_p .wizard_grafic, 
+.testing_p .knife_rate, 
+.testing_g .zone_recommend, 
+.testing_g .zone-testing,
+.testing_g .testing_sub_title
+{
+  display: none;
+}
 /*Animation*/
 
 .rot_d_one {

@@ -1425,7 +1425,7 @@
                     </button>
                   </div>
                 </div>
-                <div class="row wizard_diag hidden">
+                <div class="row wizard_diag testing_p hidden">
                   <div class="testing_mode col-xs-12">
                     <div class="btn-group" role="group" aria-label="Testing Mode">
                       <button type="button" class="btn testing_mode_item testing_mode_item_p btn-primary active">P 300</button>
@@ -1458,7 +1458,7 @@
                   </div>
                   <?php if (current_user_can('administrator')|| $cur_user_id === $testing_user) { ?>
                   <div class="col-sm-12 zone_recommend hidden">
-                    <span class="zone_recommend_text"></span><button type="button" class="zones_reset btn btn-sm btn-warning">Сбросить: <i class="fa fa-trash"></i></button>
+                    <span class="zone_recommend_text"></span><button type="button" class="zones_reset btn btn-sm btn-warning">Сбросить <i class="fa fa-trash"></i></button><button type="button" class="btn_test_accept btn btn-sm btn-success">Применить <i class="fa fa-check"></i></button>
                   </div>
                   <?php } ?>
                   <div class="col-sm-12" style="text-align: center;">
