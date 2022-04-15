@@ -2537,8 +2537,9 @@ button.wizard_starter_alt.btn.btn-success
 }
 .testing_mode
 {
-  margin: auto;
   padding-bottom: 5px;
+  width: 100%;
+  text-align: center;
 }
 .testing_p .wizard_grafic, 
 .testing_p .knife_rate, 
@@ -2547,6 +2548,10 @@ button.wizard_starter_alt.btn.btn-success
 .testing_g .testing_sub_title
 {
   display: none;
+}
+.btn.testing_mode_item.btn-primary.active:focus
+{
+  box-shadow: none!important;
 }
 /*Animation*/
 
