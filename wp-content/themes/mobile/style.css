@@ -427,7 +427,8 @@ input.wpcf7-form-control.wpcf7-submit
 .subscriber_info 
 {
   padding-top: 75px;
-  color: #eee;
+  color: #555;
+  font-weight: 400;
   text-align: center;
   font-size: 18px;
 }
